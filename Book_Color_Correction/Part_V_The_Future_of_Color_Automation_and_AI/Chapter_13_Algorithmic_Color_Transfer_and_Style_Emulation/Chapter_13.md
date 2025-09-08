@@ -1,0 +1,19 @@
+### Chapter 13: Algorithmic Color Transfer and Style Emulation
+Color transfer is the process of automatically applying the color palette and aesthetic of a reference (or "style") image to a target (or "content") image. This field has seen rapid evolution, moving from simple statistical methods to sophisticated deep learning models.
+
+#### 13.1 Classic and Modern Color Transfer
+*   **Classic Statistical Transfer**: Early methods operated on a global statistical level. A seminal technique involved converting both the source and target images to the perceptually uniform L\*a\*b\* color space and then adjusting the mean and standard deviation of each channel in the source image to match those of the target image.115 While effective at transferring the overall color mood, these methods disregard spatial information and can produce unnatural results when the content of the two images differs significantly.117
+*   **Neural Style Transfer**: A major breakthrough came with the application of Convolutional Neural Networks (CNNs). Models like that proposed by Gatys et al. demonstrated the ability to separate an image's high-level "content" representation from its "style" representation (defined by the correlations between features in different layers of the network).118 This allowed for the transfer of artistic styles, but early implementations often blended texture and color, creating a "painterly" effect that was not suitable for photorealistic color grading.119
+
+#### 13.2 State-of-the-Art Research (2024-2025)
+Recent research, particularly papers presented at top-tier AI conferences in 2025, has focused on overcoming the limitations of earlier methods to achieve photorealistic, controllable, and efficient color style transfer. The evolution is clear: a move away from simple statistical mimicry and towards AI that understands color on a more structural, perceptual, and even semantic level, making it a more powerful and controllable tool for artists.
+
+*   **Neural Preset**: Presented at CVPR 2023, this technique addresses the artifacts and speed limitations of previous deep learning models. It uses a two-stage pipeline based on a Deterministic Neural Color Mapping (DNCM). Instead of using a complex convolutional network to process the entire image, it predicts a compact, image-adaptive color mapping matrix that operates consistently on each pixel. This approach avoids spatial artifacts, supports high-resolution (up to 8K) inputs with a small memory footprint, and provides flicker-free, real-time performance for video stylization.119
+*   **Modulated Flows (ModFlows)**: A novel approach presented at AAAI 2025, this method frames color transfer as an optimal transport problem. It is based on rectified flows, a type of generative model, to learn an invertible (bijective) transformation within the RGB color space. By training on a dataset of optimal transport plans, the model can generate a precise and efficient color mapping for new pairs of images without additional fine-tuning. This provides a mathematically rigorous foundation for color transfer that is both high-fidelity and computationally efficient.118
+*   **Interpretable AI for Color Transfer**: A significant trend emerging in 2024-2025 is the move away from "black box" AI models. New research focuses on systems that, instead of outputting a final, uneditable image, predict a set of human-interpretable color adjustment parameters (e.g., values for contrast, saturation, temperature, or even entire curves).117 The AI generates a strong starting point based on the reference image, but the final control remains with the artist, who can then fine-tune these parameters. This hybrid approach blends the speed of AI with the nuance of human creativity.
+
+### References
+115. [Citation text to be added]
+117. [Citation text to be added]
+118. [Citation text to be added]
+119. [Citation text to be added]

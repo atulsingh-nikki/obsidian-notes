@@ -1,0 +1,5 @@
+- 2019 Papers
+- Prepared a prompt from ChatGPT for the list of questions for doing year by year deep research , thinking of re-using it to enhance the existing and new ones . 
+	- Comparing a deep research of 2022 Gemini without this prompt vs ChatGPT with this prompt.
+- Need to stick back to Educational Concepts especially related to Post Graduate Courses. 
+- 
