@@ -10,7 +10,9 @@ This journey from pixels to perception is not a single leap but a series of incr
 
 The most basic task in computer vision is **Image Classification**. Given an image, the goal is to assign it a single label that describes its most prominent subject. Is this a picture of a cat, a dog, or a car? The output is a simple, categorical answer. This was one of the first major problems to be convincingly solved by deep learning, famously demonstrated by AlexNet in 2012 [1], which kicked off the revolution we will explore throughout this book.
 
-*(Placeholder for an image illustrating classification: an image of a cat with the label "Cat")*
+![Classification example showing a cat with its label](../../images/ch01_fig_classification_cat.png)
+
+*Figure 1.1: A simple image classification example. The model takes an image as input and outputs a single label that best describes the main subject - in this case, "CAT".*
 
 ### 1.1.2 Object Detection: "What is in this image, and where is it?"
 
