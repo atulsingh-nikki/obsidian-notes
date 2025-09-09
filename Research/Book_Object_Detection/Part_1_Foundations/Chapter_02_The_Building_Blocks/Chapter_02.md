@@ -8,43 +8,42 @@ This is achieved by stacking layers, where each layer performs a sequence of ope
 
 The fundamental building block of a CNN is the **convolution**. Imagine a tiny, slidable window, called a **kernel** or **filter**, that scans across the entire input image. This kernel is essentially a small matrix of weights. At each position, the kernel performs a dot product with the patch of the image it is currently covering. This process produces a single number for each position, and the grid of these output numbers forms a new image, called a **feature map**.
 
-*(Placeholder for an animation showing a 3x3 kernel sliding over a 5x5 image to produce a 3x3 feature map)*
+<!-- TODO: Add animation showing a 3x3 kernel sliding over a 5x5 image to produce a 3x3 feature map -->
 
 The magic of this operation is that the weights in the kernel are *learned* during training. The network itself discovers which features are important for a given task. For example, in the early layers of a network trained for face detection, different kernels might learn to activate when they "see" a simple horizontal edge, a vertical edge, or a patch of a certain color.
 
-<br>
 
 ***A Mathematical View***
 
-From a mathematical standpoint, the convolution operation as used in deep learning is technically a **cross-correlation** [3]. For a 2D input image $I$ and a 2D kernel $K$, the value of the feature map $S$ at a location $(i, j)$ is calculated as:
-$$
+From a mathematical standpoint, the convolution operation as used in deep learning is technically a **cross-correlation** [3]. For a 2D input image \(I\) and a 2D kernel \(K\), the value of the feature map \(S\) at a location \((i, j)\) is calculated as:
+$$$
 S(i, j) = (I * K)(i, j) = \sum_{m}\sum_{n} I(i+m, j+n) K(m, n)
-$$
+$$$
 Here, the sums are taken over all the elements of the kernel \(K\). This formula simply formalizes the process of sliding the kernel over the image and computing a weighted sum at each point.
 
 ***
 
-<br>
 
 ***Connections to Classical Vision Filters***
 
 The core idea of using kernels to extract features is not new to deep learning. In classical computer vision, engineers would manually design specialized kernels, often called filters, to detect specific image properties like edges, corners, or sharpening effects [3].
 
-For example, the **Sobel operator** [4], used for detecting edges, consists of two distinct kernels—one for horizontal edges ($G_x$) and one for vertical edges ($G_y$):
+For example, the **Sobel operator** [4], used for detecting edges, consists of two distinct kernels—one for horizontal edges (\(G_x\)) and one for vertical edges (\(G_y\)):
 
-$G_x = \begin{bmatrix} -1 & 0 & +1 \\ -2 & 0 & +2 \\ -1 & 0 & +1 \end{bmatrix} \quad \text{and} \quad G_y = \begin{bmatrix} -1 & -2 & -1 \\ 0 & 0 & 0 \\ +1 & +2 & +1 \end{bmatrix}$
+$$
+G_x = \begin{bmatrix} -1 & 0 & +1 \\ -2 & 0 & +2 \\ -1 & 0 & +1 \end{bmatrix} \quad \text{and} \quad G_y = \begin{bmatrix} -1 & -2 & -1 \\ 0 & 0 & 0 \\ +1 & +2 & +1 \end{bmatrix}
+$$
 
-When you convolve an image with $G_x$, the resulting feature map highlights vertical edges. Convolving with $G_y$ highlights horizontal edges. The **Canny edge detector** [5] and others operate on similar principles.
+When you convolve an image with \(G_x\), the resulting feature map highlights vertical edges. Convolving with \(G_y\) highlights horizontal edges. The **Canny edge detector** [5] and others operate on similar principles.
 
 The revolutionary insight of CNNs is that we no longer need to design these filters by hand. The network starts with random values in its kernels and, through the process of training (which we will discuss in the next section), it *learns* the optimal values for the task at hand. In the early layers of a trained CNN, you will often find kernels that have evolved to look remarkably similar to Sobel, Gabor, and other handcrafted filters [2]. In essence, the CNN automates the process of feature design, discovering the most effective feature extractors for the specific problem it is trying to solve.
 
 ***
 
-<br>
 
 Crucially, the same kernel is used across the entire image. This property, known as **parameter sharing**, makes CNNs incredibly efficient. It means that if a kernel learns to detect a horizontal edge at one position, it can detect that same feature anywhere else in theimage without needing to be retrained.
 
-### 2.1.2 Operation 2: The Activation Function (Introducing Non--Linearity)
+### 2.1.2 Operation 2: The Activation Function (Introducing Non-Linearity)
 
 After the convolution operation, an **activation function** is applied element-wise to the feature map. This step is the secret ingredient that gives deep networks their power. Without a non-linear function like this, a stack of multiple linear operations (like convolutions) would be mathematically equivalent to a single linear operation. The entire deep network would "collapse" into a single, shallow filter, unable to learn complex patterns. The activation function introduces this essential non-linearity, which is what allows the network to approximate far more intricate functions. For a detailed theoretical explanation of activation functions and their properties, the "Deep Learning" textbook by Goodfellow et al. is an excellent resource [6].
 
@@ -69,7 +68,6 @@ So why has max pooling been so dominant? The intuition is that it acts as a dete
 
 The max pooling operation works similarly to a convolution, with a window that slides over the feature map. However, instead of performing a weighted sum, it simply takes the *maximum* value from the patch of the feature map it covers.
 
-<br>
 
 ***A Mathematical View***
 
@@ -81,7 +79,6 @@ This simply means that the output value is the maximum of all input values withi
 
 ***
 
-<br>
 
 This has two important effects:
 1.  **Downsampling**: It reduces the spatial dimensions (height and width) of the feature maps, which makes the network computationally faster and reduces the number of parameters.
@@ -113,28 +110,25 @@ This process continues through all the layers of the network, with each layer pe
 
 At its core, backpropagation is an algorithm that uses the **chain rule** from calculus to calculate the gradient of the loss function with respect to each weight in the network, a method popularized for neural networks in the seminal work by Rumelhart, Hinton, and Williams [8].
 
-<br>
 
 ***A Mathematical View: Gradient Descent***
 
-The core of gradient descent is the weight update rule. For any given weight $w_i$ in the network, it is updated after each batch of data according to the formula:
+The core of gradient descent is the weight update rule. For any given weight \(w_i\) in the network, it is updated after each batch of data according to the formula:
 
 $$
 w_i := w_i - \eta \frac{\partial L}{\partial w_i}
 $$
 
 Here:
-*   $w_i$ is the weight being updated.
-*   $\eta$ (eta) is the **learning rate**, a small hyperparameter that controls the size of the update step.
-*   $\frac{\partial L}{\partial w_i}$ is the gradient (the partial derivative) of the loss function $L$ with respect to the weight $w_i$. This term tells us how a small change in the weight will affect the loss.
+*   \(w_i\) is the weight being updated.
+*   \(\eta\) (eta) is the **learning rate**, a small hyperparameter that controls the size of the update step.
+*   \(\frac{\partial L}{\partial w_i}\) is the gradient (the partial derivative) of the loss function \(L\) with respect to the weight \(w_i\). This term tells us how a small change in the weight will affect the loss.
 
 The algorithm simply nudges each weight in the direction that will most effectively decrease the overall loss.
 ***
-<br>
 
 At its core, backpropagation is an algorithm that uses the **chain rule** from calculus to calculate the gradient of the loss function with respect to each weight in the network, a method popularized for neural networks in the seminal work by Rumelhart, Hinton, and Williams [8].
 
-<br>
 
 ***A Mathematical View: The Chain Rule***
 
@@ -148,7 +142,6 @@ $$
 
 Backpropagation is essentially a clever and efficient algorithm for applying this rule recursively, starting from the final loss and working backwards through every layer and every parameter in the network, calculating all the necessary partial derivatives.
 ***
-<br>
 
 This gradient is a vector that points in the direction of the steepest ascent of the loss. To decrease the loss, we simply need to adjust each weight by taking a small step in the *opposite* direction of its gradient. (For a highly intuitive, code-first explanation of this process, see Karpathy's "Hacker's Guide to Neural Networks" [12]).
 
@@ -319,11 +312,11 @@ After the successes of VGG and GoogLeNet, a perplexing problem emerged. Research
 
 The 2015 paper "Deep Residual Learning for Image Recognition" by He et al. provided a brilliant and surprisingly simple solution, introducing the **Residual Network**, or **ResNet** [17]. The core idea was that it is very difficult for a stack of non-linear layers to learn a true identity mapping—that is, to simply pass its input through unchanged. If an optimal function for a given layer was close to the identity, the network would struggle to learn it.
 
-ResNet solved this with the **residual block**. Instead of forcing a set of layers to learn the desired output transformation $H(x)$, the network was instead tasked with learning the *residual*, $F(x) = H(x) - x$. The final output was then formed by adding the input back to the output of the block: $H(x) = F(x) + x$. This is achieved with a "shortcut" or **"skip connection"** that bypasses the layers and adds the input directly to the output.
+ResNet solved this with the **residual block**. Instead of forcing a set of layers to learn the desired output transformation \(H(x)\), the network was instead tasked with learning the *residual*, \(F(x) = H(x) - x\). The final output was then formed by adding the input back to the output of the block: \(H(x) = F(x) + x\). This is achieved with a "shortcut" or **"skip connection"** that bypasses the layers and adds the input directly to the output.
 
-*(Placeholder for a diagram of a ResNet block, showing the main path with conv layers and the skip connection going around it)*
+<!-- TODO: Add diagram of a ResNet block, showing the main path with conv layers and the skip connection going around it -->
 
-This seemingly minor change had a profound impact. If the optimal function was the identity, the network could now easily learn this by driving the weights of the convolutional layers to zero, causing $F(x)$ to be zero and the output to be exactly the input. It is far easier for a network to learn to add a small correction (the residual) than it is to learn the entire transformation from scratch.
+This seemingly minor change had a profound impact. If the optimal function was the identity, the network could now easily learn this by driving the weights of the convolutional layers to zero, causing \(F(x)\) to be zero and the output to be exactly the input. It is far easier for a network to learn to add a small correction (the residual) than it is to learn the entire transformation from scratch.
 
 This breakthrough shattered the degradation problem and allowed for the creation of networks of unprecedented depth. The authors presented networks with 50, 101, and even 152 layers, and later experiments pushed this to over 1000 layers. ResNet won the 2015 ILSVRC competition by a huge margin, and its core idea—the skip connection—has become one of the most fundamental and widely used building blocks in nearly all state-of-the-art computer vision architectures today.
 
