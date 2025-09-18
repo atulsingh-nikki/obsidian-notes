@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Books | Obsidian Notes</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="assets/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+    <script src="assets/main.js" type="module" defer></script>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="header-content">
+        <h1>Bookshelf</h1>
+        <p class="tagline">Explore the long-form research and book projects stored in this repository.</p>
+      </div>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" id="sidebar" aria-label="Book navigation">
+        <div class="sidebar-inner">
+          <div class="sidebar-intro">
+            <h2>Library</h2>
+            <p>Select a chapter to load it on the right.</p>
+          </div>
+          <nav id="book-navigation" class="book-navigation" aria-live="polite"></nav>
+        </div>
+      </aside>
+      <main id="main" class="main-content" tabindex="-1">
+        <article id="book-content" class="book-content">
+          <div class="placeholder">
+            <p>Use the navigation to choose a chapter. The content will appear here.</p>
+          </div>
+        </article>
+      </main>
+    </div>
+    <footer class="page-footer">
+      <p>
+        Built with <a href="https://marked.js.org/" rel="noopener" target="_blank">Marked</a>. Markdown sources live in this repository,
+        so updates to the notes will automatically appear once the site is rebuilt.
+      </p>
+    </footer>
+  </body>
+</html>

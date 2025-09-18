@@ -1,0 +1,223 @@
+[
+  {
+    "title": "Color Correction",
+    "path": "Book_Color_Correction",
+    "sections": [
+      {
+        "title": "Overview",
+        "items": [
+          {
+            "title": "Deep Research",
+            "path": "Book_Color_Correction/DeepResearch.md"
+          },
+          {
+            "title": "Table of Contents",
+            "path": "Book_Color_Correction/TableOfContents.md"
+          }
+        ]
+      },
+      {
+        "title": "Part I: The Foundations of Color Science",
+        "items": [
+          {
+            "title": "Chapter 1 \u2013 The Physics and Physiology of Color Perception",
+            "path": "Book_Color_Correction/Part_I_The_Foundations_of_Color_Science/Chapter_1_The_Physics_and_Physiology_of_Color_Perception/Chapter_1.md"
+          },
+          {
+            "title": "Chapter 2 \u2013 Color Theory and Abstract Models",
+            "path": "Book_Color_Correction/Part_I_The_Foundations_of_Color_Science/Chapter_2_Color_Theory_and_Abstract_Models/Chapter_2.md"
+          },
+          {
+            "title": "Chapter 3 \u2013 Quantifying Color Color Spaces and Models",
+            "path": "Book_Color_Correction/Part_I_The_Foundations_of_Color_Science/Chapter_3_Quantifying_Color_Color_Spaces_and_Models/Chapter_3.md"
+          }
+        ]
+      },
+      {
+        "title": "Part II: The Digital Color Correction Toolkit",
+        "items": [
+          {
+            "title": "Chapter 4 \u2013 Capturing Color The Digital Imaging Pipeline",
+            "path": "Book_Color_Correction/Part_II_The_Digital_Color_Correction_Toolkit/Chapter_4_Capturing_Color_The_Digital_Imaging_Pipeline/Chapter_4.md"
+          },
+          {
+            "title": "Chapter 5 \u2013 Analyzing Color Scopes and Histograms",
+            "path": "Book_Color_Correction/Part_II_The_Digital_Color_Correction_Toolkit/Chapter_5_Analyzing_Color_Scopes_and_Histograms/Chapter_5.md"
+          },
+          {
+            "title": "Chapter 6 \u2013 Manipulating Color Core Correction Techniques",
+            "path": "Book_Color_Correction/Part_II_The_Digital_Color_Correction_Toolkit/Chapter_6_Manipulating_Color_Core_Correction_Techniques/Chapter_6.md"
+          }
+        ]
+      },
+      {
+        "title": "Part III: Professional Workflows and Color Management",
+        "items": [
+          {
+            "title": "Chapter 7 \u2013 Color Correction for Still Photography",
+            "path": "Book_Color_Correction/Part_III_Professional_Workflows_and_Color_Management/Chapter_7_Color_Correction_for_Still_Photography/Chapter_7.md"
+          },
+          {
+            "title": "Chapter 8 \u2013 Color Grading for Cinematography",
+            "path": "Book_Color_Correction/Part_III_Professional_Workflows_and_Color_Management/Chapter_8_Color_Grading_for_Cinematography/Chapter_8.md"
+          },
+          {
+            "title": "Chapter 9 \u2013 Color Standards for Broadcast and Print",
+            "path": "Book_Color_Correction/Part_III_Professional_Workflows_and_Color_Management/Chapter_9_Color_Standards_for_Broadcast_and_Print/Chapter_9.md"
+          }
+        ]
+      },
+      {
+        "title": "Part IV: Advanced Color Mapping and Transformation",
+        "items": [
+          {
+            "title": "Chapter 10 \u2013 High Dynamic Range HDR and Tone Mapping",
+            "path": "Book_Color_Correction/Part_IV_Advanced_Color_Mapping_and_Transformation/Chapter_10_High_Dynamic_Range_HDR_and_Tone_Mapping/Chapter_10.md"
+          },
+          {
+            "title": "Chapter 11 \u2013 Bridging Devices Gamut Mapping",
+            "path": "Book_Color_Correction/Part_IV_Advanced_Color_Mapping_and_Transformation/Chapter_11_Bridging_Devices_Gamut_Mapping/Chapter_11.md"
+          },
+          {
+            "title": "Chapter 12 \u2013 The Power of Presets 3D Look Up Tables LUTs",
+            "path": "Book_Color_Correction/Part_IV_Advanced_Color_Mapping_and_Transformation/Chapter_12_The_Power_of_Presets_3D_Look_Up_Tables_LUTs/Chapter_12.md"
+          }
+        ]
+      },
+      {
+        "title": "Part V: The Future of Color Automation and AI",
+        "items": [
+          {
+            "title": "Chapter 13 \u2013 Algorithmic Color Transfer and Style Emulation",
+            "path": "Book_Color_Correction/Part_V_The_Future_of_Color_Automation_and_AI/Chapter_13_Algorithmic_Color_Transfer_and_Style_Emulation/Chapter_13.md"
+          },
+          {
+            "title": "Chapter 14 \u2013 The Rise of AI in Color Correction",
+            "path": "Book_Color_Correction/Part_V_The_Future_of_Color_Automation_and_AI/Chapter_14_The_Rise_of_AI_in_Color_Correction/Chapter_14.md"
+          },
+          {
+            "title": "Chapter 15 \u2013 Emerging Frontiers and Future Challenges",
+            "path": "Book_Color_Correction/Part_V_The_Future_of_Color_Automation_and_AI/Chapter_15_Emerging_Frontiers_and_Future_Challenges/Chapter_15.md"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Object Detection",
+    "path": "Book_Object_Detection",
+    "sections": [
+      {
+        "title": "Overview",
+        "items": [
+          {
+            "title": "Chapter Outline",
+            "path": "Book_Object_Detection/Chapter_Outline.md"
+          },
+          {
+            "title": "Section Template",
+            "path": "Book_Object_Detection/Section_Template.md"
+          }
+        ]
+      },
+      {
+        "title": "Part 1: Foundations",
+        "items": [
+          {
+            "title": "Chapter 01 \u2013 A Journey into Seeing Machines",
+            "path": "Book_Object_Detection/Part_1_Foundations/Chapter_01_A_Journey_into_Seeing_Machines/Chapter_01.md"
+          },
+          {
+            "title": "Chapter 02 \u2013 The Building Blocks",
+            "path": "Book_Object_Detection/Part_1_Foundations/Chapter_02_The_Building_Blocks/Chapter_02.md"
+          }
+        ]
+      },
+      {
+        "title": "Part 2: Object Detection",
+        "items": [
+          {
+            "title": "Chapter 03 \u2013 Early Approaches to Object Localization",
+            "path": "Book_Object_Detection/Part_2_Object_Detection/Chapter_03_Early_Approaches_to_Object_Localization/Chapter_03.md"
+          },
+          {
+            "title": "Chapter 04 \u2013 The R-CNN Family",
+            "path": "Book_Object_Detection/Part_2_Object_Detection/Chapter_04_The_R-CNN_Family/Chapter_04.md"
+          },
+          {
+            "title": "Chapter 05 \u2013 Real-Time Detection",
+            "path": "Book_Object_Detection/Part_2_Object_Detection/Chapter_05_Real-Time_Detection/Chapter_05.md"
+          },
+          {
+            "title": "Chapter 06 \u2013 Beyond Bounding Boxes Modern Detection Architectures",
+            "path": "Book_Object_Detection/Part_2_Object_Detection/Chapter_06_Beyond_Bounding_Boxes_Modern_Detection_Architectures/Chapter_06.md"
+          }
+        ]
+      },
+      {
+        "title": "Part 3: Segmentation and Matting",
+        "items": [
+          {
+            "title": "Chapter 07 \u2013 Semantic Segmentation",
+            "path": "Book_Object_Detection/Part_3_Segmentation_and_Matting/Chapter_07_Semantic_Segmentation/Chapter_07.md"
+          },
+          {
+            "title": "Chapter 08 \u2013 Instance Segmentation",
+            "path": "Book_Object_Detection/Part_3_Segmentation_and_Matting/Chapter_08_Instance_Segmentation/Chapter_08.md"
+          },
+          {
+            "title": "Chapter 09 \u2013 Image Matting",
+            "path": "Book_Object_Detection/Part_3_Segmentation_and_Matting/Chapter_09_Image_Matting/Chapter_09.md"
+          }
+        ]
+      },
+      {
+        "title": "Part 4: Tracking in Videos",
+        "items": [
+          {
+            "title": "Chapter 10 \u2013 Introduction to Multi-Object Tracking",
+            "path": "Book_Object_Detection/Part_4_Tracking_in_Videos/Chapter_10_Introduction_to_Multi-Object_Tracking/Chapter_10.md"
+          },
+          {
+            "title": "Chapter 11 \u2013 The Evolution of Tracking-by-Detection",
+            "path": "Book_Object_Detection/Part_4_Tracking_in_Videos/Chapter_11_The_Evolution_of_Tracking-by-Detection/Chapter_11.md"
+          },
+          {
+            "title": "Chapter 12 \u2013 New Frontiers in Tracking",
+            "path": "Book_Object_Detection/Part_4_Tracking_in_Videos/Chapter_12_New_Frontiers_in_Tracking/Chapter_12.md"
+          }
+        ]
+      },
+      {
+        "title": "Part 5: Advanced Topics",
+        "items": [
+          {
+            "title": "Chapter 13 \u2013 Learning from Less",
+            "path": "Book_Object_Detection/Part_5_Advanced_Topics/Chapter_13_Learning_from_Less/Chapter_13.md"
+          },
+          {
+            "title": "Chapter 14 \u2013 Stepping into the Third Dimension",
+            "path": "Book_Object_Detection/Part_5_Advanced_Topics/Chapter_14_Stepping_into_the_Third_Dimension/Chapter_14.md"
+          },
+          {
+            "title": "Chapter 15 \u2013 The Future",
+            "path": "Book_Object_Detection/Part_5_Advanced_Topics/Chapter_15_The_Future/Chapter_15.md"
+          }
+        ]
+      },
+      {
+        "title": "Part 5: Advanced Topics and Future Directions",
+        "items": [
+          {
+            "title": "Chapter 14 \u2013 Stepping into the Third Dimension",
+            "path": "Book_Object_Detection/Part_5_Advanced_Topics_and_Future_Directions/Chapter_14_Stepping_into_the_Third_Dimension/Chapter_14.md"
+          },
+          {
+            "title": "Chapter 15 \u2013 The Future",
+            "path": "Book_Object_Detection/Part_5_Advanced_Topics_and_Future_Directions/Chapter_15_The_Future/Chapter_15.md"
+          }
+        ]
+      }
+    ]
+  }
+]
