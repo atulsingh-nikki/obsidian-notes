@@ -1,7 +1,15 @@
 title: Obsidian Notes – Bookshelf
 description: Explore the long-form research and book projects stored in this repository.
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  math_engine_opts:
+    preview: false
 remote_theme: pages-themes/cayman@v0.2.0
 repository: atulsingh-nikki/obsidian-notes
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+github:
+  is_project_page: false
