@@ -1,6 +1,6 @@
 # Obsidian Notes – Bookshelf
 
-This repository contains long-form research notes and two in-progress books.
+This repository contains long-form research notes, two in-progress books, and a blog for shorter updates.
 
 👉 View the published site on GitHub Pages: <https://atulsingh-nikki.github.io/obsidian-notes/>
 
@@ -8,6 +8,8 @@ The collection currently features:
 
 - **Color Correction**
 - **Object Detection**
+
+The accompanying blog highlights release notes, process updates, and essays that add context to the evolving library of notes.
 
 To make the material easier to browse, the repository now includes a GitHub
 Pages site that renders the Markdown chapters directly in the browser using
@@ -35,6 +37,27 @@ python3 scripts/generate_books_index.py
 
 Commit the updated `books.json` file alongside your content changes to keep the
 site in sync with the repository.
+
+## Writing blog posts
+
+1. Create a new Markdown file inside the `_posts/` directory using the
+   `YYYY-MM-DD-title.md` naming convention.
+2. Add front matter similar to the example below. The `layout: post` line
+   applies the custom article layout, while the optional `tags` field powers the
+   blog index metadata.
+
+   ```yaml
+   ---
+   layout: post
+   title: "A short update"
+   description: "What changed inside the vault this week."
+   tags: [updates]
+   ---
+   ```
+
+3. Write the body of the post using standard Markdown.
+4. Commit the new file and push to `main`. GitHub Pages will automatically
+   publish the post at `/blog/`.
 
 ## Local preview
 

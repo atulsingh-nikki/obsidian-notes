@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<article class="blog-post">
+  <header class="blog-post__header">
+    <h1 class="blog-post__title">{{ page.title }}</h1>
+    <p class="blog-post__meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {%- if page.author -%}
+        · <span class="blog-post__author">{{ page.author }}</span>
+      {%- endif -%}
+      {%- if page.tags and page.tags.size > 0 -%}
+        · <span class="blog-post__tags">{{ page.tags | join: ", " }}</span>
+      {%- endif -%}
+    </p>
+  </header>
+
+  <div class="blog-post__content">
+    {{ content }}
+  </div>
+
+  <nav class="blog-post__nav" aria-label="Blog post">
+    {%- if page.previous -%}
+      <a class="blog-post__nav-link blog-post__nav-link--prev" href="{{ page.previous.url | relative_url }}">
+        ← {{ page.previous.title }}
+      </a>
+    {%- endif -%}
+    {%- if page.next -%}
+      <a class="blog-post__nav-link blog-post__nav-link--next" href="{{ page.next.url | relative_url }}">
+        {{ page.next.title }} →
+      </a>
+    {%- endif -%}
+  </nav>
+</article>
