@@ -1,0 +1,6 @@
+title: Obsidian Notes – Bookshelf
+description: Explore the long-form research and book projects stored in this repository.
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

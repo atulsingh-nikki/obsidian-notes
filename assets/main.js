@@ -55,7 +55,7 @@ function buildNavigation(books) {
 
   books.forEach((book, bookIndex) => {
     const bookContainer = document.createElement("div");
-    bookContainer.className = "book";
+    bookContainer.className = "bookshelf-book";
 
     const bookHeader = document.createElement("h3");
     bookHeader.textContent = book.title;
@@ -63,7 +63,7 @@ function buildNavigation(books) {
 
     book.sections.forEach((section, sectionIndex) => {
       const details = document.createElement("details");
-      details.className = "section";
+      details.className = "bookshelf-section";
       if (bookIndex === 0 && sectionIndex === 0) {
         details.open = true;
       }
@@ -183,19 +183,19 @@ function stripFrontMatter(markdown) {
 }
 
 function renderLoading() {
-  contentEl.innerHTML = '<div class="status-message">Loading chapter…</div>';
+  contentEl.innerHTML = '<div class="bookshelf-status">Loading chapter…</div>';
 }
 
 function renderError(message) {
-  contentEl.innerHTML = `<div class="status-message error"><strong>Something went wrong.</strong><br>${message}</div>`;
+  contentEl.innerHTML = `<div class="bookshelf-status error"><strong>Something went wrong.</strong><br>${message}</div>`;
 }
 
 function renderNavigationPlaceholder(message) {
-  navigationEl.innerHTML = `<div class="status-message error">${message}</div>`;
+  navigationEl.innerHTML = `<div class="bookshelf-status error">${message}</div>`;
 }
 
 function renderContentMessage(message) {
-  contentEl.innerHTML = `<div class="status-message">${message}</div>`;
+  contentEl.innerHTML = `<div class="bookshelf-status">${message}</div>`;
 }
 
 function firstChapterPath(books) {
