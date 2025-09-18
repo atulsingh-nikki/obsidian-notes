@@ -20,16 +20,32 @@ layout: default
     {{ content }}
   </div>
 
-  <nav class="blog-post__nav" aria-label="Blog post">
-    {%- if page.previous -%}
-      <a class="blog-post__nav-link blog-post__nav-link--prev" href="{{ page.previous.url | relative_url }}">
-        ← {{ page.previous.title }}
-      </a>
-    {%- endif -%}
-    {%- if page.next -%}
-      <a class="blog-post__nav-link blog-post__nav-link--next" href="{{ page.next.url | relative_url }}">
-        {{ page.next.title }} →
-      </a>
-    {%- endif -%}
+  <nav class="blog-post__nav" aria-label="Post navigation">
+    <ul class="blog-post__nav-list">
+      <li class="blog-post__nav-item">
+        <a class="blog-post__nav-link blog-post__nav-link--home" href="{{ '/' | relative_url }}">
+          ← Home
+        </a>
+      </li>
+      <li class="blog-post__nav-item">
+        <a class="blog-post__nav-link blog-post__nav-link--index" href="{{ '/blog/' | relative_url }}">
+          Blog index
+        </a>
+      </li>
+      {%- if page.previous -%}
+        <li class="blog-post__nav-item">
+          <a class="blog-post__nav-link blog-post__nav-link--prev" href="{{ page.previous.url | relative_url }}">
+            ← Previous: {{ page.previous.title }}
+          </a>
+        </li>
+      {%- endif -%}
+      {%- if page.next -%}
+        <li class="blog-post__nav-item">
+          <a class="blog-post__nav-link blog-post__nav-link--next" href="{{ page.next.url | relative_url }}">
+            Next: {{ page.next.title }} →
+          </a>
+        </li>
+      {%- endif -%}
+    </ul>
   </nav>
 </article>
