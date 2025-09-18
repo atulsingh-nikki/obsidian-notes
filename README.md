@@ -1,6 +1,10 @@
 # Obsidian Notes – Bookshelf
 
-This repository contains long-form research notes and two in-progress books:
+This repository contains long-form research notes and two in-progress books.
+
+👉 View the published site on GitHub Pages: <https://atulsingh-nikki.github.io/obsidian-notes/>
+
+The collection currently features:
 
 - **Color Correction**
 - **Object Detection**
