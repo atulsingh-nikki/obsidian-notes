@@ -29,10 +29,10 @@ $$P(x|z) = \frac{P(z|x) \cdot P(x)}{P(z)}$$
 
 For estimating a state $x$ given measurements $z$, this becomes:
 
-- **P(x|z)** = **Posterior**: Our belief about the state after seeing the measurement
-- **P(z|x)** = **Likelihood**: How likely this measurement is for each possible state
-- **P(x)** = **Prior**: Our belief about the state before the measurement
-- **P(z)** = **Evidence**: Normalization constant (total probability of the measurement)
+- **$P(x|z)$** = **Posterior**: Our belief about the state after seeing the measurement
+- **$P(z|x)$** = **Likelihood**: How likely this measurement is for each possible state
+- **$P(x)$** = **Prior**: Our belief about the state before the measurement
+- **$P(z)$** = **Evidence**: Normalization constant (total probability of the measurement)
 
 ### The Key Insight
 
