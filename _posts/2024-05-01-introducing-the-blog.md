@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Introducing the Obsidian Notes Blog"
+title: "Introducing the Atul Singh Notes Blog"
 description: "Why the GitHub Pages site now includes a blog feed for ongoing updates."
 tags: [updates, roadmap]
 ---

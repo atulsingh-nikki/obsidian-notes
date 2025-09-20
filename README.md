@@ -1,4 +1,4 @@
-# Obsidian Notes – Bookshelf
+# Atul Singh Notes
 
 This repository contains long-form research notes, two in-progress books, and a blog for shorter updates.
 
