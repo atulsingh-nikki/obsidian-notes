@@ -113,21 +113,24 @@ This reduces infinite-dimensional probability distributions to finite-dimensiona
 
 ### Prediction Step Mathematics
 
-**Prior at time k-1**: $p(x_{k-1} \mid z_{1:k-1}) = N(\hat{x}_{k-1 \mid k-1}, P_{k-1 \mid k-1})$
+**Prior at time $k-1$**:
+$$
+p(x_{k-1} \mid z_{1:k-1}) = \mathcal{N}\!\left(\hat{x}_{k-1|k-1},\, P_{k-1|k-1}\right)
+$$
 
 **System dynamics**: $x_k = F_k x_{k-1} + B_k u_k + w_k$
 
 **Predicted distribution**: 
-$$p(x_k \mid z_{1:k-1}) = N(\hat{x}_{k \mid k-1}, P_{k \mid k-1})$$
+$$p(x_k \mid z_{1:k-1}) = \mathcal{N}\!\left(\hat{x}_{k|k-1},\, P_{k|k-1}\right)$$
 
 Where:
-$$\hat{x}_{k \mid k-1} = F_k \hat{x}_{k-1 \mid k-1} + B_k u_k \quad \text{(predicted mean)}$$
-$$P_{k \mid k-1} = F_k P_{k-1 \mid k-1} F_k^T + Q_k \quad \text{(predicted covariance)}$$
+$$\hat{x}_{k|k-1} = F_k \hat{x}_{k-1|k-1} + B_k u_k \quad \text{(predicted mean)}$$
+$$P_{k|k-1} = F_k P_{k-1|k-1} F_k^T + Q_k \quad \text{(predicted covariance)}$$
 
 ### Update Step Mathematics
 
 **Joint distribution** of state and measurement:
-$$\begin{bmatrix} x_k \\ z_k \end{bmatrix} \sim N\left(\begin{bmatrix} \hat{x}_{k \mid k-1} \\ H_k \hat{x}_{k \mid k-1} \end{bmatrix}, \begin{bmatrix} P_{k \mid k-1} & P_{k \mid k-1} H_k^T \\ H_k P_{k \mid k-1} & H_k P_{k \mid k-1} H_k^T + R_k \end{bmatrix}\right)$$
+$$\begin{bmatrix} x_k \\ z_k \end{bmatrix} \sim N\left(\begin{bmatrix} \hat{x}_{k|k-1} \\ H_k \hat{x}_{k|k-1} \end{bmatrix}, \begin{bmatrix} P_{k|k-1} & P_{k|k-1} H_k^T \\ H_k P_{k|k-1} & H_k P_{k|k-1} H_k^T + R_k \end{bmatrix}\right)$$
 
 Using the **conditional Gaussian formula**:
 $$p(X \mid Y) = N(\mu_X + \Sigma_{XY} \Sigma_{YY}^{-1}(Y - \mu_Y), \Sigma_{XX} - \Sigma_{XY} \Sigma_{YY}^{-1} \Sigma_{YX})$$
@@ -135,32 +138,32 @@ $$p(X \mid Y) = N(\mu_X + \Sigma_{XY} \Sigma_{YY}^{-1}(Y - \mu_Y), \Sigma_{XX} -
 This gives us:
 
 **Innovation** (measurement residual):
-$$\tilde{y}_k = z_k - H_k \hat{x}_{k \mid k-1}$$
+$$\tilde{y}_k = z_k - H_k \hat{x}_{k|k-1}$$
 
 **Innovation covariance**:
-$$S_k = H_k P_{k \mid k-1} H_k^T + R_k$$
+$$S_k = H_k P_{k|k-1} H_k^T + R_k$$
 
 **Kalman gain**:
-$$K_k = P_{k \mid k-1} H_k^T S_k^{-1}$$
+$$K_k = P_{k|k-1} H_k^T S_k^{-1}$$
 
 **Updated estimate**:
-$$\hat{x}_{k \mid k} = \hat{x}_{k \mid k-1} + K_k \tilde{y}_k$$
+$$\hat{x}_{k|k} = \hat{x}_{k|k-1} + K_k \tilde{y}_k$$
 
 **Updated covariance**:
-$$P_{k \mid k} = (I - K_k H_k) P_{k \mid k-1}$$
+$$P_{k|k} = (I - K_k H_k) P_{k|k-1}$$
 
 ## Understanding the Kalman Gain
 
-The Kalman gain $K_k = P_{k \mid k-1} H_k^T S_k^{-1}$ is the **optimal weighting** between prediction and measurement.
+The Kalman gain $K_k = P_{k|k-1} H_k^T S_k^{-1}$ is the **optimal weighting** between prediction and measurement.
 
 ### Intuitive Analysis
 
 #### When measurement is very reliable ($R_k \to 0$):
-- Innovation covariance: $S_k \approx H_k P_{k \mid k-1} H_k^T$
+- Innovation covariance: $S_k \approx H_k P_{k|k-1} H_k^T$
 - Kalman gain becomes large
 - **Result**: Trust the measurement more
 
-#### When prediction is very reliable ($P_{k \mid k-1} \to 0$):
+#### When prediction is very reliable ($P_{k|k-1} \to 0$):
 - Kalman gain: $K_k \to 0$
 - **Result**: Trust the prediction more
 
