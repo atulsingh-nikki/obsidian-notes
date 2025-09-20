@@ -23,14 +23,14 @@ But where does this come from mathematically? Why is this approach optimal? The 
 
 Bayes' theorem, discovered in the 18th century, provides the mathematical foundation for all optimal estimation:
 
-$$P(x|z) = \frac{P(z|x) \cdot P(x)}{P(z)}$$
+$$P(x \mid z) = \frac{P(z \mid x) \cdot P(x)}{P(z)}$$
 
 ### In State Estimation Context
 
 For estimating a state $x$ given measurements $z$, this becomes:
 
-- **$P(x &#124; z)$** = **Posterior**: Our belief about the state after seeing the measurement
-- **$P(z &#124; x)$** = **Likelihood**: How likely this measurement is for each possible state
+- **$P(x \mid z)$** = **Posterior**: Our belief about the state after seeing the measurement
+- **$P(z \mid x)$** = **Likelihood**: How likely this measurement is for each possible state
 - **$P(x)$** = **Prior**: Our belief about the state before the measurement
 - **$P(z)$** = **Evidence**: Normalization constant (total probability of the measurement)
 
@@ -55,14 +55,14 @@ In dynamic systems, we have:
 #### 1. Prediction Step (Time Update)
 Propagate our belief forward in time:
 
-$$p(x_k|z_{1:k-1}) = \int p(x_k|x_{k-1}) \cdot p(x_{k-1}|z_{1:k-1}) \, dx_{k-1}$$
+$$p(x_k \mid z_{1:k-1}) = \int p(x_k \mid x_{k-1}) \cdot p(x_{k-1} \mid z_{1:k-1}) \, dx_{k-1}$$
 
 **Intuition**: If we knew the previous state perfectly, the system dynamics tell us where we'd be now. Since we don't know the previous state perfectly, we average over all possibilities.
 
 #### 2. Update Step (Measurement Update)  
 Incorporate new measurement using Bayes' theorem:
 
-$$p(x_k|z_{1:k}) = \frac{p(z_k|x_k) \cdot p(x_k|z_{1:k-1})}{p(z_k|z_{1:k-1})}$$
+$$p(x_k \mid z_{1:k}) = \frac{p(z_k \mid x_k) \cdot p(x_k \mid z_{1:k-1})}{p(z_k \mid z_{1:k-1})}$$
 
 **Intuition**: Compare our prediction with what we actually observed, then optimally combine them.
 
@@ -99,7 +99,7 @@ The Kalman filter assumes:
    $$\text{If } X \sim N(\mu_1, \Sigma_1) \text{ and } Y \sim N(\mu_2, \Sigma_2), \text{ then } X + Y \sim N(\mu_1 + \mu_2, \Sigma_1 + \Sigma_2)$$
 
 3. **Conditioning of joint Gaussian → Gaussian**
-   $$\text{If } [X \; Y]^T \text{ is jointly Gaussian, then } p(X|Y) \text{ is Gaussian}$$
+   $$\text{If } [X \; Y]^T \text{ is jointly Gaussian, then } p(X \mid Y) \text{ is Gaussian}$$
 
 ### The Practical Consequence
 
@@ -113,12 +113,12 @@ This reduces infinite-dimensional probability distributions to finite-dimensiona
 
 ### Prediction Step Mathematics
 
-**Prior at time k-1**: $p(x_{k-1}|z_{1:k-1}) = N(\hat{x}_{k-1|k-1}, P_{k-1|k-1})$
+**Prior at time k-1**: $p(x_{k-1} \mid z_{1:k-1}) = N(\hat{x}_{k-1|k-1}, P_{k-1|k-1})$
 
 **System dynamics**: $x_k = F_k x_{k-1} + B_k u_k + w_k$
 
 **Predicted distribution**: 
-$$p(x_k|z_{1:k-1}) = N(\hat{x}_{k|k-1}, P_{k|k-1})$$
+$$p(x_k \mid z_{1:k-1}) = N(\hat{x}_{k|k-1}, P_{k|k-1})$$
 
 Where:
 $$\hat{x}_{k|k-1} = F_k \hat{x}_{k-1|k-1} + B_k u_k \quad \text{(predicted mean)}$$
@@ -130,7 +130,7 @@ $$P_{k|k-1} = F_k P_{k-1|k-1} F_k^T + Q_k \quad \text{(predicted covariance)}$$
 $$\begin{bmatrix} x_k \\ z_k \end{bmatrix} \sim N\left(\begin{bmatrix} \hat{x}_{k|k-1} \\ H_k \hat{x}_{k|k-1} \end{bmatrix}, \begin{bmatrix} P_{k|k-1} & P_{k|k-1} H_k^T \\ H_k P_{k|k-1} & H_k P_{k|k-1} H_k^T + R_k \end{bmatrix}\right)$$
 
 Using the **conditional Gaussian formula**:
-$$p(X|Y) = N(\mu_X + \Sigma_{XY} \Sigma_{YY}^{-1}(Y - \mu_Y), \Sigma_{XX} - \Sigma_{XY} \Sigma_{YY}^{-1} \Sigma_{YX})$$
+$$p(X \mid Y) = N(\mu_X + \Sigma_{XY} \Sigma_{YY}^{-1}(Y - \mu_Y), \Sigma_{XX} - \Sigma_{XY} \Sigma_{YY}^{-1} \Sigma_{YX})$$
 
 This gives us:
 
@@ -172,7 +172,7 @@ The Kalman gain $K_k = P_{k|k-1} H_k^T S_k^{-1}$ is the **optimal weighting** be
 
 **Theorem**: Under linear-Gaussian assumptions, the Kalman filter provides the **Minimum Mean Squared Error (MMSE)** estimate:
 
-$$\hat{x}_{k|k} = \arg \min E[(x_k - \hat{x})^T(x_k - \hat{x})|z_{1:k}]$$
+$$\hat{x}_{k|k} = \arg \min E[(x_k - \hat{x})^T(x_k - \hat{x}) \mid z_{1:k}]$$
 
 This is the **best possible** linear estimator in the mean-squared-error sense!
 
