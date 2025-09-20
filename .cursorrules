@@ -1,0 +1,69 @@
+# Cursor Rules for Atul Singh Notes Repository
+
+## LaTeX Mathematical Expressions
+
+### Rule: Always use \mid for ALL pipe characters in mathematical expressions
+
+**Problem**: Pipe characters (`|`) in LaTeX math expressions cause rendering issues:
+- KaTeX parse errors in local markdown viewers  
+- Table delimiter conflicts on GitHub Pages
+- Inconsistent mathematical notation
+
+**Solution**: Replace ALL `|` with `\mid` in mathematical contexts:
+
+#### ✅ Correct Usage:
+```latex
+$p(x \mid z)$                    # Conditional probability
+$\hat{x}_{k \mid k}$            # Kalman filter state estimate  
+$P_{k \mid k-1}$                # Kalman filter covariance
+$E[X \mid Y]$                   # Conditional expectation
+```
+
+#### ❌ Incorrect Usage:
+```latex
+$p(x | z)$                      # Causes parse errors
+$\hat{x}_{k|k}$                # Causes table formatting issues
+$P_{k|k-1}$                    # Inconsistent notation
+```
+
+### Application:
+- **Blog posts** in `_posts/` directory
+- **Research notes** in `Research/` directory  
+- **Book content** in `Books/` directory
+- **Any markdown file** with mathematical expressions
+
+### Examples from Recent Fixes:
+- Kalman filter subscripts: `\hat{x}_{k \mid k-1}` instead of `\hat{x}_{k|k-1}`
+- Joint distributions: `p(x_k \mid z_{1:k})` instead of `p(x_k|z_{1:k})`
+- Innovation equations: All mathematical contexts use `\mid`
+
+## Other LaTeX Best Practices
+
+### Fractions:
+- Use `\frac{numerator}{denominator}` for complex fractions
+- Use `/` only for simple inline expressions
+
+### Matrices:
+- Use `\begin{bmatrix}...\end{bmatrix}` for matrices
+- Ensure proper alignment with `&` and `\\`
+
+### Greek Letters:
+- Use proper LaTeX commands: `\mu`, `\Sigma`, `\alpha`, etc.
+- Never use Unicode Greek characters in math expressions
+
+### Spacing:
+- Use `\quad` or `\,` for proper mathematical spacing
+- Use `\text{...}` for explanatory text within equations
+
+## Repository Specific Notes
+
+This repository contains:
+- **Jekyll blog** with MathJax support
+- **Research notes** with heavy mathematical content  
+- **Book manuscripts** requiring publication-quality math
+
+Consistent LaTeX notation ensures:
+- Proper rendering across all platforms
+- Professional mathematical presentation
+- No conflicts with Markdown table syntax
+- Compatibility with GitHub Pages and local viewers
