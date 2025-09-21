@@ -15,11 +15,34 @@
   box-sizing: border-box;
 }
 
-main#content {
-  max-width: 95%;
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
+/* Override Cayman theme's width constraints */
+.main-content,
+main#content,
+.page-header + .main-content,
+body .main-content {
+  max-width: 95% !important;
+  margin: 0 auto !important;
+  padding: 2rem !important;
+  width: 100% !important;
+}
+
+/* Force wider layout for GitHub Pages Cayman theme */
+@media screen and (min-width: 64em) {
+  .main-content {
+    max-width: 95% !important;
+    padding: 2rem 4rem !important;
+    margin: 0 auto !important;
+    font-size: 1.1rem !important;
+  }
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .main-content {
+    max-width: 95% !important;
+    padding: 2rem 2rem !important;
+    margin: 0 auto !important;
+    font-size: 1.1rem !important;
+  }
 }
 
 .bookshelf-page {
@@ -356,10 +379,22 @@ main#content {
   color: var(--text-muted);
 }
 
-.blog-post {
-  max-width: 90%;
-  margin: 0 auto;
-  padding: 3rem 2rem 4rem;
+/* Override theme containers for blog posts */
+.blog-post,
+.main-content .blog-post,
+article.blog-post {
+  max-width: 95% !important;
+  margin: 0 auto !important;
+  padding: 3rem 2rem 4rem !important;
+  width: 100% !important;
+}
+
+/* Additional container overrides */
+.container,
+.wrapper,
+section.main-content {
+  max-width: 95% !important;
+  width: 100% !important;
 }
 
 .blog-post__header {
@@ -377,12 +412,19 @@ main#content {
   font-size: 0.95rem;
 }
 
-.blog-post__content {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: var(--text);
-  display: grid;
-  gap: 1.5rem;
+/* Ensure blog post content uses full width */
+.blog-post__content,
+.main-content .blog-post__content,
+article .blog-post__content {
+  font-size: 1.05rem !important;
+  line-height: 1.8 !important;
+  color: var(--text) !important;
+  display: block !important;
+  gap: 1.5rem !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .blog-post__content p {
