@@ -36,80 +36,18 @@ For estimating a state $x$ given measurements $z$, this becomes:
 
 ## Real-Life Examples: Making Bayes Tangible
 
-Let's understand these concepts through concrete examples before diving into mathematics.
+Let's understand these concepts through concrete examples organized in an easy-to-compare table format.
 
-### Example 1: Medical Diagnosis 🏥
-
-**Scenario**: A patient has a suspicious spot on an X-ray. What's the probability they have cancer?
-
-- **Prior $P(\text{cancer})$**: Based on population statistics
-  - Age 30: 0.1% chance
-  - Age 60: 2% chance  
-  - Age 80: 8% chance
-
-- **Likelihood $P(\text{spot} \mid \text{cancer})$**: Given someone has cancer, how likely is this type of spot?
-  - Malignant tumors show this pattern: 85%
-  - Normal tissue shows this pattern: 5%
-
-- **Evidence $P(\text{spot})$**: How common are spots like this overall?
-  - Combines all ways a spot can appear
-
-- **Posterior $P(\text{cancer} \mid \text{spot})$**: After seeing the X-ray, updated probability of cancer
-
-**How Probability Helps**: Without Bayes, doctors might overreact to every suspicious spot. With it, they can weigh base rates against symptoms for more accurate diagnoses.
-
-### Example 2: GPS Navigation 🚗
-
-**Scenario**: Your GPS is trying to figure out which road you're on.
-
-- **Prior $P(\text{highway})$**: Based on your recent trajectory
-  - Coming from highway exit: 90%
-  - Coming from residential area: 10%
-
-- **Likelihood $P(\text{GPS signal} \mid \text{location})$**: How likely is this GPS reading for each road?
-  - Highway (open sky): Strong signal likely
-  - City street (buildings): Weak signal likely
-
-- **Evidence $P(\text{GPS signal})$**: Overall probability of this signal strength
-
-- **Posterior $P(\text{highway} \mid \text{GPS signal})$**: Updated belief about your location
-
-**How Probability Helps**: GPS systems continuously update your most likely position by combining movement patterns with signal strength, giving you accurate navigation even with noisy satellite data.
-
-### Example 3: Spam Email Detection 📧
-
-**Scenario**: An email arrives with certain words. Is it spam?
-
-- **Prior $P(\text{spam})$**: Historical spam rate
-  - Your inbox typically gets 60% spam
-
-- **Likelihood $P(\text{words} \mid \text{spam})$**: Given it's spam, how likely are these words?
-  - "FREE MONEY": Very likely in spam (90%)
-  - "Meeting tomorrow": Unlikely in spam (5%)
-
-- **Evidence $P(\text{words})$**: How common are these words overall?
-
-- **Posterior $P(\text{spam} \mid \text{words})$**: Updated spam probability after reading the words
-
-**How Probability Helps**: Email filters avoid both false positives (important emails in spam) and false negatives (spam in inbox) by properly weighing word patterns against base rates.
-
-### Example 4: Autonomous Vehicle Tracking 🚙
-
-**Scenario**: A self-driving car's radar detects an object. What is it?
-
-- **Prior $P(\text{pedestrian})$**: Context-based expectation
-  - Near crosswalk at school: 40%
-  - On highway at night: 0.1%
-
-- **Likelihood $P(\text{radar signature} \mid \text{pedestrian})$**: Given it's a pedestrian, how likely is this radar pattern?
-  - Human-sized, walking speed: 95%
-  - Large, fast-moving: 2%
-
-- **Evidence $P(\text{radar signature})$**: How common is this radar pattern?
-
-- **Posterior $P(\text{pedestrian} \mid \text{radar signature})$**: Updated belief after sensor reading
-
-**How Probability Helps**: Autonomous vehicles make life-or-death decisions by correctly interpreting noisy sensor data in context, avoiding both dangerous overconfidence and paralyzing uncertainty.
+| **Scenario** | **Prior $P(\text{state})$** | **Likelihood $P(\text{observation} \mid \text{state})$** | **Evidence $P(\text{observation})$** | **Posterior $P(\text{state} \mid \text{observation})$** | **How Probability Helps** |
+|---|---|---|---|---|---|
+| **🏥 Medical Diagnosis**<br/>*Suspicious X-ray spot* | **Base rate by age:**<br/>• Age 30: 0.1%<br/>• Age 60: 2%<br/>• Age 80: 8% | **Pattern likelihood:**<br/>• Cancer present: 85%<br/>• Normal tissue: 5% | **Overall spot frequency:**<br/>Combines all causes of similar spots | **Updated cancer probability** after seeing X-ray | Prevents overreaction to every suspicious finding; weighs symptoms against base rates |
+| **🚗 GPS Navigation**<br/>*Determining current road* | **Location from trajectory:**<br/>• From highway exit: 90%<br/>• From residential: 10% | **Signal strength by location:**<br/>• Highway (open): Strong likely<br/>• City street (buildings): Weak likely | **Overall signal probability:**<br/>All ways to get this signal | **Most likely road location** | Accurate navigation despite noisy satellite data; combines movement with signal quality |
+| **📧 Spam Detection**<br/>*Email classification* | **Historical spam rate:**<br/>• Your inbox: 60% spam<br/>• Corporate email: 20% spam | **Word patterns:**<br/>• "FREE MONEY" in spam: 90%<br/>• "Meeting tomorrow" in spam: 5% | **Overall word frequency:**<br/>How common these words are | **Spam probability** after reading content | Balances false positives vs negatives; proper weighting of word patterns |
+| **🚙 Autonomous Vehicle**<br/>*Object identification* | **Context-based expectation:**<br/>• School crosswalk: 40% pedestrian<br/>• Highway night: 0.1% pedestrian | **Radar signature match:**<br/>• Human-sized, walking: 95%<br/>• Large, fast-moving: 2% | **Overall signature probability:**<br/>All objects with this pattern | **Object type probability** | Life-or-death decisions from noisy sensors; avoids overconfidence and paralysis |
+| **🌤️ Weather Prediction**<br/>*Rain forecast* | **Seasonal probability:**<br/>• Summer in desert: 5%<br/>• Monsoon season: 70% | **Cloud patterns:**<br/>• Dark clouds + rain: 80%<br/>• Clear skies + rain: 1% | **Overall cloud frequency:**<br/>How often we see these clouds | **Rain probability** given cloud observation | Accurate forecasts combining seasonal patterns with current conditions |
+| **💳 Fraud Detection**<br/>*Credit card transaction* | **Account behavior:**<br/>• Normal user: 0.1% fraud rate<br/>• Flagged account: 15% fraud rate | **Transaction patterns:**<br/>• Unusual location: 60% if fraud<br/>• Normal merchant: 5% if fraud | **Overall transaction probability:**<br/>How common this type of purchase is | **Fraud probability** for this transaction | Reduces false alarms while catching real fraud; considers user history |
+| **🎯 Recommendation System**<br/>*Movie suggestion* | **Genre preferences:**<br/>• User loves comedy: 30%<br/>• User avoids horror: 5% | **Movie features:**<br/>• Comedy with favorite actor: 90%<br/>• Horror with favorite actor: 20% | **Overall movie popularity:**<br/>How generally liked this movie is | **User rating prediction** | Personalized recommendations combining individual taste with movie characteristics |
+| **🔍 Face Recognition**<br/>*Identity verification* | **Security context:**<br/>• Authorized area: 80% known person<br/>• Public area: 10% known person | **Facial features:**<br/>• Perfect match: 95% correct ID<br/>• Partial match: 30% correct ID | **Overall feature probability:**<br/>How common these features are | **Identity confidence** level | Balances security with usability; considers both context and image quality |
 
 ## The Universal Pattern
 
