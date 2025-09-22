@@ -180,6 +180,55 @@ Put it all together, and humans achieve something cameras still struggle with: *
 
 ![Human color constancy: how context affects perceived color](images/human_constancy_placeholder.png)
 
+### What Makes This Image Special
+
+This image demonstrates **the most important principle in human color perception**: **identical pixels can look completely different depending on context**.
+
+#### **The Illusion Breakdown:**
+- **Left side**: Cool blue-tinted environment (simulating daylight/shade)
+- **Right side**: Warm red-tinted environment (simulating incandescent/sunset light)
+- **Gray patches**: Physically identical RGB values in both squares
+
+#### **What You Actually See:**
+- **Left gray patch**: Appears warmer, more orange/yellow
+- **Right gray patch**: Appears cooler, more blue/purple
+- **Your brain**: Automatically "corrects" for the surrounding illumination
+
+#### **Why This Happens (The Mechanisms in Action):**
+
+**1. Contextual Priors**: Your brain assumes the gray patches are supposed to be neutral. When it sees a "neutral" patch in blue light, it thinks: "This should be gray, but it looks bluish, so the lighting must be blue. Let me mentally subtract blue to recover the true gray color."
+
+**2. Local Adaptation**: The left and right halves of your retina adapt to different color environments simultaneously. The blue-adapted left region becomes less sensitive to blue, making the gray patch look more orange by contrast.
+
+**3. Simultaneous Contrast**: The surrounding colors directly influence perception. Blue surroundings make the center appear more orange; red surroundings make it appear more blue.
+
+**4. Spatial Intelligence**: Your brain uses the color gradient from edge to center to infer lighting conditions and automatically compensate.
+
+#### **The Profound Implication:**
+**This is exactly what happens in real-world color constancy**. When you look at a white piece of paper under yellow candlelight, your brain:
+1. Sees yellowish pixels
+2. Recognizes contextual cues (warm light source, evening setting)  
+3. Assumes the paper "should" be white
+4. Mentally subtracts the yellow cast
+5. Makes you perceive the paper as white
+
+#### **Why Cameras Fail Here:**
+A camera analyzing this image would report:
+- "Left patch: RGB(128,128,128)"
+- "Right patch: RGB(128,128,128)" 
+- "Conclusion: Identical colors"
+
+**The camera is technically correct but perceptually wrong**. It lacks the contextual intelligence to understand that identical pixels in different illumination contexts represent different material properties.
+
+#### **The Research Challenge:**
+Building algorithms that can do what your brain just did effortlessly:
+- Detect illumination context from spatial patterns
+- Infer material properties separate from lighting
+- Apply appropriate contextual corrections
+- Handle multiple simultaneous lighting conditions
+
+This single image encapsulates why computational color constancy is one of computer vision's most challenging problems — we're trying to reverse-engineer millions of years of visual evolution.
+
 ### Why Cameras Can't Match This (Yet)
 Cameras lack:
 - **Contextual memory**: They don't know what color grass "should" be
