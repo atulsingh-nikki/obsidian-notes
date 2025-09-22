@@ -22,7 +22,7 @@ async function init() {
     const books = await loadBooks();
     state.books = books;
     if (books.length === 0) {
-      renderNavigationPlaceholder("No book directories were found. Add folders that start with ‘Book_’.");
+      renderNavigationPlaceholder("No learning collection directories were found. Add folders that start with 'Book_'.");
       renderContentMessage("No content to display yet.");
       return;
     }
@@ -36,7 +36,7 @@ async function init() {
     }
   } catch (error) {
     console.error(error);
-    renderNavigationPlaceholder("Unable to load book metadata. Ensure books.json exists.");
+    renderNavigationPlaceholder("Unable to load learning collection metadata. Ensure books.json exists.");
     renderError(String(error));
   }
 }

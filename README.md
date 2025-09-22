@@ -1,6 +1,6 @@
 # Atul Singh Notes
 
-This repository contains long-form research notes, two in-progress books, and a blog for shorter updates.
+This repository contains long-form research notes, two in-progress learning projects, and a blog for shorter updates.
 
 👉 View the published site on GitHub Pages: <https://atulsingh-nikki.github.io/obsidian-notes/>
 
@@ -36,7 +36,7 @@ python3 scripts/generate_books_index.py
 ```
 
 Commit the updated `books.json` file alongside your content changes to keep the
-site in sync with the repository.
+learning collection in sync with the repository.
 
 ## Writing blog posts
 
