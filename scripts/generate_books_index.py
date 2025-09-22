@@ -11,7 +11,7 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
-from typing import List
+from typing import Iterable, List
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "books.json"
@@ -81,6 +81,32 @@ def discover_markdown_files(directory: Path) -> List[Path]:
     return markdown_files
 
 
+def iter_book_directories() -> Iterable[Path]:
+    """Yield directories that contain book content.
+
+    Historically the repository stored ``Book_*`` folders at the project root,
+    but they have since been grouped inside a ``Books`` directory.  To remain
+    backwards compatible and support both layouts we look in each location.
+    Duplicate directories are ignored in case a symlink is present.
+    """
+
+    search_roots = [ROOT]
+    books_folder = ROOT / "Books"
+    if books_folder.is_dir():
+        search_roots.append(books_folder)
+
+    seen: set[Path] = set()
+    for base in search_roots:
+        for candidate in base.iterdir():
+            if not candidate.is_dir() or not candidate.name.startswith(BOOK_PREFIX):
+                continue
+            resolved = candidate.resolve()
+            if resolved in seen:
+                continue
+            seen.add(resolved)
+            yield candidate
+
+
 def build_book(book_dir: Path) -> dict:
     """Build the data structure describing a single book."""
     sections = []
@@ -116,7 +142,7 @@ def build_book(book_dir: Path) -> dict:
 
     return {
         "title": format_book_title(book_dir.name),
-        "path": book_dir.name,
+        "path": book_dir.relative_to(ROOT).as_posix(),
         "sections": sections,
     }
 
@@ -140,8 +166,8 @@ def make_item(path: Path, display_root: Path | None = None) -> dict:
 
 
 def main() -> None:
-    book_dirs = [p for p in ROOT.iterdir() if p.is_dir() and p.name.startswith(BOOK_PREFIX)]
-    books = [build_book(book_dir) for book_dir in sorted(book_dirs, key=lambda p: natural_key(p.name))]
+    book_dirs = sorted(iter_book_directories(), key=lambda p: natural_key(p.name))
+    books = [build_book(book_dir) for book_dir in book_dirs]
 
     OUTPUT.write_text(json.dumps(books, indent=2), encoding="utf-8")
     print(f"Wrote {OUTPUT.relative_to(ROOT)} with {len(books)} books.")
