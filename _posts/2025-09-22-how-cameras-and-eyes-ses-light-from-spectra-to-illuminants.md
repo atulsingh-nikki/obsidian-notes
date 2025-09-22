@@ -16,7 +16,7 @@ Every light source has its own **spectral power distribution (SPD)**: how much e
 
 **Units:** watts per nanometer (W/nm), telling you how much power is packed into each tiny slice of the spectrum.  
 
-![Spectral Power Distributions of different light sources]({{ '/assets/images/spd_placeholder.png' | relative_url }})
+![Spectral Power Distributions of different light sources](images/spd_placeholder.png)
 
 ---
 
@@ -31,7 +31,7 @@ $$
 - Red apple → high in red, low elsewhere.  
 - Asphalt → very low everywhere.  
 
-![Surface reflectance spectra for different materials]({{ '/assets/images/reflectance_placeholder.png' | relative_url }})
+![Surface reflectance spectra for different materials](images/reflectance_placeholder.png)
 
 ---
 
@@ -44,7 +44,7 @@ $$
 E_c = \int L(\lambda)\,R(\lambda)\,S_c(\lambda)\,d\lambda
 $$  
 
-![Camera spectral sensitivity curves for RGB channels]({{ '/assets/images/camera_sensitivity_placeholder.png' | relative_url }})
+![Camera spectral sensitivity curves for RGB channels](images/camera_sensitivity_placeholder.png)
 
 ---
 
@@ -57,7 +57,7 @@ Each stage scales the signal:
 
 At each wavelength, multiply them. Then integrate over all wavelengths.  
 
-![Per-channel contribution: L(λ) × R(λ) × S_c(λ)]({{ '/assets/images/multiplication_chain_placeholder.png' | relative_url }})
+![Per-channel contribution: L(λ) × R(λ) × S_c(λ)](images/multiplication_chain_placeholder.png)
 
 ---
 
@@ -66,7 +66,7 @@ The human eye samples color with **three cone types** (S, M, L). Each has its ow
 
 A camera with a Bayer filter does something similar but clumsier: each pixel sees only one filter (R, G, or B), so it needs **debayering** (interpolating missing channels) to reconstruct full RGB.  
 
-![Human cone sensitivity vs camera Bayer filter comparison]({{ '/assets/images/cones_vs_bayer_placeholder.png' | relative_url }})
+![Human cone sensitivity vs camera Bayer filter comparison](images/cones_vs_bayer_placeholder.png)
 
 ---
 
@@ -77,7 +77,7 @@ Why it’s **ill-posed**:
 - A white sheet under yellow light looks the same as a yellow sheet under white light.  
 - Camera gives only three numbers (R, G, B) per pixel, but both illuminant \(L(\lambda)\) and reflectance \(R(\lambda)\) are unknown.  
 
-![The illuminant estimation problem: different lights can produce identical camera responses]({{ '/assets/images/illuminant_problem_placeholder.png' | relative_url }})
+*[Diagram would show: Same image under different illuminants - white sheet under yellow light vs yellow sheet under white light]*
 
 ---
 
@@ -88,7 +88,7 @@ Classic trick: assume that, on average, the world is gray.
 - If the averages aren’t equal, the imbalance is blamed on the illuminant.  
 - Correct by scaling channels to equalize the averages.  
 
-![Gray World assumption: channel means before and after correction]({{ '/assets/images/grayworld_placeholder.png' | relative_url }})
+![Gray World assumption: channel means before and after correction](images/grayworld_placeholder.png)
 
 ---
 
@@ -103,7 +103,7 @@ E_c^{(p)} = \left(\frac{1}{N} \sum_i I_c(i)^p \right)^{1/p}
 - \(p=\infty\): White Patch (brightest pixel).  
 - Intermediate \(p\): Shades of Gray methods.  
 
-![Minkowski p-norm: varying emphasis from mean (p=1) to max (p→∞)]({{ '/assets/images/minkowski_placeholder.png' | relative_url }})
+![Minkowski p-norm: varying emphasis from mean (p=1) to max (p→∞)](images/minkowski_placeholder.png)
 
 ---
 
@@ -126,7 +126,7 @@ Computer vision strategies:
 - Train deep models to output illuminant fields.  
 - Sometimes, ask the user (click the white patch in software).  
 
-![Multiple illuminants: example spectral power distributions and mixed lighting]({{ '/assets/images/multiple_lights_placeholder.png' | relative_url }})
+![Multiple illuminants: example spectral power distributions and mixed lighting](images/multiple_lights_placeholder.png)
 
 ---
 
@@ -138,7 +138,7 @@ Our eyes and brains cheat elegantly:
 - **Attention-driven tuning**: fixating on lamp-lit vs daylight-lit regions shifts balance.  
 - **Specular cues**: highlights give away the true illuminant.  
 
-![Human color constancy: how context affects perceived color]({{ '/assets/images/human_constancy_placeholder.png' | relative_url }})
+![Human color constancy: how context affects perceived color](images/human_constancy_placeholder.png)
 
 ---
 
