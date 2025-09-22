@@ -130,15 +130,64 @@ Computer vision strategies:
 
 ---
 
-## How Humans Do It
-Our eyes and brains cheat elegantly:  
+## How Humans Do It: The Goal of Color Constancy
 
-- **Local adaptation**: different retinal regions recalibrate.  
-- **Contextual priors**: bananas are yellow, walls are white.  
-- **Attention-driven tuning**: fixating on lamp-lit vs daylight-lit regions shifts balance.  
-- **Specular cues**: highlights give away the true illuminant.  
+**What we're trying to achieve**: See a red apple as red whether it's under yellow candlelight, blue skylight, or white fluorescent tubes. This is called **color constancy** — the ability to perceive object colors as stable despite dramatic changes in illumination.
+
+### Why This Matters
+Without color constancy, our visual world would be chaos:
+- A banana would look yellow at noon, orange at sunset, and blue-green under fluorescent light
+- We couldn't recognize objects by color across different lighting conditions  
+- Survival tasks (ripe fruit, healthy skin, dangerous signals) would be impossible
+
+### The Human Advantage
+Cameras struggle with this because they're largely **context-blind**. A white balance algorithm sees RGB numbers and applies math. Humans use **contextual intelligence** that evolved over millions of years.
+
+### How Our Brains Cheat Elegantly
+
+#### **1. Local Adaptation**
+Different parts of your retina **recalibrate independently**:
+- Look at a lamp, then at a daylight window — your eye adapts the sensitivity of different retinal regions
+- This lets you see both the warm lamp-lit area and cool daylight area as having "normal" colors simultaneously
+- Cameras can't do this — they apply one global white balance to the entire image
+
+#### **2. Contextual Priors** 
+Your brain has a **database of "known" object colors**:
+- Snow is white, grass is green, skin has predictable tones
+- When your brain sees something that should be white but looks yellowish, it assumes yellow lighting and mentally "corrects" the entire scene
+- This is why the famous blue/black vs white/gold dress illusion works — people make different assumptions about the lighting
+
+#### **3. Attention-Driven Tuning**
+Your **focal attention** actively shifts color balance:
+- Fixating on the lamp-lit part of a scene makes that region look more neutral
+- Look at the daylight area, and suddenly that looks normal while the lamp area looks warm
+- This is like having a smart, adaptive white balance that follows your gaze
+
+#### **4. Specular Highlights**
+Shiny surfaces give away the **true illuminant color**:
+- The bright reflection off a glossy apple shows the actual light color
+- Your brain uses these "uncorrupted" signals to infer what the lighting really is
+- Then it mentally subtracts that color cast from everything else
+
+#### **5. Edge and Shadow Analysis**
+Humans are incredibly good at using **spatial relationships**:
+- Cast shadows reveal the light source color
+- Color changes at edges between lit and shadowed areas
+- The same surface under different illumination zones gives multiple data points
+
+### The Remarkable Result
+Put it all together, and humans achieve something cameras still struggle with: **seeing object color, not illuminant color**. We literally see past the physics to perceive the underlying material properties.
 
 ![Human color constancy: how context affects perceived color](images/human_constancy_placeholder.png)
+
+### Why Cameras Can't Match This (Yet)
+Cameras lack:
+- **Contextual memory**: They don't know what color grass "should" be
+- **Spatial intelligence**: They can't reason about shadows, highlights, and material boundaries  
+- **Attentional control**: They can't adaptively focus processing on relevant regions
+- **Temporal integration**: They can't combine information across eye movements and time
+
+**The goal for computational color constancy**: Build algorithms that can do even a fraction of what human vision accomplishes effortlessly every day.
 
 ---
 
