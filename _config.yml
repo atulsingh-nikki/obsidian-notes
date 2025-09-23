@@ -12,3 +12,7 @@ plugins:
   - jekyll-seo-tag
 github:
   is_project_page: false
+
+# Configure Google Analytics by setting a measurement ID.
+# Update this value to change the property that receives traffic metrics.
+google_analytics: G-3X6LQQ24YV
