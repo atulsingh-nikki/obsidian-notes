@@ -9,7 +9,7 @@ tags: [mathematics, computer-vision, spectral-analysis, machine-learning, graph-
 
 Here's an elementary problem that appears deceptively simple:
 
-> **Q3.** If $A = [a_{ij}]_{n \times n}$ where $a_{ij} = i^{100} + j^{100}$, then  
+> **Q.** If $A = [a_{ij}]_{n \times n}$ where $a_{ij} = i^{100} + j^{100}$, then  
 > $$
 > \lim_{n \to \infty} \frac{\sum_{i=1}^n a_{ii}}{n^{101}}
 > $$  
