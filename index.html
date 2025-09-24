@@ -5,43 +5,80 @@ title: Atul Singh Notes
 description: Explore the long-form research and learning projects stored in this repository.
 ---
 
-<div class="bookshelf-page">
-  <header class="bookshelf-header">
-    <div class="bookshelf-header__content">
-      <h1>Learning Collection</h1>
-      <p class="bookshelf-header__tagline">
-        Explore the long-form research and learning projects stored in this repository.
-      </p>
-      <p class="bookshelf-header__blog-cta">
-        Looking for shorter updates? Visit the <a href="{{ '/blog/' | relative_url }}">blog</a> for essays and changelog-style notes.
-      </p>
-    </div>
-  </header>
-
-  <div class="bookshelf-layout">
-    <aside class="bookshelf-sidebar" id="sidebar" aria-label="Book navigation">
-      <div class="bookshelf-sidebar__inner">
-        <div class="bookshelf-sidebar__intro">
-          <h2>Contents</h2>
-          <p>Select a chapter to load it on the right.</p>
+<div class="home-page">
+  <div class="home-page__grid">
+    <section class="home-page__column home-page__column--books" aria-labelledby="learning-collection">
+      <header class="bookshelf-header">
+        <div class="bookshelf-header__content">
+          <h1 id="learning-collection">Learning Collection</h1>
+          <p class="bookshelf-header__tagline">
+            Explore the long-form research and learning projects stored in this repository.
+          </p>
+          <p class="bookshelf-header__blog-cta">
+            Looking for shorter updates? Visit the <a href="{{ '/blog/' | relative_url }}">blog</a> for essays and changelog-style notes.
+          </p>
         </div>
-        <nav id="book-navigation" class="bookshelf-navigation" aria-live="polite"></nav>
+      </header>
+
+      <div class="bookshelf-layout">
+        <aside class="bookshelf-sidebar" id="sidebar" aria-label="Book navigation">
+          <div class="bookshelf-sidebar__inner">
+            <div class="bookshelf-sidebar__intro">
+              <h2>Contents</h2>
+              <p>Select a chapter to load it on the right.</p>
+            </div>
+            <nav id="book-navigation" class="bookshelf-navigation" aria-live="polite"></nav>
+          </div>
+        </aside>
+
+        <main id="main" class="bookshelf-main" tabindex="-1">
+          <article id="book-content" class="bookshelf-content">
+            <div class="bookshelf-placeholder">
+              <p>Use the navigation to choose a chapter. The content will appear here.</p>
+            </div>
+          </article>
+        </main>
       </div>
-    </aside>
 
-    <main id="main" class="bookshelf-main" tabindex="-1">
-      <article id="book-content" class="bookshelf-content">
-        <div class="bookshelf-placeholder">
-          <p>Use the navigation to choose a chapter. The content will appear here.</p>
+      <footer class="bookshelf-footer">
+        <p>
+          Built with <a href="https://marked.js.org/" rel="noopener" target="_blank">Marked</a>. Markdown sources live in this repository,
+          so updates to the notes will automatically appear once the site is rebuilt.
+        </p>
+      </footer>
+    </section>
+
+    <section class="home-page__column home-page__column--blog" aria-labelledby="homepage-blog">
+      <header class="home-blog__header">
+        <h2 id="homepage-blog">Latest from the Blog</h2>
+        <p class="home-blog__description">
+          Short updates, context, and essays that complement the long-form notes in the bookshelf.
+        </p>
+      </header>
+
+      {%- if site.posts and site.posts.size > 0 -%}
+        <div class="home-blog__list">
+          {%- for post in site.posts limit: 4 -%}
+            <article class="home-blog__item">
+              <h3 class="home-blog__item-title">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </h3>
+              <p class="home-blog__item-meta">
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+                {%- if post.tags and post.tags.size > 0 -%}
+                  · <span class="home-blog__item-tags">{{ post.tags | join: ", " }}</span>
+                {%- endif -%}
+              </p>
+              <p class="home-blog__item-excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>
+              <a class="home-blog__item-read-more" href="{{ post.url | relative_url }}">Read more →</a>
+            </article>
+          {%- endfor -%}
         </div>
-      </article>
-    </main>
-  </div>
+      {%- else -%}
+        <p class="home-blog__empty">No posts yet. Check back soon for updates.</p>
+      {%- endif -%}
 
-  <footer class="bookshelf-footer">
-    <p>
-      Built with <a href="https://marked.js.org/" rel="noopener" target="_blank">Marked</a>. Markdown sources live in this repository,
-      so updates to the notes will automatically appear once the site is rebuilt.
-    </p>
-  </footer>
+      <a class="home-blog__cta" href="{{ '/blog/' | relative_url }}">Explore all posts →</a>
+    </section>
+  </div>
 </div>
