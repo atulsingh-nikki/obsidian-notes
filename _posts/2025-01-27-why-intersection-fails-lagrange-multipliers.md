@@ -187,6 +187,8 @@ $$h(\frac{\pi}{4} \pm \epsilon) \approx h(\frac{\pi}{4}) + h''(\frac{\pi}{4})\fr
 
 So moving in **either direction** from the critical point **decreases** the function—confirming it's a local maximum!
 
+![Animated neighborhood walk showing the circle constraint and objective values]({{ '/assets/images/lagrange/neighborhood-analysis.gif' | relative_url }})
+
 ---
 
 ## Example 3: The Deceptive Intersection  
