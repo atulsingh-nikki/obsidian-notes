@@ -52,6 +52,18 @@
     });
   }
 
+  function circle2DTrace(samples) {
+    return {
+      type: 'scatter',
+      mode: 'lines',
+      name: 'Constraint x² + y² = 1',
+      line: { color: '#1f77b4', width: 3 },
+      x: samples.map((p) => p.x),
+      y: samples.map((p) => p.y),
+      hovertemplate: 'Constraint:<br>x=%{x:.2f}, y=%{y:.2f}<extra></extra>',
+    };
+  }
+
   function makeGradientTrace(point, color, name) {
     const gradStep = 0.45;
     const x2 = point.x + point.grad[0] * gradStep;
@@ -109,6 +121,80 @@
     };
   }
 
+  function make2DArrowTrace(point, grad, color, label) {
+    const gradStep = 0.55;
+    const x2 = point.x + grad[0] * gradStep;
+    const y2 = point.y + grad[1] * gradStep;
+    return {
+      type: 'scatter',
+      mode: 'lines+markers',
+      name: label,
+      line: { color, width: 3 },
+      marker: { size: 6, color },
+      x: [point.x, x2],
+      y: [point.y, y2],
+      hovertemplate: `${label}:<br>x=%{x:.2f}, y=%{y:.2f}<extra></extra>`,
+    };
+  }
+
+  function make2DPointTrace(point, color, label) {
+    return {
+      type: 'scatter',
+      mode: 'markers+text',
+      name: label,
+      marker: { color, size: 9 },
+      text: [label],
+      textposition: 'top center',
+      x: [point.x],
+      y: [point.y],
+      hovertemplate: `${label}:<br>x=%{x:.2f}, y=%{y:.2f}<extra></extra>`,
+    };
+  }
+
+  function makeAxesLine(axis, color, name) {
+    return {
+      type: 'scatter',
+      mode: 'lines',
+      name,
+      line: { color, width: 2, dash: 'dash' },
+      x: axis.x,
+      y: axis.y,
+      hoverinfo: 'skip',
+    };
+  }
+
+  function makeHyperbolaTrace(value) {
+    const samples = 160;
+    const xs = [];
+    const ys = [];
+    const range = 1.5;
+    for (let i = 0; i < samples; i += 1) {
+      const x = -range + (2 * range * i) / (samples - 1);
+      if (Math.abs(x) < 0.2) {
+        xs.push(null);
+        ys.push(null);
+        continue;
+      }
+      const y = value / x;
+      if (Math.abs(y) <= range) {
+        xs.push(x);
+        ys.push(y);
+      } else {
+        xs.push(null);
+        ys.push(null);
+      }
+    }
+    return {
+      type: 'scatter',
+      mode: 'lines',
+      name: `Level set xy = ${value}`,
+      line: { color: '#d62728', width: 3 },
+      x: xs,
+      y: ys,
+      hovertemplate: 'Level set:<br>x=%{x:.2f}, y=%{y:.2f}<extra></extra>',
+    };
+  }
+
   function ensurePlotly(callback) {
     if (window.Plotly) {
       callback();
@@ -120,12 +206,16 @@
   function renderPlots() {
     const intersectionContainer = document.getElementById('lagrange-intersection-3d');
     const tangencyContainer = document.getElementById('lagrange-tangency-3d');
+    const intersection2dContainer = document.getElementById('lagrange-intersection-2d');
+    const tangency2dContainer = document.getElementById('lagrange-tangency-2d');
+
     if (!intersectionContainer || !tangencyContainer) {
       return;
     }
 
     const { xVals, yVals, zMatrix } = buildSurfaceData();
     const constraintSamples = circleConstraintSamples(160);
+    const circleTrace2D = circle2DTrace(constraintSamples);
     const surfaceTraceIntersection = makeSurfaceTrace(xVals, yVals, zMatrix);
     const surfaceTraceTangency = makeSurfaceTrace(xVals, yVals, zMatrix);
     const constraintTraceIntersection = makeConstraintTrace(constraintSamples);
@@ -186,6 +276,54 @@
       },
       { responsive: true }
     );
+
+    if (intersection2dContainer && tangency2dContainer) {
+      const axesLines = [
+        makeAxesLine({ x: [-1.6, 1.6], y: [0, 0] }, '#ff7f0e', 'Level set f = 0 (y=0)'),
+        makeAxesLine({ x: [0, 0], y: [-1.6, 1.6] }, '#ff7f0e', 'Level set f = 0 (x=0)'),
+      ];
+      const hyperbolaTrace = makeHyperbolaTrace(0.5);
+
+      const base2DLayout = {
+        xaxis: { title: 'x', range: [-1.5, 1.5], zeroline: false },
+        yaxis: { title: 'y', range: [-1.5, 1.5], zeroline: false, scaleanchor: 'x' },
+        margin: { l: 50, r: 20, t: 40, b: 40 },
+        legend: { orientation: 'h' },
+        height: 420,
+      };
+
+      Plotly.newPlot(
+        intersection2dContainer,
+        [
+          circleTrace2D,
+          ...axesLines,
+          make2DPointTrace(intersectionPoint, '#d62728', 'Intersection point'),
+          make2DArrowTrace(intersectionPoint, intersectionPoint.grad, '#d62728', '∇f'),
+          make2DArrowTrace(intersectionPoint, intersectionPoint.gradConstraint, '#2ca02c', '∇g'),
+        ],
+        {
+          ...base2DLayout,
+          title: 'Intersection in the constraint plane',
+        },
+        { responsive: true }
+      );
+
+      Plotly.newPlot(
+        tangency2dContainer,
+        [
+          circleTrace2D,
+          hyperbolaTrace,
+          make2DPointTrace(tangencyPoint, '#9467bd', 'Tangency point'),
+          make2DArrowTrace(tangencyPoint, tangencyPoint.grad, '#d62728', '∇f'),
+          make2DArrowTrace(tangencyPoint, tangencyPoint.gradConstraint, '#2ca02c', '∇g'),
+        ],
+        {
+          ...base2DLayout,
+          title: 'Tangency in the constraint plane',
+        },
+        { responsive: true }
+      );
+    }
 
     Plotly.newPlot(
       tangencyContainer,

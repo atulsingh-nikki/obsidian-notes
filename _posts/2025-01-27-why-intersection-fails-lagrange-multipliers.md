@@ -299,6 +299,16 @@ So moving in **either direction** from the critical point **decreases** the func
 <div class="lagrange-plot-wrapper">
   <div id="lagrange-tangency-3d" class="lagrange-plot"></div>
 </div>
+
+<p>Drop into the $xy$-plane to see just the constraint curve and level sets.</p>
+
+<div class="lagrange-plot-wrapper">
+  <div id="lagrange-intersection-2d" class="lagrange-plot"></div>
+</div>
+
+<div class="lagrange-plot-wrapper">
+  <div id="lagrange-tangency-2d" class="lagrange-plot"></div>
+</div>
 </div>
 
 ---
