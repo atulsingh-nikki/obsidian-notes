@@ -289,6 +289,18 @@ So moving in **either direction** from the critical point **decreases** the func
 
 ![Animated neighborhood walk showing the circle constraint and objective values]({{ '/assets/images/lagrange/neighborhood-analysis.gif' | relative_url }})
 
+<div class="lagrange-3d-block">
+<p><strong>Explore the surfaces interactively.</strong> The plots below show the saddle surface $f(x,y) = xy$, the unit-circle constraint, and the level planes that either cross or just touch the constraint. Rotate, zoom, and inspect the gradient arrows to see why the two situations behave so differently.</p>
+
+<div class="lagrange-plot-wrapper">
+  <div id="lagrange-intersection-3d" class="lagrange-plot"></div>
+</div>
+
+<div class="lagrange-plot-wrapper">
+  <div id="lagrange-tangency-3d" class="lagrange-plot"></div>
+</div>
+</div>
+
 ---
 
 ## Example 3: The Deceptive Intersection  
@@ -483,3 +495,15 @@ The method works because optimization is fundamentally about finding points wher
 - **Rudin, W.** - *Principles of Mathematical Analysis* (Rigorous treatment of constrained optimization)
 
 The visual understanding developed here forms the foundation for more advanced topics like **KKT conditions**, **penalty methods**, and **constrained optimization in machine learning**.
+
+<style>
+.lagrange-3d-block { margin: 2rem 0; }
+.lagrange-3d-block .lagrange-plot-wrapper { margin-bottom: 2rem; }
+.lagrange-plot { width: 100%; min-height: 420px; }
+@media (min-width: 768px) {
+  .lagrange-plot { min-height: 500px; }
+}
+</style>
+
+<script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+<script defer src="{{ '/assets/js/lagrange-interactive.js' | relative_url }}"></script>
