@@ -19,11 +19,28 @@ Consider optimizing $f(x,y) = x^2 + y^2$ subject to $g(x,y) = x + y - 2 = 0$.
 
 At any point on the constraint line, we can ask: *"If I move slightly along the constraint, does $f$ increase or decrease?"*
 
-**At intersection points**: The level curves of $f$ **cross** the constraint, meaning $f$ changes as we move along the constraint.
+**At intersection points**: The level curves of $f$ **cross** the constraint, meaning $f$ has **first-order change** as we move along the constraint (the function increases or decreases linearly to first approximation).
 
-**At tangency points**: The level curves **touch** the constraint without crossing, meaning $f$ has no first-order change as we move along the constraint.
+**At tangency points**: The level curves **touch** the constraint without crossing, meaning $f$ has **no first-order change** as we move along the constraint. The function can still change (usually quadratically), but the first derivative along the constraint is zero.
 
 ![Intersection vs Tangency in Lagrange multipliers](../assets/images/lagrange/intersection-vs-tangency.svg)
+
+### The Crucial Distinction: First-Order vs Higher-Order Change
+
+**You're absolutely right to question this!** At tangency points, $f$ does indeed change as you move along the constraint - but it's the **type of change** that matters:
+
+**At intersection points:**
+- Moving distance $\epsilon$ along constraint → $f$ changes by approximately $c_1 \cdot \epsilon$ (linear in $\epsilon$)
+- **First derivative along constraint ≠ 0**
+- You can improve by moving further in the same direction
+
+**At tangency points (critical points):**
+- Moving distance $\epsilon$ along constraint → $f$ changes by approximately $c_2 \cdot \epsilon^2$ (quadratic in $\epsilon$)  
+- **First derivative along constraint = 0** (this is the Lagrange condition!)
+- **Second derivative** determines if it's a maximum (negative) or minimum (positive)
+- You can't improve by moving in either direction (to first order)
+
+**Mathematical insight**: We're looking for points where $\frac{df}{dt} = 0$ when $t$ parametrizes motion along the constraint, not where $f$ is constant.
 
 ---
 
@@ -40,16 +57,18 @@ The gradient $\nabla f(x_0, y_0)$ points in the direction of steepest increase o
 ### The Parallel Condition Ensures No First-Order Change
 
 If $\nabla f$ and $\nabla g$ are **not parallel**, then $\nabla f$ has a component tangent to the constraint curve. This means:
-- Moving along the constraint will change $f$
-- We're not at an extremum
-- We can improve by moving further along the constraint
+- Moving along the constraint will change $f$ **linearly** (first-order change)
+- $\frac{df}{dt} \neq 0$ along the constraint curve  
+- We're not at an extremum - we can improve by moving further
 
 If $\nabla f$ and $\nabla g$ **are parallel**, then $\nabla f$ is perpendicular to the constraint curve:
-- No first-order change in $f$ when moving along the constraint  
-- We've found a critical point
-- This is a candidate for an extremum
+- $\frac{df}{dt} = 0$ along the constraint (no first-order change)
+- $f$ may still change quadratically (second-order), determining max/min
+- We've found a critical point - a candidate for an extremum
 
-$$\nabla f = \lambda \nabla g \quad \Leftrightarrow \quad \text{No first-order change along constraint}$$
+$$\nabla f = \lambda \nabla g \quad \Leftrightarrow \quad \frac{df}{dt} = 0 \text{ along constraint}$$
+
+**Key insight**: The condition $\nabla f = \lambda \nabla g$ ensures the **first derivative** of $f$ along the constraint is zero, not that $f$ is constant along the constraint.
 
 ---
 
