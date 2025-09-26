@@ -215,7 +215,9 @@
 
     const { xVals, yVals, zMatrix } = buildSurfaceData();
     const constraintSamples = circleConstraintSamples(160);
-    const circleTrace2D = circle2DTrace(constraintSamples);
+    const constraintSamples2D = circleConstraintSamples(360);
+    const circleTraceIntersection2D = circle2DTrace(constraintSamples2D);
+    const circleTraceTangency2D = circle2DTrace(constraintSamples2D);
     const surfaceTraceIntersection = makeSurfaceTrace(xVals, yVals, zMatrix);
     const surfaceTraceTangency = makeSurfaceTrace(xVals, yVals, zMatrix);
     const constraintTraceIntersection = makeConstraintTrace(constraintSamples);
@@ -295,7 +297,7 @@
       Plotly.newPlot(
         intersection2dContainer,
         [
-          circleTrace2D,
+          circleTraceIntersection2D,
           ...axesLines,
           make2DPointTrace(intersectionPoint, '#d62728', 'Intersection point'),
           make2DArrowTrace(intersectionPoint, intersectionPoint.grad, '#d62728', '∇f'),
@@ -311,7 +313,7 @@
       Plotly.newPlot(
         tangency2dContainer,
         [
-          circleTrace2D,
+          circleTraceTangency2D,
           hyperbolaTrace,
           make2DPointTrace(tangencyPoint, '#9467bd', 'Tangency point'),
           make2DArrowTrace(tangencyPoint, tangencyPoint.grad, '#d62728', '∇f'),
