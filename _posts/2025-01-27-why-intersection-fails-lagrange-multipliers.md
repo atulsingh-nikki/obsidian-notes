@@ -23,7 +23,7 @@ At any point on the constraint line, we can ask: *"If I move slightly along the 
 
 **At tangency points**: The level curves **touch** the constraint without crossing, meaning $f$ has no first-order change as we move along the constraint.
 
-![Intersection vs Tangency in Lagrange multipliers]({{ '/assets/images/lagrange/intersection-vs-tangency.svg' | relative_url }})
+![Intersection vs Tangency in Lagrange multipliers](../assets/images/lagrange/intersection-vs-tangency.svg)
 
 ---
 
@@ -134,7 +134,7 @@ At a non-critical point like $(1,0)$:
 - The level curve $f(x,y) = 0$ (the axes $x = 0$ or $y = 0$) **intersects** the circle
 - Since $\nabla f(1,0) = (0,1)$ and $\nabla g(1,0) = (2,0)$ are not parallel, this isn't optimal
 
-![Level curves intersecting vs tangent to unit circle]({{ '/assets/images/lagrange/circle-hyperbola-tangency.svg' | relative_url }})
+![Level curves intersecting vs tangent to unit circle](../assets/images/lagrange/circle-hyperbola-tangency.svg)
 
 ---
 
@@ -187,7 +187,7 @@ $$h(\frac{\pi}{4} \pm \epsilon) \approx h(\frac{\pi}{4}) + h''(\frac{\pi}{4})\fr
 
 So moving in **either direction** from the critical point **decreases** the function—confirming it's a local maximum!
 
-![Animated neighborhood walk showing the circle constraint and objective values]({{ '/assets/images/lagrange/neighborhood-analysis.gif' | relative_url }})
+![Animated neighborhood walk showing the circle constraint and objective values](../assets/images/lagrange/neighborhood-analysis.gif)
 
 ---
 
@@ -235,7 +235,7 @@ $$\lambda = \pm\frac{1}{2}$$
 - $x = -1, y = -2$  
 - $f(-1,-2) = -1 - 4 = -5$ (minimum)
 
-![Linear objective function tangent to circle]({{ '/assets/images/lagrange/linear-circle-tangency.svg' | relative_url }})
+![Linear objective function tangent to circle](../assets/images/lagrange/linear-circle-tangency.svg)
 
 ### Why Intersection Points Fail
 
@@ -275,7 +275,7 @@ The most compelling argument comes from visualizing the gradients:
 - **Meaning**: No first-order change in $f$ when moving along constraint
 - **Conclusion**: Critical point (potential optimum)
 
-![Gradient vectors at intersection vs tangency points]({{ '/assets/images/lagrange/gradient-geometry.svg' | relative_url }})
+![Gradient vectors at intersection vs tangency points](../assets/images/lagrange/gradient-geometry.svg)
 
 ---
 
