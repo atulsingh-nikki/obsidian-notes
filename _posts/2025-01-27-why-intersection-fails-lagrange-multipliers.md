@@ -42,6 +42,52 @@ At any point on the constraint line, we can ask: *"If I move slightly along the 
 
 **Mathematical insight**: We're looking for points where $\frac{df}{dt} = 0$ when $t$ parametrizes motion along the constraint, not where $f$ is constant.
 
+### What Do We Mean by "First-Order Change"?
+
+This terminology comes from **Taylor series expansion**. When you move a small distance $\epsilon$ along the constraint from a point, the function value changes as:
+
+$$f(\text{new point}) = f(\text{old point}) + \underbrace{c_1 \cdot \epsilon}_{\text{first-order term}} + \underbrace{c_2 \cdot \epsilon^2}_{\text{second-order term}} + \underbrace{c_3 \cdot \epsilon^3 + \cdots}_{\text{higher-order terms}}$$
+
+**First-order change** means the $c_1 \cdot \epsilon$ term **dominates** for small $\epsilon$.
+
+#### **Concrete Example: Walking on a Hill**
+
+Imagine you're at position $x = 0$ on the hill $f(x) = x^2 + 3x + 5$:
+
+**At $x = 0$**: $f(0) = 5$, $f'(0) = 3$, $f''(0) = 2$
+
+If you walk distance $\epsilon = 0.1$:
+- **Actual change**: $f(0.1) - f(0) = (0.01 + 0.3 + 5) - 5 = 0.31$
+- **First-order approximation**: $c_1 \cdot \epsilon = 3 \times 0.1 = 0.30$ 
+- **Second-order approximation**: $c_1 \cdot \epsilon + \frac{c_2}{2} \cdot \epsilon^2 = 0.30 + \frac{2}{2} \times 0.01 = 0.31$ ✓
+
+**For small steps, the linear term $3 \times \epsilon$ dominates** - this is first-order change.
+
+#### **Zero First-Order Change (Critical Points)**
+
+Now consider $f(x) = x^2 + 5$ at $x = 0$:
+
+**At $x = 0$**: $f(0) = 5$, $f'(0) = 0$, $f''(0) = 2$
+
+Walking distance $\epsilon = 0.1$:
+- **Actual change**: $f(0.1) - f(0) = (0.01 + 5) - 5 = 0.01$
+- **First-order term**: $0 \times 0.1 = 0$ (vanishes!)
+- **Second-order term dominates**: $\frac{2}{2} \times (0.1)^2 = 0.01$ ✓
+
+**This is what happens at Lagrange multiplier critical points** - the first-order change vanishes, leaving only second-order effects.
+
+#### **Why This Matters for Optimization**
+
+**Non-critical point** ($f'(x) \neq 0$):
+- Small step → linear improvement  
+- Keep walking in the same direction to keep improving
+- **Not optimal**
+
+**Critical point** ($f'(x) = 0$):  
+- Small step → quadratic change only
+- Can't improve by taking tiny steps in either direction
+- **Potential optimum** (check second derivative for max/min)
+
 ---
 
 ## Mathematical Foundation: Why Gradients Must Be Parallel
