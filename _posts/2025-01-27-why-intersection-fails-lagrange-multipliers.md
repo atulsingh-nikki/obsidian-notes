@@ -44,84 +44,36 @@ At any point on the constraint line, we can ask: *"If I move slightly along the 
 
 ### What Do We Mean by "First-Order Change"?
 
-This terminology comes from **Taylor series expansion**. When you move a small distance $\epsilon$ along the constraint from a point, the function value changes as:
+When we move a short distance $\epsilon$ along a curve, the Taylor expansion of $f$ around the starting point looks like:
 
-$$f(\text{new point}) = f(\text{old point}) + \underbrace{c_1 \cdot \epsilon}_{\text{first-order term}} + \underbrace{c_2 \cdot \epsilon^2}_{\text{second-order term}} + \underbrace{c_3 \cdot \epsilon^3 + \cdots}_{\text{higher-order terms}}$$
+$$f(\epsilon) = f(0) + c_1\epsilon + c_2\epsilon^2 + c_3\epsilon^3 + \cdots$$
 
-**First-order change** means the $c_1 \cdot \epsilon$ term **dominates** for small $\epsilon$.
+The **first-order change** is captured by the linear term $c_1\epsilon$. If $c_1 \neq 0$, the change in $f$ is primarily linear for small steps. If $c_1 = 0$, the first non-zero term comes from $c_2\epsilon^2$, so the leading change is quadratic.
 
-#### **Concrete Example: Walking on a Hill**
+#### Two One-Dimensional Examples
 
-Imagine you're at position $x = 0$ on the hill $f(x) = x^2 + 3x + 5$:
+1. **Non-critical point** — $f(x) = x^2 + 3x + 5$ at $x=0$:
+   - $f'(0) = 3$, $f''(0) = 2$.
+   - Move by $\epsilon = 0.1$: true change $\approx 0.31$. The linear term $3\epsilon = 0.30$ already captures almost the whole change. The second-order contribution adds the remaining $0.01$.
 
-**At $x = 0$**: $f(0) = 5$, $f'(0) = 3$, $f''(0) = 2$
+2. **Critical point** — $f(x) = x^2 + 5$ at $x=0$:
+   - $f'(0) = 0$, $f''(0) = 2$.
+   - Move by $\epsilon = 0.1$: the linear term vanishes, and the change is dominated by the quadratic term $\frac{1}{2}f''(0)\epsilon^2 = 0.01$.
 
-If you walk distance $\epsilon = 0.1$:
-- **Actual change**: $f(0.1) - f(0) = (0.01 + 0.3 + 5) - 5 = 0.31$
-- **First-order approximation**: $c_1 \cdot \epsilon = 3 \times 0.1 = 0.30$ 
-- **Second-order approximation**: $c_1 \cdot \epsilon + \frac{c_2}{2} \cdot \epsilon^2 = 0.30 + \frac{2}{2} \times 0.01 = 0.31$ ✓
+The second example mirrors what happens at a constrained optimum: once the linear (first-order) variation is eliminated, you only see second-order effects.
 
-**For small steps, the linear term $3 \times \epsilon$ dominates** - this is first-order change.
+### First-Order Change: Unconstrained vs Constrained
 
-#### **Zero First-Order Change (Critical Points)**
+The phrase "first-order change" depends on the directions you are allowed to move.
 
-Now consider $f(x) = x^2 + 5$ at $x = 0$:
+- **Unconstrained**: you can move in any direction, so the gradient must vanish completely. Critical points satisfy $\nabla f = \mathbf{0}$.
+- **Constrained**: you may only move along directions tangent to the constraint. The requirement is $\frac{df}{dt} = \nabla f \cdot \mathbf{T} = 0$ for every tangent direction $\mathbf{T}$. The gradient itself need not vanish; it just cannot have a component along the tangent. This is precisely the Lagrange condition $\nabla f = \lambda \nabla g$.
 
-**At $x = 0$**: $f(0) = 5$, $f'(0) = 0$, $f''(0) = 2$
+Parametrising the constraint as $(x(t), y(t))$ confirms the picture:
 
-Walking distance $\epsilon = 0.1$:
-- **Actual change**: $f(0.1) - f(0) = (0.01 + 5) - 5 = 0.01$
-- **First-order term**: $0 \times 0.1 = 0$ (vanishes!)
-- **Second-order term dominates**: $\frac{2}{2} \times (0.1)^2 = 0.01$ ✓
+$$\frac{df}{dt} = \frac{\partial f}{\partial x} \frac{dx}{dt} + \frac{\partial f}{\partial y} \frac{dy}{dt} = \nabla f \cdot \mathbf{T},$$
 
-**This is what happens at Lagrange multiplier critical points** - the first-order change vanishes, leaving only second-order effects.
-
-#### **Why This Matters for Optimization**
-
-**Non-critical point** ($f'(x) \neq 0$):
-- Small step → linear improvement  
-- Keep walking in the same direction to keep improving
-- **Not optimal**
-
-**Critical point** ($f'(x) = 0$):  
-- Small step → quadratic change only
-- Can't improve by taking tiny steps in either direction
-- **Potential optimum** (check second derivative for max/min)
-
-### **Crucial Clarification: Constrained vs Unconstrained "First-Order Change"**
-
-**You're absolutely right to question this!** The terminology "first-order change" can be confusing because it means different things in different contexts:
-
-#### **Unconstrained Optimization** (free to move in any direction):
-- **Condition for critical point**: $\frac{\partial f}{\partial x} = 0$ **AND** $\frac{\partial f}{\partial y} = 0$
-- **All first-order partial derivatives** must be zero
-- **Gradient**: $\nabla f = (0, 0)$
-
-#### **Constrained Optimization** (restricted to move along constraint):
-- **Condition for critical point**: $\frac{df}{dt} = 0$ along the constraint curve only
-- **Partial derivatives** $\frac{\partial f}{\partial x}$ and $\frac{\partial f}{\partial y}$ are typically **NOT zero**
-- **Gradient**: $\nabla f = \lambda \nabla g$ (parallel to constraint normal, not zero!)
-
-#### **Key Insight: Directional vs Partial Derivatives**
-
-At a Lagrange multiplier critical point:
-- **Moving freely in x-direction**: $\frac{\partial f}{\partial x} \neq 0$ (usually)
-- **Moving freely in y-direction**: $\frac{\partial f}{\partial y} \neq 0$ (usually)  
-- **Moving along constraint curve**: $\frac{df}{dt} = 0$ ✓
-
-**The constraint prevents us from moving freely in all directions** - we can only move along the constraint curve. The Lagrange method finds points where moving along this restricted path gives no first-order improvement.
-
-#### **Mathematical Connection**
-
-If the constraint is $g(x,y) = c$ and we parametrize it as $(x(t), y(t))$, then:
-$$\frac{df}{dt} = \frac{\partial f}{\partial x}\frac{dx}{dt} + \frac{\partial f}{\partial y}\frac{dy}{dt} = \nabla f \cdot \mathbf{T}$$
-
-where $\mathbf{T} = (\frac{dx}{dt}, \frac{dy}{dt})$ is the tangent vector to the constraint.
-
-**Lagrange condition** $\nabla f = \lambda \nabla g$ ensures:
-$$\frac{df}{dt} = (\lambda \nabla g) \cdot \mathbf{T} = \lambda (\nabla g \cdot \mathbf{T}) = \lambda \cdot 0 = 0$$
-
-since $\nabla g \perp \mathbf{T}$ (gradient perpendicular to level curve).
+and because $\nabla g$ is perpendicular to $\mathbf{T}$, the parallel-gradient condition makes $\frac{df}{dt}$ vanish. So the "first-order change" along the feasible directions really is zero at the constrained optimum, even though individual partial derivatives remain non-zero.
 
 ---
 
@@ -290,7 +242,8 @@ So moving in **either direction** from the critical point **decreases** the func
 ![Animated neighborhood walk showing the circle constraint and objective values]({{ '/assets/images/lagrange/neighborhood-analysis.gif' | relative_url }})
 
 <div class="lagrange-3d-block">
-<p><strong>Explore the surfaces interactively.</strong> The plots below show the saddle surface $f(x,y) = xy$, the unit-circle constraint, and the level planes that either cross or just touch the constraint. Rotate, zoom, and inspect the gradient arrows to see why the two situations behave so differently.</p>
+<h3 class="lagrange-section-heading">Interactive geometry</h3>
+<p>The first pair of panels shows the saddle surface $f(x,y) = xy$ together with the unit-circle constraint. Rotate and zoom to watch how the constraint curve threads through the surface, and note how the gradient arrows either disagree (intersection) or align (tangency).</p>
 
 <div class="lagrange-plot-wrapper">
   <div id="lagrange-intersection-3d" class="lagrange-plot"></div>
@@ -300,7 +253,8 @@ So moving in **either direction** from the critical point **decreases** the func
   <div id="lagrange-tangency-3d" class="lagrange-plot"></div>
 </div>
 
-<p>Drop into the xy-plane to see just the constraint curve and level sets.</p>
+<h4 class="lagrange-section-subheading">Constraint plane view</h4>
+<p>The top-down plots strip away the height, leaving the constraint curve and level sets. Compare how the gradients behave directly on the $xy$-plane.</p>
 
 <div class="lagrange-plot-wrapper">
   <div id="lagrange-intersection-2d" class="lagrange-plot"></div>
@@ -508,6 +462,8 @@ The visual understanding developed here forms the foundation for more advanced t
 
 <style>
 .lagrange-3d-block { margin: 2rem 0; }
+.lagrange-section-heading { margin: 0 0 0.75rem; font-size: 1.35rem; }
+.lagrange-section-subheading { margin: 1.5rem 0 0.75rem; font-size: 1.1rem; font-weight: 600; }
 .lagrange-3d-block .lagrange-plot-wrapper { margin-bottom: 2rem; }
 .lagrange-plot { width: 100%; min-height: 420px; }
 @media (min-width: 768px) {
