@@ -22,13 +22,13 @@ tags:
   - grid-based
 arxiv: https://arxiv.org/abs/1506.02640
 related:
-  - "[[R-CNN (2014)]]"
   - "[[Fast R-CNN (2015)]]"
   - "[[SSD (2016)]]"
   - "[[YOLOv2 (2017)]]"
   - "[[YOLOv3 (2018)]]"
   - "[[YOLOv5]]"
-  - "[[Faster R-CNN (2015)]]"
+  - "[[Faster R-CNN Towards Real-Time Object Detection with Region Proposal Networks|Faster R-CNN (2015)]]"
+  - '[[Rich feature hierarchies for accurate object detection and semantic segmentation" (R-CNN)|R-CNN]]'
 ---
 
 # Summary

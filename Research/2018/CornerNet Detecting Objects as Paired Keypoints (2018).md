@@ -1,16 +1,16 @@
 ---
 title: "CornerNet: Detecting Objects as Paired Keypoints (2018)"
-aliases: 
+aliases:
   - CornerNet
   - Keypoint-based Object Detection
 authors:
   - Hei Law
   - Jia Deng
 year: 2018
-venue: "ECCV"
-doi: "10.1007/978-3-030-01264-9_1"
-arxiv: "https://arxiv.org/abs/1808.01244"
-code: "https://github.com/princeton-vl/CornerNet"
+venue: ECCV
+doi: 10.1007/978-3-030-01264-9_1
+arxiv: https://arxiv.org/abs/1808.01244
+code: https://github.com/princeton-vl/CornerNet
 citations: 4000+
 dataset:
   - MS COCO
@@ -23,16 +23,16 @@ fields:
   - vision
   - detection
 related:
-  - "[[CenterNet (2019)]]"
-  - "[[FCOS (2019)]]"
+  - "[[FCOS Fully Convolutional One-Stage Object Detection (2019)|FCOS]]"
+  - "[[CenterNet Keypoint Triplets for Object Detection (2019)|CornetNet_2019]]"
 predecessors:
-  - "[[YOLO (2016)]]"
-  - "[[RetinaNet (2017)]]"
+  - "[[YOLO You Only Look Once — Unified, Real-Time Object Detection|YOLO (2016)]]"
+  - "[[Focal Loss for Dense Object Detection (2017)|RetinaNet]]"
 successors:
-  - "[[CenterNet (2019)]]"
-  - "[[DETR (2020)]]"
+  - "[[CenterNet Keypoint Triplets for Object Detection (2019)|CornetNet_2019]]"
+  - "[[DETR End-to-End Object Detection with Transformers (2020)|DETR]]"
 impact: ⭐⭐⭐⭐☆
-status: "read"
+status: read
 ---
 
 # Summary

@@ -24,10 +24,10 @@ tags:
 arxiv: https://arxiv.org/abs/1506.01497
 related:
   - "[[Fast R-CNN (2015)|Fast R-CNN (2015)]]]"
-  - "[[Mask R-CNN (2017)]]"
-  - "[[YOLO (2016)]]"
   - "[[SSD (2016)]]"
-  - "[[Region Proposal Networks]]"
+  - "[[Mask R-CNN]]"
+  - "[[Selective Search for Object Recognition (2013)|Region Proposals Selective Search]]"
+  - "[[YOLO You Only Look Once — Unified, Real-Time Object Detection|YOLO (2016)]]"
 ---
 
 # Summary

@@ -25,7 +25,7 @@ related:
   - "[[ReLU Activation]]"
   - "[[Very Deep Convolutional Networks for Large-Scale Image Recognition|VGGNet (2014)]]"
   - "[[Deep Residual Learning for Image Recognition]]"
-  - "[[GoogLeNet (2014)]]"
+  - "[[GoogLeNet Inception v1 Going Deeper with Convolutions|GoogLeNet]]"
 ---
 
 # Summary

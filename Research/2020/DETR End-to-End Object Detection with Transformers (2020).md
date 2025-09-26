@@ -1,5 +1,6 @@
+---
 title: "DETR: End-to-End Object Detection with Transformers (2020)"
-aliases: 
+aliases:
   - DETR
   - End-to-End Transformer Detection
 authors:
@@ -10,10 +11,10 @@ authors:
   - Alexander Kirillov
   - Sergey Zagoruyko
 year: 2020
-venue: "ECCV"
-doi: "10.1007/978-3-030-58452-8_13"
-arxiv: "https://arxiv.org/abs/2005.12872"
-code: "https://github.com/facebookresearch/detr"
+venue: ECCV
+doi: 10.1007/978-3-030-58452-8_13
+arxiv: https://arxiv.org/abs/2005.12872
+code: https://github.com/facebookresearch/detr
 citations: 16,000+
 dataset:
   - COCO
@@ -26,18 +27,19 @@ fields:
   - vision
   - detection
 related:
-  - "[[FCOS (2019)]]"
-  - "[[CenterNet (2019)]]"
-  - "[[CornerNet (2018)]]"
+  - "[[CornerNet Detecting Objects as Paired Keypoints (2018)]]"
+  - "[[FCOS Fully Convolutional One-Stage Object Detection (2019)|FCOS]]"
+  - "[[CenterNet Keypoint Triplets for Object Detection (2019)|CornetNet_2019]]"
 predecessors:
-  - "[[FCOS (2019)]]"
-  - "[[CenterNet (2019)]]"
+  - "[[CornerNet Detecting Objects as Paired Keypoints (2018)|CornerNet]]"
+  - "[[FCOS Fully Convolutional One-Stage Object Detection (2019)|FCOS]]"
 successors:
   - "[[Deformable DETR (2020)]]"
   - "[[DN-DETR (2022)]]"
 impact: ⭐⭐⭐⭐⭐
-status: "read"
+status: read
 ---
+
 
 # Summary
 DETR reframed object detection as a **direct set prediction problem** using **transformers**, eliminating hand-crafted components like anchors, region proposals, and non-max suppression (NMS). It outputs a fixed-size set of predictions, trained end-to-end with bipartite matching.

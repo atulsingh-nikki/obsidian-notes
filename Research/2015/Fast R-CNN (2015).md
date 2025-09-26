@@ -23,14 +23,14 @@ fields:
   - vision
   - detection
 related:
-  - "[[R-CNN (2014)]]"
+  - '[[Rich feature hierarchies for accurate object detection and semantic segmentation" (R-CNN)|R-CNN (2014)]]'
   - "[[SPPnet (2014)]]"
 predecessors:
-  - "[[R-CNN (2014)]]"
   - "[[SPPnet (2014)]]"
+  - '[[Rich feature hierarchies for accurate object detection and semantic segmentation" (R-CNN)|R-CNN]]'
 successors:
-  - "[[Mask R-CNN (2017)]]"
-  - "[[Faster R-CNN (2015)]]"
+  - "[[Mask R-CNN]]"
+  - "[[Fast R-CNN (2015)|Fast R-CNN]]"
 impact: ⭐⭐⭐⭐⭐
 status: read
 ---

@@ -30,7 +30,7 @@ related:
   - "[[DeepLab (2017)]]"
   - "[[Segment Anything (SAM, 2023)]]"
 predecessors:
-  - "[[Mask R-CNN (2017)]]"
+  - "[[Mask R-CNN]]"
 successors:
   - "[[HRNet (2020+)]]"
   - "[[Segmentation Transformers (2021+)]]"

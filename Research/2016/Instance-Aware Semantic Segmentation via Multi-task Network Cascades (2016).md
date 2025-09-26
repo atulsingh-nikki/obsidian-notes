@@ -1,6 +1,6 @@
 ---
-title: "Instance-Aware Semantic Segmentation via Multi-task Network Cascades (2016)"
-aliases: 
+title: Instance-Aware Semantic Segmentation via Multi-task Network Cascades (2016)
+aliases:
   - MNC
   - Multi-task Network Cascades
 authors:
@@ -8,10 +8,10 @@ authors:
   - Kaiming He
   - Jian Sun
 year: 2016
-venue: "CVPR"
-doi: "10.1109/CVPR.2016.89"
-arxiv: "https://arxiv.org/abs/1512.04412"
-code: "https://github.com/daijifeng001/MNC"  # original Caffe implementation
+venue: CVPR
+doi: 10.1109/CVPR.2016.89
+arxiv: https://arxiv.org/abs/1512.04412
+code: https://github.com/daijifeng001/MNC
 citations: 3000+
 dataset:
   - MS COCO
@@ -25,15 +25,15 @@ fields:
   - segmentation
 related:
   - "[[Mask R-CNN]]"
-  - "[[Fully Convolutional Networks for Semantic Segmentation]]"
+  - "[[Fully Convolutional Networks for Semantic Segmentation (2015)|FCN]]"
 predecessors:
   - "[[Fast R-CNN (2015)|Fast R-CNN]]]"
-  - "[[FCN]]"
+  - "[[Fully Convolutional Networks for Semantic Segmentation (2015)|FCN]]"
 successors:
   - "[[Mask R-CNN]]"
   - "[[PANet]]"
 impact: ⭐⭐⭐⭐☆
-status: "read"
+status: read
 ---
 
 # Summary

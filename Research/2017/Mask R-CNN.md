@@ -21,13 +21,13 @@ tags:
   - roi-align
 arxiv: https://arxiv.org/abs/1703.06870
 related:
-  - "[[R-CNN (2014)]]"
   - "[[Fast R-CNN (2015)]]"
-  - "[[Faster R-CNN (2015)]]"
-  - "[[YOLO (2016)]]"
   - "[[SSD (2016)]]"
   - "[[Panoptic Segmentation]]"
   - "[[ROI Align]]"
+  - '[[Rich feature hierarchies for accurate object detection and semantic segmentation" (R-CNN)|R-CNN]]'
+  - "[[Faster R-CNN Towards Real-Time Object Detection with Region Proposal Networks|Faster R-CNN]]"
+  - "[[YOLO You Only Look Once — Unified, Real-Time Object Detection|YOLO (2016)]]"
 ---
 
 # Summary

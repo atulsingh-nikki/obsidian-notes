@@ -1,12 +1,12 @@
 ---
-title: "Learning Hierarchical Features for Scene Labeling"
+title: Learning Hierarchical Features for Scene Labeling
 authors:
   - Clement Farabet
   - Camille Couprie
   - Laurent Najman
   - Yann LeCun
 year: 2013
-venue: "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI 2013), earlier versions in CVPR 2012"
+venue: IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI 2013), earlier versions in CVPR 2012
 dataset:
   - Stanford Background Dataset
   - SIFT Flow
@@ -18,12 +18,12 @@ tags:
   - deep-learning
   - hierarchical-features
   - convolutional-neural-networks
-arxiv: "https://arxiv.org/abs/1312.2293"
+arxiv: https://arxiv.org/abs/1312.2293
 related:
   - "[[Convolutional Neural Networks]]"
-  - "[[Fully Convolutional Networks (2015)]]"
   - "[[Scene Understanding]]"
   - "[[Semantic Segmentation]]"
+  - "[[Fully Convolutional Networks for Semantic Segmentation (2015)]]"
 ---
 
 # Summary
@@ -69,8 +69,8 @@ This work proposed one of the **earliest applications of deep convolutional netw
   - Handcrafted features + CRFs for segmentation (pre-2010).  
   - [[AlexNet (ImageNet Classification with Deep Convolutional Neural Networks)|AlexNet (2012)]] → deep learning revival.  
 - **Successors**:
-  - [[Fully Convolutional Networks (2015)]] → end-to-end segmentation without sliding windows.  
-  - [[U-Net (2015)]] → encoder–decoder for biomedical segmentation.  
+  - [[Fully Convolutional Networks for Semantic Segmentation (2015)]] → end-to-end segmentation without sliding windows.  
+  - [[U-Net Convolutional Networks for Biomedical Image Segmentation (2015)]] → encoder–decoder for biomedical segmentation.  
   - [[DeepLab (2015–2017)]] → dilated convolutions + CRF postprocessing.  
 - **Influence**:
   - Brought CNNs into **dense prediction tasks**.  

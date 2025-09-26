@@ -1,6 +1,6 @@
 ---
 title: "U-Net: Convolutional Networks for Biomedical Image Segmentation (2015)"
-aliases: 
+aliases:
   - U-Net
   - UNet
 authors:
@@ -8,10 +8,10 @@ authors:
   - Philipp Fischer
   - Thomas Brox
 year: 2015
-venue: "MICCAI"
-doi: "10.1007/978-3-319-24574-4_28"
-arxiv: "https://arxiv.org/abs/1505.04597"
-code: "https://github.com/milesial/Pytorch-UNet"
+venue: MICCAI
+doi: 10.1007/978-3-319-24574-4_28
+arxiv: https://arxiv.org/abs/1505.04597
+code: https://github.com/milesial/Pytorch-UNet
 citations: 80,000+
 dataset:
   - ISBI cell tracking challenge
@@ -26,16 +26,16 @@ fields:
   - medical-imaging
   - segmentation
 related:
-  - "[[Fully Convolutional Networks for Semantic Segmentation]]"
   - "[[Mask R-CNN]]"
+  - "[[Fully Convolutional Networks for Semantic Segmentation (2015)|FCN]]"
 predecessors:
-  - "[[Fully Convolutional Networks for Semantic Segmentation]]"
+  - "[[Fully Convolutional Networks for Semantic Segmentation (2015)|FCN]]"
 successors:
   - "[[V-Net]]"
   - "[[nnU-Net]]"
   - "[[Attention U-Net]]"
 impact: ⭐⭐⭐⭐⭐
-status: "read"
+status: read
 ---
 
 # Summary

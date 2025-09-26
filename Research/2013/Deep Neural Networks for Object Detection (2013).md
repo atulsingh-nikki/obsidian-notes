@@ -1,5 +1,5 @@
 ---
-title: "Deep Neural Networks for Object Detection (2013)"
+title: Deep Neural Networks for Object Detection (2013)
 aliases:
   - DNN Object Detection NeurIPS 2013
 authors:
@@ -7,10 +7,10 @@ authors:
   - Alexander Toshev
   - Dumitru Erhan
 year: 2013
-venue: "NeurIPS"
-doi: "10.48550/arXiv.1504.08083"  # Published version aligns
-arxiv: "https://arxiv.org/abs/1504.08083"
-code: "—"
+venue: NeurIPS
+doi: 10.48550/arXiv.1504.08083
+arxiv: https://arxiv.org/abs/1504.08083
+code: —
 citations: 2,200+
 dataset:
   - PASCAL VOC
@@ -23,16 +23,15 @@ fields:
   - vision
   - detection
 related:
-  - "[[R-CNN (2014)]]"
-  - "[[OverFeat (2013)]]"
+  - '[[Rich feature hierarchies for accurate object detection and semantic segmentation" (R-CNN)|R-CNN]]'
+  - "[[OverFeat Integrated Recognition, Localization and Detection using Convolutional Networks|OverFeat (2013)]]"
 predecessors:
   - "[[DPM (Deformable Part Models)]]"
 successors:
-  - "[[R-CNN (2014)]]"
   - "[[Fast R-CNN (2015)]]"
+  - '[[Rich feature hierarchies for accurate object detection and semantic segmentation" (R-CNN)|R-CNN]]'
 impact: ⭐⭐⭐⭐☆
-status: "read"
-
+status: read
 ---
 
 ## Summary

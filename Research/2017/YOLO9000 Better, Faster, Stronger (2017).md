@@ -1,16 +1,16 @@
 ---
 title: "YOLO9000: Better, Faster, Stronger (2017)"
-aliases: 
+aliases:
   - YOLOv2
   - YOLO9000
 authors:
   - Joseph Redmon
   - Ali Farhadi
 year: 2017
-venue: "CVPR"
-doi: "10.1109/CVPR.2017.690"
-arxiv: "https://arxiv.org/abs/1612.08242"
-code: "https://pjreddie.com/darknet/yolo/"
+venue: CVPR
+doi: 10.1109/CVPR.2017.690
+arxiv: https://arxiv.org/abs/1612.08242
+code: https://pjreddie.com/darknet/yolo/
 citations: 13,000+
 dataset:
   - PASCAL VOC
@@ -25,15 +25,15 @@ fields:
   - vision
   - detection
 related:
-  - "[[YOLO: Unified Object Detection (2016)]]"
   - "[[YOLOv3 (2018)]]"
+  - "[[YOLO You Only Look Once — Unified, Real-Time Object Detection|YOLO (2016)]]"
 predecessors:
-  - "[[YOLO: Unified Object Detection (2016)]]"
+  - "[[YOLO You Only Look Once — Unified, Real-Time Object Detection|YOLO (2016)]]"
 successors:
   - "[[YOLOv3 (2018)]]"
   - "[[Scaled-YOLOv4]]"
 impact: ⭐⭐⭐⭐⭐
-status: "read"
+status: read
 ---
 
 # Summary

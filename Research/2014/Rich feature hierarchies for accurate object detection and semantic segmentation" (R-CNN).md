@@ -35,7 +35,7 @@ predecessors:
   - "[[AlexNet (ImageNet Classification with Deep Convolutional Neural Networks)|AlexNet (2012)]]"
 successors:
   - "[[Fast R-CNN (2015)]]"
-  - "[[Faster R-CNN (2015)]]"
+  - "[[Fast R-CNN (2015)|Fast R-CNN]]"
 impact: ⭐⭐⭐⭐⭐
 status: read
 ---

@@ -27,6 +27,7 @@ related:
   - "[[Multi-Scale Retinex (MSR, 1997)]]"
   - "[[Retinex Theory of Color Vision (1971)|Retinex]]"
   - "[[MSRCR Multi-Scale Retinex with Color Restoration]]"
+  - "[[KinD Kindling the Darkness — A Practical Low-Light Image Enhancer (2019)|KinD]]"
 predecessors:
   - MSRCR
 successors:

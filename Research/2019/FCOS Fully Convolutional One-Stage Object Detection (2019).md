@@ -1,6 +1,6 @@
 ---
 title: "FCOS: Fully Convolutional One-Stage Object Detection (2019)"
-aliases: 
+aliases:
   - FCOS
   - Fully Convolutional Object Detector
 authors:
@@ -9,10 +9,10 @@ authors:
   - Hao Chen
   - Tong He
 year: 2019
-venue: "ICCV"
-doi: "10.1109/ICCV.2019.00664"
-arxiv: "https://arxiv.org/abs/1904.01355"
-code: "https://github.com/tianzhi0549/FCOS"
+venue: ICCV
+doi: 10.1109/ICCV.2019.00664
+arxiv: https://arxiv.org/abs/1904.01355
+code: https://github.com/tianzhi0549/FCOS
 citations: 6000+
 dataset:
   - COCO
@@ -25,16 +25,16 @@ fields:
   - vision
   - detection
 related:
-  - "[[YOLO (2016)]]"
-  - "[[RetinaNet (2017)]]"
-  - "[[CenterNet (2019)]]"
+  - "[[YOLO You Only Look Once — Unified, Real-Time Object Detection|YOLO (2016)]]"
+  - "[[CenterNet Keypoint Triplets for Object Detection (2019)|CornetNet_2019]]"
+  - "[[Focal Loss for Dense Object Detection (2017)|RetinaNet]]"
 predecessors:
-  - "[[RetinaNet (2017)]]"
+  - "[[Focal Loss for Dense Object Detection (2017)|RetinaNet]]"
 successors:
   - "[[ATSS (2020)]]"
-  - "[[DETR (2020)]]"
+  - "[[DETR End-to-End Object Detection with Transformers (2020)|DETR]]"
 impact: ⭐⭐⭐⭐⭐
-status: "read"
+status: read
 ---
 
 # Summary

@@ -13,10 +13,10 @@ authors:
   - Stephen Lin
   - Baining Guo
 year: 2021
-venue: "ICCV"
-doi: "10.1109/ICCV48922.2021.00986"
-arxiv: "https://arxiv.org/abs/2103.14030"
-code: "https://github.com/microsoft/Swin-Transformer"
+venue: ICCV
+doi: 10.1109/ICCV48922.2021.00986
+arxiv: https://arxiv.org/abs/2103.14030
+code: https://github.com/microsoft/Swin-Transformer
 citations: 15,000+
 dataset:
   - ImageNet-1k
@@ -33,18 +33,17 @@ fields:
   - transformers
   - dense-prediction
 related:
-  - "[[ViT (2020/2021)]]"
-  - "[[DeiT (2021)]]"
-  - "[[ConvNeXt (2022)]]"
+  - "[[An Image is Worth 16x16 Words Transformers for Image Recognition at Scale (ViT 2020 2021)|Vision Transformer]]"
+  - "[[DeiT Training Data-Efficient Image Transformers & Distillation through Attention (2021)|DeiT]]"
+  - "[[ConvNeXt A ConvNet for the 2020s (2022)|ConvNeXt]]"
 predecessors:
-  - "[[ViT (2020/2021)]]"
-  - "[[DeiT (2021)]]"
+  - "[[An Image is Worth 16x16 Words Transformers for Image Recognition at Scale (ViT 2020 2021)|ViT]]"
+  - "[[DeiT Training Data-Efficient Image Transformers & Distillation through Attention (2021)|DeiT]]"
 successors:
-  - "[[ConvNeXt (2022)]]"
   - "[[SwinV2 (2022)]]"
+  - "[[ConvNeXt A ConvNet for the 2020s (2022)|ConvNeXt]]"
 impact: ⭐⭐⭐⭐⭐
-status: "read"
-
+status: read
 ---
 
 # Summary

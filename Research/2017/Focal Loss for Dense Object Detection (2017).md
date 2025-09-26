@@ -26,13 +26,13 @@ fields:
   - vision
   - detection
 related:
-  - "[[Feature Pyramid Networks (FPN, 2017)]]"
-  - "[[YOLO]]"
+  - "[[YOLO You Only Look Once — Unified, Real-Time Object Detection|YOLO (2016)]]"
+  - "[[Feature Pyramid Networks for Object Detection (2017)|Feature Pyramid Networks]]"
 predecessors:
   - "[[SSD (Single Shot MultiBox Detector)]]"
   - "[[Faster R-CNN Towards Real-Time Object Detection with Region Proposal Networks|Faster R-CNN]]"
 successors:
-  - "[[DETR (2020)]]"
+  - "[[DETR End-to-End Object Detection with Transformers (2020)]]"
 impact: ⭐⭐⭐⭐⭐
 status: read
 ---

@@ -1,17 +1,18 @@
 ---
 title: "CenterNet: Keypoint Triplets for Object Detection (2019)"
-aliases: 
+aliases:
   - CenterNet
   - Keypoint Triplet Detection
+  - CornetNet_2019
 authors:
   - Xingyi Zhou
   - Dequan Wang
   - Philipp Krähenbühl
 year: 2019
-venue: "ICCV"
-doi: "10.1109/ICCV.2019.00666"
-arxiv: "https://arxiv.org/abs/1904.07850"
-code: "https://github.com/xingyizhou/CenterNet"
+venue: ICCV
+doi: 10.1109/ICCV.2019.00666
+arxiv: https://arxiv.org/abs/1904.07850
+code: https://github.com/xingyizhou/CenterNet
 citations: 5000+
 dataset:
   - COCO
@@ -24,14 +25,14 @@ fields:
   - vision
   - detection
 related:
-  - "[[FCOS (2019)]]"
-  - "[[CornerNet (2018)]]"
+  - "[[CornerNet Detecting Objects as Paired Keypoints (2018)|CornerNet]]"
+  - "[[FCOS Fully Convolutional One-Stage Object Detection (2019)|FCOS]]"
 predecessors:
-  - "[[CornerNet (2018)]]"
+  - "[[CornerNet Detecting Objects as Paired Keypoints (2018)|CornerNet]]"
 successors:
-  - "[[DETR (2020)]]"
+  - "[[DETR End-to-End Object Detection with Transformers (2020)|DETR]]"
 impact: ⭐⭐⭐⭐☆
-status: "read"
+status: read
 ---
 
 # Summary

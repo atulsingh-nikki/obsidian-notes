@@ -1,6 +1,6 @@
 ---
 title: "HyperNet: Towards Accurate Region Proposal Generation and Joint Object Detection (2016)"
-aliases: 
+aliases:
   - HyperNet
   - Hyper Feature Network
 authors:
@@ -9,10 +9,10 @@ authors:
   - Yurong Chen
   - Shiyu Sun
 year: 2016
-venue: "CVPR"
-doi: "10.1109/CVPR.2016.163"
-arxiv: "https://arxiv.org/abs/1604.00600"
-code: "https://github.com/aimerykong/HyperNet"
+venue: CVPR
+doi: 10.1109/CVPR.2016.163
+arxiv: https://arxiv.org/abs/1604.00600
+code: https://github.com/aimerykong/HyperNet
 citations: 1500+
 dataset:
   - PASCAL VOC
@@ -29,13 +29,13 @@ related:
   - "[[Fast R-CNN (2015)|Fast R-CNN]]]"
   - "[[Faster R-CNN Towards Real-Time Object Detection with Region Proposal Networks|Faster R-CNN]]]"
 predecessors:
-  - "[[R-CNN]]"
   - "[[Fast R-CNN (2015)|Fast R-CNN]]]"
+  - '[[Rich feature hierarchies for accurate object detection and semantic segmentation" (R-CNN)|R-CNN]]'
 successors:
   - "[[Feature Pyramid Networks for Object Detection (2017)|Feature Pyramid Networks]]]"
   - "[[Mask R-CNN]]"
 impact: ⭐⭐⭐⭐☆
-status: "read"
+status: read
 ---
 
 # Summary

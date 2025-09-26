@@ -10,10 +10,10 @@ authors:
   - Liwei Wang
   - Stephen Lin
 year: 2020
-venue: "NeurIPS"
-doi: "10.48550/arXiv.2007.08508"
-arxiv: "https://arxiv.org/abs/2007.08508"
-code: "https://github.com/Scalsol/RepPointsV2"
+venue: NeurIPS
+doi: 10.48550/arXiv.2007.08508
+arxiv: https://arxiv.org/abs/2007.08508
+code: https://github.com/Scalsol/RepPointsV2
 citations: ~450+
 dataset:
   - COCO
@@ -27,16 +27,15 @@ fields:
   - vision
   - detection
 related:
-  - "[[RepPoints (2019)]]"
-  - "[[DETR (2020)]]"
-  - "[[FCOS (2019)]]"
+  - "[[FCOS Fully Convolutional One-Stage Object Detection (2019)|FCOS]]"
+  - "[[RepPoints Point Set Representation for Object Detection (2019)|RepPoints (2019)]]"
+  - "[[DETR End-to-End Object Detection with Transformers (2020)|DETR]]"
 predecessors:
-  - "[[RepPoints (2019)]]"
+  - "[[RepPoints Point Set Representation for Object Detection (2019)|RepPoints (2019)]]"
 successors:
   - "[[Deformable DETR (2021)]]"
 impact: ⭐⭐⭐⭐☆
-status: "read"
-
+status: read
 ---
 
 # Summary

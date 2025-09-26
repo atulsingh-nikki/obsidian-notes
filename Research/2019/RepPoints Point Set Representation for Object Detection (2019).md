@@ -3,6 +3,7 @@ title: "RepPoints: Point Set Representation for Object Detection (2019)"
 aliases:
   - RepPoints
   - Point Set Object Detection
+  - RepPoints (2019)
 authors:
   - Ze Yang
   - Shaohui Liu
@@ -10,10 +11,10 @@ authors:
   - Liwei Wang
   - Stephen Lin
 year: 2019
-venue: "ICCV"
-doi: "10.1109/ICCV.2019.00943"
-arxiv: "https://arxiv.org/abs/1904.11490"
-code: "https://github.com/microsoft/RepPoints"
+venue: ICCV
+doi: 10.1109/ICCV.2019.00943
+arxiv: https://arxiv.org/abs/1904.11490
+code: https://github.com/microsoft/RepPoints
 citations: ~1200+
 dataset:
   - COCO
@@ -27,16 +28,16 @@ fields:
   - vision
   - detection
 related:
-  - "[[FCOS (2019)]]"
-  - "[[CenterNet (2019)]]"
-  - "[[DETR (2020)]]"
+  - "[[FCOS Fully Convolutional One-Stage Object Detection (2019)|FCOS]]"
+  - "[[CenterNet Keypoint Triplets for Object Detection (2019)|CornetNet_2019]]"
+  - "[[DETR End-to-End Object Detection with Transformers (2020)|DETR]]"
 predecessors:
   - "[[Anchor-based Object Detectors (Faster R-CNN, RetinaNet)]]"
+  - "[[Faster R-CNN Towards Real-Time Object Detection with Region Proposal Networks|Faster R-CNN]]"
 successors:
-  - "[[RepPointsV2 (2020)]]"
+  - "[[RepPointsV2 Verification Meets Regression for Object Detection (2020)]]"
 impact: ⭐⭐⭐⭐☆
-status: "read"
-
+status: read
 ---
 
 # Summary

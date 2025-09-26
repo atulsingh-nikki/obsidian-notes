@@ -1,5 +1,5 @@
 ---
-title: "Segment Anything (SAM, 2023)"
+title: Segment Anything (SAM, 2023)
 aliases:
   - SAM
   - Segment Anything Model
@@ -17,10 +17,10 @@ authors:
   - Piotr Dollar
   - Ross Girshick
 year: 2023
-venue: "arXiv / Meta AI Research"
-doi: "10.48550/arXiv.2304.02643"
-arxiv: "https://arxiv.org/abs/2304.02643"
-code: "https://segment-anything.com/"
+venue: arXiv / Meta AI Research
+doi: 10.48550/arXiv.2304.02643
+arxiv: https://arxiv.org/abs/2304.02643
+code: https://segment-anything.com/
 citations: 8000+
 dataset:
   - SA-1B (11M images, 1.1B masks)
@@ -34,18 +34,17 @@ fields:
   - segmentation
   - foundation-models
 related:
-  - "[[Mask R-CNN (2017)]]"
-  - "[[DETR (2020)]]"
-  - "[[XMem (2022)]]"
   - "[[RDeAOT (2023)]]"
+  - "[[Mask R-CNN]]"
+  - "[[DN-DETR Accelerate DETR Training by Introducing Query DeNoising (2022)|DN-DETR]]"
+  - "[[XMem Long-Term Video Object Segmentation with an Atkinson-Shiffrin Memory Model (2022)|XMem]]"
 predecessors:
-  - "[[Mask R-CNN (2017)]]"
-  - "[[Vision Transformers (2020)]]"
+  - "[[Mask R-CNN]]"
+  - "[[An Image is Worth 16x16 Words Transformers for Image Recognition at Scale (ViT 2020 2021)|Vision Transformer]]"
 successors:
-  - "[[SAM 2 (2024)]]"
+  - "[[SAM 2 Segment Anything in Images and Videos (2024)|SAM 2]]"
 impact: ⭐⭐⭐⭐⭐
-status: "read"
-
+status: read
 ---
 
 # Summary

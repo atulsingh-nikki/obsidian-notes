@@ -22,10 +22,10 @@ tags:
   - sliding-window
 arxiv: https://arxiv.org/abs/1312.6229
 related:
-  - "[[R-CNN (2014)]]"
-  - "[[YOLO (2016)]]"
   - "[[AlexNet (ImageNet Classification with Deep Convolutional Neural Networks)|AlexNet (2012)]]"
   - "[[Faster R-CNN Towards Real-Time Object Detection with Region Proposal Networks|Faster R-CNN (2015)]]"
+  - "[[YOLO You Only Look Once — Unified, Real-Time Object Detection|YOLO (2016)]]"
+  - '[[Rich feature hierarchies for accurate object detection and semantic segmentation" (R-CNN)|R-CNN]]'
 ---
 
 # Summary

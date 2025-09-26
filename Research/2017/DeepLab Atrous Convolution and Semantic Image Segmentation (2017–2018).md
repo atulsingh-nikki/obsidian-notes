@@ -12,13 +12,13 @@ authors:
   - Hartwig Adam
   - et al.
 year: 2017–2018
-venue: "CVPR, ECCV, TPAMI"
-doi: "10.1109/TPAMI.2017.2699184"
-arxiv: 
-  - "https://arxiv.org/abs/1606.00915"   # DeepLabv2
-  - "https://arxiv.org/abs/1706.05587"   # DeepLabv3
-  - "https://arxiv.org/abs/1802.02611"   # DeepLabv3+
-code: "https://github.com/tensorflow/models/tree/master/research/deeplab"
+venue: CVPR, ECCV, TPAMI
+doi: 10.1109/TPAMI.2017.2699184
+arxiv:
+  - https://arxiv.org/abs/1606.00915
+  - https://arxiv.org/abs/1706.05587
+  - https://arxiv.org/abs/1802.02611
+code: https://github.com/tensorflow/models/tree/master/research/deeplab
 citations: 20000+
 dataset:
   - PASCAL VOC
@@ -34,19 +34,18 @@ fields:
   - segmentation
   - semantic-understanding
 related:
-  - "[[FCN (2015)]]"
-  - "[[Mask R-CNN (2017)]]"
-  - "[[PointRend (2020)]]"
-  - "[[Segment Anything (2023)]]"
+  - "[[Mask R-CNN]]"
+  - "[[PointRend Image Segmentation as Rendering (2020)|PointRend]]"
+  - "[[Segment Anything (SAM, 2023)|Segment Anything Model]]"
+  - "[[Fully Convolutional Networks for Semantic Segmentation (2015)|FCN]]"
 predecessors:
-  - "[[FCN (2015)]]"
+  - "[[Fully Convolutional Networks for Semantic Segmentation (2015)|FCN]]"
 successors:
-  - "[[HRNet (2020)]]"
+  - "[[Segment Anything (SAM, 2023)|Segment Anything Model]]"
   - "[[SegFormer (2021)]]"
-  - "[[Segment Anything (2023)]]"
+  - "[[HRNet (2020)]]"
 impact: ⭐⭐⭐⭐⭐
-status: "read"
-
+status: read
 ---
 
 # Summary
