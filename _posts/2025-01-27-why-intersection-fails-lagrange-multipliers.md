@@ -88,6 +88,41 @@ Walking distance $\epsilon = 0.1$:
 - Can't improve by taking tiny steps in either direction
 - **Potential optimum** (check second derivative for max/min)
 
+### **Crucial Clarification: Constrained vs Unconstrained "First-Order Change"**
+
+**You're absolutely right to question this!** The terminology "first-order change" can be confusing because it means different things in different contexts:
+
+#### **Unconstrained Optimization** (free to move in any direction):
+- **Condition for critical point**: $\frac{\partial f}{\partial x} = 0$ **AND** $\frac{\partial f}{\partial y} = 0$
+- **All first-order partial derivatives** must be zero
+- **Gradient**: $\nabla f = (0, 0)$
+
+#### **Constrained Optimization** (restricted to move along constraint):
+- **Condition for critical point**: $\frac{df}{dt} = 0$ along the constraint curve only
+- **Partial derivatives** $\frac{\partial f}{\partial x}$ and $\frac{\partial f}{\partial y}$ are typically **NOT zero**
+- **Gradient**: $\nabla f = \lambda \nabla g$ (parallel to constraint normal, not zero!)
+
+#### **Key Insight: Directional vs Partial Derivatives**
+
+At a Lagrange multiplier critical point:
+- **Moving freely in x-direction**: $\frac{\partial f}{\partial x} \neq 0$ (usually)
+- **Moving freely in y-direction**: $\frac{\partial f}{\partial y} \neq 0$ (usually)  
+- **Moving along constraint curve**: $\frac{df}{dt} = 0$ ✓
+
+**The constraint prevents us from moving freely in all directions** - we can only move along the constraint curve. The Lagrange method finds points where moving along this restricted path gives no first-order improvement.
+
+#### **Mathematical Connection**
+
+If the constraint is $g(x,y) = c$ and we parametrize it as $(x(t), y(t))$, then:
+$$\frac{df}{dt} = \frac{\partial f}{\partial x}\frac{dx}{dt} + \frac{\partial f}{\partial y}\frac{dy}{dt} = \nabla f \cdot \mathbf{T}$$
+
+where $\mathbf{T} = (\frac{dx}{dt}, \frac{dy}{dt})$ is the tangent vector to the constraint.
+
+**Lagrange condition** $\nabla f = \lambda \nabla g$ ensures:
+$$\frac{df}{dt} = (\lambda \nabla g) \cdot \mathbf{T} = \lambda (\nabla g \cdot \mathbf{T}) = \lambda \cdot 0 = 0$$
+
+since $\nabla g \perp \mathbf{T}$ (gradient perpendicular to level curve).
+
 ---
 
 ## Mathematical Foundation: Why Gradients Must Be Parallel
