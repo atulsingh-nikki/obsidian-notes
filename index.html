@@ -6,6 +6,15 @@ description: Explore the long-form research and learning projects stored in this
 ---
 
 <div class="home-page">
+  <nav class="home-page__nav" aria-label="Primary">
+    <div class="home-page__nav-inner">
+      <a class="home-page__brand" href="{{ '/' | relative_url }}">Atul Singh Notes</a>
+      <ul class="home-page__nav-links">
+        <li><a href="#learning-collection">Learning Collection</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
   <div class="home-page__grid">
     <section class="home-page__column home-page__column--books" aria-labelledby="learning-collection">
       <header class="bookshelf-header">

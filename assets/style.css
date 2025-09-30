@@ -52,6 +52,64 @@ body .main-content {
   padding: 2.5rem 2rem;
 }
 
+.home-page__nav {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  margin: 0 auto 2rem;
+  max-width: 95%;
+}
+
+.home-page__nav-inner {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 1.5rem;
+  justify-content: space-between;
+  padding: 1rem 1.75rem;
+}
+
+.home-page__brand {
+  color: var(--text);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+}
+
+.home-page__brand:hover,
+.home-page__brand:focus {
+  color: var(--accent);
+}
+
+.home-page__nav-links {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.home-page__nav-links li {
+  margin: 0;
+}
+
+.home-page__nav-links a {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.home-page__nav-links a:hover,
+.home-page__nav-links a:focus {
+  color: var(--accent);
+}
+
+#learning-collection {
+  scroll-margin-top: 6rem;
+}
+
 .home-page__grid {
   max-width: 95%;
   margin: 0 auto;
