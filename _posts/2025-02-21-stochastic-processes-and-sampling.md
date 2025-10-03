@@ -9,6 +9,8 @@ tags: [probability, statistics, stochastic-processes, sampling]
 
 Weather systems, server traffic, gene expression, and financial markets all exhibit variability that cannot be captured with a single deterministic trajectory. **Stochastic processes** give us the mathematical language to describe this randomness coherently. They model families of random variables evolving in time or space, indexed by a parameter $t$ drawn from a set $T$.
 
+Although "stochastic" and "random" are often used interchangeably in casual conversation, they serve slightly different purposes in technical writing. *Random* typically describes objects that arise from chance—random variables, random events, random noise—without committing to any temporal or structural relationship. *Stochastic* emphasizes that randomness is organized within a system that unfolds across an index such as time, space, or sequence. Thus, a stochastic process is a structured collection of random variables whose dependencies matter, whereas a single measurement drawn without regard to context is simply random. In practice, we reserve "stochastic" for discussions about models or dynamics driven by randomness, and "random" for the underlying uncertain outcomes themselves.
+
 At a high level, a stochastic process is
 
 $$\{X_t : t \in T\},$$
