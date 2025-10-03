@@ -54,7 +54,11 @@ If your interest is the distribution of isolated measurements, call the object r
 
 ## Sampling: From Random Draws to Stochastic Simulation
 
-Sampling is the connective tissue between abstract probability models and the finite data we can actually observe or compute. Even when a distribution is fully specified, we often cannot write closed-form expressions for expectations, gradients, or risk functionals. Sampling supplies approximations by turning integrals into averages, letting us stress-test models, calibrate parameters, and propagate uncertainty through downstream decisions. The more structure we impose (e.g., temporal dependence or spatial correlation), the more carefully our sampling strategies must mirror that structure.
+Sampling is the connective tissue between abstract probability models and the finite data we can actually observe or compute. Even when a distribution is fully specified, we often cannot write closed-form expressions for expectations, gradients, or risk functionals because these quantities involve integrating products of densities with nonlinear functions that lack elementary antiderivatives. For instance, the expected logistic activation under a Gaussian input,
+
+$$\mathbb{E}[\sigma(wX+b)] = \int_{-\infty}^{\infty} \frac{1}{1+e^{-(wx+b)}} \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}\, dx,$$
+
+has no closed-form solution for generic $(w,b,\mu,\sigma)$, even though both the logistic function and Gaussian density are fully specified. In such cases we estimate the expectation (and its gradient with respect to $w$ and $b$) via Monte Carlo or quadrature. Sampling supplies approximations by turning integrals into averages, letting us stress-test models, calibrate parameters, and propagate uncertainty through downstream decisions. The more structure we impose (e.g., temporal dependence or spatial correlation), the more carefully our sampling strategies must mirror that structure.
 
 ### Why Sampling Matters in Practice
 
