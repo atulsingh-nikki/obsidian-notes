@@ -46,7 +46,7 @@ The homogeneous Poisson process $N(t)$ counts the number of arrivals up to time 
 - Stationary increments: the distribution of arrivals depends only on the interval length.
 - Exponential inter-arrival times with rate $\lambda$.
 
-Poisson processes underpin queueing theory, network traffic modeling, and reliability analysis.
+Poisson processes underpin queueing theory, network traffic modeling, and reliability analysis. In computer vision, they model photon arrivals in low-light imaging systems and the asynchronous firing of event cameras, where each event corresponds to a discretized jump in brightness detected at microsecond scales. Treating these sensing pipelines as Poisson-driven counting processes clarifies how exposure time, sensor gain, and denoising algorithms interact when reconstructing images under severe shot noise.
 
 ### Markov Chains: Memoryless Dynamics
 A time-homogeneous Markov chain evolves through transition probabilities $P_{ij} = \mathbb{P}(X_{t+1} = j \mid X_t = i)$. Key concepts include:
@@ -54,12 +54,12 @@ A time-homogeneous Markov chain evolves through transition probabilities $P_{ij}
 - **Stationary distribution** $\pi$ solving $\pi^T P = \pi^T$.
 - **Mixing time** quantifying how quickly the chain forgets its initial state.
 
-Markov chains drive PageRank, language models, and Monte Carlo algorithms.
+Markov chains drive PageRank, language models, and Monte Carlo algorithms. Computer vision leverages closely related Markov random fields and conditional random fields for tasks such as semantic segmentation, stereo reconstruction, and depth completion, where the Markov property enforces local consistency between neighboring pixels or superpixels. Sampling or inference over these structured grids hinges on understanding the chain's transition dynamics and mixing behavior.
 
 ### Gaussian Processes: Functions as Random Variables
 A Gaussian process (GP) specifies that any finite collection of function values follows a multivariate normal distribution. A GP is fully determined by its mean function $m(t)$ and covariance kernel $k(t, t')$.
 
-Applications range from Bayesian optimization to climate interpolation, where the kernel encodes smoothness, periodicity, or long-range correlations.
+Applications range from Bayesian optimization to climate interpolation, where the kernel encodes smoothness, periodicity, or long-range correlations. In vision, Gaussian processes support non-parametric shape modeling, surface reconstruction from sparse depth observations, and uncertainty-aware trajectory forecasting for articulated poses, where kernels can incorporate spatial coordinates, viewing geometry, or temporal context to capture correlations across pixels and frames.
 
 ---
 
@@ -80,7 +80,7 @@ MCMC constructs a Markov chain whose stationary distribution matches the target.
 - **Gibbs sampling** updates one component at a time from its conditional distribution.
 - **Hamiltonian Monte Carlo** introduces auxiliary momenta to explore continuous spaces efficiently.
 
-MCMC is indispensable when sampling from posterior distributions induced by stochastic process priors, such as inferring GP hyperparameters or hidden Markov model states.
+MCMC is indispensable when sampling from posterior distributions induced by stochastic process priors, such as inferring GP hyperparameters or hidden Markov model states. In high-dimensional generative vision models, researchers deploy Langevin dynamics and diffusion-inspired MCMC variants to synthesize photorealistic images while quantifying uncertainty over latent scene structure.
 
 ### 3. Sequential Monte Carlo (SMC) and Particle Filters
 For state-space models with latent stochastic processes and noisy observations, particle methods approximate the filtering distribution.
@@ -88,7 +88,7 @@ For state-space models with latent stochastic processes and noisy observations, 
 - **Importance sampling** updates weights using the likelihood of new observations.
 - **Resampling** combats weight degeneracy by focusing on high-probability particles.
 
-SMC is the workhorse behind real-time tracking, robotics localization, and online Bayesian inference.
+SMC is the workhorse behind real-time tracking, robotics localization, and online Bayesian inference. In computer vision, particle filters fuse stochastic motion models with pixel-level observations to follow pedestrians, drones, or autonomous vehicles through occlusions and sensor noise, delivering robust state estimates for downstream decision-making.
 
 ---
 
@@ -108,6 +108,14 @@ Sampling is meaningful only if the empirical estimates converge to the true expe
 4. **Decision-making**: use simulated outcomes to compute risk, optimize policies, or communicate uncertainty to stakeholders.
 
 By embracing stochastic processes and mastering their sampling algorithms, we gain a toolkit for reasoning under uncertainty—transforming randomness from a nuisance into a strategic asset.
+
+---
+
+## Computer Vision Spotlights
+
+- **Denoising diffusion models** reinterpret image generation as a controlled stochastic differential equation, gradually transforming Gaussian noise into detailed imagery while enabling principled uncertainty estimates over pixels.
+- **Event-based perception** treats asynchronous brightness changes as Poisson-like point processes, inspiring reconstruction algorithms that integrate stochastic arrival models with neural rendering.
+- **Bayesian tracking pipelines** pair stochastic motion priors with particle or Kalman filtering to maintain distributions over object poses in autonomous driving and augmented reality systems.
 
 ---
 
