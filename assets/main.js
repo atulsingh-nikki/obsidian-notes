@@ -18,6 +18,9 @@ if (window.marked) {
 }
 
 async function init() {
+  if (!navigationEl || !contentEl || !mainEl) {
+    return;
+  }
   try {
     const books = await loadBooks();
     state.books = books;
@@ -215,5 +218,7 @@ function handleHashChange() {
   displayChapter(path);
 }
 
-window.addEventListener("hashchange", handleHashChange);
-document.addEventListener("DOMContentLoaded", init);
+if (navigationEl && contentEl && mainEl) {
+  window.addEventListener("hashchange", handleHashChange);
+  document.addEventListener("DOMContentLoaded", init);
+}
