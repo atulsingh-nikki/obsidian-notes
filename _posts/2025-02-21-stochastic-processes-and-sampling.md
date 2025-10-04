@@ -65,7 +65,7 @@ Applications range from Bayesian optimization to climate interpolation, where th
 
 ## Sampling from Stochastic Processes
 
-Simulating a stochastic process gives us synthetic trajectories to test hypotheses, estimate probabilities, and visualize uncertainty. Three fundamental strategies dominate practice:
+Simulating a stochastic process gives us synthetic trajectories to test hypotheses, estimate probabilities, and visualize uncertainty. Three fundamental strategies dominate practice (and if you want to study how these ideas extend into advanced variance-reduction and high-dimensional workflows, read ["Beyond Basics: Importance, Gibbs, and Stratified Sampling"]({{ "/2025/02/22/advanced-sampling-techniques/" | relative_url }})).
 
 ### 1. Direct (Exact) Sampling
 When analytical distributions are available, we can sample exactly.
