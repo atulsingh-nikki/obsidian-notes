@@ -83,7 +83,7 @@ Once dependencies enter the picture, we need algorithms that respect them:
 - **Sequential Monte Carlo (particle filters)** propagate a set of samples through time, resampling to focus computational effort on high-probability regions of state space.
 - **Stochastic differential equation solvers** (e.g., Euler–Maruyama) simulate continuous-time processes where each increment depends on previous states and fresh random noise.
 
-The goal shifts from producing independent draws to generating trajectories whose joint distribution matches the process model.
+The goal shifts from producing independent draws to generating trajectories whose joint distribution matches the process model. When you’re ready to dive deeper into specific techniques for rare events, conditional sampling, and structured surveys, jump to ["Beyond Basics: Importance, Gibbs, and Stratified Sampling"]({{ "/2025/02/22/advanced-sampling-techniques/" | relative_url }}).
 
 ---
 
