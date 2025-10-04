@@ -3,6 +3,9 @@ const state = {
   activePath: null,
 };
 
+const siteConfig = window.__SITE_CONFIG__ || {};
+const booksIndexUrl = siteConfig.booksIndexUrl || "books.json";
+
 const navigationEl = document.getElementById("book-navigation");
 const contentEl = document.getElementById("book-content");
 const mainEl = document.getElementById("main");
@@ -45,7 +48,7 @@ async function init() {
 }
 
 async function loadBooks() {
-  const response = await fetch("books.json", { cache: "no-store" });
+  const response = await fetch(resolveUrl(booksIndexUrl), { cache: "no-store" });
   if (!response.ok) {
     throw new Error(`books.json could not be loaded (HTTP ${response.status})`);
   }
@@ -156,7 +159,7 @@ function setActiveLink(path, entry) {
 async function loadChapter(path) {
   renderLoading();
   try {
-    const response = await fetch(encodeURI(path));
+    const response = await fetch(resolveUrl(path));
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
@@ -172,6 +175,22 @@ async function loadChapter(path) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   } catch (error) {
     renderError(`Unable to load the selected chapter. ${error.message}`);
+  }
+}
+
+function resolveUrl(path) {
+  if (!path) return "";
+
+  const rawPath = String(path).trim();
+  if (/^(?:[a-z]+:)?\/\//i.test(rawPath)) {
+    return rawPath;
+  }
+
+  try {
+    return new URL(rawPath, document.baseURI).toString();
+  } catch (error) {
+    console.warn("Unable to resolve path", rawPath, error);
+    return rawPath;
   }
 }
 
