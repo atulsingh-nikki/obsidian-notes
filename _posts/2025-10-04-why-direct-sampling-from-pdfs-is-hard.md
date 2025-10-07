@@ -7,6 +7,52 @@ tags: [probability, sampling, monte-carlo, numerical-methods]
 
 Directly sampling from a probability density function (PDF) or probability mass function (PMF) sounds deceptively simple: evaluate the function, interpret the number, and draw a random value accordingly. In practice, that workflow fails because a density or mass function only provides relative likelihoods, not a mechanical procedure for generating values with those likelihoods. If you need a refresher on how randomness is structured, start with ["Random vs Stochastic: Clarifying Variables, Processes, Sampling, and Optimization"]({{ "/2025/03/05/random-vs-stochastic-foundations/" | relative_url }}), and if you want a broader sampling tour, revisit ["Stochastic Processes and the Art of Sampling Uncertainty"]({{ "/2025/02/21/stochastic-processes-and-sampling/" | relative_url }}). With that context in hand, this post dissects the major theoretical obstacles to direct sampling and surveys the standard workarounds.
 
+## Visual Map: From Density to Samples
+
+```plantuml
+@startuml
+skinparam monochrome true
+skinparam shadowing false
+skinparam defaultTextAlignment center
+
+rectangle "Unnormalized\ndensity ~p(x)" as U
+rectangle "Normalized\nPDF p(x)" as P
+rectangle "CDF F(x)" as F
+rectangle "Practical sampler\n(MCMC / SMC / ...)" as S
+
+U --> P : divide by Z
+P --> F : integrate
+F --> S : invert F(x)=u
+P -[#000000,dotted]-> S : evaluate & guard\nagainst numerical issues
+
+@enduml
+```
+
+> PlantUML blocks are rendered as plain text by default with GitHub Pages + kramdown. To visualize the diagram, run PlantUML locally (e.g., `plantuml file.md`) or integrate a build step/Jekyll plugin that converts the block into an image during site generation.
+
+This schematic highlights the two major choke points: computing the normalizing constant $Z$ and inverting the CDF. Both steps must succeed before you can reach a dependable sampling routine, which is why so many practical methods focus on approximations or indirect constructions.
+
+```plantuml
+@startuml
+skinparam monochrome true
+skinparam shadowing false
+skinparam defaultTextAlignment center
+
+rectangle "Unnormalized\ndensity ~p(x)" as U
+rectangle "Normalized\nPDF p(x)" as P
+rectangle "CDF F(x)" as F
+rectangle "Practical sampler\n(MCMC / SMC / ...)" as S
+
+U --> P : divide by Z
+P --> F : integrate
+F --> S : invert F(x)=u
+P -[#000000,dotted]-> S : evaluate & guard\nagainst numerical issues
+
+@enduml
+```
+
+> PlantUML blocks are rendered as plain text by default with GitHub Pages + kramdown. To visualize the diagram, run PlantUML locally (e.g., `plantuml file.md`) or integrate a build step/Jekyll plugin that converts the block into an image during site generation.
+
 ## Why the CDF Is the Essential Bridge
 
 The cumulative distribution function (CDF) $F(x)$ converts local density information into cumulative probability: $F(x) = \Pr(X \le x)$. With the CDF in hand, three core tasks become straightforward.
