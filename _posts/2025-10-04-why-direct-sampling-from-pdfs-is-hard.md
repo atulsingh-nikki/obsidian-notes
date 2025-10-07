@@ -9,9 +9,9 @@ Directly sampling from a probability density function (PDF) or probability mass 
 
 ## Visual Map: From Density to Samples
 
-![Diagram showing the path from unnormalized density to practical sampler](https://www.plantuml.com/plantuml/svg/JP4zJmCn38Rt_0ghIAX8j30ZWOeEtLPqKha5ok1Ut3GYyLMEKre6VZj7-D1vyF0-ZsL7MIH5qHo3IM-UzoWO8VRSTplf8u5AfX59ExJzksS7MmnfJ2njCGTzegFU1-yu4YjqGoCnHgXJP1S89YrpBn63_o2xPakSl9xWSpyzNam04xHZ-N6aDWyr_5lDsAe6Kl-HUamQmKvzXm4IndqWMVDqMIqhk89LwVFv_6TiPKmBizaTD703rX-y9TYSuDaq9Qs7r0zlSO9AfYxPgcG74YtRR_Et-t9sNUhIzgfaNtyzEc38moYSWyierg13pqc1SoGf5_gKCYLZ5iHs-8ul)
+![Diagram showing the path from unnormalized density to practical sampler]({{ "/assets/images/direct-sampling-flow.svg" | relative_url }})
 
-> This diagram is rendered via the public PlantUML server. If you prefer not to rely on an external service, pre-generate the SVG with PlantUML locally (or in CI) and commit the asset to the repository.
+> Diagram generated locally via Python/Matplotlib so the site no longer depends on an external rendering service.
 
 This schematic highlights the two major choke points: computing the normalizing constant $Z$ and inverting the CDF. Both steps must succeed before you can reach a dependable sampling routine, which is why so many practical methods focus on approximations or indirect constructions.
 
