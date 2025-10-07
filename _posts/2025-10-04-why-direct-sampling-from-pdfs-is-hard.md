@@ -9,26 +9,9 @@ Directly sampling from a probability density function (PDF) or probability mass 
 
 ## Visual Map: From Density to Samples
 
-```plantuml
-@startuml
-skinparam monochrome true
-skinparam shadowing false
-skinparam defaultTextAlignment center
+![Diagram showing the path from unnormalized density to practical sampler](https://www.plantuml.com/plantuml/svg/JP4zJmCn38Rt_0ghIAX8j30ZWOeEtLPqKha5ok1Ut3GYyLMEKre6VZj7-D1vyF0-ZsL7MIH5qHo3IM-UzoWO8VRSTplf8u5AfX59ExJzksS7MmnfJ2njCGTzegFU1-yu4YjqGoCnHgXJP1S89YrpBn63_o2xPakSl9xWSpyzNam04xHZ-N6aDWyr_5lDsAe6Kl-HUamQmKvzXm4IndqWMVDqMIqhk89LwVFv_6TiPKmBizaTD703rX-y9TYSuDaq9Qs7r0zlSO9AfYxPgcG74YtRR_Et-t9sNUhIzgfaNtyzEc38moYSWyierg13pqc1SoGf5_gKCYLZ5iHs-8ul)
 
-rectangle "Unnormalized\ndensity ~p(x)" as U
-rectangle "Normalized\nPDF p(x)" as P
-rectangle "CDF F(x)" as F
-rectangle "Practical sampler\n(MCMC / SMC / ...)" as S
-
-U --> P : divide by Z
-P --> F : integrate
-F --> S : invert F(x)=u
-P -[#000000,dotted]-> S : evaluate & guard\nagainst numerical issues
-
-@enduml
-```
-
-> PlantUML blocks are rendered as plain text by default with GitHub Pages + kramdown. To visualize the diagram, run PlantUML locally (e.g., `plantuml file.md`) or integrate a build step/Jekyll plugin that converts the block into an image during site generation.
+> This diagram is rendered via the public PlantUML server. If you prefer not to rely on an external service, pre-generate the SVG with PlantUML locally (or in CI) and commit the asset to the repository.
 
 This schematic highlights the two major choke points: computing the normalizing constant $Z$ and inverting the CDF. Both steps must succeed before you can reach a dependable sampling routine, which is why so many practical methods focus on approximations or indirect constructions.
 
