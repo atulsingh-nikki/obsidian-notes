@@ -72,7 +72,7 @@ Maxout introduced a new activation function and network architecture that **gene
   - Early CNN explorations for image recognition.
 - **Successors**:
   - [[PReLU (2015)]] — learnable ReLU slopes.
-  - [[Swish (2017)]] and [[GELU (2016)]] — smooth nonlinearities.
+  - [[Searching for Activation Functions (2017)|Swish]] and [[Gaussian Error Linear Units (GELU)|GELU (2016)]] — smooth nonlinearities.
 - **Influence**:
   - Highlighted importance of activation design in deep nets.
   - Provided foundation for architectures built around dropout.

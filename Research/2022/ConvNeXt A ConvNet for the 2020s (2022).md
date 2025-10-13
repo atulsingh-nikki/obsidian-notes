@@ -11,10 +11,10 @@ authors:
   - Trevor Darrell
   - Saining Xie
 year: 2022
-venue: "CVPR"
-doi: "10.1109/CVPR52688.2022.01093"
-arxiv: "https://arxiv.org/abs/2201.03545"
-code: "https://github.com/facebookresearch/ConvNeXt"
+venue: CVPR
+doi: 10.1109/CVPR52688.2022.01093
+arxiv: https://arxiv.org/abs/2201.03545
+code: https://github.com/facebookresearch/ConvNeXt
 citations: ~4000+
 dataset:
   - ImageNet-1k
@@ -32,15 +32,14 @@ fields:
   - deep-learning
   - architectures
 related:
-  - "[[Swin Transformer (2021)]]"
-  - "[[ViT (2020/2021)]]"
+  - "[[An Image is Worth 16x16 Words Transformers for Image Recognition at Scale (ViT 2020 2021)|ViT]]"
+  - "[[Swin Transformer Hierarchical Vision Transformer using Shifted Windows (2021)|Swin Transformer]]"
 predecessors:
-  - "[[ResNet (2016)]]"
+  - "[[Deep Residual Learning for Image Recognition|ResNet (2015)]]"
 successors:
-  - "[[ConvNeXt V2 (2023)]]"
+  - "[[ConvNeXt V2 Co-designing and Scaling ConvNets with Masked Autoencoders (2023)|ConvNeXt V2]]"
 impact: ⭐⭐⭐⭐⭐
-status: "read"
-
+status: read
 ---
 
 # Summary

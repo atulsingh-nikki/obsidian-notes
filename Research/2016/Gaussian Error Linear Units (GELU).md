@@ -15,10 +15,10 @@ tags:
   - nonlinearity
 arxiv: https://arxiv.org/abs/1606.08415
 related:
-  - "[[ReLU Activation]]"
   - "[[ELU (2015)]]"
-  - "[[Swish (2017)]]"
   - "[[Transformers (2017)]]"
+  - "[[Searching for Activation Functions (2017)|Swish]]"
+  - "[[Rectified Linear Units (ReLU) for Deep Learning (2010–2012)|ReLU]]"
 ---
 
 # Summary
@@ -56,7 +56,7 @@ The **Gaussian Error Linear Unit (GELU)** is a smooth, differentiable activation
 
 # Connections
 - **Predecessors**: ReLU (2011), ELU (2015), Maxout (2013).  
-- **Successors**: [[Swish (2017)]], [[Mish (2019)]] (other smooth nonlinearities).  
+- **Successors**: [[Searching for Activation Functions (2017)|Swish]], [[Mish A Self Regularized Non-Monotonic Activation Function (2019)|Mish]] (other smooth nonlinearities).  
 - **Influence**: Default in BERT, GPT, ViT, and most state-of-the-art deep models.  
 
 # Implementation Notes

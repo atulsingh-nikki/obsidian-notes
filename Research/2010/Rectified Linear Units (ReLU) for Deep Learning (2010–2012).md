@@ -1,5 +1,5 @@
 ---
-title: "Rectified Linear Units (ReLU) for Deep Learning (2010–2012)"
+title: Rectified Linear Units (ReLU) for Deep Learning (2010–2012)
 aliases:
   - ReLU
   - Rectified Linear Unit
@@ -10,11 +10,11 @@ authors:
   - Ilya Sutskever
   - Geoffrey Hinton
 year: 2010 (first intro), 2012 (popularized via AlexNet)
-venue: "ICML 2010 (Nair & Hinton), NeurIPS 2012 (AlexNet)"
-doi: 
-  - "10.5555/3104322.3104425"   # Nair & Hinton ICML 2010
-  - "10.1145/3065386"           # AlexNet retrospective
-arxiv: "https://arxiv.org/abs/1207.0580"   # AlexNet
+venue: ICML 2010 (Nair & Hinton), NeurIPS 2012 (AlexNet)
+doi:
+  - 10.5555/3104322.3104425
+  - 10.1145/3065386
+arxiv: https://arxiv.org/abs/1207.0580
 citations: 100000+
 tags:
   - paper
@@ -27,17 +27,16 @@ fields:
   - neural-networks
 related:
   - "[[LeNet-5 (1998)]]"
-  - "[[AlexNet (2012)]]"
   - "[[Activation Function Survey (2022)]]"
+  - "[[AlexNet (ImageNet Classification with Deep Convolutional Neural Networks)|AlexNet (2012)]]"
 predecessors:
   - "[[Sigmoid and Tanh Activations]]"
 successors:
   - "[[Leaky ReLU (2015)]]"
   - "[[ELU (2016)]]"
-  - "[[GELU (2018)]]"
+  - "[[Gaussian Error Linear Units (GELU)]]"
 impact: ⭐⭐⭐⭐⭐
-status: "read"
-
+status: read
 ---
 
 # Summary

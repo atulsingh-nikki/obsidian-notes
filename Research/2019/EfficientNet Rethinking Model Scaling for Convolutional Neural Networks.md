@@ -45,7 +45,7 @@ EfficientNet introduced a **compound scaling method** that balances depth, width
 - **Baseline Architecture**: Developed a small EfficientNet-B0 using neural architecture search (NAS).
 - **Compound Scaling**: Introduced coefficients to scale width, depth, and resolution together.
 - **Family of Models**: EfficientNet-B0 → B7 created by scaling up with compound coefficients.
-- **Activation**: Used [[Swish Self-Gated Activation Function]] instead of ReLU for smoother gradients.
+- **Activation**: Used [[Searching for Activation Functions (2017)]] instead of ReLU for smoother gradients.
 - **Regularization**: Data augmentation, dropout, and stochastic depth.
 
 # Results
@@ -63,7 +63,7 @@ EfficientNet introduced a **compound scaling method** that balances depth, width
 - [[Convolutional Neural Networks]] → MBConv blocks (depthwise separable convolutions).
 - [[Neural Architecture Search (NAS)]] → baseline design.
 - [[Compound Scaling]] → systematic model scaling.
-- [[Swish Activation]] → improved nonlinearity.
+- [[Searching for Activation Functions (2017)|Swish]] → improved nonlinearity.
 
 # Connections
 - **Predecessors**: [[MobileNet (2017)]], [[ResNet (2015)]], [[Inception (2014)]].  

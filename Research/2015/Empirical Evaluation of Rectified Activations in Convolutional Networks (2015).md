@@ -1,5 +1,5 @@
 ---
-title: "Empirical Evaluation of Rectified Activations in Convolutional Networks (2015)"
+title: Empirical Evaluation of Rectified Activations in Convolutional Networks (2015)
 aliases:
   - PReLU
   - Parametric ReLU
@@ -10,8 +10,8 @@ authors:
   - Tianqi Chen
   - Mu Li
 year: 2015
-venue: "arXiv preprint"
-arxiv: "https://arxiv.org/abs/1505.00853"
+venue: arXiv preprint
+arxiv: https://arxiv.org/abs/1505.00853
 citations: 8000+
 tags:
   - paper
@@ -22,19 +22,19 @@ fields:
   - deep-learning
   - neural-networks
 related:
-  - "[[ReLU (2010–2012)]]"
   - "[[Leaky ReLU (2015)]]"
   - "[[ELU (2016)]]"
-  - "[[GELU (2018)]]"
+  - "[[3D Scene Representation]]"
+  - "[[Gaussian Error Linear Units (GELU)|GELU (2016)]]"
+  - "[[Rectified Linear Units (ReLU) for Deep Learning (2010–2012)|ReLU]]"
 predecessors:
-  - "[[ReLU (2010–2012)]]"
+  - "[[Rectified Linear Units (ReLU) for Deep Learning (2010–2012)|Rectified Linear Unit]]"
 successors:
   - "[[ELU (2016)]]"
   - "[[SELU (2017)]]"
-  - "[[GELU (2018)]]"
+  - "[[Gaussian Error Linear Units (GELU)]]"
 impact: ⭐⭐⭐⭐☆
-status: "read"
-
+status: read
 ---
 
 # Summary

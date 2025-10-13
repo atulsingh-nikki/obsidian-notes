@@ -21,9 +21,9 @@ fields:
   - optimization
 related:
   - "[[Backpropagation (Rumelhart et al., 1986)]]"
-  - "[[Rectified Linear Unit (ReLU)]]"
   - "[[AlexNet (ImageNet Classification with Deep Convolutional Neural Networks)|AlexNet (2012)]]"
   - "[[Gradient-Based Learning Applied to Document Recognition (1998)|LeNet-5]]"
+  - "[[Rectified Linear Units (ReLU) for Deep Learning (2010–2012)|ReLU]]"
 impact: ⭐⭐⭐⭐☆
 status: reading
 ---

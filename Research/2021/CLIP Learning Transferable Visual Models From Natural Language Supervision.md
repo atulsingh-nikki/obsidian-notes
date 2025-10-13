@@ -29,12 +29,12 @@ tags:
   - zero-shot-learning
 arxiv: https://arxiv.org/abs/2103.00020
 related:
-  - "[[SimCLR (2020)]]"
-  - "[[MoCo (2019)]]"
-  - "[[BYOL (2020)]]"
-  - "[[Vision Transformer (ViT, 2020)]]"
   - "[[Contrastive Learning]]"
   - "[[Zero-Shot Learning]]"
+  - "[[SimCLR A Simple Framework for Contrastive Learning of Visual Representations]]"
+  - "[[MoCo Momentum Contrast for Unsupervised Visual Representation Learning]]"
+  - "[[BYOL Bootstrap Your Own Latent|BYOL (2020)]]"
+  - "[[An Image is Worth 16x16 Words Transformers for Image Recognition at Scale (ViT 2020 2021)|ViT]]"
 ---
 
 # Summary
@@ -75,7 +75,7 @@ CLIP trains visual models using **natural language supervision** by pairing imag
 
 # Connections
 - **Predecessors**:
-  - [[SimCLR (2020)]], [[MoCo (2019)]] — contrastive SSL in vision.
+  - [[SimCLR A Simple Framework for Contrastive Learning of Visual Representations]], [[MoCo Momentum Contrast for Unsupervised Visual Representation Learning]] — contrastive SSL in vision.
 - **Contemporaries**:
   - ALIGN (Google, 2021) — similar large-scale image–text contrastive training.
 - **Successors**:
