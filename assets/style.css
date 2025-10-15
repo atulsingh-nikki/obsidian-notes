@@ -842,6 +842,54 @@ article .blog-post__content {
   border-bottom: none;
 }
 
+.color-pca-demo {
+  display: grid;
+  gap: 1.75rem;
+  margin: 2rem 0;
+}
+
+.color-pca-demo__images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.color-pca-demo__images canvas {
+  image-rendering: crisp-edges;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  background: #fff;
+}
+
+.color-pca-demo__caption {
+  font-size: 0.85rem;
+  color: rgba(15, 23, 42, 0.7);
+  margin-top: 0.35rem;
+}
+
+.color-pca-demo__plots {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 960px) {
+  .color-pca-demo__plots {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.color-pca-demo__stats {
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  background: rgba(79, 70, 229, 0.08);
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  box-shadow: inset 0 0 0 1px rgba(79, 70, 229, 0.18);
+}
+
 /* Better mobile table handling */
 @media (max-width: 768px) {
   .home-page {
