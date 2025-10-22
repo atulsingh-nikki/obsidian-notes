@@ -65,6 +65,23 @@ description: Explore the long-form research and learning projects stored in this
         </p>
       </header>
 
+      {%- assign cadence_post = site.posts | where: "title", "Publishing Cadence Summary" | first -%}
+      {%- if cadence_post -%}
+        <aside class="home-blog__feature" aria-labelledby="homepage-cadence">
+          <h3 id="homepage-cadence" class="home-blog__feature-title">
+            <a href="{{ cadence_post.url | relative_url }}">{{ cadence_post.title }}</a>
+          </h3>
+          <p class="home-blog__feature-meta">
+            <time datetime="{{ cadence_post.date | date_to_xmlschema }}">{{ cadence_post.date | date: "%B %-d, %Y" }}</time>
+            · {{ cadence_post.tags | join: ", " }}
+          </p>
+          <p class="home-blog__feature-description">
+            Monthly, quarterly, semiannual, and annual rollups of every post—perfect for catching up on the entire publishing cadence in one stop.
+          </p>
+          <a class="home-blog__feature-cta" href="{{ cadence_post.url | relative_url }}">Read the full cadence summary →</a>
+        </aside>
+      {%- endif -%}
+
       {%- if site.posts and site.posts.size > 0 -%}
         <div class="home-blog__list">
           {%- for post in site.posts limit: 4 -%}
