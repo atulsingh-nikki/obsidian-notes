@@ -35,6 +35,13 @@ Understanding the identifiers (`blockIdx`, `blockDim`, `threadIdx`) is the key t
 - **Block**: a cooperative team of threads. NVIDIA hardware schedules blocks onto Streaming Multiprocessors (SMs). Blocks can share fast on-chip memory (`__shared__`) and synchronize with `__syncthreads()`.
 - **Grid**: the collection of all blocks launched for a kernel invocation.
 
+If you are brand new to CUDA, picture the grid as a **set of labeled boxes**. Each box is a block and holds a fixed number of **people** (threads). Every person knows two IDs:
+
+- `blockIdx` → which box they live in.
+- `threadIdx` → their seat number inside the box.
+
+When the kernel starts, each thread computes a global ID from those two numbers and touches its own slice of data.
+
 Launch example:
 
 ```cpp
@@ -44,6 +51,41 @@ vector_add<<<blocks, threads_per_block>>>(d_a, d_b, d_c, n);
 ```
 
 The parameters `<<<gridDim, blockDim>>>` specify how many blocks and how many threads per block you want.
+
+### A Minimal 1D Example
+
+Let’s shrink the numbers so the mapping is easy to see:
+
+```cpp
+const int threads_per_block = 4;
+const int blocks = 3;
+vector_add<<<blocks, threads_per_block>>>(d_a, d_b, d_c, 12);
+```
+
+Inside the kernel:
+
+```cpp
+size_t idx = blockIdx.x * blockDim.x + threadIdx.x;
+```
+
+Since `blockDim.x` is `4`, every time `blockIdx.x` increments, `idx` jumps by four. The table below shows the first few threads:
+
+| blockIdx.x | threadIdx.x | Computed idx | Element processed |
+|------------|-------------|--------------|-------------------|
+| 0          | 0           | 0            | `a[0] + b[0]`     |
+| 0          | 1           | 1            | `a[1] + b[1]`     |
+| 0          | 2           | 2            | `a[2] + b[2]`     |
+| 0          | 3           | 3            | `a[3] + b[3]`     |
+| 1          | 0           | 4            | `a[4] + b[4]`     |
+| 1          | 1           | 5            | `a[5] + b[5]`     |
+| 1          | 2           | 6            | `a[6] + b[6]`     |
+| 1          | 3           | 7            | `a[7] + b[7]`     |
+| 2          | 0           | 8            | `a[8] + b[8]`     |
+| 2          | 1           | 9            | `a[9] + b[9]`     |
+| 2          | 2           | 10           | `a[10] + b[10]`   |
+| 2          | 3           | 11           | `a[11] + b[11]`   |
+
+Every element of the input vectors is covered exactly once. If `n` were not perfectly divisible by `threads_per_block`, the `if (idx < n)` guard in the kernel would prevent out-of-bounds accesses.
 
 ```mermaid
 flowchart LR
@@ -72,6 +114,8 @@ process_image<<<blocks, threads>>>(...);
 
 Inside the kernel, combine `blockIdx.{x,y}`, `blockDim.{x,y}`, and `threadIdx.{x,y}` to compute pixel coordinates.
 
+### Visualizing a 2D Launch
+
 ```mermaid
 flowchart TD
     subgraph Block["blockIdx = (bx, by)"]
@@ -86,6 +130,22 @@ flowchart TD
 ```
 
 *A 2D thread block with `blockDim = (16,16)`. Each thread computes pixel coordinates via `x = blockIdx.x * blockDim.x + threadIdx.x`, `y = blockIdx.y * blockDim.y + threadIdx.y`.*
+
+To see how this plays out on a small image, suppose you launch 2×2 blocks of size 2×2 threads to process a 4×4 grayscale grid:
+
+- Block `(0,0)` handles pixels `(0..1, 0..1)`
+- Block `(1,0)` handles `(2..3, 0..1)`
+- Block `(0,1)` handles `(0..1, 2..3)`
+- Block `(1,1)` handles `(2..3, 2..3)`
+
+Within block `(1,0)`, thread `(0,1)` computes:
+
+```cpp
+int x = blockIdx.x * blockDim.x + threadIdx.x; // 1 * 2 + 0 = 2
+int y = blockIdx.y * blockDim.y + threadIdx.y; // 0 * 2 + 1 = 1
+```
+
+so it reads/writes the pixel at `(x=2, y=1)`. Thinking in terms of **block origin + thread offset** keeps the mapping intuitive as you scale to larger images or multi-channel tensors.
 
 ## Warps and SIMD Execution
 
