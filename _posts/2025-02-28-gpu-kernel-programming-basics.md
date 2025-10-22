@@ -52,6 +52,18 @@ vector_add<<<blocks, threads_per_block>>>(d_a, d_b, d_c, n);
 
 The parameters `<<<gridDim, blockDim>>>` specify how many blocks and how many threads per block you want.
 
+```mermaid
+flowchart LR
+    subgraph Grid["gridDim.x = 3 blocks"]
+        B0["Block 0<br/>blockIdx.x = 0"]
+        B1["Block 1<br/>blockIdx.x = 1"]
+        B2["Block 2<br/>blockIdx.x = 2"]
+    end
+    B0 -->|"threadIdx.x 0..255"| Threads0["256 threads<br/>blockDim.x = 256"]
+    B1 -->|"threadIdx.x 0..255"| Threads1["256 threads<br/>blockDim.x = 256"]
+    B2 -->|"threadIdx.x 0..255"| Threads2["256 threads<br/>blockDim.x = 256"]
+```
+
 ### A Minimal 1D Example
 
 Let’s shrink the numbers so the mapping is easy to see:
@@ -87,17 +99,7 @@ Since `blockDim.x` is `4`, every time `blockIdx.x` increments, `idx` jumps by fo
 
 Every element of the input vectors is covered exactly once. If `n` were not perfectly divisible by `threads_per_block`, the `if (idx < n)` guard in the kernel would prevent out-of-bounds accesses.
 
-```mermaid
-flowchart LR
-    subgraph Grid["gridDim.x = 3 blocks"]
-        B0["Block 0<br/>blockIdx.x = 0"]
-        B1["Block 1<br/>blockIdx.x = 1"]
-        B2["Block 2<br/>blockIdx.x = 2"]
-    end
-    B0 -->|"threadIdx.x 0..255"| Threads0["256 threads<br/>blockDim.x = 256"]
-    B1 -->|"threadIdx.x 0..255"| Threads1["256 threads<br/>blockDim.x = 256"]
-    B2 -->|"threadIdx.x 0..255"| Threads2["256 threads<br/>blockDim.x = 256"]
-```
+
 
 *A 1D grid with three blocks; each block launches 256 threads. Every thread computes a unique `idx = blockIdx.x * blockDim.x + threadIdx.x`.*
 
