@@ -149,6 +149,8 @@ int y = blockIdx.y * blockDim.y + threadIdx.y; // 0 * 2 + 1 = 1
 
 so it reads/writes the pixel at `(x=2, y=1)`. Thinking in terms of **block origin + thread offset** keeps the mapping intuitive as you scale to larger images or multi-channel tensors.
 
+Curious how CPU SIMD lanes relate to GPU warps? Check [From ISA to GPU Kernels: Bridging SIMD Mindsets]({{ site.baseurl }}{% link _posts/2025-03-08-isa-to-gpu-kernel-bridge.md %}).
+
 ## Warps and SIMD Execution
 
 - A **warp** is a scheduling unit of 32 threads (on recent NVIDIA GPUs). AMD calls the equivalent a **wavefront** (64 threads).
