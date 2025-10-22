@@ -7,6 +7,8 @@ tags: [c++, concurrency, futures, promises]
 
 Modern C++ puts powerful concurrency tools in your hands, but raw threads still make it easy to race on shared state, forget to join, or swallow exceptions. Futures and promises give you a higher-level contract: one side produces a value once, the other side waits for it exactly when needed. This post walks through the mental model, standard library types, and a couple of realistic patterns so you can apply them with confidence.
 
+*Ready to coordinate multiple futures? Continue with [Composing Futures in Modern C++](2025-02-19-compound-futures-modern-cpp.md).*
+
 ## Why Futures and Promises Exist
 
 Threading APIs traditionally expose two sharp edges:
