@@ -5,7 +5,7 @@ description: "Exploring how Kalman filters solve practical problems in navigatio
 tags: [kalman-filter, applications, navigation, robotics, computer-vision, series]
 ---
 
-*This is Part 6 of an 8-part series on Kalman Filtering. [Part 5](2024-09-24-kalman-filter-implementation.md) covered Python implementation details.*
+*This is Part 6 of an 8-part series on Kalman Filtering. [Part 5]({{ site.baseurl }}{% link _posts/2024-09-24-kalman-filter-implementation.md %}) covered Python implementation details.*
 
 ## From Theory to Real Impact
 
@@ -415,7 +415,7 @@ The applications we've explored represent just the beginning. As sensors become 
 
 In our next post, we'll explore **nonlinear extensions** – the Extended Kalman Filter, Unscented Kalman Filter, and Particle Filters – that push beyond the linear-Gaussian limitations to handle the full complexity of real-world systems.
 
-*Continue to [Part 7: Nonlinear Extensions - EKF, UKF, and Particle Filters](2024-09-26-nonlinear-kalman-extensions.md)*
+*Continue to [Part 7: Nonlinear Extensions - EKF, UKF, and Particle Filters]({{ site.baseurl }}{% link _posts/2024-09-26-nonlinear-kalman-extensions.md %})*
 
 ---
 

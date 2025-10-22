@@ -5,7 +5,7 @@ description: "Understanding the mathematical framework and universal patterns th
 tags: [kalman-filter, recursive-filtering, signal-processing, series]
 ---
 
-*This is Part 2 of an 8-part series on Kalman Filtering. [Part 1](2024-09-20-introduction-to-kalman-filtering.md) introduced state estimation concepts.*
+*This is Part 2 of an 8-part series on Kalman Filtering. [Part 1]({{ site.baseurl }}{% link _posts/2024-09-20-introduction-to-kalman-filtering.md %}) introduced state estimation concepts.*
 
 ## What Makes a Filter "Recursive"?
 
@@ -227,4 +227,4 @@ The journey from recursive average to Kalman filter is really about:
 - **No uncertainty → Optimal uncertainty propagation**
 - **Simple updates → Mathematically optimal estimation**
 
-*Continue to [Part 3: Bayesian Foundations of Kalman Filtering](2024-09-22-bayesian-foundations-kalman.md)*
+*Continue to [Part 3: Bayesian Foundations of Kalman Filtering]({{ site.baseurl }}{% link _posts/2024-09-22-bayesian-foundations-kalman.md %})*

@@ -5,7 +5,7 @@ description: "Step-by-step mathematical derivation of the Kalman filter equation
 tags: [kalman-filter, mathematical-derivation, linear-algebra, series]
 ---
 
-*This is Part 4 of an 8-part series on Kalman Filtering. [Part 3](2024-09-22-bayesian-foundations-kalman.md) established the Bayesian foundations.*
+*This is Part 4 of an 8-part series on Kalman Filtering. [Part 3]({{ site.baseurl }}{% link _posts/2024-09-22-bayesian-foundations-kalman.md %}) established the Bayesian foundations.*
 
 ## From Theory to Equations
 
@@ -251,4 +251,4 @@ With the complete mathematical foundation in place, our next post will transform
 
 The journey from abstract mathematics to running code reveals both the elegance of the theory and the care required for reliable implementation.
 
-*Continue to [Part 5: Implementing the Kalman Filter in Python](2024-09-24-kalman-filter-implementation.md)*
+*Continue to [Part 5: Implementing the Kalman Filter in Python]({{ site.baseurl }}{% link _posts/2024-09-24-kalman-filter-implementation.md %})*

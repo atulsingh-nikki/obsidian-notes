@@ -126,4 +126,4 @@ The Kalman filter represents one of the most beautiful intersections of mathemat
 
 Whether you're a student encountering these concepts for the first time or an engineer looking to deepen your understanding, this series will equip you with both the theoretical foundation and practical skills to apply Kalman filtering effectively.
 
-*Continue to [Part 2: Fundamentals of Recursive Filtering](2024-09-21-fundamentals-recursive-filtering.md)*
+*Continue to [Part 2: Fundamentals of Recursive Filtering]({{ site.baseurl }}{% link _posts/2024-09-21-fundamentals-recursive-filtering.md %})*

@@ -5,7 +5,7 @@ description: "A complete step-by-step Python implementation of the Kalman filter
 tags: [kalman-filter, python, implementation, programming, series]
 ---
 
-*This is Part 5 of an 8-part series on Kalman Filtering. [Part 4](2024-09-23-kalman-filter-derivation.md) provided the complete mathematical derivation.*
+*This is Part 5 of an 8-part series on Kalman Filtering. [Part 4]({{ site.baseurl }}{% link _posts/2024-09-23-kalman-filter-derivation.md %}) provided the complete mathematical derivation.*
 
 ## From Mathematics to Code
 
@@ -393,7 +393,7 @@ With a solid implementation foundation, our next post will explore **real-world 
 
 The journey from mathematical equations to working code reveals both the elegance of the underlying theory and the care required for production-ready implementations.
 
-*Continue to [Part 6: Real-World Applications of Kalman Filtering](2024-09-25-kalman-filter-applications.md)*
+*Continue to [Part 6: Real-World Applications of Kalman Filtering]({{ site.baseurl }}{% link _posts/2024-09-25-kalman-filter-applications.md %})*
 
 ---
 

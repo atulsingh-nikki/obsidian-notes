@@ -5,7 +5,7 @@ description: "Moving beyond linear-Gaussian assumptions with Extended Kalman Fil
 tags: [kalman-filter, ekf, ukf, particle-filter, nonlinear, series]
 ---
 
-*This is Part 7 of an 8-part series on Kalman Filtering. [Part 6](2024-09-25-kalman-filter-applications.md) explored real-world applications.*
+*This is Part 7 of an 8-part series on Kalman Filtering. [Part 6]({{ site.baseurl }}{% link _posts/2024-09-25-kalman-filter-applications.md %}) explored real-world applications.*
 
 ## Beyond Linear-Gaussian: The Real World
 
@@ -526,4 +526,4 @@ The nonlinear extensions we've explored represent the current state-of-the-art i
 
 The evolution from linear Kalman filters to sophisticated nonlinear estimators mirrors the broader trajectory of engineering: starting with elegant mathematical foundations and extending them to handle real-world complexity while preserving practical utility.
 
-*Continue to [Part 8: Advanced Topics and Future Directions](2024-09-27-advanced-kalman-topics.md)*
+*Continue to [Part 8: Advanced Topics and Future Directions]({{ site.baseurl }}{% link _posts/2024-09-27-advanced-kalman-topics.md %})*

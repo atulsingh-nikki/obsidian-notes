@@ -5,7 +5,7 @@ description: "Exploring cutting-edge developments in Kalman filtering: neural ne
 tags: [kalman-filter, machine-learning, distributed-systems, quantum-computing, series]
 ---
 
-*This is Part 8 (Final) of an 8-part series on Kalman Filtering. [Part 7](2024-09-26-nonlinear-kalman-extensions.md) covered nonlinear extensions.*
+*This is Part 8 (Final) of an 8-part series on Kalman Filtering. [Part 7]({{ site.baseurl }}{% link _posts/2024-09-26-nonlinear-kalman-extensions.md %}) covered nonlinear extensions.*
 
 ## Beyond Classical Filtering: The Modern Frontier
 

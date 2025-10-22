@@ -5,7 +5,7 @@ description: "Understanding how Bayes' theorem provides the mathematical foundat
 tags: [kalman-filter, bayesian-inference, probability, series]
 ---
 
-*This is Part 3 of an 8-part series on Kalman Filtering. [Part 2](2024-09-21-fundamentals-recursive-filtering.md) explored recursive filtering fundamentals.*
+*This is Part 3 of an 8-part series on Kalman Filtering. [Part 2]({{ site.baseurl }}{% link _posts/2024-09-21-fundamentals-recursive-filtering.md %}) explored recursive filtering fundamentals.*
 
 ## From Intuition to Mathematical Rigor
 
@@ -331,4 +331,4 @@ Understanding the Bayesian foundations reveals why the Kalman filter is so power
 
 The journey from Bayes' theorem to the Kalman filter represents one of applied mathematics' greatest success stories – transforming abstract probability theory into a practical algorithm that guides spacecraft, tracks objects, and enables autonomous systems worldwide.
 
-*Continue to [Part 4: Complete Mathematical Derivation of the Kalman Filter](2024-09-23-kalman-filter-derivation.md)*
+*Continue to [Part 4: Complete Mathematical Derivation of the Kalman Filter]({{ site.baseurl }}{% link _posts/2024-09-23-kalman-filter-derivation.md %})*
