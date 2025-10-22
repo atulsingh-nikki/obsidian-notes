@@ -50,11 +50,21 @@
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    const codeBlocks = document.querySelectorAll('pre code.language-mermaid, pre code.lang-mermaid');
+    codeBlocks.forEach(code => {
+      const pre = code.parentElement;
+      const container = document.createElement('div');
+      container.className = 'mermaid';
+      container.textContent = code.textContent;
+      pre.replaceWith(container);
+    });
+
     if (window.mermaid) {
       mermaid.initialize({
         startOnLoad: true,
         theme: document.body.classList.contains('night') ? 'dark' : 'default'
       });
+      mermaid.run();
     }
   });
 </script>
