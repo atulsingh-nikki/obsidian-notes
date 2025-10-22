@@ -46,15 +46,15 @@ vector_add<<<blocks, threads_per_block>>>(d_a, d_b, d_c, n);
 The parameters `<<<gridDim, blockDim>>>` specify how many blocks and how many threads per block you want.
 
 ```mermaid
-graph LR
-    subgraph Grid (gridDim = 3)
-        B0("Block 0\nblockIdx.x = 0")
-        B1("Block 1\nblockIdx.x = 1")
-        B2("Block 2\nblockIdx.x = 2")
+flowchart LR
+    subgraph Grid["gridDim.x = 3 blocks"]
+        B0["Block 0<br/>blockIdx.x = 0"]
+        B1["Block 1<br/>blockIdx.x = 1"]
+        B2["Block 2<br/>blockIdx.x = 2"]
     end
-    B0 -->|threadIdx.x = 0..255| TPB0("256 threads\nblockDim.x = 256")
-    B1 -->|threadIdx.x = 0..255| TPB1("256 threads\nblockDim.x = 256")
-    B2 -->|threadIdx.x = 0..255| TPB2("256 threads\nblockDim.x = 256")
+    B0 -->|"threadIdx.x 0..255"| Threads0["256 threads<br/>blockDim.x = 256"]
+    B1 -->|"threadIdx.x 0..255"| Threads1["256 threads<br/>blockDim.x = 256"]
+    B2 -->|"threadIdx.x 0..255"| Threads2["256 threads<br/>blockDim.x = 256"]
 ```
 
 *A 1D grid with three blocks; each block launches 256 threads. Every thread computes a unique `idx = blockIdx.x * blockDim.x + threadIdx.x`.*
@@ -73,18 +73,16 @@ process_image<<<blocks, threads>>>(...);
 Inside the kernel, combine `blockIdx.{x,y}`, `blockDim.{x,y}`, and `threadIdx.{x,y}` to compute pixel coordinates.
 
 ```mermaid
-graph TD
-    subgraph blockIdx = (bx, by)
-        subgraph blockDim = (16,16)
-            T00("threadIdx (0,0)")
-            T01("threadIdx (1,0)")
-            T0n("...")
-            Tn0("...")
-            Tnn("threadIdx (15,15)")
+flowchart TD
+    subgraph Block["blockIdx = (bx, by)"]
+        subgraph Threads["blockDim = (16,16)"]
+            T00["threadIdx (0,0)"]
+            T01["threadIdx (1,0)"]
+            T02["..."]
+            T30["..."]
+            TNN["threadIdx (15,15)"]
         end
     end
-    style blockDim fill:#f6f9ff,stroke:#4a6cf7,stroke-width:2px
-    style blockIdx fill:#eef5ff,stroke:#2c4dd6,stroke-width:2px
 ```
 
 *A 2D thread block with `blockDim = (16,16)`. Each thread computes pixel coordinates via `x = blockIdx.x * blockDim.x + threadIdx.x`, `y = blockIdx.y * blockDim.y + threadIdx.y`.*
