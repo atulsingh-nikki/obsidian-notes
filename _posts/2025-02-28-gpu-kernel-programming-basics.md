@@ -46,7 +46,7 @@ Launch example:
 
 ```cpp
 int threads_per_block = 256;
-int blocks = (n + threads_per_block - 1) / threads_per_block;
+int blocks = (n + threads_per_block - 1) / threads_per_block; // ceiling division so every element gets a thread
 vector_add<<<blocks, threads_per_block>>>(d_a, d_b, d_c, n);
 ```
 
