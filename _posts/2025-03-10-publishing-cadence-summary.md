@@ -27,6 +27,9 @@ Looking for a single place to trace how the notebook has evolved? This reference
 ### October 2024 — 1 post
 - Oct 06: [Understanding the Resent Family of Emotions]({{ site.baseurl }}{% link _posts/2024-10-06-resent-family-spectrum.md %})
 
+### December 2024 — 1 post
+- Dec 02: [From Tesseract to Transformers: The Evolution of OCR]({{ site.baseurl }}{% link _posts/2024-12-02-tesseract-ocr-evolution.md %})
+
 ### January 2025 — 3 posts
 - Jan 10: [Understanding ACES, Scene-Referred Workflows, and Color Space Conversions]({{ site.baseurl }}{% link _posts/2025-01-10-understanding-aces-scene-referred-workflows.md %})
 - Jan 15: [The Hidden Symmetry of Inverse Sine and Cosine]({{ site.baseurl }}{% link _posts/2025-01-15-hidden-symmetry-inverse-trig.md %})
@@ -60,7 +63,7 @@ Looking for a single place to trace how the notebook has evolved? This reference
 
 - **2024 Q2 (Apr–Jun)** — 2 posts launching the site and documenting the learning pipeline in May.
 - **2024 Q3 (Jul–Sep)** — 9 posts that build the Kalman Filtering series end-to-end, capped by a MathJax rendering check.
-- **2024 Q4 (Oct–Dec)** — 1 semantics post exploring the resent family of emotions.
+- **2024 Q4 (Oct–Dec)** — 2 posts mixing affective semantics with a look at OCR's leap from Tesseract to transformers.
 - **2025 Q1 (Jan–Mar)** — 13 posts spanning optimization math, language studies, the C++ futures trilogy, and a multi-part sampling primer.
 - **2025 Q3 (Jul–Sep)** — 4 posts blending vision research write-ups with a language usage study.
 - **2025 Q4 (Oct–Dec)** — 2 posts advancing sampling theory and panoptic segmentation insights.
@@ -68,11 +71,11 @@ Looking for a single place to trace how the notebook has evolved? This reference
 ## Semiannual Rollup
 
 - **2024 H1 (Jan–Jun)** — 2 foundational posts laying out the project mission and note-taking workflow.
-- **2024 H2 (Jul–Dec)** — 10 posts focused on probabilistic state estimation plus affective semantics.
+- **2024 H2 (Jul–Dec)** — 11 posts focused on probabilistic state estimation, affective semantics, and the evolution of OCR tooling.
 - **2025 H1 (Jan–Jun)** — 13 posts covering advanced calculus, optimization, C++ concurrency, and sampling methods.
 - **2025 H2 (Jul–Dec)** — 6 posts summarizing vision research and probabilistic modeling extensions.
 
 ## Annual Rollup
 
-- **2024 — 12 posts**: From the site introduction to a comprehensive Kalman Filtering curriculum and an exploration of affective vocabulary.
+- **2024 — 13 posts**: From the site introduction to a comprehensive Kalman Filtering curriculum, affective vocabulary studies, and a survey of OCR advances.
 - **2025 — 19 posts**: Deep dives into color science, optimization, functional analysis, C++ concurrency, sampling theory, and computer vision research notes.
