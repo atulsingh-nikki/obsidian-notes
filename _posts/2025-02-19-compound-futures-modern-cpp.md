@@ -7,7 +7,7 @@ tags: [c++, concurrency, futures, async]
 
 In the previous post we focused on the contract between a single promise and future. Real systems rarely stop there. Data pipelines, UI flows, and service backends routinely launch *several* asynchronous operations and need a coordinated response. This article explores how to build those compound futures—combining readiness, folding results, and handling failure as a single outcome.
 
-*New to the basics? Start with [Understanding Futures and Promises in Modern C++]({{ site.baseurl }}{% link _posts/2025-02-18-understanding-futures-promises-cpp.md %}) and come back when you're ready to compose them.*
+*New to the basics? Start with [Understanding Futures and Promises in Modern C++]({{ site.baseurl }}{% link _posts/2025-02-18-understanding-futures-promises-cpp.md %}) and come back when you're ready to compose them. To understand the move semantics and perfect forwarding used throughout these examples, see [Understanding Reference Types in Modern C++]({{ site.baseurl }}{% link _posts/2025-10-22-cpp-reference-types-explained.md %}).*
 
 ## Why Compose Futures?
 

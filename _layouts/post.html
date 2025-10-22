@@ -20,6 +20,68 @@ layout: default
     {{ content }}
   </div>
 
+  {% assign related_count = 0 %}
+  {% capture related_items %}
+    {% if page.tags and page.tags.size > 0 %}
+      {% for candidate in site.posts %}
+        {% if candidate.url != page.url %}
+          {% assign share = false %}
+          {% for tag in candidate.tags %}
+            {% if page.tags contains tag %}
+              {% assign share = true %}
+            {% endif %}
+          {% endfor %}
+          {% if share %}
+            {% assign related_count = related_count | plus: 1 %}
+            <li class="blog-post__related-item">
+              <a class="blog-post__related-link" href="{{ candidate.url | relative_url }}">{{ candidate.title }}</a>
+              <span class="blog-post__related-meta">
+                {{ candidate.date | date: "%B %-d, %Y" }}
+                {% if candidate.tags and candidate.tags.size > 0 %}
+                  · {{ candidate.tags | join: ", " }}
+                {% endif %}
+              </span>
+            </li>
+          {% endif %}
+          {% if related_count == 5 %}
+            {% break %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endcapture %}
+  {% if related_count == 0 %}
+    {% assign fallback_count = 0 %}
+    {% capture related_items %}
+      {% for candidate in site.posts %}
+        {% if candidate.url != page.url %}
+          {% assign fallback_count = fallback_count | plus: 1 %}
+          <li class="blog-post__related-item">
+            <a class="blog-post__related-link" href="{{ candidate.url | relative_url }}">{{ candidate.title }}</a>
+            <span class="blog-post__related-meta">
+              {{ candidate.date | date: "%B %-d, %Y" }}
+              {% if candidate.tags and candidate.tags.size > 0 %}
+                · {{ candidate.tags | join: ", " }}
+              {% endif %}
+            </span>
+          </li>
+        {% endif %}
+        {% if fallback_count == 5 %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    {% endcapture %}
+    {% assign related_count = fallback_count %}
+  {% endif %}
+  {% if related_count > 0 %}
+    <section class="blog-post__related" aria-label="Related posts">
+      <h2 class="blog-post__related-title">Keep Reading</h2>
+      <ul class="blog-post__related-list">
+        {{ related_items }}
+      </ul>
+    </section>
+  {% endif %}
+
   <nav class="blog-post__nav" aria-label="Post navigation">
     <ul class="blog-post__nav-list">
       <li class="blog-post__nav-item">
