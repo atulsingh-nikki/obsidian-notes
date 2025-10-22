@@ -174,3 +174,5 @@ Each `get()` will block until its producer finishes, but there is no extra synch
 ## Wrapping Up
 
 Compound futures let you express whole phases of asynchronous work as a single step. Whether you adopt `std::when_all` and `std::when_any` or craft a minimal helper, the pattern is the same: guard shared state with a promise, propagate exceptions, and let the consumer observe one future that captures the whole conversation. Bring these techniques into your codebase and the jump from single-task demos to production pipelines becomes far less daunting.
+
+Want to dig deeper into how those futures are created? Read [Mastering std::async in Modern C++]({{ site.baseurl }}{% link _posts/2025-02-20-mastering-std-async.md %}) for launch policies, lifetime rules, and patterns that pair well with these composition techniques.
