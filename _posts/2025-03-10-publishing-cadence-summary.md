@@ -47,8 +47,9 @@ Looking for a single place to trace how the notebook has evolved? This reference
 - Feb 24: [Logarithmic Color Spaces, PCA, and the lαβ Intuition]({{ site.baseurl }}{% link _posts/2025-02-24-logarithmic-color-pca.md %})
 - Feb 28: [GPU Kernel Programming: Grids, Blocks, and Warps Explained]({{ site.baseurl }}{% link _posts/2025-02-28-gpu-kernel-programming-basics.md %})
 
-### March 2025 — 1 post
+### March 2025 — 2 posts
 - Mar 05: [Random vs Stochastic: Clarifying Variables, Processes, Sampling, and Optimization]({{ site.baseurl }}{% link _posts/2025-03-05-random-vs-stochastic-foundations.md %})
+- Mar 12: [PyTorch Tensor Indexing: From 1D Slices to N-Dimensional Views]({{ site.baseurl }}{% link _posts/2025-03-12-pytorch-indexing-slicing.md %})
 
 ### September 2025 — 4 posts
 - Sep 22: [From Elementary Mathematics to Vision Algorithms: The Hidden Life of Normalized Power Sums]({{ site.baseurl }}{% link _posts/2025-09-22-elementary-math-to-vision-algorithms.md %})
@@ -65,7 +66,7 @@ Looking for a single place to trace how the notebook has evolved? This reference
 - **2024 Q2 (Apr–Jun)** — 2 posts launching the site and documenting the learning pipeline in May.
 - **2024 Q3 (Jul–Sep)** — 9 posts that build the Kalman Filtering series end-to-end, capped by a MathJax rendering check.
 - **2024 Q4 (Oct–Dec)** — 2 posts mixing affective semantics with a look at OCR's leap from Tesseract to transformers.
-- **2025 Q1 (Jan–Mar)** — 14 posts spanning optimization math, language studies, the C++ futures trilogy, GPU programming, and a multi-part sampling primer.
+- **2025 Q1 (Jan–Mar)** — 15 posts spanning optimization math, language studies, the C++ futures trilogy, GPU programming, tensor indexing, and a multi-part sampling primer.
 - **2025 Q3 (Jul–Sep)** — 4 posts blending vision research write-ups with a language usage study.
 - **2025 Q4 (Oct–Dec)** — 2 posts advancing sampling theory and panoptic segmentation insights.
 
@@ -73,10 +74,10 @@ Looking for a single place to trace how the notebook has evolved? This reference
 
 - **2024 H1 (Jan–Jun)** — 2 foundational posts laying out the project mission and note-taking workflow.
 - **2024 H2 (Jul–Dec)** — 11 posts focused on probabilistic state estimation, affective semantics, and the evolution of OCR tooling.
-- **2025 H1 (Jan–Jun)** — 14 posts covering advanced calculus, optimization, C++ concurrency, GPU programming, and sampling methods.
+- **2025 H1 (Jan–Jun)** — 15 posts covering advanced calculus, optimization, C++ concurrency, GPU programming, tensor indexing, and sampling methods.
 - **2025 H2 (Jul–Dec)** — 6 posts summarizing vision research and probabilistic modeling extensions.
 
 ## Annual Rollup
 
 - **2024 — 13 posts**: From the site introduction to a comprehensive Kalman Filtering curriculum, affective vocabulary studies, and a survey of OCR advances.
-- **2025 — 20 posts**: Deep dives into color science, optimization, functional analysis, C++ concurrency, GPU programming, sampling theory, and computer vision research notes.
+- **2025 — 21 posts**: Deep dives into color science, optimization, functional analysis, C++ concurrency, GPU programming, tensor indexing, sampling theory, and computer vision research notes.
