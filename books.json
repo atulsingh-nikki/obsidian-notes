@@ -219,5 +219,33 @@
         ]
       }
     ]
+  },
+  {
+    "title": "Deep Learning Architectures",
+    "path": "Books/Book_Deep_Learning_Architectures",
+    "sections": [
+      {
+        "title": "Overview",
+        "items": [
+          {
+            "title": "Introduction",
+            "path": "Books/Book_Deep_Learning_Architectures/Introduction.md"
+          },
+          {
+            "title": "Table of Contents",
+            "path": "Books/Book_Deep_Learning_Architectures/TableOfContents.md"
+          }
+        ]
+      },
+      {
+        "title": "Part I: Spatial Architectures",
+        "items": [
+          {
+            "title": "Chapter 1: The Convolutional Foundation",
+            "path": "Books/Book_Deep_Learning_Architectures/Part_1_Spatial_Architectures/Chapter_1_The_Convolutional_Foundation.md"
+          }
+        ]
+      }
+    ]
   }
 ]
