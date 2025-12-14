@@ -1,6 +1,8 @@
 const state = {
   books: [],
   activePath: null,
+  selectedBook: null,
+  viewMode: 'overview', // 'overview' or 'chapter'
 };
 
 const siteConfig = window.__SITE_CONFIG__ || {};
@@ -33,12 +35,14 @@ async function init() {
       return;
     }
 
-    buildNavigation(books);
-    const initialPath = decodeHash(location.hash) || firstChapterPath(books);
+    const initialPath = decodeHash(location.hash);
     if (initialPath) {
-      // Use replaceState so that the initial load does not add an extra entry.
-      updateHash(initialPath, { replace: true });
+      // If there's a hash, show the chapter view
+      buildNavigation(books);
       await displayChapter(initialPath);
+    } else {
+      // Show books overview by default
+      showBooksOverview();
     }
   } catch (error) {
     console.error(error);
@@ -55,17 +59,160 @@ async function loadBooks() {
   return response.json();
 }
 
+function showBooksOverview() {
+  state.viewMode = 'overview';
+  state.selectedBook = null;
+  state.activePath = null;
+  history.replaceState(null, "", window.location.pathname);
+  
+  renderBooksOverview();
+  renderBooksOverviewContent();
+}
+
+function renderBooksOverview() {
+  navigationEl.innerHTML = "";
+  
+  const overviewContainer = document.createElement("div");
+  overviewContainer.className = "books-overview";
+  
+  const header = document.createElement("div");
+  header.className = "books-overview__header";
+  header.innerHTML = `
+    <h2>Available Books</h2>
+    <p>Select a book to explore its chapters and content.</p>
+  `;
+  overviewContainer.appendChild(header);
+  
+  const grid = document.createElement("div");
+  grid.className = "books-overview__grid";
+  
+  const bookDescriptions = {
+    'Color Correction': 'A comprehensive guide to color science, digital imaging pipeline, and professional color grading workflows.',
+    'Object Detection': 'Explore computer vision fundamentals, detection architectures, segmentation techniques, and tracking algorithms.',
+    'Deep Learning Architectures': 'Learn about modern neural network architectures and their applications in various domains.'
+  };
+  
+  const bookIcons = ['🎨', '👁️', '🧠', '🔬', '📊', '🎯', '📚'];
+  
+  state.books.forEach((book, index) => {
+    const card = document.createElement("div");
+    card.className = "book-card";
+    card.setAttribute("role", "button");
+    card.setAttribute("tabindex", "0");
+    
+    const totalChapters = book.sections.reduce((sum, section) => sum + section.items.length, 0);
+    const sectionCount = book.sections.length;
+    const description = bookDescriptions[book.title] || `Explore ${book.title.toLowerCase()} with detailed chapters and sections.`;
+    
+    card.innerHTML = `
+      <div class="book-card__header">
+        <div class="book-card__icon">${bookIcons[index % bookIcons.length]}</div>
+        <h3 class="book-card__title">${book.title}</h3>
+      </div>
+      <p class="book-card__description">${description}</p>
+      <div class="book-card__meta">
+        <span class="book-card__meta-item">📖 ${totalChapters} chapters</span>
+        <span class="book-card__meta-item">📑 ${sectionCount} sections</span>
+      </div>
+      <p class="book-card__arrow">Explore book →</p>
+    `;
+    
+    card.addEventListener("click", () => selectBook(book));
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        selectBook(book);
+      }
+    });
+    
+    grid.appendChild(card);
+  });
+  
+  overviewContainer.appendChild(grid);
+  navigationEl.appendChild(overviewContainer);
+}
+
+function renderBooksOverviewContent() {
+  contentEl.innerHTML = `
+    <div class="books-overview">
+      <div class="books-overview__header">
+        <h2>Welcome to the Learning Collection</h2>
+        <p>This collection contains in-depth explorations of various topics in computer science, machine learning, and related fields.</p>
+        <p style="margin-top: 1rem;">Select a book from the sidebar to begin reading, or browse all available chapters using the navigation menu.</p>
+      </div>
+    </div>
+  `;
+}
+
+function selectBook(book) {
+  state.viewMode = 'chapter';
+  state.selectedBook = book;
+  buildNavigation(state.books);
+  
+  // Load the first chapter of the selected book
+  const firstPath = firstChapterPathForBook(book);
+  if (firstPath) {
+    navigateToChapter(firstPath);
+  }
+}
+
+function firstChapterPathForBook(book) {
+  for (const section of book.sections) {
+    if (section.items && section.items.length > 0) {
+      return section.items[0].path;
+    }
+  }
+  return "";
+}
+
+function renderBreadcrumb(bookTitle) {
+  const breadcrumb = document.createElement("div");
+  breadcrumb.className = "bookshelf-breadcrumb";
+  
+  const homeLink = document.createElement("a");
+  homeLink.href = "#";
+  homeLink.textContent = "All Books";
+  homeLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    showBooksOverview();
+  });
+  
+  const separator = document.createElement("span");
+  separator.className = "bookshelf-breadcrumb__separator";
+  separator.textContent = "/";
+  
+  const current = document.createElement("span");
+  current.className = "bookshelf-breadcrumb__current";
+  current.textContent = bookTitle;
+  
+  breadcrumb.appendChild(homeLink);
+  breadcrumb.appendChild(separator);
+  breadcrumb.appendChild(current);
+  
+  return breadcrumb;
+}
+
 function buildNavigation(books) {
   navigationEl.innerHTML = "";
   navRegistry.clear();
 
-  books.forEach((book, bookIndex) => {
+  // Add breadcrumb if we're viewing a specific book
+  if (state.selectedBook) {
+    navigationEl.appendChild(renderBreadcrumb(state.selectedBook.title));
+  }
+
+  const booksToShow = state.selectedBook ? [state.selectedBook] : books;
+
+  booksToShow.forEach((book, bookIndex) => {
     const bookContainer = document.createElement("div");
     bookContainer.className = "bookshelf-book";
 
-    const bookHeader = document.createElement("h3");
-    bookHeader.textContent = book.title;
-    bookContainer.appendChild(bookHeader);
+    // Only show book title if displaying multiple books
+    if (!state.selectedBook) {
+      const bookHeader = document.createElement("h3");
+      bookHeader.textContent = book.title;
+      bookContainer.appendChild(bookHeader);
+    }
 
     book.sections.forEach((section, sectionIndex) => {
       const details = document.createElement("details");
@@ -134,6 +281,25 @@ function decodeHash(hash) {
 
 async function displayChapter(path) {
   if (!path) return;
+  
+  // Find which book this chapter belongs to
+  if (!state.selectedBook) {
+    for (const book of state.books) {
+      for (const section of book.sections) {
+        for (const item of section.items) {
+          if (item.path === path) {
+            state.selectedBook = book;
+            state.viewMode = 'chapter';
+            buildNavigation(state.books);
+            break;
+          }
+        }
+        if (state.selectedBook) break;
+      }
+      if (state.selectedBook) break;
+    }
+  }
+  
   const registryEntry = navRegistry.get(path);
   if (!registryEntry) {
     renderError("The requested chapter is not part of the current index.");
@@ -233,7 +399,10 @@ function firstChapterPath(books) {
 
 function handleHashChange() {
   const path = decodeHash(location.hash);
-  if (!path) return;
+  if (!path) {
+    showBooksOverview();
+    return;
+  }
   displayChapter(path);
 }
 
