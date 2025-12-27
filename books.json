@@ -247,5 +247,85 @@
         ]
       }
     ]
+  },
+  {
+    "title": "Training Strategies",
+    "path": "Books/Book_Training_Strategies",
+    "sections": [
+      {
+        "title": "Overview",
+        "items": [
+          {
+            "title": "Introduction",
+            "path": "Books/Book_Training_Strategies/Introduction.md"
+          },
+          {
+            "title": "Table of Contents",
+            "path": "Books/Book_Training_Strategies/TableOfContents.md"
+          }
+        ]
+      },
+      {
+        "title": "Part 1: Foundations",
+        "items": [
+          {
+            "title": "Chapter 1 – Understanding Model Training",
+            "path": "Books/Book_Training_Strategies/Part_1_Foundations/Chapter_01_Understanding_Model_Training/Chapter_01.md"
+          }
+        ]
+      },
+      {
+        "title": "Part 2: Optimization Techniques",
+        "items": [
+          {
+            "title": "Chapter 2 – Gradient Descent and Variants",
+            "path": "Books/Book_Training_Strategies/Part_2_Optimization_Techniques/Chapter_02_Gradient_Descent_and_Variants/Chapter_02.md"
+          },
+          {
+            "title": "Chapter 3 – Advanced Optimizers",
+            "path": "Books/Book_Training_Strategies/Part_2_Optimization_Techniques/Chapter_03_Advanced_Optimizers/Chapter_03.md"
+          }
+        ]
+      },
+      {
+        "title": "Part 3: Regularization Strategies",
+        "items": [
+          {
+            "title": "Chapter 4 – Preventing Overfitting",
+            "path": "Books/Book_Training_Strategies/Part_3_Regularization/Chapter_04_Preventing_Overfitting/Chapter_04.md"
+          },
+          {
+            "title": "Chapter 5 – Data Augmentation",
+            "path": "Books/Book_Training_Strategies/Part_3_Regularization/Chapter_05_Data_Augmentation/Chapter_05.md"
+          }
+        ]
+      },
+      {
+        "title": "Part 4: Transfer Learning",
+        "items": [
+          {
+            "title": "Chapter 6 – Foundation Models",
+            "path": "Books/Book_Training_Strategies/Part_4_Transfer_Learning/Chapter_06_Foundation_Models/Chapter_06.md"
+          },
+          {
+            "title": "Chapter 7 – Fine-Tuning Strategies",
+            "path": "Books/Book_Training_Strategies/Part_4_Transfer_Learning/Chapter_07_Fine_Tuning_Strategies/Chapter_07.md"
+          }
+        ]
+      },
+      {
+        "title": "Part 5: Advanced Topics",
+        "items": [
+          {
+            "title": "Chapter 8 – Multi-Task Learning",
+            "path": "Books/Book_Training_Strategies/Part_5_Advanced_Topics/Chapter_08_Multi_Task_Learning/Chapter_08.md"
+          },
+          {
+            "title": "Chapter 9 – Self-Supervised Learning",
+            "path": "Books/Book_Training_Strategies/Part_5_Advanced_Topics/Chapter_09_Self_Supervised_Learning/Chapter_09.md"
+          }
+        ]
+      }
+    ]
   }
 ]

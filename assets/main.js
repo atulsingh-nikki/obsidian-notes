@@ -67,6 +67,7 @@ function showBooksOverview() {
   
   renderBooksOverview();
   renderBooksOverviewContent();
+  showBlogSection();
 }
 
 function renderBooksOverview() {
@@ -89,10 +90,11 @@ function renderBooksOverview() {
   const bookDescriptions = {
     'Color Correction': 'A comprehensive guide to color science, digital imaging pipeline, and professional color grading workflows.',
     'Object Detection': 'Explore computer vision fundamentals, detection architectures, segmentation techniques, and tracking algorithms.',
-    'Deep Learning Architectures': 'Learn about modern neural network architectures and their applications in various domains.'
+    'Deep Learning Architectures': 'Learn about modern neural network architectures and their applications in various domains.',
+    'Training Strategies': 'Master optimization techniques, regularization, transfer learning, and advanced training strategies for computer vision models.'
   };
   
-  const bookIcons = ['🎨', '👁️', '🧠', '🔬', '📊', '🎯', '📚'];
+  const bookIcons = ['🎨', '👁️', '🧠', '🎯', '🔬', '📊', '📚'];
   
   state.books.forEach((book, index) => {
     const card = document.createElement("div");
@@ -117,11 +119,11 @@ function renderBooksOverview() {
       <p class="book-card__arrow">Explore book →</p>
     `;
     
-    card.addEventListener("click", () => selectBook(book));
+    card.addEventListener("click", () => selectBookInNewTab(book));
     card.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
-        selectBook(book);
+        selectBookInNewTab(book);
       }
     });
     
@@ -148,11 +150,23 @@ function selectBook(book) {
   state.viewMode = 'chapter';
   state.selectedBook = book;
   buildNavigation(state.books);
+  hideBlogSection();
   
   // Load the first chapter of the selected book
   const firstPath = firstChapterPathForBook(book);
   if (firstPath) {
     navigateToChapter(firstPath);
+  }
+}
+
+function selectBookInNewTab(book) {
+  // Get the first chapter path for this book
+  const firstPath = firstChapterPathForBook(book);
+  if (firstPath) {
+    // Construct the URL with the chapter hash
+    const currentUrl = window.location.href.split('#')[0];
+    const newUrl = `${currentUrl}#${encodeURIComponent(firstPath)}`;
+    window.open(newUrl, '_blank');
   }
 }
 
@@ -300,6 +314,9 @@ async function displayChapter(path) {
     }
   }
   
+  // Hide blog section when viewing a chapter
+  hideBlogSection();
+  
   const registryEntry = navRegistry.get(path);
   if (!registryEntry) {
     renderError("The requested chapter is not part of the current index.");
@@ -404,6 +421,28 @@ function handleHashChange() {
     return;
   }
   displayChapter(path);
+}
+
+function hideBlogSection() {
+  const blogSection = document.querySelector('.home-page__column--blog');
+  const grid = document.querySelector('.home-page__grid');
+  if (blogSection) {
+    blogSection.style.display = 'none';
+  }
+  if (grid) {
+    grid.classList.add('home-page__grid--single');
+  }
+}
+
+function showBlogSection() {
+  const blogSection = document.querySelector('.home-page__column--blog');
+  const grid = document.querySelector('.home-page__grid');
+  if (blogSection) {
+    blogSection.style.display = '';
+  }
+  if (grid) {
+    grid.classList.remove('home-page__grid--single');
+  }
 }
 
 if (navigationEl && contentEl && mainEl) {

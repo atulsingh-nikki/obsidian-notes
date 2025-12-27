@@ -324,6 +324,10 @@ body .main-content {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: stretch;
   }
+  
+  .home-page__grid--single {
+    grid-template-columns: 1fr;
+  }
 }
 
 .bookshelf-header {
