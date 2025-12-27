@@ -135,15 +135,10 @@ function renderBooksOverview() {
 }
 
 function renderBooksOverviewContent() {
-  contentEl.innerHTML = `
-    <div class="books-overview">
-      <div class="books-overview__header">
-        <h2>Welcome to the Learning Collection</h2>
-        <p>This collection contains in-depth explorations of various topics in computer science, machine learning, and related fields.</p>
-        <p style="margin-top: 1rem;">Select a book from the sidebar to begin reading, or browse all available chapters using the navigation menu.</p>
-      </div>
-    </div>
-  `;
+  // Hide the main content area completely when showing book overview
+  if (mainEl) {
+    mainEl.style.display = 'none';
+  }
 }
 
 function selectBook(book) {
@@ -151,6 +146,11 @@ function selectBook(book) {
   state.selectedBook = book;
   buildNavigation(state.books);
   hideBlogSection();
+  
+  // Show main content area when selecting a book
+  if (mainEl) {
+    mainEl.style.display = '';
+  }
   
   // Load the first chapter of the selected book
   const firstPath = firstChapterPathForBook(book);
@@ -316,6 +316,11 @@ async function displayChapter(path) {
   
   // Hide blog section when viewing a chapter
   hideBlogSection();
+  
+  // Show main content area when displaying a chapter
+  if (mainEl) {
+    mainEl.style.display = '';
+  }
   
   const registryEntry = navRegistry.get(path);
   if (!registryEntry) {

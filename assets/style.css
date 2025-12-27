@@ -356,7 +356,7 @@ body .main-content {
 .bookshelf-layout {
   flex: 1;
   display: grid;
-  grid-template-columns: minmax(260px, 320px) 1fr;
+  grid-template-columns: minmax(300px, 600px) 1fr;
   gap: 0;
   max-width: 95%;
   margin: 0 auto;
@@ -377,8 +377,8 @@ body .main-content {
   border-radius: 16px;
   padding: 1.5rem;
   box-shadow: var(--shadow);
-  max-height: calc(100vh - 4rem);
-  overflow: auto;
+  max-height: none;
+  overflow: visible;
 }
 
 .bookshelf-sidebar__intro h2 {
