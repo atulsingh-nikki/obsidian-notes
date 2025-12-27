@@ -9,6 +9,19 @@ Negative feelings often get lumped together, but the words we choose point to ve
 of **resent** as the seed in a small emotional ecosystem. Give it time or the right conditions and you can grow everything from
 quiet envy to corrosive bitterness. Here's a tour through the "resent" family and how each term earns its place in the spectrum.
 
+
+## Table of Contents
+
+- [Resent: The Spark of Unfairness](#resent-the-spark-of-unfairness)
+- [Grudge: When Resentment Lingers](#grudge-when-resentment-lingers)
+- [Begrudge: Resentment with a Dash of Envy](#begrudge-resentment-with-a-dash-of-envy)
+- [Bitterness: Resentment Left to Stew](#bitterness-resentment-left-to-stew)
+- [Spite: Acting on the Hurt](#spite-acting-on-the-hurt)
+- [Envy and Jealousy: Nearby, Not Identical](#envy-and-jealousy-nearby-not-identical)
+- [Disdain: The Cold Shoulder](#disdain-the-cold-shoulder)
+- [Mapping the Emotional Spectrum](#mapping-the-emotional-spectrum)
+- [The Takeaway](#the-takeaway)
+
 ## Resent: The Spark of Unfairness
 
 Resentment sits at the core. It's the flare of anger or bitterness that lights up when you feel wronged, disrespected, or excluded.

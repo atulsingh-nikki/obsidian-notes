@@ -10,6 +10,20 @@ tags: [optimization, hessian, computer-vision, machine-learning]
 <h3 class="hessian-section-title">Interactive Figures</h3>
 <p>Spin, zoom, and inspect these plots to see how gradient and Hessian information shapes the local geometry and degeneracies we meet in vision pipelines.</p>
 
+
+## Table of Contents
+
+- [From Gradients to Hessians: How Optimization Shapes Vision & ML](#from-gradients-to-hessians-how-optimization-shapes-vision-ml)
+- [First-Order Condition: Where Extrema Can Even Happen](#first-order-condition-where-extrema-can-even-happen)
+- [Second-Order Condition: The Hessian Tells the Local Shape](#second-order-condition-the-hessian-tells-the-local-shape)
+- [A One-Line Family That Shows the Difference (Avriel’s Example 2.1.1)](#a-one-line-family-that-shows-the-difference-avriels-example-211)
+- [When Semidefinite Isn’t Enough: Degenerate Saddles](#when-semidefinite-isnt-enough-degenerate-saddles)
+- [Where Degenerate Hessians Show Up in Vision](#where-degenerate-hessians-show-up-in-vision)
+- [Practical Compass](#practical-compass)
+- [Suggested Figures](#suggested-figures)
+- [References](#references)
+- [TL;DR](#tldr)
+
 <div class="hessian-plot">
   <div id="hessian-surfaces" class="hessian-plot__canvas" aria-label="Hessian surface comparisons"></div>
   <p class="hessian-caption">Positive definite, indefinite, and semidefinite Hessians produce very different local landscapes.</p>

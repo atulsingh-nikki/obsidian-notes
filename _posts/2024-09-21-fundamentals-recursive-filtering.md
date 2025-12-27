@@ -7,6 +7,42 @@ tags: [kalman-filter, recursive-filtering, signal-processing, series]
 
 *This is Part 2 of an 8-part series on Kalman Filtering. [Part 1]({{ site.baseurl }}{% link _posts/2024-09-20-introduction-to-kalman-filtering.md %}) introduced state estimation concepts.*
 
+
+## Table of Contents
+
+- [What Makes a Filter "Recursive"?](#what-makes-a-filter-recursive)
+- [The Universal Recursive Pattern](#the-universal-recursive-pattern)
+  - [Mathematical Framework](#mathematical-framework)
+  - [The Innovation-Based Update](#the-innovation-based-update)
+- [Building Intuition: The Recursive Average](#building-intuition-the-recursive-average)
+  - [Problem: Computing a Running Average](#problem-computing-a-running-average)
+  - [Mathematical Derivation](#mathematical-derivation)
+  - [The Beautiful Result](#the-beautiful-result)
+  - [Key Insights](#key-insights)
+- [Exponential Smoothing: Adding Forgetting](#exponential-smoothing-adding-forgetting)
+  - [Mathematical Form](#mathematical-form)
+  - [Rewritten in Innovation Form](#rewritten-in-innovation-form)
+  - [Exponential Weighting](#exponential-weighting)
+  - [Key Properties](#key-properties)
+- [Why Recursive Filters are Powerful](#why-recursive-filters-are-powerful)
+  - [1. Memory Efficiency](#1-memory-efficiency)
+  - [2. Real-Time Processing](#2-real-time-processing)
+  - [3. Predictive Capability](#3-predictive-capability)
+  - [4. Computational Efficiency](#4-computational-efficiency)
+- [The Bridge to Kalman Filtering](#the-bridge-to-kalman-filtering)
+  - [Limitations of Simple Filters](#limitations-of-simple-filters)
+  - [Kalman Filter Extensions](#kalman-filter-extensions)
+- [Applications of Simple Recursive Filters](#applications-of-simple-recursive-filters)
+  - [Financial Data Smoothing](#financial-data-smoothing)
+  - [Sensor Noise Reduction](#sensor-noise-reduction)
+  - [Network Latency Estimation](#network-latency-estimation)
+- [Implementation Considerations](#implementation-considerations)
+  - [Initialization](#initialization)
+  - [Numerical Stability](#numerical-stability)
+  - [Parameter Tuning](#parameter-tuning)
+- [Key Takeaways](#key-takeaways)
+- [Looking Ahead](#looking-ahead)
+
 ## What Makes a Filter "Recursive"?
 
 A **recursive filter** processes data sequentially, updating its internal state with each new observation. Unlike batch processors that need all data upfront, recursive filters:

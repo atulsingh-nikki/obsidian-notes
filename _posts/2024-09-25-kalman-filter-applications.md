@@ -7,6 +7,39 @@ tags: [kalman-filter, applications, navigation, robotics, computer-vision, serie
 
 *This is Part 6 of an 8-part series on Kalman Filtering. [Part 5]({{ site.baseurl }}{% link _posts/2024-09-24-kalman-filter-implementation.md %}) covered Python implementation details.*
 
+
+## Table of Contents
+
+- [From Theory to Real Impact](#from-theory-to-real-impact)
+- [Navigation and Positioning Systems](#navigation-and-positioning-systems)
+  - [GPS Navigation: The Ubiquitous Application](#gps-navigation-the-ubiquitous-application)
+  - [Inertial Navigation Systems (INS)](#inertial-navigation-systems-ins)
+  - [The Apollo Success Story](#the-apollo-success-story)
+- [Computer Vision and Object Tracking](#computer-vision-and-object-tracking)
+  - [Single Object Tracking](#single-object-tracking)
+  - [Multiple Object Tracking (MOT)](#multiple-object-tracking-mot)
+- [Robotics and Control Systems](#robotics-and-control-systems)
+  - [Robot Localization (Where Am I?)](#robot-localization-where-am-i)
+  - [SLAM (Simultaneous Localization and Mapping)](#slam-simultaneous-localization-and-mapping)
+- [Signal Processing and Communications](#signal-processing-and-communications)
+  - [Adaptive Noise Cancellation](#adaptive-noise-cancellation)
+  - [Channel Estimation in Wireless Communications](#channel-estimation-in-wireless-communications)
+- [Financial Engineering and Economics](#financial-engineering-and-economics)
+  - [Algorithmic Trading](#algorithmic-trading)
+  - [Risk Management](#risk-management)
+- [Biomedical and Healthcare Applications](#biomedical-and-healthcare-applications)
+  - [Physiological Signal Processing](#physiological-signal-processing)
+  - [Medical Imaging](#medical-imaging)
+- [Modern Applications and Emerging Fields](#modern-applications-and-emerging-fields)
+  - [Autonomous Vehicles](#autonomous-vehicles)
+  - [Internet of Things (IoT)](#internet-of-things-iot)
+  - [Machine Learning Integration](#machine-learning-integration)
+- [Key Success Factors](#key-success-factors)
+  - [Why Kalman Filters Excel](#why-kalman-filters-excel)
+  - [Common Implementation Challenges](#common-implementation-challenges)
+- [Looking Forward](#looking-forward)
+- [Case Study Deep Dives](#case-study-deep-dives)
+
 ## From Theory to Real Impact
 
 The Kalman filter's theoretical elegance translates into remarkable practical utility. From guiding Apollo missions to the Moon to enabling modern autonomous vehicles, Kalman filters solve estimation problems across virtually every engineering domain. Let's explore the most significant applications and understand why this 60-year-old algorithm remains indispensable.

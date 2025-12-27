@@ -9,6 +9,24 @@ tags: [kalman-filter, state-estimation, signal-processing, series]
 
 *This is Part 1 of an 8-part series on Kalman Filtering. This series will take you from basic concepts to advanced applications and implementations.*
 
+
+## Table of Contents
+
+- [What is State Estimation?](#what-is-state-estimation)
+- [Enter the Kalman Filter](#enter-the-kalman-filter)
+  - [Why the Kalman Filter Matters](#why-the-kalman-filter-matters)
+- [The Big Picture: How It Works](#the-big-picture-how-it-works)
+  - [The Prediction-Correction Cycle](#the-prediction-correction-cycle)
+  - [The Key Insight: Optimal Information Fusion](#the-key-insight-optimal-information-fusion)
+- [Real-World Impact: The Apollo Program](#real-world-impact-the-apollo-program)
+- [Mathematical Intuition](#mathematical-intuition)
+- [Types of Systems and Filter Variants](#types-of-systems-and-filter-variants)
+  - [Linear Systems: Standard Kalman Filter](#linear-systems-standard-kalman-filter)
+  - [Nonlinear Systems: Extended Variants](#nonlinear-systems-extended-variants)
+- [What's Coming Next](#whats-coming-next)
+- [Key Takeaways](#key-takeaways)
+- [Looking Forward](#looking-forward)
+
 ## What is State Estimation?
 
 Imagine you're trying to track a moving car, but your GPS readings are noisy and arrive infrequently. You need to know not just where the car *is*, but where it's *going* and how fast it's traveling. This is the essence of **state estimation** – determining the hidden or partially observable characteristics of a dynamic system from noisy measurements.

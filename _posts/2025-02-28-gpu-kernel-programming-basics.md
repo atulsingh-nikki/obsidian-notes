@@ -7,6 +7,22 @@ tags: [gpu, cuda, parallel-computing, high-performance]
 
 Modern GPUs deliver petaflops by letting thousands of lightweight threads execute in lockstep. To harness that power, you need to understand how your kernels are scheduled and what the hardware expects. This post walks through the vocabulary—grids, blocks, warps—and connects it to the underlying SIMD (Single Instruction, Multiple Data) architecture used by NVIDIA CUDA and similar APIs (HIP, OpenCL, Metal).
 
+
+## Table of Contents
+
+- [From Scalar Code to Massive Parallelism](#from-scalar-code-to-massive-parallelism)
+- [Grids and Blocks](#grids-and-blocks)
+  - [A Minimal 1D Example](#a-minimal-1d-example)
+  - [Multi-dimensional Layouts](#multi-dimensional-layouts)
+  - [Visualizing a 2D Launch](#visualizing-a-2d-launch)
+- [Warps and SIMD Execution](#warps-and-simd-execution)
+- [Memory Hierarchy at a Glance](#memory-hierarchy-at-a-glance)
+- [Example: Tiling Matrix Multiply](#example-tiling-matrix-multiply)
+- [Occupancy and Scheduling](#occupancy-and-scheduling)
+- [Beyond CUDA: HIP, SYCL, and Metal](#beyond-cuda-hip-sycl-and-metal)
+- [Checklist for Kernel Design](#checklist-for-kernel-design)
+- [Further Exploration](#further-exploration)
+
 ## From Scalar Code to Massive Parallelism
 
 On a CPU, you iterate over data in a loop:

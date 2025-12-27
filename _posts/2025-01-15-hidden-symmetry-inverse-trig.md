@@ -8,6 +8,16 @@ tags: [mathematics, engineering, intuition]
 Mathematics often rewards patient observers with patterns that seemed invisible at first glance. One of my favorite examples links two functions that appear to live on separate islands: the inverse sine and inverse cosine. Ask each function the same question—
 "what angle corresponds to this ratio?"—and they respond with complementary stories that add up to a single elegant punchline:
 
+
+## Table of Contents
+
+- [1. Where the Symmetry Comes From](#1-where-the-symmetry-comes-from)
+  - [Algebraic reasoning](#algebraic-reasoning)
+  - [Geometric reasoning](#geometric-reasoning)
+- [2. Turning the Identity into a Tool](#2-turning-the-identity-into-a-tool)
+- [3. Why Practitioners Care](#3-why-practitioners-care)
+- [4. Takeaway](#4-takeaway)
+
 $$
 \cos^{-1}(x) + \sin^{-1}(x) = \frac{\pi}{2}, \quad x \in [-1, 1].
 $$

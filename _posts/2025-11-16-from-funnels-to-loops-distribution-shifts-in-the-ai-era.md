@@ -7,6 +7,17 @@ description: "Summary and takeaways from a talk on why distribution beats produc
 ---
 
 ### TL;DR
+
+## Table of Contents
+
+  - [TL;DR](#tldr)
+  - [Product vs. Distribution (and why loops beat funnels)](#product-vs-distribution-and-why-loops-beat-funnels)
+  - [Why PLG rose (and what changed)](#why-plg-rose-and-what-changed)
+  - [AI’s impact: legacy channels are collapsing](#ais-impact-legacy-channels-are-collapsing)
+  - [What to build now: new distribution and new moats](#what-to-build-now-new-distribution-and-new-moats)
+  - [Practical checklist for PMs and founders](#practical-checklist-for-pms-and-founders)
+  - [Key takeaways](#key-takeaways)
+
 **Distribution beats product.** Great products without distribution die quietly; mediocre products with strong distribution become monopolies. The fastest‑growing companies compound through product‑embedded loops, not linear funnels. AI has collapsed legacy channels (SEO and social reach), commoditized simple SaaS functionality, and raised the bar for defensibility. Winning strategies now center on:
 - **Product loops** (acquisition and retention)
 - **Freemium as marketing spend**

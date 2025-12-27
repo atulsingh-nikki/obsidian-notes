@@ -7,6 +7,20 @@ tags: [calculus, analysis, nonlinear-systems]
 
 ## Why the Implicit Function Theorem Matters
 
+## Table of Contents
+
+- [Why the Implicit Function Theorem Matters](#why-the-implicit-function-theorem-matters)
+- [Statement in Two Variables (Digest Version)](#statement-in-two-variables-digest-version)
+- [Geometric Intuition](#geometric-intuition)
+- [Worked Example: Solving for a Circle as a Function](#worked-example-solving-for-a-circle-as-a-function)
+- [Beyond Two Variables](#beyond-two-variables)
+- [Practical Checklist for Applying the IFT](#practical-checklist-for-applying-the-ift)
+- [Common Pitfalls and Counterexamples](#common-pitfalls-and-counterexamples)
+- [Where You Encounter the IFT in Practice](#where-you-encounter-the-ift-in-practice)
+- [How the IFT Powers Optimization Theory](#how-the-ift-powers-optimization-theory)
+- [TL;DR](#tldr)
+
+
 The implicit function theorem (IFT) sits at the crossroads of multivariable calculus, analysis, and applied modeling. It tells us when an equation of the form $F(x, y) = 0$ hides a function $y = g(x)$ nearby, even if we cannot solve for $y$ explicitly. That promise underpins everything from constraint-based optimization to coordinate changes in differential geometry and equilibrium analysis in economics.
 
 In practical work, the IFT answers two persistent questions:

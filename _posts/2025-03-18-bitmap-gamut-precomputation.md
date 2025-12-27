@@ -7,6 +7,17 @@ tags: [color, rendering, optimization]
 
 Color pipelines that ingest YUV video frames but render or analyze in RGB often have to answer two expensive questions before any correction work begins:
 
+
+## Table of Contents
+
+- [Quantizing the YUV lattice](#quantizing-the-yuv-lattice)
+- [Precomputing RGB gamut membership](#precomputing-rgb-gamut-membership)
+- [Runtime checks in the shader or CPU path](#runtime-checks-in-the-shader-or-cpu-path)
+- [Extending the bitmap with auxiliary payloads](#extending-the-bitmap-with-auxiliary-payloads)
+- [Memory footprint and cache behavior](#memory-footprint-and-cache-behavior)
+- [Putting it together](#putting-it-together)
+- [Where this ships today](#where-this-ships-today)
+
 1. **What RGB value would this YUV triplet produce after decoding and tone/gamut transforms?**
 2. **Does that RGB point land inside the display gamut, or do we need to apply mapping and clipping?**
 

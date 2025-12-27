@@ -7,6 +7,36 @@ tags: [kalman-filter, machine-learning, distributed-systems, quantum-computing, 
 
 *This is Part 8 (Final) of an 8-part series on Kalman Filtering. [Part 7]({{ site.baseurl }}{% link _posts/2024-09-26-nonlinear-kalman-extensions.md %}) covered nonlinear extensions.*
 
+
+## Table of Contents
+
+- [Beyond Classical Filtering: The Modern Frontier](#beyond-classical-filtering-the-modern-frontier)
+- [Machine Learning Integration](#machine-learning-integration)
+  - [Neural Kalman Filters](#neural-kalman-filters)
+  - [Differentiable Kalman Filters](#differentiable-kalman-filters)
+  - [Applications in Deep Learning](#applications-in-deep-learning)
+- [Distributed and Federated Filtering](#distributed-and-federated-filtering)
+  - [Multi-Agent Estimation](#multi-agent-estimation)
+  - [Federated Learning with Kalman Filters](#federated-learning-with-kalman-filters)
+- [Quantum Kalman Filtering](#quantum-kalman-filtering)
+  - [Quantum State Estimation](#quantum-state-estimation)
+- [Constrained and Robust Filtering](#constrained-and-robust-filtering)
+  - [Constrained Kalman Filtering](#constrained-kalman-filtering)
+- [Emerging Applications and Modern Challenges](#emerging-applications-and-modern-challenges)
+  - [Autonomous Systems](#autonomous-systems)
+  - [Digital Twins](#digital-twins)
+- [Future Research Directions](#future-research-directions)
+  - [1. Quantum-Enhanced Classical Filtering](#1-quantum-enhanced-classical-filtering)
+  - [2. Neuromorphic Computing Integration](#2-neuromorphic-computing-integration)
+  - [3. Continual Learning](#3-continual-learning)
+- [Key Recommendations for Practitioners](#key-recommendations-for-practitioners)
+  - [Implementation Guidelines](#implementation-guidelines)
+  - [Best Practices](#best-practices)
+- [Conclusion: The Continuing Evolution](#conclusion-the-continuing-evolution)
+  - [Key Insights from This Series](#key-insights-from-this-series)
+  - [The Path Forward](#the-path-forward)
+  - [Final Recommendations](#final-recommendations)
+
 ## Beyond Classical Filtering: The Modern Frontier
 
 After exploring the foundations, mathematics, implementation, and applications of Kalman filtering, we now turn to the cutting edge. This final post examines how classical filtering theory is evolving to meet the challenges of modern systems: machine learning integration, distributed computation, quantum mechanics, and the demands of AI-driven applications.

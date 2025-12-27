@@ -7,6 +7,20 @@ tags: [probability, sampling, monte-carlo, numerical-methods]
 
 Directly sampling from a probability density function (PDF) or probability mass function (PMF) sounds deceptively simple: evaluate the function, interpret the number, and draw a random value accordingly. In practice, that workflow fails because a density or mass function only provides relative likelihoods, not a mechanical procedure for generating values with those likelihoods. If you need a refresher on how randomness is structured, start with ["Random vs Stochastic: Clarifying Variables, Processes, Sampling, and Optimization"]({{ "/2025/03/05/random-vs-stochastic-foundations/" | relative_url }}), and if you want a broader sampling tour, revisit ["Stochastic Processes and the Art of Sampling Uncertainty"]({{ "/2025/02/21/stochastic-processes-and-sampling/" | relative_url }}). With that context in hand, this post dissects the major theoretical obstacles to direct sampling and surveys the standard workarounds.
 
+
+## Table of Contents
+
+- [Visual Map: From Density to Samples](#visual-map-from-density-to-samples)
+- [Why the CDF Is the Essential Bridge](#why-the-cdf-is-the-essential-bridge)
+- [Obstacle 1: Normalization Constants](#obstacle-1-normalization-constants)
+- [Obstacle 2: Inverting the CDF](#obstacle-2-inverting-the-cdf)
+- [Obstacle 3: High Dimensionality](#obstacle-3-high-dimensionality)
+- [Obstacle 4: Proposal Bounds for Rejection Sampling](#obstacle-4-proposal-bounds-for-rejection-sampling)
+- [Obstacle 5: Geometric Constraints](#obstacle-5-geometric-constraints)
+- [Obstacle 6: Numerical Stability](#obstacle-6-numerical-stability)
+- [Practical Workarounds](#practical-workarounds)
+- [Takeaway](#takeaway)
+
 ## Visual Map: From Density to Samples
 
 ![Diagram showing the path from unnormalized density to practical sampler]({{ "/assets/images/direct-sampling-flow.svg" | relative_url }})

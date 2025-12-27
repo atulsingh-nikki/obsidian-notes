@@ -7,6 +7,15 @@ tags: [computer-vision, panoptic-segmentation, generative-models]
 
 > Question: The model learns to generate a panoptic mask, which is an array of discrete tokens, conditioned on an input image. This avoids the inductive biases of traditional methods.
 
+
+## Table of Contents
+
+- [Inductive Biases, in Context](#inductive-biases-in-context)
+- [Why the Mask Becomes “Tokens”](#why-the-mask-becomes-tokens)
+- [Discrete Labels, Continuous Generators](#discrete-labels-continuous-generators)
+- [Escaping Traditional Biases](#escaping-traditional-biases)
+- [Takeaways](#takeaways)
+
 Pix2Seq-D reimagines panoptic segmentation as a language-generation problem. Instead of chaining together detectors, semantic heads, and heuristics, the model generates the entire mask as a grid of discrete tokens conditioned on an image.[^1] That shift only makes sense once we unpack what “inductive bias,” “tokens,” and “discrete diffusion” mean in this context.
 
 ## Inductive Biases, in Context

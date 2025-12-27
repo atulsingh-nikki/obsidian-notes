@@ -7,6 +7,27 @@ tags: [statistics, sampling, monte-carlo, data-collection]
 
 ## When Theory Meets Practice in Sampling
 
+## Table of Contents
+
+- [When Theory Meets Practice in Sampling](#when-theory-meets-practice-in-sampling)
+- [Importance Sampling: Theory-Guided Focus on Rare Events](#importance-sampling-theory-guided-focus-on-rare-events)
+  - [Theoretical Backbone](#theoretical-backbone)
+  - [Applied Narrative: Estimating Rare Losses without Burning the Budget](#applied-narrative-estimating-rare-losses-without-burning-the-budget)
+  - [Choosing Proposals: A Practitioner’s Checklist](#choosing-proposals-a-practitioners-checklist)
+  - [Where the Method Shows Up](#where-the-method-shows-up)
+- [Gibbs Sampling: Conditional Logic for Complex Posteriors](#gibbs-sampling-conditional-logic-for-complex-posteriors)
+  - [Theoretical Backbone](#theoretical-backbone)
+  - [Applied Narrative: Latent Dirichlet Allocation Finds Newsroom Themes](#applied-narrative-latent-dirichlet-allocation-finds-newsroom-themes)
+  - [Practical Enhancements and Diagnostics](#practical-enhancements-and-diagnostics)
+  - [Wider Applications](#wider-applications)
+- [Stratified Sampling: Structured Populations, Structured Estimators](#stratified-sampling-structured-populations-structured-estimators)
+  - [Theoretical Backbone](#theoretical-backbone)
+  - [Applied Narrative: Building an Inclusive Public Health Survey](#applied-narrative-building-an-inclusive-public-health-survey)
+  - [Extensions in Practice](#extensions-in-practice)
+- [Bringing the Methods Together](#bringing-the-methods-together)
+- [Key Takeaways](#key-takeaways)
+
+
 Sampling sits at the heart of modern inference. We estimate population means, compute Bayesian posteriors, and simulate unlikely engineering failures by drawing finite collections of random points. Simple random sampling is the doorway into this world, but many real-world problems demand methods that marry mathematical rigor with pragmatic efficiency. Risk analysts worry about tail events, machine-learning researchers juggle dozens of latent variables, and survey designers must respect demographic structure. In those situations the *theory* guides how to stay unbiased, while the *practice* teaches us where to spend our computational or data-collection budget. If you need a refresher on the broader sampling landscape, revisit ["Stochastic Processes and the Art of Sampling Uncertainty"]({{ "/2025/02/21/stochastic-processes-and-sampling/" | relative_url }}) and the terminology primer ["Random vs Stochastic"]({{ "/2025/03/05/random-vs-stochastic-foundations/" | relative_url }}).
 
 This article rewrites three essential techniques through that dual lens:

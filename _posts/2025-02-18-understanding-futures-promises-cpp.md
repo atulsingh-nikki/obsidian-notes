@@ -7,6 +7,18 @@ tags: [c++, concurrency, futures, promises]
 
 Modern C++ puts powerful concurrency tools in your hands, but raw threads still make it easy to race on shared state, forget to join, or swallow exceptions. Futures and promises give you a higher-level contract: one side produces a value once, the other side waits for it exactly when needed. This post walks through the mental model, standard library types, and a couple of realistic patterns so you can apply them with confidence.
 
+
+## Table of Contents
+
+- [Why Futures and Promises Exist](#why-futures-and-promises-exist)
+- [Anatomy of a Future/Promise Pair](#anatomy-of-a-futurepromise-pair)
+- [Delivering Results with `std::async`](#delivering-results-with-stdasync)
+- [Sharing Results Safely](#sharing-results-safely)
+- [Error Propagation and Timeouts](#error-propagation-and-timeouts)
+- [Building Higher-Level Pipelines](#building-higher-level-pipelines)
+- [Practical Guidance](#practical-guidance)
+- [Wrapping Up](#wrapping-up)
+
 *Ready to coordinate multiple futures? Continue with [Composing Futures in Modern C++]({{ site.baseurl }}{% link _posts/2025-02-19-compound-futures-modern-cpp.md %}). Want to understand how move semantics power these APIs? Read [Understanding Reference Types in Modern C++]({{ site.baseurl }}{% link _posts/2025-10-22-cpp-reference-types-explained.md %}).*
 
 ## Why Futures and Promises Exist

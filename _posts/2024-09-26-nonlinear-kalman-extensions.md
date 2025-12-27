@@ -7,6 +7,42 @@ tags: [kalman-filter, ekf, ukf, particle-filter, nonlinear, series]
 
 *This is Part 7 of an 8-part series on Kalman Filtering. [Part 6]({{ site.baseurl }}{% link _posts/2024-09-25-kalman-filter-applications.md %}) explored real-world applications.*
 
+
+## Table of Contents
+
+- [Beyond Linear-Gaussian: The Real World](#beyond-linear-gaussian-the-real-world)
+- [The Challenge of Nonlinearity](#the-challenge-of-nonlinearity)
+  - [When Linearity Breaks Down](#when-linearity-breaks-down)
+  - [Why Standard Kalman Filter Fails](#why-standard-kalman-filter-fails)
+- [Extended Kalman Filter (EKF)](#extended-kalman-filter-ekf)
+  - [The Core Idea: Linearize Locally](#the-core-idea-linearize-locally)
+  - [Mathematical Framework](#mathematical-framework)
+  - [EKF Algorithm](#ekf-algorithm)
+  - [Robot Localization Example](#robot-localization-example)
+  - [EKF Advantages](#ekf-advantages)
+  - [EKF Limitations](#ekf-limitations)
+- [Unscented Kalman Filter (UKF)](#unscented-kalman-filter-ukf)
+  - [The Innovation: Deterministic Sampling](#the-innovation-deterministic-sampling)
+  - [Key Insight](#key-insight)
+  - [The Unscented Transform](#the-unscented-transform)
+  - [UKF Algorithm](#ukf-algorithm)
+  - [UKF Advantages](#ukf-advantages)
+  - [UKF Limitations](#ukf-limitations)
+- [Particle Filters](#particle-filters)
+  - [When Gaussians Aren't Enough](#when-gaussians-arent-enough)
+  - [Core Concept: Weighted Particles](#core-concept-weighted-particles)
+  - [Sequential Importance Resampling (SIR)](#sequential-importance-resampling-sir)
+  - [Particle Filter Applications](#particle-filter-applications)
+  - [Particle Filter Advantages](#particle-filter-advantages)
+  - [Particle Filter Limitations](#particle-filter-limitations)
+- [Comparison and Selection Criteria](#comparison-and-selection-criteria)
+  - [Selection Guidelines](#selection-guidelines)
+- [Implementation Best Practices](#implementation-best-practices)
+  - [Hybrid Approaches](#hybrid-approaches)
+  - [Numerical Considerations](#numerical-considerations)
+- [Key Takeaways](#key-takeaways)
+- [Looking Forward](#looking-forward)
+
 ## Beyond Linear-Gaussian: The Real World
 
 The standard Kalman filter assumes linear dynamics and Gaussian noise – elegant mathematical assumptions that make optimal estimation tractable. But real-world systems are often stubbornly nonlinear:

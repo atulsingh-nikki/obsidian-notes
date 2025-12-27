@@ -7,6 +7,15 @@ tags: [mathematics, computer-vision, spectral-analysis, machine-learning, graph-
 
 # From Elementary Mathematics to Vision Algorithms: The Hidden Life of Normalized Power Sums  
 
+
+## Table of Contents
+
+- [The Math Core](#the-math-core)
+- [Why This Matters in Computer Science and Vision](#why-this-matters-in-computer-science-and-vision)
+- [A Mini Example: Normalized Cuts on a 3-Node “Image”](#a-mini-example-normalized-cuts-on-a-3-node-image)
+- [Research Anchors](#research-anchors)
+- [Takeaway](#takeaway)
+
 Here's an elementary problem that appears deceptively simple:
 
 > **Q.** If $A = [a_{ij}]_{n \times n}$ where $a_{ij} = i^{100} + j^{100}$, then  

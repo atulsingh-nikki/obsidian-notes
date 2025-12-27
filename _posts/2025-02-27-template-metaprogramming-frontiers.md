@@ -8,6 +8,18 @@ tags: [c++, templates, metaprogramming, generic-programming]
 
 ## Why Templates Still Matter
 
+## Table of Contents
+
+- [Why Templates Still Matter](#why-templates-still-matter)
+  - [Design Principles to Remember](#design-principles-to-remember)
+- [Enter Template Metaprogramming (TMP)](#enter-template-metaprogramming-tmp)
+  - [Compile-Time Algorithms](#compile-time-algorithms)
+  - [When to Reach for TMP](#when-to-reach-for-tmp)
+- [Patterns That Scale](#patterns-that-scale)
+- [Connecting with the Community](#connecting-with-the-community)
+- [Bringing It All Together](#bringing-it-all-together)
+
+
 Template programming remains one of C++'s superpowers. By parameterizing code over types, values, and even compile-time constants, we can write zero-cost abstractions that adapt to any domain. Classic examples include containers like `std::vector`, iterator adapters, and policy-based designs that keep runtime overhead negligible. The key insight is that templates let the compiler generate the most specialized code possible for each use, giving us both flexibility and performance.
 
 ### Design Principles to Remember

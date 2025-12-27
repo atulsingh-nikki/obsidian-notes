@@ -7,6 +7,28 @@ tags: [computer-vision, color-theory, camera-systems, spectral-analysis]
 
 Light is never just "white." It has a shape, a fingerprint, a dance across wavelengths. Cameras record it, eyes interpret it, and both struggle in their own ways. In this post, we'll walk step by step through the chain: spectral power distribution, surface reflectance, camera sensitivity, illuminant estimation, and the knotty problem of multiple light sources.
 
+
+## Table of Contents
+
+- [Spectral Power Distribution: The Fingerprint of Light](#spectral-power-distribution-the-fingerprint-of-light)
+- [Surface Reflectance: How Materials Shape Light](#surface-reflectance-how-materials-shape-light)
+- [Camera Spectral Sensitivity: What Sensors Respond To](#camera-spectral-sensitivity-what-sensors-respond-to)
+- [Why Multiplication?](#why-multiplication)
+- [From Cones to Debayering](#from-cones-to-debayering)
+- [Illuminant Estimation: Guessing the Light Source](#illuminant-estimation-guessing-the-light-source)
+- [The Gray World Assumption](#the-gray-world-assumption)
+- [Minkowski Norm Estimates: A Family of Fixes](#minkowski-norm-estimates-a-family-of-fixes)
+- [Coping with Limitations](#coping-with-limitations)
+- [Multiple Illuminants: The Real Mess](#multiple-illuminants-the-real-mess)
+- [How Humans Do It: The Goal of Color Constancy](#how-humans-do-it-the-goal-of-color-constancy)
+  - [Why This Matters](#why-this-matters)
+  - [The Human Advantage](#the-human-advantage)
+  - [How Our Brains Cheat Elegantly](#how-our-brains-cheat-elegantly)
+  - [The Remarkable Result](#the-remarkable-result)
+  - [What Makes This Image Special](#what-makes-this-image-special)
+  - [Why Cameras Can't Match This (Yet)](#why-cameras-cant-match-this-yet)
+- [Closing Thoughts](#closing-thoughts)
+
 ## Spectral Power Distribution: The Fingerprint of Light
 Every light source has its own **spectral power distribution (SPD)**: how much energy it emits at each wavelength.  
 

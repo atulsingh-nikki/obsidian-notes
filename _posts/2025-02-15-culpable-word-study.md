@@ -7,6 +7,20 @@ categories: [language, vocabulary]
 
 ## Introduction
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Etymology and Family Tree](#etymology-and-family-tree)
+  - [Word Family](#word-family)
+- [Shades of Meaning](#shades-of-meaning)
+  - [Register and Collocations](#register-and-collocations)
+- [Synonyms and Antonyms](#synonyms-and-antonyms)
+- [Examples from Indian Newspapers](#examples-from-indian-newspapers)
+- [Related Usages in Indian Law and Media](#related-usages-in-indian-law-and-media)
+- [How to Use "Culpable" Effectively](#how-to-use-culpable-effectively)
+- [Conclusion](#conclusion)
+
+
 The adjective **culpable** sits at the intersection of law, morality, and everyday judgement. It signals that someone deserves blame for a misdeed—whether through direct action, negligence, or a failure to prevent harm. In India, the word frequently surfaces in legal reporting (think of phrases like *culpable homicide not amounting to murder*) and in stories that weigh institutional accountability. This post tracks the word’s family tree, surveys its synonyms and antonyms, and highlights how Indian newspapers deploy it in context.
 
 ## Etymology and Family Tree

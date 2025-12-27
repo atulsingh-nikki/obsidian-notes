@@ -11,6 +11,46 @@ In grayscale images, contrast is relatively straightforward—it's all about dif
 
 This post explores how contrast works in color images, diving into chromatic contrast, opponent color channels, perceptual color spaces, and practical applications in computer vision, web design, and image quality assessment.
 
+## Table of Contents
+
+1. [The Multi-Dimensional Nature of Color Contrast](#the-multi-dimensional-nature-of-color-contrast)
+2. [Luminance Contrast in Color Images](#luminance-contrast-in-color-images)
+   - [Converting RGB to Luminance](#converting-rgb-to-luminance)
+   - [Example: Isoluminant Colors](#example-isoluminant-colors)
+3. [Chromatic Contrast: The Color Difference Component](#chromatic-contrast-the-color-difference-component)
+   - [Opponent Color Channels](#opponent-color-channels)
+   - [Lab Color Space](#lab-color-space)
+   - [Converting RGB to Lab](#converting-rgb-to-lab)
+4. [Color Contrast Metrics](#color-contrast-metrics)
+   - [1. Euclidean Distance in Lab Space (ΔE)](#1-euclidean-distance-in-lab-space-δe)
+   - [2. RMS Contrast in Lab Channels](#2-rms-contrast-in-lab-channels)
+   - [3. Chromatic Contrast Ratio](#3-chromatic-contrast-ratio)
+   - [4. Multi-Scale Color Contrast](#4-multi-scale-color-contrast)
+5. [Practical Comparison: Different Color Patterns](#practical-comparison-different-color-patterns)
+   - [Image A: Red-Cyan Isoluminant Pattern](#image-a-red-cyan-isoluminant-pattern)
+   - [Image B: Blue-Yellow Gradient](#image-b-blue-yellow-gradient)
+   - [Image C: Multicolored Noise](#image-c-multicolored-noise)
+6. [Color Contrast in Different Color Spaces](#color-contrast-in-different-color-spaces)
+   - [RGB Space: Simple but Non-Uniform](#rgb-space-simple-but-non-uniform)
+   - [HSV/HSL: Intuitive but Non-Perceptual](#hsvhsl-intuitive-but-non-perceptual)
+   - [LCh: Cylindrical Lab](#lch-cylindrical-lab)
+7. [Applications in Computer Vision and Design](#applications-in-computer-vision-and-design)
+   - [1. Web Accessibility (WCAG)](#1-web-accessibility-wcag)
+   - [2. Saliency Detection](#2-saliency-detection)
+   - [3. Color Constancy and White Balance](#3-color-constancy-and-white-balance)
+   - [4. Image Quality Assessment](#4-image-quality-assessment)
+   - [5. HDR Tone Mapping](#5-hdr-tone-mapping)
+   - [6. Image Segmentation](#6-image-segmentation)
+8. [Color Contrast for Colorblind Users](#color-contrast-for-colorblind-users)
+   - [Types of Color Blindness](#types-of-color-blindness)
+   - [Design Guidelines](#design-guidelines)
+   - [Example: Traffic Light Accessibility](#example-traffic-light-accessibility)
+9. [Choosing the Right Color Contrast Metric](#choosing-the-right-color-contrast-metric)
+10. [Implementation Tips](#implementation-tips)
+11. [Color Contrast in Different Domains](#color-contrast-in-different-domains)
+12. [Conclusion: Color Contrast Is Multi-Dimensional](#conclusion-color-contrast-is-multi-dimensional)
+13. [Further Reading](#further-reading)
+
 ## The Multi-Dimensional Nature of Color Contrast
 
 While grayscale images have only one dimension (luminance), color images have at least three:

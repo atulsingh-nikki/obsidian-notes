@@ -7,6 +7,27 @@ tags: [probability, statistics, stochastic-processes, sampling]
 
 ## Why Stochastic Thinking Matters
 
+## Table of Contents
+
+- [Why Stochastic Thinking Matters](#why-stochastic-thinking-matters)
+- [Taxonomy of Stochastic Processes](#taxonomy-of-stochastic-processes)
+  - [1. Discrete-Time vs Continuous-Time](#1-discrete-time-vs-continuous-time)
+  - [2. State Space](#2-state-space)
+  - [3. Dependency Structure](#3-dependency-structure)
+- [Core Examples](#core-examples)
+  - [Poisson Process: Counting Random Events](#poisson-process-counting-random-events)
+  - [Markov Chains: Memoryless Dynamics](#markov-chains-memoryless-dynamics)
+  - [Gaussian Processes: Functions as Random Variables](#gaussian-processes-functions-as-random-variables)
+- [Sampling from Stochastic Processes](#sampling-from-stochastic-processes)
+  - [1. Direct (Exact) Sampling](#1-direct-exact-sampling)
+  - [2. Markov Chain Monte Carlo (MCMC)](#2-markov-chain-monte-carlo-mcmc)
+  - [3. Sequential Monte Carlo (SMC) and Particle Filters](#3-sequential-monte-carlo-smc-and-particle-filters)
+- [Convergence and Diagnostics](#convergence-and-diagnostics)
+- [Putting It Together in Practice](#putting-it-together-in-practice)
+- [Computer Vision Spotlights](#computer-vision-spotlights)
+- [Further Reading](#further-reading)
+
+
 Weather systems, server traffic, gene expression, and financial markets all exhibit variability that cannot be captured with a single deterministic trajectory. **Stochastic processes** give us the mathematical language to describe this randomness coherently. They model families of random variables evolving in time or space, indexed by a parameter $t$ drawn from a set $T$.
 
 Although "stochastic" and "random" are often used interchangeably in casual conversation, they serve slightly different purposes in technical writing. *Random* typically describes objects that arise from chance—random variables, random events, random noise—without committing to any temporal or structural relationship. *Stochastic* emphasizes that randomness is organized within a system that unfolds across an index such as time, space, or sequence. Thus, a stochastic process is a structured collection of random variables whose dependencies matter, whereas a single measurement drawn without regard to context is simply random. In practice, we reserve "stochastic" for discussions about models or dynamics driven by randomness, and "random" for the underlying uncertain outcomes themselves.

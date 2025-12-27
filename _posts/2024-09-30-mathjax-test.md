@@ -7,6 +7,15 @@ tags: [test, mathjax]
 
 # MathJax Test Page
 
+
+## Table of Contents
+
+- [Inline Math Test](#inline-math-test)
+- [Block Math Test](#block-math-test)
+- [Conditional Probability Test](#conditional-probability-test)
+- [Complex Kalman Filter Equations](#complex-kalman-filter-equations)
+- [Matrix Equation](#matrix-equation)
+
 ## Inline Math Test
 Here is an inline equation: $E = mc^2$ and another one $a^2 + b^2 = c^2$.
 

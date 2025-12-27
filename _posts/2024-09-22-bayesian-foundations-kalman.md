@@ -7,6 +7,43 @@ tags: [kalman-filter, bayesian-inference, probability, series]
 
 *This is Part 3 of an 8-part series on Kalman Filtering. [Part 2]({{ site.baseurl }}{% link _posts/2024-09-21-fundamentals-recursive-filtering.md %}) explored recursive filtering fundamentals.*
 
+
+## Table of Contents
+
+- [From Intuition to Mathematical Rigor](#from-intuition-to-mathematical-rigor)
+- [Bayes' Theorem: The Foundation](#bayes-theorem-the-foundation)
+  - [The Basic Formula](#the-basic-formula)
+  - [In State Estimation Context](#in-state-estimation-context)
+- [Real-Life Examples: Making Bayes Tangible](#real-life-examples-making-bayes-tangible)
+  - [Why Probability Theory Matters in AI/ML](#why-probability-theory-matters-in-aiml)
+  - [Deep Dive: How Probability Transforms CV/ML Tasks](#deep-dive-how-probability-transforms-cvml-tasks)
+  - [The Kalman Connection: Why This Matters for State Estimation](#the-kalman-connection-why-this-matters-for-state-estimation)
+- [The Universal Pattern](#the-universal-pattern)
+  - [The Key Insight](#the-key-insight)
+- [Recursive Bayesian Estimation](#recursive-bayesian-estimation)
+  - [The Sequential Problem](#the-sequential-problem)
+  - [The Two-Step Recursive Process](#the-two-step-recursive-process)
+  - [The Intractability Problem](#the-intractability-problem)
+- [The Linear-Gaussian Magic](#the-linear-gaussian-magic)
+  - [Why These Assumptions Are Magical](#why-these-assumptions-are-magical)
+  - [The Practical Consequence](#the-practical-consequence)
+- [The Kalman Filter as Optimal Bayesian Estimator](#the-kalman-filter-as-optimal-bayesian-estimator)
+  - [Prediction Step Mathematics](#prediction-step-mathematics)
+  - [Update Step Mathematics](#update-step-mathematics)
+- [Understanding the Kalman Gain](#understanding-the-kalman-gain)
+  - [Intuitive Analysis](#intuitive-analysis)
+  - [The Optimality Property](#the-optimality-property)
+- [Practical Implications](#practical-implications)
+  - [1. Information Fusion](#1-information-fusion)
+  - [2. Uncertainty Quantification](#2-uncertainty-quantification)
+  - [3. Real-Time Capability](#3-real-time-capability)
+- [Beyond Linear-Gaussian: The Extensions](#beyond-linear-gaussian-the-extensions)
+  - [Extended Kalman Filter (EKF)](#extended-kalman-filter-ekf)
+  - [Unscented Kalman Filter (UKF)](#unscented-kalman-filter-ukf)
+  - [Particle Filters](#particle-filters)
+- [Key Takeaways](#key-takeaways)
+- [Looking Forward](#looking-forward)
+
 ## From Intuition to Mathematical Rigor
 
 In our previous posts, we saw how recursive filters use the intuitive pattern:

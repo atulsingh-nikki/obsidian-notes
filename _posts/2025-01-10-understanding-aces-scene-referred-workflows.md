@@ -7,6 +7,18 @@ tags: [color, aces, rec709, color-management, workflows]
 
 Color pipelines can feel abstract until you tie each transform to what your eye sees. In this post we follow a Rec.709 image as it moves into ACES, gets graded in a scene-referred workflow, and lands back in delivery-friendly color spaces. Along the way we clarify why ACES exists, how scene-referred thinking differs from display-referred grading, and what role YUV encoding really plays.
 
+
+## Table of Contents
+
+- [Converting Rec.709 to ACES AP0](#converting-rec709-to-aces-ap0)
+- [Roundtripping 709 → AP0 → 709](#roundtripping-709-ap0-709)
+- [Guardrails to Avoid Surprises](#guardrails-to-avoid-surprises)
+- [ACES Is a Framework, Not a Look](#aces-is-a-framework-not-a-look)
+- [Scene-Referred vs. Display-Referred Thinking](#scene-referred-vs-display-referred-thinking)
+- [Where YUV Fits In](#where-yuv-fits-in)
+- [Putting the Pipeline Together](#putting-the-pipeline-together)
+- [Final Thought](#final-thought)
+
 ## Converting Rec.709 to ACES AP0
 
 Rec.709 defines a comparatively small triangle on the CIE chromaticity diagram and uses a display-referred gamma. ACES AP0, by contrast, is a massive, scene-linear gamut designed to hold *any* color you might encounter on a production.

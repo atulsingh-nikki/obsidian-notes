@@ -7,6 +7,17 @@ tags: [ocr, computer-vision, history, transformers]
 
 Optical character recognition rarely gets the spotlight, yet it's the bridge between physical documents and searchable data. In 2005, HP open-sourced its internal Tesseract engine, and Google adopted it soon after. Tesseract became the de facto choice for anyone who needed OCR without paying for commercial licenses. Nearly two decades later, OCR workflows look very different—neural networks now dominate text detection, layout understanding, and language modeling. This post tracks the evolution from Tesseract's classical pipeline to today's transformer-driven systems.
 
+
+## Table of Contents
+
+- [Tesseract's Original Architecture](#tesseracts-original-architecture)
+- [Neural Era: Tesseract 4 and LSTM Integration](#neural-era-tesseract-4-and-lstm-integration)
+- [Today's OCR Landscape](#todays-ocr-landscape)
+- [Hybrid Workflows: Where Tesseract Still Fits](#hybrid-workflows-where-tesseract-still-fits)
+- [Evaluating OCR Quality Today](#evaluating-ocr-quality-today)
+- [Looking Ahead](#looking-ahead)
+- [Further Reading](#further-reading)
+
 ## Tesseract's Original Architecture
 
 Tesseract 2.x and 3.x relied on carefully engineered stages:

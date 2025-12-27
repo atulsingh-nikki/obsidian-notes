@@ -7,6 +7,18 @@ tags: [simd, gpu, isa, parallel-computing]
 
 If you have written SIMD intrinsics for SSE or AVX, many of the mental models translate directly to CUDA or HIP kernels. Both ecosystems ask you to think in vectors, manage memory layout carefully, and minimize divergence. Yet GPUs schedule work differently: instead of a few hardware vector lanes, you contend with thousands of threads organized into warps. This quick bridge highlights the parallels and contrasts so you can reuse your ISA habits when you jump into GPU programming.
 
+
+## Table of Contents
+
+- [SIMD vs SIMT at a Glance](#simd-vs-simt-at-a-glance)
+- [Memory Layout: SoA and Coalescing](#memory-layout-soa-and-coalescing)
+- [Broadcast and Shuffles](#broadcast-and-shuffles)
+- [Divergence and Masks](#divergence-and-masks)
+- [Tiling and Blocking](#tiling-and-blocking)
+- [ISA Feature Flags vs. Device Capabilities](#isa-feature-flags-vs-device-capabilities)
+- [Practical Migration Tips](#practical-migration-tips)
+- [Further Reading](#further-reading)
+
 ## SIMD vs SIMT at a Glance
 
 | Concept | CPU SIMD (e.g., AVX2) | GPU SIMT (e.g., CUDA) |

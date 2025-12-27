@@ -7,6 +7,29 @@ tags: [probability, statistics, optimization, sampling]
 
 ## Why the Vocabulary Feels Slippery
 
+## Table of Contents
+
+- [Why the Vocabulary Feels Slippery](#why-the-vocabulary-feels-slippery)
+- [Random vs Stochastic Variables](#random-vs-stochastic-variables)
+  - [Random Variable](#random-variable)
+  - [Stochastic Variable](#stochastic-variable)
+  - [Practical takeaway](#practical-takeaway)
+- [Random Phenomena vs Stochastic Processes](#random-phenomena-vs-stochastic-processes)
+  - [Random Phenomenon](#random-phenomenon)
+  - [Stochastic Process](#stochastic-process)
+  - [When to use each term](#when-to-use-each-term)
+- [Sampling: From Random Draws to Stochastic Simulation](#sampling-from-random-draws-to-stochastic-simulation)
+  - [Why Sampling Matters in Practice](#why-sampling-matters-in-practice)
+  - [Simple Random Sampling](#simple-random-sampling)
+  - [Sampling Stochastic Processes](#sampling-stochastic-processes)
+- [Optimization: Deterministic vs Stochastic Strategies](#optimization-deterministic-vs-stochastic-strategies)
+  - [Deterministic Optimization of Random Objectives](#deterministic-optimization-of-random-objectives)
+  - [Stochastic Optimization Algorithms](#stochastic-optimization-algorithms)
+  - [Bridging the Terminology](#bridging-the-terminology)
+- [Putting It All Together](#putting-it-all-together)
+- [Further Reading](#further-reading)
+
+
 "Random" and "stochastic" are often treated as synonyms in casual speech, yet technical writing benefits from giving each word a precise role. **Random** points to uncertainty in individual outcomes, while **stochastic** highlights how that uncertainty is organized within a system evolving over an index such as time, space, or sequence. Understanding the distinction clarifies how we model variability, how we sample from those models, and how we optimize under uncertainty.
 
 This article unpacks the vocabulary by moving from the smallest unit—a random variable—to structured stochastic processes, then to sampling strategies and optimization algorithms that exploit (or fight against) randomness.

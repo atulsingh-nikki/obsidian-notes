@@ -7,6 +7,39 @@ tags: [optimization, calculus, lagrange-multipliers, geometry, mathematical-anal
 
 # Why Intersection Fails in Lagrange Multipliers: The Geometry of Optimization
 
+
+## Table of Contents
+
+- [The Core Insight](#the-core-insight)
+  - [The Crucial Distinction: First-Order vs Higher-Order Change](#the-crucial-distinction-first-order-vs-higher-order-change)
+  - [What Do We Mean by "First-Order Change"?](#what-do-we-mean-by-first-order-change)
+  - [First-Order Change: Unconstrained vs Constrained](#first-order-change-unconstrained-vs-constrained)
+- [Mathematical Foundation: Why Gradients Must Be Parallel](#mathematical-foundation-why-gradients-must-be-parallel)
+  - [The Constraint Defines a Path](#the-constraint-defines-a-path)
+  - [The Objective Function Has a Direction of Steepest Ascent](#the-objective-function-has-a-direction-of-steepest-ascent)
+  - [The Parallel Condition Ensures No First-Order Change](#the-parallel-condition-ensures-no-first-order-change)
+- [Example 1: The Intersection That Fails](#example-1-the-intersection-that-fails)
+- [Example 2: A Clear Intersection vs Tangency Case](#example-2-a-clear-intersection-vs-tangency-case)
+  - [Step 1: Find the Critical Points (Lagrange Method)](#step-1-find-the-critical-points-lagrange-method)
+  - [Step 2: Analyze Intersection vs Tangency](#step-2-analyze-intersection-vs-tangency)
+- [Neighborhood Analysis: The Walking Test](#neighborhood-analysis-the-walking-test)
+  - [Walking Near an Intersection Point](#walking-near-an-intersection-point)
+  - [Walking Near a Tangency Point](#walking-near-a-tangency-point)
+  - [Concrete Neighborhood Calculation](#concrete-neighborhood-calculation)
+- [Example 3: The Deceptive Intersection](#example-3-the-deceptive-intersection)
+  - [The Intersection Approach (Wrong)](#the-intersection-approach-wrong)
+  - [The Lagrange Approach (Correct)](#the-lagrange-approach-correct)
+  - [Why Intersection Points Fail](#why-intersection-points-fail)
+- [The Visual Proof: Gradient Geometry](#the-visual-proof-gradient-geometry)
+  - [At Intersection Points](#at-intersection-points)
+  - [At Tangency Points](#at-tangency-points)
+- [A Physics Analogy: Rolling Ball on a Track](#a-physics-analogy-rolling-ball-on-a-track)
+- [Advanced Example: The Saddle Point Case](#advanced-example-the-saddle-point-case)
+  - [Lagrange Analysis](#lagrange-analysis)
+  - [Neighborhood Analysis](#neighborhood-analysis)
+- [Summary: The Fundamental Geometric Principle](#summary-the-fundamental-geometric-principle)
+- [Further Reading](#further-reading)
+
 When learning Lagrange multipliers, students often wonder: **why do we need gradients to be parallel?** Why can't we just find where the constraint curve intersects with level sets of our objective function?
 
 The answer reveals a beautiful geometric truth: **intersection is about crossing through, while optimization is about touching without crossing.**

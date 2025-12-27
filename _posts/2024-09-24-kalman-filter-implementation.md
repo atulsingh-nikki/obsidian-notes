@@ -7,6 +7,40 @@ tags: [kalman-filter, python, implementation, programming, series]
 
 *This is Part 5 of an 8-part series on Kalman Filtering. [Part 4]({{ site.baseurl }}{% link _posts/2024-09-23-kalman-filter-derivation.md %}) provided the complete mathematical derivation.*
 
+
+## Table of Contents
+
+- [From Mathematics to Code](#from-mathematics-to-code)
+- [The Basic Structure](#the-basic-structure)
+- [System Modeling](#system-modeling)
+  - [State Definition](#state-definition)
+  - [The Constructor](#the-constructor)
+  - [System Matrices](#system-matrices)
+  - [Understanding the Process Noise Matrix](#understanding-the-process-noise-matrix)
+- [The Prediction Step](#the-prediction-step)
+  - [Key Implementation Details](#key-implementation-details)
+- [The Update Step](#the-update-step)
+  - [Numerical Stability: The Joseph Form](#numerical-stability-the-joseph-form)
+- [Utility Methods](#utility-methods)
+  - [State Access](#state-access)
+  - [Data Generation for Testing](#data-generation-for-testing)
+- [Complete Demonstration](#complete-demonstration)
+- [Advanced Implementation Considerations](#advanced-implementation-considerations)
+  - [1. Matrix Inversion Stability](#1-matrix-inversion-stability)
+  - [2. Handling Missing Measurements](#2-handling-missing-measurements)
+  - [3. Multi-Dimensional Extensions](#3-multi-dimensional-extensions)
+  - [4. Parameter Validation](#4-parameter-validation)
+- [Performance Optimization Tips](#performance-optimization-tips)
+  - [1. Pre-allocate Arrays](#1-pre-allocate-arrays)
+  - [2. Avoid Repeated Calculations](#2-avoid-repeated-calculations)
+  - [3. Use In-Place Operations When Possible](#3-use-in-place-operations-when-possible)
+- [Debugging and Validation](#debugging-and-validation)
+  - [1. Innovation Monitoring](#1-innovation-monitoring)
+  - [2. Covariance Validation](#2-covariance-validation)
+- [Key Takeaways](#key-takeaways)
+- [Looking Forward](#looking-forward)
+- [Complete Code](#complete-code)
+
 ## From Mathematics to Code
 
 Having derived the Kalman filter equations, we now transform mathematical theory into practical Python code. This post will guide you through building a robust, well-documented implementation that handles real-world considerations.

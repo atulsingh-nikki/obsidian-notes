@@ -7,6 +7,48 @@ tags: [computer-vision, image-processing, perception, contrast, quality-assessme
 
 Contrast is one of those terms that feels intuitive until you try to define it precisely. "High contrast" evokes vivid images with deep blacks and brilliant whites, while "low contrast" suggests muddy, washed-out scenes. But when you need to *measure* contrast—for adaptive histogram equalization, quality metrics, or exposure fusion—you quickly discover there's no single answer. Different applications demand different definitions, each optimized for specific perceptual or computational goals.
 
+
+## Table of Contents
+
+- [What Is Contrast, Really?](#what-is-contrast-really)
+- [Luminance Contrast: The Simplest Definition](#luminance-contrast-the-simplest-definition)
+  - [Properties:](#properties)
+  - [Limitations:](#limitations)
+- [Michelson Contrast: For Periodic Patterns](#michelson-contrast-for-periodic-patterns)
+  - [Example:](#example)
+- [RMS (Root Mean Square) Contrast: Statistical Rigor](#rms-root-mean-square-contrast-statistical-rigor)
+  - [Why It Works:](#why-it-works)
+  - [Properties:](#properties)
+  - [Applications:](#applications)
+  - [Limitation:](#limitation)
+- [Local Contrast: Capturing Spatial Structure](#local-contrast-capturing-spatial-structure)
+  - [Why Local Contrast Matters:](#why-local-contrast-matters)
+  - [Implementation Example:](#implementation-example)
+  - [Applications:](#applications)
+- [Weber Contrast: The Perceptual Standard](#weber-contrast-the-perceptual-standard)
+  - [Key Insight:](#key-insight)
+  - [Applications:](#applications)
+  - [Limitation:](#limitation)
+- [Contrast Sensitivity Function (CSF): Frequency-Dependent Perception](#contrast-sensitivity-function-csf-frequency-dependent-perception)
+  - [CSF in Image Quality Metrics:](#csf-in-image-quality-metrics)
+- [Practical Comparison: Different Metrics, Different Stories](#practical-comparison-different-metrics-different-stories)
+- [Applications in Computer Vision](#applications-in-computer-vision)
+  - [1. Adaptive Contrast Enhancement](#1-adaptive-contrast-enhancement)
+  - [2. Exposure Fusion](#2-exposure-fusion)
+  - [3. Image Quality Assessment](#3-image-quality-assessment)
+  - [4. Retinal Image Analysis](#4-retinal-image-analysis)
+- [Choosing the Right Contrast Metric](#choosing-the-right-contrast-metric)
+- [Implementation Tips](#implementation-tips)
+  - [1. Normalize Before Comparing](#1-normalize-before-comparing)
+  - [2. Handle Edge Cases](#2-handle-edge-cases)
+  - [3. Choose Window Size Carefully](#3-choose-window-size-carefully)
+  - [4. Combine Metrics](#4-combine-metrics)
+- [Contrast in Color Images](#contrast-in-color-images)
+  - [1. Luminance-Only](#1-luminance-only)
+  - [2. Per-Channel or Multi-Dimensional](#2-per-channel-or-multi-dimensional)
+- [Conclusion: Contrast Is Not One Thing](#conclusion-contrast-is-not-one-thing)
+- [Further Reading](#further-reading)
+
 ## What Is Contrast, Really?
 
 At its core, contrast measures **how much pixel values differ** within an image or region. But "differ" can mean many things:

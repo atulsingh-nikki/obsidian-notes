@@ -7,6 +7,15 @@ categories: [language, media]
 
 ## Introduction
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Word Frequency in September 2025](#word-frequency-in-september-2025)
+- [Newspaper-wise Distribution](#newspaper-wise-distribution)
+- [Contextual Examples and Tone](#contextual-examples-and-tone)
+- [Conclusion](#conclusion)
+
+
 In everyday English, “complaint,” “grievance,” and “gripe” all refer to expressions of discontent – but they carry different tones and formality levels. To explore these differences in real-world usage, we analyzed how often and in what context these words appeared in English-language print newspapers in India during September 2025. The findings confirm that complaint is by far the most commonly used term, whereas grievance appears in more formal or official contexts, and gripe is a relatively rare, colloquial term. Below, we break down the frequency of each word, their distribution across major newspapers, sample contexts from headlines and articles, and what these reveal about tone and register in journalism.
 
 ## Word Frequency in September 2025

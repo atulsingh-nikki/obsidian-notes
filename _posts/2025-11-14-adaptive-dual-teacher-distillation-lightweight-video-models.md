@@ -7,6 +7,20 @@ description: "A concise walkthrough of a dual-teacher distillation framework (Vi
 ---
 
 ### TL;DR
+
+## Table of Contents
+
+  - [TL;DR](#tldr)
+  - [Motivation](#motivation)
+  - [Core Ideas and Contributions](#core-ideas-and-contributions)
+  - [Discrepancy‑Aware Teacher Weighting (DATW)](#discrepancyaware-teacher-weighting-datw)
+  - [Structure Discrepancy‑Aware Distillation (SDD) and Residual Features](#structure-discrepancyaware-distillation-sdd-and-residual-features)
+  - [Architectures: Heterogeneous vs. Structurally Similar Teachers](#architectures-heterogeneous-vs-structurally-similar-teachers)
+  - [Datasets and Results (Highlights)](#datasets-and-results-highlights)
+  - [Efficiency and Deployment](#efficiency-and-deployment)
+  - [FAQs](#faqs)
+  - [References](#references)
+
 A dual-teacher knowledge distillation framework uses a heterogeneous Vision Transformer (ViT) teacher and a structurally similar CNN teacher to train a lightweight CNN student for video action recognition. Two key components drive gains:
 - Discrepancy‑Aware Teacher Weighting (DATW): adaptively mixes teacher logits per sample using teacher confidence and student–teacher discrepancy.
 - Structure Discrepancy‑Aware Distillation (SDD): the student learns the residual between ViT and CNN teacher features via a lightweight auxiliary branch during training (removed at inference).

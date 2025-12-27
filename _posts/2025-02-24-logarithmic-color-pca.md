@@ -7,6 +7,14 @@ tags: [color, perception, vision, pca]
 
 The lαβ color model from Reinhard, Ashikhmin, Gooch, and Shirley (2001) fuses two simple ideas: compress channel intensities with a logarithm so that multiplicative illumination becomes additive, then rotate the color axes with principal component analysis (PCA) to decorrelate them. As described in their paper “Color Transfer between Images,” the combination mimics how our eyes notice relative brightness and largely independent chromatic contrasts.[^reinhard]
 
+
+## Table of Contents
+
+- [Why log transforms feel perceptually linear](#why-log-transforms-feel-perceptually-linear)
+- [PCA for maximal decorrelation](#pca-for-maximal-decorrelation)
+- [Building intuition with a sample image](#building-intuition-with-a-sample-image)
+- [Takeaways](#takeaways)
+
 ## Why log transforms feel perceptually linear
 
 Light that is twice as bright does not look twice as bright. Human vision roughly follows a Weber–Fechner response: we register ratios better than absolute differences. Taking the logarithm of the long-, medium-, and short-cone signals (LMS) converts multiplicative illumination changes into additive offsets. Equal increments in log space approximate equal perceptual steps, so simple adjustments feel balanced across the range.

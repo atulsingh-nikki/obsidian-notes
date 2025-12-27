@@ -7,6 +7,38 @@ tags: [kalman-filter, mathematical-derivation, linear-algebra, series]
 
 *This is Part 4 of an 8-part series on Kalman Filtering. [Part 3]({{ site.baseurl }}{% link _posts/2024-09-22-bayesian-foundations-kalman.md %}) established the Bayesian foundations.*
 
+
+## Table of Contents
+
+- [From Theory to Equations](#from-theory-to-equations)
+- [System Setup and Assumptions](#system-setup-and-assumptions)
+  - [State Space Model](#state-space-model)
+  - [Noise Assumptions](#noise-assumptions)
+  - [Prior Distribution](#prior-distribution)
+  - [Notation Convention](#notation-convention)
+- [The Prediction Step](#the-prediction-step)
+  - [State Prediction](#state-prediction)
+  - [Covariance Prediction](#covariance-prediction)
+- [The Update Step](#the-update-step)
+  - [Joint Distribution Setup](#joint-distribution-setup)
+  - [Deriving the Joint Distribution](#deriving-the-joint-distribution)
+  - [Conditional Gaussian Formula](#conditional-gaussian-formula)
+  - [Applying the Formula](#applying-the-formula)
+- [Standard Kalman Filter Form](#standard-kalman-filter-form)
+  - [Introducing Key Variables](#introducing-key-variables)
+  - [Final Kalman Filter Equations](#final-kalman-filter-equations)
+- [Alternative Covariance Update Forms](#alternative-covariance-update-forms)
+  - [Joseph Form (Numerically Stable)](#joseph-form-numerically-stable)
+  - [Information Filter Form](#information-filter-form)
+- [Matrix Calculus Verification](#matrix-calculus-verification)
+  - [Deriving the Optimal Gain](#deriving-the-optimal-gain)
+- [Properties and Interpretations](#properties-and-interpretations)
+  - [Innovation Properties](#innovation-properties)
+  - [Gain Matrix Insights](#gain-matrix-insights)
+- [Computational Complexity](#computational-complexity)
+- [Key Takeaways](#key-takeaways)
+- [Looking Forward](#looking-forward)
+
 ## From Theory to Equations
 
 In our previous post, we saw how Bayesian inference provides the theoretical foundation for optimal estimation. Now we'll derive the complete Kalman filter equations step-by-step, showing exactly how abstract probability theory becomes a practical algorithm.

@@ -7,6 +7,21 @@ tags: [simd, intrinsics, avx, performance, c++]
 
 Modern CPUs have wide vector units capable of executing the same operation across multiple data elements at once. Compiler auto-vectorization handles the simple cases, but when you need precise control—special data layouts, mixed operations, or custom reductions—SIMD intrinsics become essential. This post explains the basics of SSE/AVX intrinsics, walks through a few examples, and points out when the low-level approach pays off.
 
+
+## Table of Contents
+
+  - [Why Intrinsics Exist](#why-intrinsics-exist)
+  - [ISA Support Cheat Sheet](#isa-support-cheat-sheet)
+- [Intrinsics Primer](#intrinsics-primer)
+- [Example: Vector Addition with AVX](#example-vector-addition-with-avx)
+- [Alignment Matters](#alignment-matters)
+- [Example: Dot Product with FMA](#example-dot-product-with-fma)
+- [Integer Operations with AVX2](#integer-operations-with-avx2)
+- [Gather and Scatter](#gather-and-scatter)
+- [When to Reach for Intrinsics](#when-to-reach-for-intrinsics)
+- [Tooling Tips](#tooling-tips)
+- [Further Reading](#further-reading)
+
 ### Why Intrinsics Exist
 
 - **Hardware has moved faster than compilers**: Since Intel’s Pentium III (1999) introduced SSE, CPUs have steadily widened their vector units. AVX (2011) and AVX2 (2013) doubled the width to 256 bits, but compilers do not always auto-vectorize real-world loops (non-contiguous memory, conditionals, or custom reductions).

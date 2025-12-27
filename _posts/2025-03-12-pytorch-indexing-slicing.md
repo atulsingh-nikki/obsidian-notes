@@ -7,6 +7,18 @@ tags: [pytorch, tensors, deep-learning, indexing]
 
 Tensor indexing feels natural once you see how dimensions line up. This walkthrough starts with 1D arrays and climbs to N-dimensional tensors, highlighting how PyTorch treats slices as **views** (no copies) and how to mutate data safely. To keep the shape intuition crisp, we pair each example with a small diagram illustrating axes and selected elements.
 
+
+## Table of Contents
+
+- [1D Vectors: The Basics](#1d-vectors-the-basics)
+- [2D Matrices: Rows, Columns, and Ranges](#2d-matrices-rows-columns-and-ranges)
+- [3D Tensors: Batches + Channels + Spatial](#3d-tensors-batches-channels-spatial)
+- [Boolean Masks and Fancy Indexing](#boolean-masks-and-fancy-indexing)
+- [Ellipsis for High Dimensions](#ellipsis-for-high-dimensions)
+- [Mutating with Index_add_ and Scatter](#mutating-with-index_add_-and-scatter)
+- [Beware of Non-Contiguous Views](#beware-of-non-contiguous-views)
+- [Quick Reference](#quick-reference)
+
 ## 1D Vectors: The Basics
 
 ```python

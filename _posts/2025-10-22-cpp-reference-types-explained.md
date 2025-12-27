@@ -7,6 +7,24 @@ tags: [c++, references, move-semantics, perfect-forwarding]
 
 Modern C++ gives you several kinds of references, each solving different problems around binding, lifetime, and ownership. Before C++11, you had one tool: the lvalue reference. After, you gained rvalue references and the forwarding reference pattern, unlocking move semantics and perfect forwarding. This post walks through all reference types, the rules that govern them, and patterns that let you write efficient, expressive generic code.
 
+
+## Table of Contents
+
+- [The Foundation: Lvalue References](#the-foundation-lvalue-references)
+- [Enter Rvalue References (C++11)](#enter-rvalue-references-c11)
+- [std::move: Casting to Rvalue Reference](#stdmove-casting-to-rvalue-reference)
+- [Forwarding References (Universal References)](#forwarding-references-universal-references)
+- [Reference Collapsing Rules](#reference-collapsing-rules)
+- [Perfect Forwarding with std::forward](#perfect-forwarding-with-stdforward)
+- [Practical Pattern: Factory Functions](#practical-pattern-factory-functions)
+- [Practical Pattern: Wrapper Classes](#practical-pattern-wrapper-classes)
+- [Combining with Move-Only Types](#combining-with-move-only-types)
+- [Common Pitfalls](#common-pitfalls)
+- [When to Use Each Reference Type](#when-to-use-each-reference-type)
+- [Reference Lifetime Extension](#reference-lifetime-extension)
+- [Practical Guidance](#practical-guidance)
+- [Wrapping Up](#wrapping-up)
+
 *Looking for related concurrency patterns? Check out [Understanding Futures and Promises in Modern C++]({{ site.baseurl }}{% link _posts/2025-02-18-understanding-futures-promises-cpp.md %}) for how references interact with asynchronous APIs.*
 
 ## The Foundation: Lvalue References

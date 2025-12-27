@@ -7,6 +7,23 @@ tags: [meta, index]
 
 Looking for a single place to trace how the notebook has evolved? This reference page aggregates every post that landed on the site, sliced by month, quarter, half-year, and full year. Use it to spot clusters of research, follow multi-part series, or plan what to read next.
 
+
+## Table of Contents
+
+- [Monthly Rollup](#monthly-rollup)
+  - [May 2024 — 2 posts](#may-2024-2-posts)
+  - [September 2024 — 9 posts](#september-2024-9-posts)
+  - [October 2024 — 1 post](#october-2024-1-post)
+  - [December 2024 — 1 post](#december-2024-1-post)
+  - [January 2025 — 3 posts](#january-2025-3-posts)
+  - [February 2025 — 10 posts](#february-2025-10-posts)
+  - [March 2025 — 2 posts](#march-2025-2-posts)
+  - [September 2025 — 4 posts](#september-2025-4-posts)
+  - [October 2025 — 2 posts](#october-2025-2-posts)
+- [Quarterly Rollup](#quarterly-rollup)
+- [Semiannual Rollup](#semiannual-rollup)
+- [Annual Rollup](#annual-rollup)
+
 ## Monthly Rollup
 
 ### May 2024 — 2 posts

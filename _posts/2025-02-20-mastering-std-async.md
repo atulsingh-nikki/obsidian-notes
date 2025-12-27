@@ -7,6 +7,20 @@ tags: [c++, concurrency, async, futures]
 
 `std::async` is the standard library's shortest path to running work asynchronously and receiving the result as a `std::future`. Used well, it hides thread management, propagates exceptions, and helps structure CPU-bound pipelines. Misunderstood, it quietly serializes work or launches threads you never join. Let's walk through how to make the most of it.
 
+
+## Table of Contents
+
+- [What std::async Actually Does](#what-stdasync-actually-does)
+- [Launch Policies Matter](#launch-policies-matter)
+- [Lifetime and Blocking Rules](#lifetime-and-blocking-rules)
+- [Exception Propagation](#exception-propagation)
+- [Example: Parallel Accumulate](#example-parallel-accumulate)
+- [Example: Overlapping CPU and I/O](#example-overlapping-cpu-and-io)
+- [Handling Timeouts](#handling-timeouts)
+- [Composition Strategies](#composition-strategies)
+- [Common Pitfalls](#common-pitfalls)
+- [Wrapping Up](#wrapping-up)
+
 *You may want to review [Understanding Futures and Promises in Modern C++]({{ site.baseurl }}{% link _posts/2025-02-18-understanding-futures-promises-cpp.md %}) first, then follow up with [Composing Futures in Modern C++]({{ site.baseurl }}{% link _posts/2025-02-19-compound-futures-modern-cpp.md %}). For a deep dive into the move semantics that make futures efficient, see [Understanding Reference Types in Modern C++]({{ site.baseurl }}{% link _posts/2025-10-22-cpp-reference-types-explained.md %}).*
 
 ## What std::async Actually Does
