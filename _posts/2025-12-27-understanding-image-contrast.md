@@ -177,25 +177,13 @@ The $\sigma$ terms capture contrast, weighted across multiple scales to align wi
 
 Consider three images, each 8-bit grayscale ($[0, 255]$):
 
-### Image A: Bimodal Histogram
-- 50% pixels at intensity 50, 50% at intensity 200
-- **Luminance contrast**: $\frac{200-50}{200+50} = 0.6$
-- **RMS contrast**: High (large $\sigma$)
-- **Local contrast**: Low (uniform blocks)
+| Image | Visual | Description | Luminance Contrast | RMS Contrast | Local Contrast |
+|-------|--------|-------------|-------------------|--------------|----------------|
+| **A: Bimodal Histogram** | ![Bimodal]({{ "/assets/images/contrast_bimodal.png" \| relative_url }}) | 50% pixels at intensity 50, 50% at intensity 200 | $\frac{200-50}{200+50} = 0.6$ | High (large $\sigma$) | Low (uniform blocks) |
+| **B: Linear Gradient** | ![Gradient]({{ "/assets/images/contrast_gradient.png" \| relative_url }}) | Smooth ramp from 50 to 200 | $\frac{200-50}{200+50} = 0.6$ | Moderate | Low (gradual change) |
+| **C: High-Frequency Noise** | ![Noise]({{ "/assets/images/contrast_noise.png" \| relative_url }}) | Mean = 125, $\sigma = 50$ | Depends on outliers | High ($\frac{50}{125} = 0.4$) | Very high (rapid changes) |
 
-### Image B: Linear Gradient
-- Smooth ramp from 50 to 200
-- **Luminance contrast**: $\frac{200-50}{200+50} = 0.6$
-- **RMS contrast**: Moderate
-- **Local contrast**: Low (gradual change)
-
-### Image C: High-Frequency Noise
-- Mean = 125, $\sigma = 50$
-- **Luminance contrast**: Depends on extreme outliers
-- **RMS contrast**: High ($\frac{50}{125} = 0.4$)
-- **Local contrast**: Very high (rapid pixel-to-pixel changes)
-
-**Conclusion**: Luminance contrast suggests A and B are similar, but RMS and local contrast reveal their structural differences. Choose the metric that aligns with your application's needs.
+**Key Insight**: Luminance contrast suggests images A and B are identical, but RMS and local contrast reveal their structural differences. Choose the metric that aligns with your application's needs.
 
 ## Applications in Computer Vision
 
