@@ -277,17 +277,23 @@ This is the **law of the iterated logarithm** for Brownian motion. It quantifies
 
 #### Infinite Total Variation
 
-Another manifestation of roughness: for any partition of $[0, T]$:
+Another striking manifestation of Brownian motion's roughness is its **infinite total variation**—the "path length" over any time interval is infinite.
+
+**Statement**: For any partition of $[0, T]$:
 
 $$\lim_{\|\Delta\| \to 0} \sum_{i=0}^{n-1} \lvert W(t_{i+1}) - W(t_i)\rvert = \infty \quad \text{(almost surely)}$$
 
-**Meaning**: The path length is infinite—Brownian motion wiggles infinitely much over any time interval.
+**Key insight**: Total variation grows like $\sqrt{n}$ as we refine partitions, diverging to infinity.
 
-**Compare with smooth curves**: A differentiable curve $f$ on $[0,T]$ has total variation:
+**Contrast with quadratic variation**: While $\sum \lvert\Delta W\rvert \to \infty$, we have $\sum (\Delta W)^2 \to T$ (finite!). The critical exponent $p = 2$ is special—it's the only power for which Brownian motion has finite, non-zero $p$-variation.
 
-$$\int_0^T \lvert f'(t)\rvert \, dt < \infty$$
+**Why this matters**:
+- Brownian motion is **non-rectifiable** (no well-defined arc length)
+- Classical Riemann-Stieltjes integration **fails** (requires bounded variation)
+- We need specialized stochastic integrals (Itô, Stratonovich)
+- This is why $(dW)^2 = dt$ is fundamental in stochastic calculus
 
-Brownian motion has **unbounded** accumulated change.
+**For a comprehensive analysis** including rigorous proofs, $p$-variation theory, comparison with smooth curves, implications for integration, and practical consequences, see our dedicated post: [Infinite Total Variation of Brownian Motion]({{ site.baseurl }}{% link _posts/2025-12-27-total-variation-brownian-motion.md %})
 
 #### Visual Manifestation: Fractal Self-Similarity
 
@@ -505,6 +511,7 @@ For the full story, see [Brownian Motion and Modern Generative Models]({{ site.b
 - Karras et al. (2022), "Elucidating the Design Space of Diffusion-Based Generative Models" (unified framework)
 
 **Related Posts**:
+- [Infinite Total Variation of Brownian Motion]({{ site.baseurl }}{% link _posts/2025-12-27-total-variation-brownian-motion.md %}) — Deep dive into why path length diverges
 - [The Landscape of Differential Equations]({{ site.baseurl }}{% link _posts/2025-12-29-differential-equations-ode-pde-sde.md %})
 - [Itô Calculus: Why We Need New Rules for SDEs]({{ site.baseurl }}{% link _posts/2025-12-28-ito-calculus-stochastic-differential-equations.md %})
 - [Brownian Motion and Modern Generative Models]({{ site.baseurl }}{% link _posts/2025-12-31-brownian-motion-diffusion-flow-models.md %})

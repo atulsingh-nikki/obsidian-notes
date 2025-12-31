@@ -134,7 +134,7 @@ The mathematics of Brownian motion provides the rigorous framework for both.
 
 ### Forward Diffusion Process
 
-Start with data $\mathbf{x}_0 \sim p_{\text{data}}(\mathbf{x})$ (e.g., natural images). Define a forward SDE:
+Start with data $\mathbf{x}\_0 \sim p\_{\text{data}}(\mathbf{x})$ (e.g., natural images). Define a forward SDE:
 
 $$d\mathbf{x} = -\frac{1}{2} \beta(t) \mathbf{x} \, dt + \sqrt{\beta(t)} \, d\mathbf{W}$$
 
@@ -143,18 +143,18 @@ where $\beta(t) > 0$ is a **noise schedule** and $\mathbf{W}$ is multi-dimension
 **Properties**:
 - The drift term $-\frac{1}{2}\beta(t) \mathbf{x}$ shrinks the signal
 - The diffusion term $\sqrt{\beta(t)} \, d\mathbf{W}$ adds noise
-- As $t \to \infty$, $\mathbf{x}_t \to \mathcal{N}(0, I)$ regardless of $\mathbf{x}_0$
+- As $t \to \infty$, $\mathbf{x}\_t \to \mathcal{N}(0, I)$ regardless of $\mathbf{x}\_0$
 
 **Discrete-time version** (DDPM):
-$$\mathbf{x}_t = \sqrt{1 - \beta_t} \, \mathbf{x}_{t-1} + \sqrt{\beta_t} \, \boldsymbol{\epsilon}_t$$
+$$\mathbf{x}_t = \sqrt{1 - \beta_t} \, \mathbf{x}_{t-1} + \sqrt{\beta_t} \, \varepsilon_t$$
 
-where $\boldsymbol{\epsilon}_t \sim \mathcal{N}(0, I)$.
+where $\varepsilon\_t \sim \mathcal{N}(0, I)$.
 
 **Closed-form solution**: Thanks to Gaussian properties,
 
-$$\mathbf{x}_t = \sqrt{\bar{\alpha}_t} \, \mathbf{x}_0 + \sqrt{1 - \bar{\alpha}_t} \, \boldsymbol{\epsilon}$$
+$$\mathbf{x}_t = \sqrt{\bar{\alpha}_t} \, \mathbf{x}_0 + \sqrt{1 - \bar{\alpha}_t} \, \varepsilon$$
 
-where $\bar{\alpha}_t = \prod_{s=1}^t (1 - \beta_s)$ and $\boldsymbol{\epsilon} \sim \mathcal{N}(0, I)$.
+where $\bar{\alpha}\_t = \prod\_{s=1}^t (1 - \beta\_s)$ and $\varepsilon \sim \mathcal{N}(0, I)$.
 
 ### Reverse Diffusion Process
 
@@ -164,15 +164,15 @@ $$d\mathbf{x} = \left[-\frac{1}{2} \beta(t) \mathbf{x} - \beta(t) \nabla_{\mathb
 
 where:
 - $\bar{\mathbf{W}}$ is reverse-time Brownian motion
-- $\nabla_{\mathbf{x}} \log p_t(\mathbf{x})$ is the **score function**
+- $\nabla\_{\mathbf{x}} \log p\_t(\mathbf{x})$ is the **score function**
 
-**The challenge**: We don't know $p_t(\mathbf{x})$, so we don't know its score!
+**The challenge**: We don't know $p\_t(\mathbf{x})$, so we don't know its score!
 
-**The solution**: Train a neural network $\mathbf{s}_\theta(\mathbf{x}, t) \approx \nabla_{\mathbf{x}} \log p_t(\mathbf{x})$ to estimate the score.
+**The solution**: Train a neural network $\mathbf{s}\_\theta(\mathbf{x}, t) \approx \nabla\_{\mathbf{x}} \log p\_t(\mathbf{x})$ to estimate the score.
 
 ### Score-Based Generative Models
 
-The **score function** $\nabla_{\mathbf{x}} \log p(\mathbf{x})$ points toward higher probability regions:
+The **score function** $\nabla\_{\mathbf{x}} \log p(\mathbf{x})$ points toward higher probability regions:
 
 - High magnitude where data is unlikely (far from modes)
 - Points toward data manifold
@@ -182,28 +182,28 @@ $$\mathbf{x}_{k+1} = \mathbf{x}_k + \frac{\epsilon}{2} \nabla_{\mathbf{x}} \log 
 
 ### Training Objective
 
-**Score matching**: Train $\mathbf{s}_\theta(\mathbf{x}, t)$ to match the true score by minimizing:
+**Score matching**: Train $\mathbf{s}\_\theta(\mathbf{x}, t)$ to match the true score by minimizing:
 
 $$\mathbb{E}_{t \sim U(0,T)} \mathbb{E}_{\mathbf{x}_0 \sim p_{\text{data}}} \mathbb{E}_{\mathbf{x}_t \mid \mathbf{x}_0} \left[ \lambda(t) \left\| \mathbf{s}_\theta(\mathbf{x}_t, t) - \nabla_{\mathbf{x}_t} \log p(\mathbf{x}_t \mid \mathbf{x}_0) \right\|^2 \right]$$
 
-**Key insight**: We can compute $\nabla_{\mathbf{x}_t} \log p(\mathbf{x}_t \mid \mathbf{x}_0)$ analytically since $p(\mathbf{x}_t \mid \mathbf{x}_0) = \mathcal{N}(\sqrt{\bar{\alpha}_t} \mathbf{x}_0, (1 - \bar{\alpha}_t) I)$:
+**Key insight**: We can compute $\nabla\_{\mathbf{x}\_t} \log p(\mathbf{x}\_t \mid \mathbf{x}\_0)$ analytically since $p(\mathbf{x}\_t \mid \mathbf{x}\_0) = \mathcal{N}(\sqrt{\bar{\alpha}\_t} \mathbf{x}\_0, (1 - \bar{\alpha}\_t) I)$:
 
-$$\nabla_{\mathbf{x}_t} \log p(\mathbf{x}_t \mid \mathbf{x}_0) = -\frac{\mathbf{x}_t - \sqrt{\bar{\alpha}_t} \mathbf{x}_0}{1 - \bar{\alpha}_t} = -\frac{\boldsymbol{\epsilon}}{\sqrt{1 - \bar{\alpha}_t}}$$
+$$\nabla_{\mathbf{x}_t} \log p(\mathbf{x}_t \mid \mathbf{x}_0) = -\frac{\mathbf{x}_t - \sqrt{\bar{\alpha}_t} \mathbf{x}_0}{1 - \bar{\alpha}_t} = -\frac{\varepsilon}{\sqrt{1 - \bar{\alpha}_t}}$$
 
-This reduces to **denoising**: predict the noise $\boldsymbol{\epsilon}$!
+This reduces to **denoising**: predict the noise $\varepsilon$!
 
-$$\mathcal{L} = \mathbb{E}_{t, \mathbf{x}_0, \boldsymbol{\epsilon}} \left[ \lambda(t) \left\| \boldsymbol{\epsilon}_\theta(\mathbf{x}_t, t) - \boldsymbol{\epsilon} \right\|^2 \right]$$
+$$\mathcal{L} = \mathbb{E}_{t, \mathbf{x}_0, \varepsilon} \left[ \lambda(t) \left\| \varepsilon_\theta(\mathbf{x}_t, t) - \varepsilon \right\|^2 \right]$$
 
 ## Normalizing Flows: Continuous Transformations and Probability
 
 ### The Change of Variables Formula
 
-If $\mathbf{z} \sim p_Z(\mathbf{z})$ and $\mathbf{x} = f(\mathbf{z})$ where $f$ is invertible:
+If $\mathbf{z} \sim p\_Z(\mathbf{z})$ and $\mathbf{x} = f(\mathbf{z})$ where $f$ is invertible:
 
 $$p_X(\mathbf{x}) = p_Z(f^{-1}(\mathbf{x})) \left| \det \frac{\partial f^{-1}}{\partial \mathbf{x}} \right|$$
 
 Equivalently:
-$$\log p_X(\mathbf{x}) = \log p_Z(\mathbf{z}) - \log \left| \det \frac{\partial f}{\partial \mathbf{z}} \right|$$
+$$\log p\_X(\mathbf{x}) = \log p\_Z(\mathbf{z}) - \log \left| \det \frac{\partial f}{\partial \mathbf{z}} \right|$$
 
 **Intuition**: Probability mass is conserved, but the Jacobian determinant accounts for volume expansion/contraction.
 
@@ -216,12 +216,12 @@ $$\mathbf{z}_0 \xrightarrow{f_1} \mathbf{z}_1 \xrightarrow{f_2} \cdots \xrightar
 starting from a simple base distribution (typically $\mathcal{N}(0, I)$).
 
 **Log-likelihood**:
-$$\log p_X(\mathbf{x}) = \log p_Z(\mathbf{z}_0) - \sum_{k=1}^K \log \left| \det \frac{\partial f_k}{\partial \mathbf{z}_{k-1}} \right|$$
+$$\log p\_X(\mathbf{x}) = \log p\_Z(\mathbf{z}\_0) - \sum\_{k=1}^K \log \left| \det \frac{\partial f\_k}{\partial \mathbf{z}\_{k-1}} \right|$$
 
 **Advantages**:
 - Exact likelihood computation
-- Exact sampling: sample $\mathbf{z}_0 \sim \mathcal{N}(0, I)$ and apply $f_1 \circ \cdots \circ f_K$
-- Exact inference: apply $f_K^{-1} \circ \cdots \circ f_1^{-1}$
+- Exact sampling: sample $\mathbf{z}\_0 \sim \mathcal{N}(0, I)$ and apply $f\_1 \circ \cdots \circ f\_K$
+- Exact inference: apply $f\_K^{-1} \circ \cdots \circ f\_1^{-1}$
 
 **Challenges**:
 - Designing architectures with tractable Jacobians
@@ -256,7 +256,7 @@ $$\frac{d\mathbf{z}}{dt} = \text{NeuralNet}_\theta(\mathbf{z}(t), t)$$
 
 The groundbreaking insight (Song et al., 2021): **diffusion models and continuous normalizing flows are two sides of the same coin**.
 
-Every diffusion SDE has a corresponding **probability flow ODE** that generates the same marginal distributions $p_t(\mathbf{x})$ without stochasticity:
+Every diffusion SDE has a corresponding **probability flow ODE** that generates the same marginal distributions $p\_t(\mathbf{x})$ without stochasticity:
 
 **Forward SDE**:
 $$d\mathbf{x} = f(\mathbf{x}, t) \, dt + g(t) \, d\mathbf{W}$$
@@ -269,8 +269,8 @@ $$d\mathbf{x} = \left[f(\mathbf{x}, t) - \frac{1}{2} g^2(t) \nabla_{\mathbf{x}} 
 | **Property** | **SDE (Diffusion)** | **ODE (Flow)** |
 |---|---|---|
 | **Stochasticity** | Stochastic trajectories | Deterministic trajectories |
-| **Marginals** | $p_t(\mathbf{x})$ | Same $p_t(\mathbf{x})$ |
-| **Sampling** | Multiple runs give different outputs | Deterministic for fixed $\mathbf{z}_0$ |
+| **Marginals** | $p\_t(\mathbf{x})$ | Same $p\_t(\mathbf{x})$ |
+| **Sampling** | Multiple runs give different outputs | Deterministic for fixed $\mathbf{z}\_0$ |
 | **Likelihood** | Requires estimation | Exact via change of variables |
 | **Flexibility** | Temperature tuning, partial denoising | Exact inversion |
 
@@ -324,7 +324,7 @@ for t in reversed(range(T)):
 
 **Noise Conditional Score Networks** (Song & Ermon, 2019):
 
-- Train score network $\mathbf{s}_\theta(\mathbf{x}, \sigma)$ at multiple noise levels
+- Train score network $\mathbf{s}\_\theta(\mathbf{x}, \sigma)$ at multiple noise levels
 - Sample via **annealed Langevin dynamics**:
 
 ```python

@@ -66,13 +66,15 @@ As $h \to 0$, the variance explodes to infinity! There's no convergence.
 
 For smooth functions, the **total variation** (sum of absolute changes) is finite:
 
-$$\sum_{i} |f(t_{i+1}) - f(t_i)| < \infty$$
+$$\sum_{i} \lvert f(t_{i+1}) - f(t_i)\rvert < \infty$$
 
 For Brownian motion, total variation is **infinite** with probability 1:
 
-$$\sum_{i} |W(t_{i+1}) - W(t_i)| \to \infty$$
+$$\sum_{i} \lvert W(t_{i+1}) - W(t_i)\rvert \to \infty$$
 
 The path is infinitely wiggly.
+
+*For a comprehensive analysis including rigorous proofs, $p$-variation theory, scaling arguments, implications for integration, and why this necessitates Itô/Stratonovich integrals, see our dedicated post: [Infinite Total Variation of Brownian Motion]({{ site.baseurl }}{% link _posts/2025-12-27-total-variation-brownian-motion.md %}).*
 
 ### Finite Quadratic Variation
 
@@ -388,6 +390,7 @@ Optimal control of systems with noise:
 **Related Posts**:
 - [The Landscape of Differential Equations: From ODEs to PDEs to SDEs]({{ site.baseurl }}{% link _posts/2025-12-29-differential-equations-ode-pde-sde.md %})
 - [Mathematical Properties of Brownian Motion]({{ site.baseurl }}{% link _posts/2025-12-30-mathematical-properties-brownian-motion.md %})
+- [Infinite Total Variation of Brownian Motion]({{ site.baseurl }}{% link _posts/2025-12-27-total-variation-brownian-motion.md %}) — Why Riemann-Stieltjes integration fails
 - [Brownian Motion and Modern Generative Models]({{ site.baseurl }}{% link _posts/2025-12-31-brownian-motion-diffusion-flow-models.md %})
 - [Stochastic Processes and Sampling]({{ site.baseurl }}{% link _posts/2025-02-21-stochastic-processes-and-sampling.md %})
 
