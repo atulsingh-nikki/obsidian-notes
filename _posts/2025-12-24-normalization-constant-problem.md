@@ -16,6 +16,46 @@ tags: [probability, machine-learning, generative-models, statistical-mechanics]
 
 We want to assign probabilities: **Which data points are likely? Which are not?**
 
+## How We Build Generative Models (The Big Picture)
+
+Here's what happens when we train a generative model:
+
+**1. We have a dataset**: 1 million cat photos, for example.
+
+**2. We build a neural network**: This network looks at any image and outputs a **score** - a single number representing "how much the model likes this image."
+
+```
+Neural Network: Image → Score
+```
+
+**3. We convert scores to unnormalized probabilities**: 
+
+$$\tilde{p}_\theta(x) = \exp(\text{score})$$
+
+This gives us positive numbers that capture the model's belief:
+- High score → Large $\tilde{p}(x)$ → "This looks like training data"
+- Low score → Small $\tilde{p}(x)$ → "This doesn't look like training data"
+
+**Example outputs**:
+- Cat photo: $\tilde{p}(x) = 1000$
+- Dog photo: $\tilde{p}(x) = 10$  
+- Random noise: $\tilde{p}(x) = 0.001$
+
+**4. The problem**: These numbers **don't sum to 1**! 
+
+When we sum $\tilde{p}(x)$ over all possible images, we might get 1 trillion, or 0.00001, or anything. We don't know because we can't compute the sum.
+
+**5. What we need**: To convert to valid probabilities, we divide by the total:
+
+$$p(x) = \frac{\tilde{p}(x)}{Z} \quad \text{where } Z = \text{sum of } \tilde{p}(x) \text{ over all possible images}$$
+
+**This $Z$ is the normalization constant - and computing it is impossible.**
+
+So in summary:
+- **$\tilde{p}(x)$ = What our model actually outputs** (easy to compute, but not a valid probability)
+- **$Z$ = What we need to make it valid** (impossible to compute)
+- **$p(x) = \tilde{p}(x)/Z$ = Valid probability** (what we want, but can't get)
+
 ## The Mathematical Requirement
 
 To define a valid probability distribution, we need:
@@ -35,6 +75,29 @@ or for discrete $x$:
 $$Z = \sum\_x \tilde{p}(x)$$
 
 **The problem**: Computing $Z$ requires **summing or integrating over all possible data points**. In high dimensions, this becomes computationally impossible.
+
+## Understanding $\tilde{p}(x)$ in Context
+
+**What is $\tilde{p}(x)$ when modeling data?**
+
+When building a generative model (say, to generate images), here's what happens:
+
+1. **You have data**: A dataset of images (cats, dogs, faces, etc.)
+2. **You build a neural network**: The network takes an image and outputs a **score** indicating how "realistic" it is
+3. **You create $\tilde{p}(x)$**: Convert the score to a positive number: $\tilde{p}(x) = \exp(\text{network\_score})$
+
+**This $\tilde{p}(x)$ is the output of your model** - it's what the network "thinks" about each image:
+- High score for realistic images (e.g., $\tilde{p}(\text{cat photo}) = 1000$)
+- Low score for unrealistic images (e.g., $\tilde{p}(\text{noise}) = 0.01$)
+
+**Why "easy to compute"?** For any specific image $x$, computing $\tilde{p}(x)$ is just:
+- One forward pass through your neural network
+- One exponential operation
+- Takes milliseconds on a GPU
+
+**Why "unnormalized"?** These scores don't sum to 1 across all possible images. Without knowing $Z$, you can't convert them to valid probabilities. The model can say "this is more realistic than that," but not "this has a 90% probability of being a cat."
+
+**The tragedy**: Your model naturally outputs $\tilde{p}(x)$ for any image you show it, but to train it properly (maximize likelihood) or evaluate probabilities, you need $Z$ - which requires evaluating $\tilde{p}(x)$ for every possible image!
 
 ## An Intuitive Example: The Fair Coin
 
@@ -58,9 +121,30 @@ $$p(\text{heads}) = \frac{3}{6} = 0.5, \quad p(\text{tails}) = \frac{3}{6} = 0.5
 
 $$256^{256 \times 256} = 256^{65{,}536}$$
 
+**Converting to base 10**: To understand the scale, we convert this to powers of 10:
+
+$$256^{65{,}536} = 10^{x}$$
+
+Taking $\log_{10}$ of both sides:
+
+$$x = 65{,}536 \cdot \log_{10}(256) = 65{,}536 \cdot \log_{10}(2^8) = 65{,}536 \cdot 8 \cdot \log_{10}(2)$$
+
+Since $\log_{10}(2) \approx 0.30103$:
+
+$$x = 65{,}536 \times 8 \times 0.30103 \approx 157{,}826$$
+
+Therefore: $256^{65{,}536} \approx 10^{157{,}826}$
+
 To put this in perspective:
-- Number of atoms in the universe: $\approx 10^{80}$
+- Number of atoms in the observable universe: $\approx 10^{80}$
 - Number of possible images: $\approx 10^{157{,}826}$
+
+**Time perspective**: Suppose processing one image takes just 1 millisecond:
+- Total time needed: $10^{157{,}826}$ milliseconds $= 10^{157{,}823}$ seconds
+- Converting to years: $\frac{10^{157{,}823}}{3.16 \times 10^7} \approx 3.16 \times 10^{157{,}815}$ years
+- Age of the universe: $\approx 1.38 \times 10^{10}$ years
+
+**That's $10^{157{,}805}$ times the age of the universe!** Even processing a trillion images per millisecond wouldn't make a dent.
 
 **To compute $Z$, we need to sum over $10^{157{,}826}$ images.** Even if we could evaluate $\tilde{p}(x)$ a billion times per second, the universe would end many times over before we finish.
 
