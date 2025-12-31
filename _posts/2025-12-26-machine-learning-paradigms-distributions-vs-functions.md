@@ -5,7 +5,7 @@ description: "Understanding the fundamental divide between generative models tha
 tags: [machine-learning, probability, generative-models, discriminative-models, deep-learning]
 ---
 
-*This post establishes foundational concepts that underpin many advanced topics. For probabilistic foundations, see [Bayesian Foundations of Kalman Filtering]({{ site.baseurl }}{% link _posts/2024-09-22-bayesian-foundations-kalman.md %}). For sampling techniques, see [Stochastic Processes and the Art of Sampling Uncertainty]({{ site.baseurl }}{% link _posts/2025-02-21-stochastic-processes-and-sampling.md %}). For modern generative applications, see [Brownian Motion and Modern Generative Models]({{ site.baseurl }}{% link _posts/2025-12-31-brownian-motion-diffusion-flow-models.md %}).*
+*This post establishes foundational concepts that underpin many advanced topics. For historical context on why this distinction matters, see [Why Discriminative Learning Dominated First]({{ site.baseurl }}{% link _posts/2025-12-25-why-discriminative-learning-came-first.md %}). For probabilistic foundations, see [Bayesian Foundations of Kalman Filtering]({{ site.baseurl }}{% link _posts/2024-09-22-bayesian-foundations-kalman.md %}). For sampling techniques, see [Stochastic Processes and the Art of Sampling Uncertainty]({{ site.baseurl }}{% link _posts/2025-02-21-stochastic-processes-and-sampling.md %}). For modern generative applications, see [Brownian Motion and Modern Generative Models]({{ site.baseurl }}{% link _posts/2025-12-31-brownian-motion-diffusion-flow-models.md %}).*
 
 ## Table of Contents
 
@@ -573,6 +573,7 @@ The future of machine learning is increasingly **generative**:
 - Bond-Taylor et al. (2022), "Deep Generative Modelling: A Comparative Review"
 
 **Related Blog Posts**:
+- [Why Discriminative Learning Dominated First]({{ site.baseurl }}{% link _posts/2025-12-25-why-discriminative-learning-came-first.md %}) - historical context for the paradigm shift
 - [Bayesian Foundations of Kalman Filtering]({{ site.baseurl }}{% link _posts/2024-09-22-bayesian-foundations-kalman.md %}) - probabilistic state estimation
 - [Stochastic Processes and the Art of Sampling Uncertainty]({{ site.baseurl }}{% link _posts/2025-02-21-stochastic-processes-and-sampling.md %}) - sampling from distributions
 - [Why Direct Sampling from PDFs Is Hard]({{ site.baseurl }}{% link _posts/2025-10-04-why-direct-sampling-from-pdfs-is-hard.md %}) - practical challenges
