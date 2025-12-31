@@ -73,7 +73,7 @@ A **standard Brownian motion** (or Wiener process) $W(t)$ is a continuous-time s
 3. **Stationary Gaussian increments**: $W(t) - W(s) \sim \mathcal{N}(0, t - s)$
 4. **Continuous paths**: $W(t)$ is continuous in $t$ (almost surely)
 
-![Brownian Motion Properties](/assets/images/brownian-motion-properties.png)
+![Brownian Motion Properties](images/brownian-motion-properties.png)
 *Figure: Visual representation of Brownian motion's defining properties. **Top**: Multiple continuous paths starting from zero. **Middle left**: Independent increments over non-overlapping intervals. **Middle right**: Gaussian distribution of values at different times. **Bottom left**: Scaling property showing equivalence between time-scaled and amplitude-scaled processes. **Bottom right**: Quadratic variation converging to T as partition becomes finer.*
 
 ### Key Properties

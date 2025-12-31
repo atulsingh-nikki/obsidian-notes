@@ -225,13 +225,22 @@ def main():
     fig.suptitle('Brownian Motion: Mathematical Properties Visualized', 
                 fontsize=16, fontweight='bold', y=0.995)
     
-    # Save figure
+    # Save figure to both locations (assets for Jekyll, _posts/images for Obsidian)
     import os
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    output_path = os.path.join(script_dir, '..', 'assets', 'images', 'brownian-motion-properties.png')
-    output_path = os.path.normpath(output_path)
-    plt.savefig(output_path, dpi=150, bbox_inches='tight', facecolor='white')
-    print(f"Saved visualization to {output_path}")
+    
+    # Save to assets/images for Jekyll
+    output_path1 = os.path.join(script_dir, '..', 'assets', 'images', 'brownian-motion-properties.png')
+    output_path1 = os.path.normpath(output_path1)
+    plt.savefig(output_path1, dpi=150, bbox_inches='tight', facecolor='white')
+    print(f"Saved visualization to {output_path1}")
+    
+    # Also save to _posts/images for Obsidian local viewing
+    output_path2 = os.path.join(script_dir, '..', '_posts', 'images', 'brownian-motion-properties.png')
+    output_path2 = os.path.normpath(output_path2)
+    plt.savefig(output_path2, dpi=150, bbox_inches='tight', facecolor='white')
+    print(f"Also saved to {output_path2} for Obsidian")
+    
     plt.close()
 
 if __name__ == '__main__':
