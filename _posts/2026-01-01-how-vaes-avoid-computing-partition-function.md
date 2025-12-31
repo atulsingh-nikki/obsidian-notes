@@ -111,55 +111,176 @@ $$p_\theta(x) = \int p_\theta(x, z) dz = \int p_\theta(x \mid z) p(z) dz$$
 
 Here's where VAEs become clever. Instead of computing $p_\theta(x)$ directly, we derive a **lower bound** that is tractable.
 
-### Step 1: Introduce an Approximate Posterior
+**Understanding Prior and Posterior in VAEs:**
 
-We introduce a **recognition model** (encoder) $q_\phi(z \mid x)$ that approximates the true posterior $p_\theta(z \mid x)$.
+Before we proceed, let's clarify two fundamental concepts:
 
-**Why?** Because the true posterior $p_\theta(z \mid x) = \frac{p_\theta(x \mid z)p(z)}{p_\theta(x)}$ also requires computing $p_\theta(x)$—the very thing we're trying to avoid!
+**Prior $p(z)$**: This represents our initial belief about latent codes *before* seeing any data. In VAEs, we typically use $p(z) = \mathcal{N}(0, I)$ (standard Gaussian). Think of it as: "If I pick a random recipe without knowing what dish I want, what distribution should I sample from?" We choose a simple distribution that's easy to sample from.
 
-### Step 2: Derive the Evidence Lower Bound (ELBO)
+**Posterior $p_\theta(z \mid x)$**: This represents our belief about latent codes *after* observing specific data $x$. It answers: "Given that I see this specific cat image, what recipes $z$ likely produced it?" Using Bayes' rule:
 
-Starting with the log-likelihood we want to maximize:
+$$p_\theta(z \mid x) = \frac{p_\theta(x \mid z) p(z)}{p_\theta(x)} = \frac{\text{likelihood} \times \text{prior}}{\text{evidence}}$$
+
+**The posterior problem**: Computing $p_\theta(z \mid x)$ requires $p_\theta(x)$ in the denominator—the intractable integral we're trying to avoid! This creates a circular dependency:
+- We need the posterior to efficiently sample relevant $z$ values
+- But computing the posterior requires knowing $p_\theta(x)$
+- And computing $p_\theta(x)$ requires integrating over all $z$
+
+**VAE's solution**: Introduce an **approximate posterior** $q_\phi(z \mid x)$ (the encoder) that we can actually compute, and use it to derive a tractable objective.
+
+### Building the Approximate Posterior
+
+So here's our strategy: since we can't compute the true posterior $p_\theta(z \mid x) = \frac{p_\theta(x \mid z)p(z)}{p_\theta(x)}$ (it has that pesky $p_\theta(x)$ in the denominator), let's build our own approximate version!
+
+We'll create a **recognition model** (encoder) $q_\phi(z \mid x)$—a neural network that looks at data $x$ and directly outputs parameters describing which $z$ values are relevant. For example, if $q_\phi$ is Gaussian, the encoder outputs mean $\mu_\phi(x)$ and variance $\sigma_\phi^2(x)$.
+
+**Crucially**: $q_\phi(z \mid x)$ is a proper probability distribution over $z$. Let me explain what this means:
+
+**Why does any probability distribution integrate to 1?**
+
+Think about it intuitively: if you have a distribution over possible outcomes, the probabilities of *all possible outcomes* must add up to 100% (or 1 in decimal).
+
+**Example with Gaussian parameters (exactly what VAE encoders do)**:
+
+Suppose our encoder looks at a cat image and outputs:
+- Mean: $\mu_\phi(x_{\text{cat}}) = [0.5, -0.2, 0.8, ...]$ 
+- Variance: $\sigma_\phi^2(x_{\text{cat}}) = [0.1, 0.15, 0.2, ...]$
+
+These parameters define a Gaussian distribution $q_\phi(z \mid x_{\text{cat}}) = \mathcal{N}(\mu_\phi(x_{\text{cat}}), \sigma_\phi^2(x_{\text{cat}}))$.
+
+**The key property**: This Gaussian distribution, like *all* probability distributions, must integrate to 1:
+
+$$\int q_\phi(z \mid x_{\text{cat}}) dz = \int \mathcal{N}(z; \mu_\phi(x_{\text{cat}}), \sigma_\phi^2(x_{\text{cat}})) dz = 1$$
+
+**What this means**: "The probability that the latent code $z$ takes *some value* (anywhere in latent space) is 100%." 
+
+We're not saying which specific $z$ value is most likely (that's what $\mu$ tells us), we're saying that the total probability across all possible $z$ values must equal 1. This is true for *any* Gaussian, regardless of what $\mu$ and $\sigma$ are!
+
+**Intuition**: *Something* must be the latent code—we can't have a distribution where probabilities sum to more than 100% (impossible) or less than 100% (implying "maybe nothing exists").
+
+**For our VAE**: $q_\phi(z \mid x)$ represents "given image $x$, what's the probability distribution over latent codes $z$?" Since *some* latent code must be responsible, the probabilities across all possible $z$ values must sum to 1:
+
+$$\int q_\phi(z \mid x) dz = 1$$
+
+**Critical clarification - What variable are we integrating over?**
+
+Notice we're integrating over $z$ (the latent code), NOT over $x$ (the data). This is crucial:
+
+**For a single data point** $x_{\text{cat}}$:
+- The encoder produces one distribution over latent codes: $q_\phi(z \mid x_{\text{cat}})$
+- This distribution integrates to 1 **over $z$**: $\int q_\phi(z \mid x_{\text{cat}}) dz = 1$
+- Meaning: "For this cat image, the total probability across all possible latent codes is 100%"
+
+**For a different data point** $x_{\text{dog}}$:
+- The encoder produces a *different* distribution: $q_\phi(z \mid x_{\text{dog}})$
+- This also integrates to 1 **over $z$**: $\int q_\phi(z \mid x_{\text{dog}}) dz = 1$
+- Meaning: "For this dog image, the total probability across all possible latent codes is 100%"
+
+**These are separate distributions!** Each data point gets its own distribution over $z$ that integrates to 1. We're not summing probabilities across different data points—each data point has its own complete probability distribution over latent space.
+
+**Analogy**: Think of it like heights of people:
+- For men: $p(\text{height} \mid \text{male})$ integrates to 1 over all possible heights
+- For women: $p(\text{height} \mid \text{female})$ integrates to 1 over all possible heights
+- These are two different distributions (different means), but each integrates to 1 over the height variable
+- We don't add them together—they describe different conditional distributions
+
+**This is not something we choose or compute—it's a fundamental requirement for $q_\phi$ to be a valid probability distribution.** When we design the encoder network, we ensure it outputs parameters of a proper distribution (like a Gaussian), which automatically satisfies this property.
+
+This property (that probabilities sum to 1 **over latent codes**) will be key to our derivation—we'll use it as a clever way to introduce $q_\phi$ into our equations.
+
+**The brilliant insight: $q_\phi(z \mid x)$ tells us WHERE to look!**
+
+This is the key to making VAEs work! Remember our problem from earlier: when computing $p_\theta(x) = \int p_\theta(x \mid z) p(z) dz$, most $z$ values are irrelevant and contribute nothing.
+
+**What $q_\phi(z \mid x)$ does**:
+- For a specific cat image $x_{\text{cat}}$, it says: "Focus on $z$ values around $\mu = [0.5, -0.2, 0.8, ...]$"
+- For a specific dog image $x_{\text{dog}}$, it says: "Focus on $z$ values around $\mu = [-0.3, 0.7, -0.1, ...]$"
+
+**Without $q_\phi$**: We'd sample $z$ randomly from $p(z) = \mathcal{N}(0, I)$ and waste 99.99% of samples on irrelevant regions
+
+**With $q_\phi$**: We sample $z$ from $q_\phi(z \mid x)$, which concentrates probability mass on the $z$ values that actually matter for reconstructing $x$!
+
+This is why $q_\phi(z \mid x)$ is called the **approximate posterior**—it approximates "which latent codes likely produced this specific data point?" Even though we can't compute the true posterior $p_\theta(z \mid x)$ (requires intractable $p_\theta(x)$), we can learn $q_\phi(z \mid x)$ directly with a neural network!
+
+**Now what?** We have this approximate posterior $q_\phi(z \mid x)$, but how do we use it to train the model? This is where the mathematical magic happens.
+
+### Deriving the Evidence Lower Bound (ELBO)
+
+**Wait, what are we actually trying to maximize?**
+
+This is a crucial point: In maximum likelihood training, we want to maximize the probability of the *observed data* $x$, which is the **marginal likelihood** $p_\theta(x)$.
+
+Recall from earlier that the full generative model is:
+
+$$p_\theta(x) = \int p_\theta(x \mid z) p(z) dz$$
+
+- $p_\theta(x \mid z)$ is the **decoder/likelihood**: "probability of data given latent code"
+- $p(z)$ is the **prior**: "probability of latent code"
+- $p_\theta(x)$ is the **marginal likelihood** or **evidence**: "total probability of data" (integrating over all possible latent codes)
+
+**What we want**: Maximize $\log p_\theta(x)$ for each observed data point in our training set. This says: "adjust the model parameters $\theta$ so that the observed data becomes highly probable."
+
+**The problem**: Computing $p_\theta(x)$ requires that intractable integral over $z$!
+
+**The strategy**: We'll derive a tractable lower bound on $\log p_\theta(x)$ that we can maximize instead.
+
+Let's start with the quantity we actually want to maximize—the marginal log-likelihood:
 
 $$\log p_\theta(x)$$
 
-**Multiply by 1** (in a clever way):
+**The clever trick**: Let's multiply both sides by 1, but in a sneaky way—using the fact that our approximate posterior $q_\phi(z \mid x)$ is a proper probability distribution (recall: $\int q_\phi(z \mid x) dz = 1$):
 
 $$\log p_\theta(x) = \log p_\theta(x) \cdot \int q_\phi(z \mid x) dz$$
 
-Since $\int q_\phi(z \mid x) dz = 1$ (it's a probability distribution).
+**How do we rewrite this as an expectation?**
 
-**Bring the log inside** (using properties of expectations):
+Notice that $\log p_\theta(x)$ doesn't depend on $z$ (it's just a constant with respect to $z$). So we can move it inside the integral:
+
+$$\log p_\theta(x) \cdot \int q_\phi(z \mid x) dz = \int \log p_\theta(x) \cdot q_\phi(z \mid x) dz$$
+
+**Now recall the definition of expectation**: For a random variable $Z \sim q_\phi(z \mid x)$ and any function $f(Z)$:
+
+$$\mathbb{E}_{q_\phi(z \mid x)} [f(Z)] = \int f(z) \cdot q_\phi(z \mid x) dz$$
+
+In our case, $f(Z) = \log p_\theta(x)$ is a constant function (doesn't depend on $z$). Applying the expectation definition:
+
+$$\int \log p_\theta(x) \cdot q_\phi(z \mid x) dz = \mathbb{E}_{q_\phi(z \mid x)} \left[ \log p_\theta(x) \right]$$
+
+**So we have**:
 
 $$\log p_\theta(x) = \mathbb{E}_{q_\phi(z \mid x)} \left[ \log p_\theta(x) \right]$$
 
-**Apply Bayes' rule** inside the expectation:
+> **Note**: For a deeper dive into expectation, its mathematical properties, and why constants can be pulled in/out of expectations, see our companion post: *Expected Value & Expectation: Mathematical Foundations* (coming soon). This post will cover discrete vs continuous expectations, linearity of expectation, and expectation of constant functions in detail.
+
+**Why is this useful?** Because now we've expressed the log-likelihood as an expectation over our approximate posterior $q_\phi$. This will allow us to manipulate the equation in powerful ways!
+
+**Next move**: Inside this expectation, let's apply Bayes' rule to decompose $p_\theta(x)$:
 
 $$p_\theta(x) = \frac{p_\theta(x, z)}{p_\theta(z \mid x)} = \frac{p_\theta(x \mid z)p(z)}{p_\theta(z \mid x)}$$
 
-Therefore:
+Substituting this back:
 
 $$\log p_\theta(x) = \mathbb{E}_{q_\phi(z \mid x)} \left[ \log \frac{p_\theta(x \mid z)p(z)}{p_\theta(z \mid x)} \right]$$
 
-**Introduce $q_\phi$** by multiplying and dividing:
+**Here comes the key insight**: We now multiply and divide by our approximate posterior $q_\phi(z \mid x)$ to bring it into the picture:
 
 $$\log p_\theta(x) = \mathbb{E}_{q_\phi(z \mid x)} \left[ \log \frac{p_\theta(x \mid z)p(z)}{p_\theta(z \mid x)} \cdot \frac{q_\phi(z \mid x)}{q_\phi(z \mid x)} \right]$$
 
-**Rearrange**:
+**Rearranging the logarithms**, we can split this into three separate terms:
 
 $$\log p_\theta(x) = \mathbb{E}_{q_\phi(z \mid x)} \left[ \log p_\theta(x \mid z) \right] + \mathbb{E}_{q_\phi(z \mid x)} \left[ \log \frac{p(z)}{q_\phi(z \mid x)} \right] + \mathbb{E}_{q_\phi(z \mid x)} \left[ \log \frac{q_\phi(z \mid x)}{p_\theta(z \mid x)} \right]$$
 
-The last term is the **KL divergence** $\text{KL}(q_\phi(z \mid x) \| p_\theta(z \mid x)) \geq 0$.
+**Recognizing the pattern**: That last term is actually the **KL divergence** between our approximate posterior and the true posterior: $\text{KL}(q_\phi(z \mid x) \| p_\theta(z \mid x)) \geq 0$.
 
-**Final result**:
+**Putting it all together**:
 
 $$\log p_\theta(x) = \underbrace{\mathbb{E}_{q_\phi(z \mid x)} \left[ \log p_\theta(x \mid z) \right] - \text{KL}(q_\phi(z \mid x) \| p(z))}_{\text{ELBO: } \mathcal{L}(\theta, \phi; x)} + \text{KL}(q_\phi(z \mid x) \| p_\theta(z \mid x))$$
 
-Since KL divergence is non-negative:
+**The breakthrough**: Since KL divergence is always non-negative (it's zero only when the two distributions are identical), we have:
 
 $$\log p_\theta(x) \geq \mathcal{L}(\theta, \phi; x)$$
 
-**This is the Evidence Lower Bound (ELBO)!**
+**We've discovered the Evidence Lower Bound (ELBO)!** The first two terms give us a lower bound on the log-likelihood. And here's the beautiful part: these terms are tractable to compute! We can now optimize this lower bound instead of the intractable true likelihood.
 
 ## Why This Solves the Z Problem
 
