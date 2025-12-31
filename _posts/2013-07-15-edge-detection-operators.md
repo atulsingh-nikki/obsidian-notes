@@ -27,6 +27,8 @@ Canny remained the gold standard for general-purpose edge detection. The canonic
 
 Parameter tuning in 2013 often focused on the Gaussian sigma (edge scale) and the high/low thresholds (linking strength). Implementations in OpenCV and MATLAB exposed these knobs, making Canny a reproducible baseline across research papers and production pipelines.
 
+For a deeper 2013-era dive—including kernel choices, threshold strategies, and how the algorithm compares to LoG on noisy images—see the follow-up article on the Canny edge detector. {{ site.baseurl }}{% post_url 2013-08-10-canny-edge-detector-practice %}
+
 ## Practical considerations (circa 2013)
 
 - **Noise handling**: Operators were frequently preceded by Gaussian or median filters, especially for Roberts and Laplacian variants.
