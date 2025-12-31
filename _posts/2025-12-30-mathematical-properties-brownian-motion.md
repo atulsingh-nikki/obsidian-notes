@@ -194,13 +194,44 @@ For differentiability at $t$, we need:
 
 $$\lim_{h \to 0} \frac{W(t+h) - W(t)}{h} = W'(t)$$
 
-to exist and be finite. But:
+to exist and be finite. 
+
+**Step 1: Distribution of the increment**
+
+From Property 3 (Gaussian increments), we know:
+
+$$W(t+h) - W(t) \sim \mathcal{N}(0, h)$$
+
+This means:
+- Mean: $\mathbb{E}[W(t+h) - W(t)] = 0$
+- Variance: $\text{Var}[W(t+h) - W(t)] = h$
+
+**Step 2: Distribution of the difference quotient**
+
+When we divide by $h$:
+
+$$\frac{W(t+h) - W(t)}{h} = \frac{1}{h} \cdot [W(t+h) - W(t)]$$
+
+**Key scaling property of Gaussian distributions**: If $X \sim \mathcal{N}(\mu, \sigma^2)$ and $c$ is a constant, then:
+
+$$cX \sim \mathcal{N}(c\mu, c^2\sigma^2)$$
+
+The variance gets multiplied by $c^2$ (not just $c$)!
+
+**Applying this**: With $c = \frac{1}{h}$:
+
+- Mean: $\frac{1}{h} \cdot 0 = 0$
+- Variance: $\left(\frac{1}{h}\right)^2 \cdot h = \frac{1}{h^2} \cdot h = \frac{1}{h}$
+
+Therefore:
 
 $$\frac{W(t+h) - W(t)}{h} \sim \mathcal{N}\left(0, \frac{1}{h}\right)$$
 
+**Step 3: What happens as $h \to 0$?**
+
 As $h \to 0$:
-- The mean stays at 0
-- **The variance $\text{Var}\left[\frac{W(t+h)-W(t)}{h}\right] = \frac{1}{h} \to \infty$**
+- The mean stays at 0 ✓
+- **The variance $\frac{1}{h} \to \infty$ ✗**
 
 The difference quotient doesn't converge to any value—it becomes more and more wildly distributed!
 
