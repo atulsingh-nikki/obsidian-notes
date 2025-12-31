@@ -11,7 +11,7 @@ tags: [probability, machine-learning, generative-models, statistical-mechanics]
 
 **Goal**: Model a probability distribution over data $p(x)$ where $x$ could be:
 - An image: $x \in \mathbb{R}^{256 \times 256 \times 3} \approx \mathbb{R}^{200{,}000}$
-- A sentence: $x = (w\_1, w\_2, \dots, w\_n)$ where each $w\_i$ is a word
+- A sentence: $x = (w_1, w_2, \dots, w_n)$ where each $w_i$ is a word
 - A molecule: $x$ represents atomic positions and bonds
 
 We want to assign probabilities: **Which data points are likely? Which are not?**
@@ -72,7 +72,7 @@ $$Z = \int \tilde{p}(x) \, dx$$
 
 or for discrete $x$:
 
-$$Z = \sum\_x \tilde{p}(x)$$
+$$Z = \sum_x \tilde{p}(x)$$
 
 **The problem**: Computing $Z$ requires **summing or integrating over all possible data points**. In high dimensions, this becomes computationally impossible.
 
@@ -84,7 +84,7 @@ When building a generative model (say, to generate images), here's what happens:
 
 1. **You have data**: A dataset of images (cats, dogs, faces, etc.)
 2. **You build a neural network**: The network takes an image and outputs a **score** indicating how "realistic" it is
-3. **You create $\tilde{p}(x)$**: Convert the score to a positive number: $\tilde{p}(x) = \exp(\text{network\_score})$
+3. **You create $\tilde{p}(x)$**: Convert the score to a positive number: $\tilde{p}(x) = \exp(\text{network_score})$
 
 **This $\tilde{p}(x)$ is the output of your model** - it's what the network "thinks" about each image:
 - High score for realistic images (e.g., $\tilde{p}(\text{cat photo}) = 1000$)
@@ -158,56 +158,64 @@ Given an image $x$, we want to compute $p(x)$—how likely is this image under o
 
 Without $Z$, we only have $\tilde{p}(x)$, which doesn't mean anything probabilistically:
 - Is $\tilde{p}(x) = 100$ high or low?
-- We can't tell without comparing to $Z = \sum\_{x'} \tilde{p}(x')$
+- We can't tell without comparing to $Z = \sum_{x'} \tilde{p}(x')$
 
 ### 2. To Train Models
 
+**Why maximum likelihood?** The idea is simple: we want our model $p_\theta(x)$ to assign **high probability to the data we've actually seen**. If we have 1 million cat photos, we adjust the parameters $\theta$ so that these specific photos get high probability under $p_\theta(x)$. This makes the model "believe" that similar data is likely to occur.
+
 **Maximum likelihood training** tries to maximize:
 
-$$\max\_\theta \prod\_{i=1}^N p\_\theta(x\_i) = \max\_\theta \sum\_{i=1}^N \log p\_\theta(x\_i)$$
+$$\max_\theta \prod_{i=1}^N p_\theta(x_i) = \max_\theta \sum_{i=1}^N \log p_\theta(x_i)$$
 
-Expanding:
+**Why is taking log still a max problem?** Because $\log$ is a monotonically increasing function: if $a > b$, then $\log a > \log b$. So maximizing the likelihood $\prod p_\theta(x_i)$ is equivalent to maximizing the log-likelihood $\sum \log p_\theta(x_i)$—they have the same optimal $\theta^*$. We use log because it turns products into sums (easier math) and prevents numerical underflow.
 
-$$\log p\_\theta(x) = \log \tilde{p}\_\theta(x) - \log Z\_\theta$$
+In words: find parameters $\theta$ that make the observed data $\{x_1, \dots, x_N\}$ as likely as possible.
+
+**But here's the problem**: Recall from earlier that our probability is:
+
+$$p_\theta(x) = \frac{\tilde{p}_\theta(x)}{Z_\theta}$$
+
+where $Z_\theta = \sum_x \tilde{p}_\theta(x)$ is the partition function. Taking the log:
+
+$$\log p_\theta(x) = \log \tilde{p}_\theta(x) - \log Z_\theta$$
 
 **The gradient with respect to parameters $\theta$**:
 
-$$\frac{\partial \log p\_\theta(x)}{\partial \theta} = \frac{\partial \log \tilde{p}\_\theta(x)}{\partial \theta} - \frac{\partial \log Z\_\theta}{\partial \theta}$$
+**Why compute the gradient?** To actually maximize the log-likelihood, we need to know how to update $\theta$. The gradient $\frac{\partial \log p_\theta(x)}{\partial \theta}$ tells us which direction to adjust the parameters to increase the likelihood.
+
+$$\frac{\partial \log p_\theta(x)}{\partial \theta} = \frac{\partial \log \tilde{p}_\theta(x)}{\partial \theta} - \frac{\partial \log Z_\theta}{\partial \theta}$$
 
 The second term is:
 
-$$\frac{\partial \log Z\_\theta}{\partial \theta} = \frac{1}{Z\_\theta} \frac{\partial Z\_\theta}{\partial \theta} = \frac{1}{Z\_\theta} \int \frac{\partial \tilde{p}\_\theta(x)}{\partial \theta} dx$$
+**Step 1**: Apply the chain rule to $\log Z_\theta$:
 
-**This integral is over all possible $x$!** Intractable again.
+$$\frac{\partial \log Z_\theta}{\partial \theta} = \frac{1}{Z_\theta} \frac{\partial Z_\theta}{\partial \theta}$$
+
+**Step 2**: Recall that $Z_\theta = \sum_x \tilde{p}_\theta(x)$ (or $\int \tilde{p}_\theta(x) dx$ in continuous case). Differentiate:
+
+$$\frac{\partial Z_\theta}{\partial \theta} = \frac{\partial}{\partial \theta} \sum_x \tilde{p}_\theta(x) = \sum_x \frac{\partial \tilde{p}_\theta(x)}{\partial \theta}$$
+
+**Step 3**: Combine the steps:
+
+$$\frac{\partial \log Z_\theta}{\partial \theta} = \frac{1}{Z_\theta} \sum_x \frac{\partial \tilde{p}_\theta(x)}{\partial \theta}$$
+
+**This sum is over all possible $x$!** For images, that's $10^{157,826}$ terms—intractable again.
 
 ### 3. To Sample
 
 Even if we ignore training, generating samples from $p(x)$ typically requires knowing $Z$ or being able to evaluate $p(x)$ efficiently. Without $Z$, most classical sampling methods fail.
 
-## A Visual Analogy: The Mountain Range
-
-Imagine $\tilde{p}(x)$ as a landscape where height represents unnormalized probability:
-- High peaks: likely data points (e.g., realistic images)
-- Low valleys: unlikely data points (e.g., random noise)
-
-**Computing $Z$ is like**:
-- Walking over **every square inch** of the landscape
-- Measuring the height at each point
-- Summing all those heights
-
-In 2D (say, $1000 \times 1000$ grid), this is $10^6$ measurements—doable.
-
-In 200,000 dimensions (an image), this becomes $10^{157{,}826}$ measurements—**physically impossible**.
 
 ## Why Discriminative Models Don't Have This Problem
 
 **Discriminative models** learn $p(Y \mid X)$, not $p(X)$. For classification with $K$ classes:
 
-$$p(Y=k \mid X=x) = \frac{e^{f\_\theta^{(k)}(x)}}{\sum\_{j=1}^K e^{f\_\theta^{(j)}(x)}}$$
+$$p(Y=k \mid X=x) = \frac{e^{f_\theta^{(k)}(x)}}{\sum_{j=1}^K e^{f_\theta^{(j)}(x)}}$$
 
 **The "partition function" here** is:
 
-$$Z(x) = \sum\_{j=1}^K e^{f\_\theta^{(j)}(x)}$$
+$$Z(x) = \sum_{j=1}^K e^{f_\theta^{(j)}(x)}$$
 
 **Key difference**: This sum is over **classes** (typically 10-1000), not over all possible inputs $x$ (typically $10^{157{,}826}$).
 
@@ -221,7 +229,7 @@ The history of generative modeling is largely a story of clever ways to **avoid 
 
 **Key idea**: Don't compute $p(x)$ directly. Instead, optimize a **lower bound**:
 
-$$\log p(x) \geq \mathbb{E}\_{q(z|x)}[\log p(x|z)] - \text{KL}(q(z|x) \| p(z))$$
+$$\log p(x) \geq \mathbb{E}_{q(z|x)}[\log p(x|z)] - \text{KL}(q(z|x) \| p(z))$$
 
 This **evidence lower bound (ELBO)** is tractable to compute and differentiate. We never need $Z$!
 
@@ -249,13 +257,13 @@ $$x = f(z), \quad p(x) = p(z) \left\lvert \det \frac{\partial f^{-1}}{\partial x
 
 ### 4. Diffusion Models (2020)
 
-**Key idea**: Model a gradual noising process $x\_0 \to x\_1 \to \dots \to x\_T$ where $x\_T \sim \mathcal{N}(0, I)$.
+**Key idea**: Model a gradual noising process $x_0 \to x_1 \to \dots \to x_T$ where $x_T \sim \mathcal{N}(0, I)$.
 
-Learn to reverse this process: $x\_T \to \dots \to x\_1 \to x\_0$.
+Learn to reverse this process: $x_T \to \dots \to x_1 \to x_0$.
 
 **Training objective**: Denoising score matching, which is tractable:
 
-$$\mathbb{E}\_{t, x\_0, \varepsilon} \left[\left\lVert \varepsilon - \varepsilon\_\theta(x\_t, t)\right\rVert^2\right]$$
+$$\mathbb{E}_{t, x_0, \varepsilon} \left[\left\lVert \varepsilon - \varepsilon_\theta(x_t, t)\right\rVert^2\right]$$
 
 **Result**: No $Z$ appears! We just learn to denoise.
 
@@ -265,11 +273,11 @@ $$\mathbb{E}\_{t, x\_0, \varepsilon} \left[\left\lVert \varepsilon - \varepsilon
 
 **Key idea**: Factor $p(x)$ using the chain rule:
 
-$$p(x\_1, x\_2, \dots, x\_n) = p(x\_1) p(x\_2 \mid x\_1) p(x\_3 \mid x\_1, x\_2) \cdots p(x\_n \mid x\_1, \dots, x\_{n-1})$$
+$$p(x_1, x_2, \dots, x_n) = p(x_1) p(x_2 \mid x_1) p(x_3 \mid x_1, x_2) \cdots p(x_n \mid x_1, \dots, x_{n-1})$$
 
-Each conditional $p(x\_i \mid x\_{1:i-1})$ is a **small classification problem** (e.g., over vocabulary).
+Each conditional $p(x_i \mid x_{1:i-1})$ is a **small classification problem** (e.g., over vocabulary).
 
-**The partition functions** $Z\_i = \sum\_{x\_i} \tilde{p}(x\_i \mid x\_{1:i-1})$ are over vocabulary size (50K-100K words), not data space ($\infty$).
+**The partition functions** $Z_i = \sum_{x_i} \tilde{p}(x_i \mid x_{1:i-1})$ are over vocabulary size (50K-100K words), not data space ($\infty$).
 
 **Result**: Tractable! This is why GPT and other language models work.
 
@@ -280,7 +288,7 @@ Each conditional $p(x\_i \mid x\_{1:i-1})$ is a **small classification problem**
 The normalization constant problem is not just a technical nuisance—it reveals a profound asymmetry in machine learning:
 
 **Discriminative learning** (predict $Y$ given $X$):
-- Partition function over labels: $Z = \sum\_{y} \exp(f(x, y))$
+- Partition function over labels: $Z = \sum_{y} \exp(f(x, y))$
 - Typically 10-1000 terms → **tractable**
 
 **Generative learning** (model $X$ itself):
@@ -295,7 +303,7 @@ The normalization constant problem is not just a technical nuisance—it reveals
 
 **Fun fact**: The partition function $Z$ comes from statistical mechanics, where it's central to thermodynamics:
 
-$$Z = \sum\_{\text{states}} e^{-E(\text{state})/kT}$$
+$$Z = \sum_{\text{states}} e^{-E(\text{state})/kT}$$
 
 In physics, computing $Z$ is equally hard (NP-complete in general), but for some special systems (e.g., Ising model on planar graphs), exact solutions exist.
 
