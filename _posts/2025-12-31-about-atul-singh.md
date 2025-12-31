@@ -11,6 +11,13 @@ tags: [portfolio, about, expertise, computer-vision, machine-learning, hpc, colo
 
 Welcome to my technical portfolio. I'm Atul Singh, and I use this notebook to document deep dives into computer vision, machine learning infrastructure, high-performance computing, and the mathematical foundations that underpin production systems. What you see here isn't just theoretical exploration—it's battle-tested knowledge from building real-world pipelines, optimizing performance-critical code, and solving problems at the intersection of perception, computation, and human vision science.
 
+### Snapshot
+- **Output**: 45+ longform technical posts (~80k words) across 19 months
+- **Roles**: CV/HPC engineer, ML infrastructure builder, and technical writer
+- **Depth**: Multi-part series on contrast, Kalman filtering, C++ concurrency, sampling theory
+- **Tooling**: Python (NumPy, PyTorch, OpenCV), C++17/20, CUDA, LaTeX
+- **Philosophy**: Production rigor + mathematical grounding + accessible explanations
+
 ## What This Portfolio Demonstrates
 
 Over **45+ technical posts** spanning 2024-2025, I've built a comprehensive technical curriculum covering:
@@ -104,6 +111,12 @@ My technical writing follows three principles:
 - Connect mathematics, perception science, and engineering
 - Show how concepts from physics, signal processing, and human vision converge
 - Reference standards (SMPTE, ITU-R) and seminal papers
+
+### How I Work
+- **Reproducibility first**: deterministic seeds, pinned environments, and complete code listings
+- **Instrumentation everywhere**: profiling (CPU/GPU), memory audits, and accuracy/stability checks
+- **Design documents**: hypotheses, failure modes, and rollback criteria before implementing
+- **Teaching mindset**: each post ladders from intuition → formalism → implementation → caveats
 
 ## Key Technical Series
 
@@ -312,4 +325,3 @@ This portfolio is a living document of continuous learning and knowledge sharing
 * [Blog Home](https://atulsingh-nikki.github.io/obsidian-notes/) — Browse all content
 
 *Want to discuss computer vision, color science, or HPC optimization? These posts are conversation starters—I'd love to hear your perspective on these topics.*
-
