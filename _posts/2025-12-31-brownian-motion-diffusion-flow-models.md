@@ -5,7 +5,7 @@ description: "Exploring how 19th-century physics of random particle motion becam
 tags: [stochastic-processes, deep-learning, diffusion-models, normalizing-flows, generative-ai]
 ---
 
-*This post builds on concepts from [Stochastic Processes and the Art of Sampling Uncertainty]({{ site.baseurl }}{% link _posts/2025-02-21-stochastic-processes-and-sampling.md %}). Familiarity with basic probability and calculus is helpful but not required.*
+*This post builds on concepts from [Stochastic Processes and the Art of Sampling Uncertainty]({{ site.baseurl }}{% link _posts/2025-02-21-stochastic-processes-and-sampling.md %}). For a broader introduction to differential equations (ODEs, PDEs, SDEs), see [The Landscape of Differential Equations]({{ site.baseurl }}{% link _posts/2025-12-29-differential-equations-ode-pde-sde.md %}). For the essential mathematical framework of stochastic calculus, see [Itô Calculus: Why We Need New Rules for SDEs]({{ site.baseurl }}{% link _posts/2025-12-28-ito-calculus-stochastic-differential-equations.md %}). Familiarity with basic probability and calculus is helpful but not required.*
 
 ## Table of Contents
 
@@ -66,42 +66,20 @@ Brownian motion represents one of mathematics' most beautiful examples of order 
 
 ### Mathematical Definition
 
-A **standard Brownian motion** (or Wiener process) $W(t)$ is a continuous-time stochastic process with:
+A **standard Brownian motion** (or Wiener process) $W(t)$ is a continuous-time stochastic process with four defining properties:
 
 1. **$W(0) = 0$** with probability 1
 2. **Independent increments**: For $s < t$, $W(t) - W(s)$ is independent of all $W(u)$ for $u \leq s$
 3. **Stationary Gaussian increments**: $W(t) - W(s) \sim \mathcal{N}(0, t - s)$
 4. **Continuous paths**: $W(t)$ is continuous in $t$ (almost surely)
 
-![Brownian Motion Properties](images/brownian-motion-properties.png)
-*Figure: Visual representation of Brownian motion's defining properties. **Top**: Multiple continuous paths starting from zero. **Middle left**: Independent increments over non-overlapping intervals. **Middle right**: Gaussian distribution of values at different times. **Bottom left**: Scaling property showing equivalence between time-scaled and amplitude-scaled processes. **Bottom right**: Quadratic variation converging to T as partition becomes finer.*
+These simple axioms give rise to remarkable properties including self-similarity, the Markov property, and quadratic variation $(dW)^2 = dt$—the foundation of stochastic calculus.
 
-### Key Properties
-
-**Scaling Property**:
-$$W(ct) \stackrel{d}{=} \sqrt{c} \, W(t)$$
-
-This self-similarity is crucial for understanding diffusion processes at different time scales.
-
-**Non-differentiability**: Despite being continuous, Brownian paths are **nowhere differentiable** with probability 1. This counter-intuitive property makes standard calculus insufficient, necessitating Itô calculus.
-
-**Markov Property**: The future evolution depends only on the current position, not the path history:
-$$\mathbb{P}(W(t) \in A \mid W(s), s \leq t_0) = \mathbb{P}(W(t) \in A \mid W(t_0))$$
-
-**Quadratic Variation**: Over interval $[0, T]$, the quadratic variation equals $T$:
-$$\lim_{\|\Delta\| \to 0} \sum_{i} [W(t_{i+1}) - W(t_i)]^2 = T$$
-
-This property, written informally as $(dW)^2 = dt$, is fundamental to Itô calculus.
-
-### The Wiener Process
-
-Mathematically, we can construct Brownian motion as:
-
-$$W(t) = \lim_{n \to \infty} \sum_{k=1}^{\lfloor nt \rfloor} \frac{Z_k}{\sqrt{n}}$$
-
-where $Z_k \sim \mathcal{N}(0, 1)$ are independent standard normals. This construction shows how Brownian motion emerges from accumulating many small random shocks—exactly Einstein's molecular collision interpretation.
+**For a detailed exploration with visualizations**, see [Mathematical Properties of Brownian Motion: A Visual Guide]({{ site.baseurl }}{% link _posts/2025-12-30-mathematical-properties-brownian-motion.md %}), which includes interactive demonstrations of continuous paths, independent increments, Gaussian distributions, scaling behavior, and quadratic variation.
 
 ## Stochastic Differential Equations: Dynamics Under Uncertainty
+
+*For a comprehensive introduction to the landscape of differential equations (ODEs, PDEs, SDEs), see [The Landscape of Differential Equations]({{ site.baseurl }}{% link _posts/2025-12-29-differential-equations-ode-pde-sde.md %}). For a deep dive into why we need new calculus rules for SDEs, see [Itô Calculus: Why We Need New Rules for SDEs]({{ site.baseurl }}{% link _posts/2025-12-28-ito-calculus-stochastic-differential-equations.md %}).*
 
 ### From ODEs to SDEs
 
@@ -120,7 +98,7 @@ Here:
 
 ### Itô Calculus: The Mathematics of Noise
 
-Because Brownian motion is non-differentiable, we need special rules. **Itô's lemma** is the stochastic chain rule:
+Because Brownian motion is non-differentiable, we need special rules. **Itô's lemma** is the stochastic chain rule (for a detailed explanation, see [Itô Calculus]({{ site.baseurl }}{% link _posts/2025-12-28-ito-calculus-stochastic-differential-equations.md %})):
 
 For $Y(t) = h(X(t), t)$ where $dX = f \, dt + g \, dW$:
 
@@ -457,6 +435,13 @@ The key advantage: diffusion models provide **principled uncertainty quantificat
    - Hybrid methods: combine advantages
 
 6. **The big picture**: Generative modeling is fundamentally about transforming simple distributions (Gaussian noise) into complex ones (natural images). Brownian motion and stochastic calculus provide the rigorous mathematical framework to do this in a principled, controllable way.
+
+## Related Posts
+
+- [The Landscape of Differential Equations: From ODEs to PDEs to SDEs]({{ site.baseurl }}{% link _posts/2025-12-29-differential-equations-ode-pde-sde.md %}) — Foundational overview of differential equations
+- [Mathematical Properties of Brownian Motion: A Visual Guide]({{ site.baseurl }}{% link _posts/2025-12-30-mathematical-properties-brownian-motion.md %}) — Deep dive into Brownian motion properties
+- [Itô Calculus: Why We Need New Rules for SDEs]({{ site.baseurl }}{% link _posts/2025-12-28-ito-calculus-stochastic-differential-equations.md %}) — Essential mathematical framework for stochastic calculus
+- [Stochastic Processes and the Art of Sampling Uncertainty]({{ site.baseurl }}{% link _posts/2025-02-21-stochastic-processes-and-sampling.md %}) — Broader context for stochastic processes
 
 ## Further Reading
 
