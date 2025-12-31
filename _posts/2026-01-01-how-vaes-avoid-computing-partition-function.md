@@ -250,7 +250,7 @@ $$\int \log p_\theta(x) \cdot q_\phi(z \mid x) dz = \mathbb{E}_{q_\phi(z \mid x)
 
 $$\log p_\theta(x) = \mathbb{E}_{q_\phi(z \mid x)} \left[ \log p_\theta(x) \right]$$
 
-> **Note**: For a deeper dive into expectation, its mathematical properties, and why constants can be pulled in/out of expectations, see our companion post: *Expected Value & Expectation: Mathematical Foundations* (coming soon). This post will cover discrete vs continuous expectations, linearity of expectation, and expectation of constant functions in detail.
+> **Note**: For a deeper dive into expectation, its mathematical properties, and why constants can be pulled in/out of expectations, see our companion post: [Expected Value & Expectation: Mathematical Foundations]({{ site.baseurl }}{% link _posts/2026-01-01-expected-value-expectation-mathematical-foundations.md %}). This post covers discrete vs continuous expectations, linearity of expectation, and expectation of constant functions with detailed examples.
 
 **Why is this useful?** Because now we've expressed the log-likelihood as an expectation over our approximate posterior $q_\phi$. This will allow us to manipulate the equation in powerful ways!
 
@@ -295,6 +295,143 @@ This is tractable! We can:
 1. Sample $z \sim q_\phi(z \mid x)$ (easy if $q_\phi$ is Gaussian)
 2. Evaluate $\log p_\theta(x \mid z)$ (no partition function needed!)
 3. Estimate the expectation via Monte Carlo
+
+**Why does $\log p_\theta(x \mid z)$ not need a partition function?**
+
+This is crucial to understand, and it's important to clarify what both networks output:
+
+**What the encoder outputs**: 
+- Input: data $x$ (e.g., a cat image)
+- Output: parameters $\mu_\phi(x), \sigma_\phi(x)$ for the distribution $q_\phi(z \mid x) = \mathcal{N}(\mu_\phi(x), \sigma_\phi^2(x))$
+- This is a distribution **over latent codes $z$**
+
+**What the decoder outputs**:
+- Input: latent code $z$
+- Output: parameters $\mu_\theta(z)$ (and possibly $\sigma_\theta(z)$) for the distribution $p_\theta(x \mid z) = \mathcal{N}(\mu_\theta(z), \sigma^2 I)$
+- This is a distribution **over data $x$**
+
+**Both output normalized distributions, but over different variables!** Now let's see why the decoder's distribution doesn't need a partition function:
+
+**The decoder parameterizes a distribution over data $x$**:
+
+For image data (continuous), the decoder neural network takes latent code $z$ as input and outputs parameters for a Gaussian distribution over possible images $x$:
+
+$$p_\theta(x \mid z) = \mathcal{N}(x; \mu_\theta(z), \sigma^2 I)$$
+
+Here, $\mu_\theta(z)$ is the output of the decoder network—it represents "the most likely image corresponding to latent code $z$."
+
+**Important distinction: Training vs Generation**
+
+This is where many people get confused! The decoder is used differently during training and generation:
+
+**During TRAINING**:
+- We have actual training data $x_{\text{train}}$ (e.g., a real cat image)
+- Encoder gives us $z \sim q_\phi(z \mid x_{\text{train}})$
+- Decoder outputs $\mu_\theta(z)$ (reconstructed image)
+- **Key**: We evaluate $\log p_\theta(x_{\text{train}} \mid z)$ = "How likely is the *actual* training image under the Gaussian centered at $\mu_\theta(z)$?"
+- We compute: $\log \mathcal{N}(x_{\text{train}}; \mu_\theta(z), \sigma^2 I)$ which measures reconstruction quality
+
+**During GENERATION** (after training):
+- We sample a random latent code: $z \sim p(z) = \mathcal{N}(0, I)$
+- Decoder outputs $\mu_\theta(z)$
+- **Option 1 (deterministic)**: Use $x_{\text{new}} = \mu_\theta(z)$ directly (most common in practice)
+- **Option 2 (stochastic)**: Sample $x_{\text{new}} \sim \mathcal{N}(\mu_\theta(z), \sigma^2 I)$ (adds noise around the mean)
+
+**Why Option 1 is common**: The variance $\sigma^2$ is often very small in trained VAEs. The mean $\mu_\theta(z)$ is already a good image, and adding Gaussian noise would just blur it. So in practice, we often just use the mean as the generated image.
+
+**Analogy**: Think of $\mu_\theta(z)$ as the decoder saying "Given this recipe $z$, here's the exact dish I recommend," while the full Gaussian $\mathcal{N}(\mu_\theta(z), \sigma^2 I)$ says "Here's my recommendation, plus/minus some random variation."
+
+**Critical insight: How do we generate complex images with just a Gaussian?**
+
+This is where the magic happens! The Gaussian distribution $p_\theta(x \mid z) = \mathcal{N}(\mu_\theta(z), \sigma^2 I)$ is NOT saying "images are Gaussian distributed." Instead:
+
+**The mean $\mu_\theta(z)$ is the output of a powerful neural network!**
+
+$$\mu_\theta(z) = \text{DecoderNetwork}_\theta(z)$$
+
+This neural network can be arbitrarily complex (multiple layers, convolutions, etc.) and can approximate ANY function. So:
+
+1. **Input**: Simple latent code $z \in \mathbb{R}^{100}$ (just 100 numbers)
+2. **Neural network**: Complex transformation with millions of parameters
+3. **Output**: $\mu_\theta(z) \in \mathbb{R}^{200,000}$ (a full image!)
+
+**What the Gaussian does**: It models small **noise/uncertainty** around the neural network's output:
+
+$$x \approx \mu_\theta(z) + \text{small Gaussian noise}$$
+
+**Example**: Suppose $z = [0.5, -0.2, 0.8, \ldots]$ represents "cat with smile."
+- The decoder neural network transforms this into $\mu_\theta(z)$ = a specific 256×256 cat image
+- The Gaussian says: "The actual pixel values are probably very close to this image, maybe off by a tiny bit due to natural variation"
+
+**Key realization**: 
+- **The complexity comes from the neural network**, not the Gaussian!
+- The neural network can generate arbitrarily complex images
+- The Gaussian just says "there's a bit of randomness around the neural network's prediction"
+
+**This is similar to regression**: When we fit $y = f(x) + \epsilon$ where $\epsilon \sim \mathcal{N}(0, \sigma^2)$:
+- We're NOT saying $y$ is Gaussian distributed
+- We're saying $y$ equals a complex function $f(x)$ (the neural network) plus Gaussian noise
+- All the complexity is in $f(x)$; the Gaussian is just measurement noise
+
+**In practice**: Since $\sigma^2$ is typically very small and the neural network $\mu_\theta(z)$ is very powerful, the generated images are essentially just the neural network outputs—complex, realistic images, not blurry Gaussian samples!
+
+**Precise structure of the decoder's Gaussian output:**
+
+For a 256×256 grayscale image (65,536 pixels):
+
+$$p_\theta(x \mid z) = \mathcal{N}(\mu_\theta(z), \sigma^2 I)$$
+
+where:
+- $\mu_\theta(z) \in \mathbb{R}^{65,536}$: One mean value per pixel (output of decoder neural network)
+- $\sigma^2 I$: Diagonal covariance matrix
+  - Each pixel has the same small variance $\sigma^2$ (typically $\sigma^2 \approx 0.01$ or smaller)
+  - Pixels are **independent** (off-diagonal entries are 0)
+  - No correlation between pixels
+
+**What this means**:
+- Each pixel $x_i$ is independently sampled: $x_i \sim \mathcal{N}(\mu_i, \sigma^2)$
+- The mean $\mu_i$ for pixel $i$ comes from the neural network
+- Each pixel just has a tiny bit of noise ($\sigma$) around its mean
+
+**Example for one pixel**:
+- Decoder neural network says: "Pixel (10, 15) should have value $\mu = 0.73$"
+- Actual pixel value: $x \sim \mathcal{N}(0.73, 0.01^2)$
+- Most likely value: $x \approx 0.73$ (just use the mean!)
+
+**Important limitation**: The independence assumption ($\sigma^2 I$) means VAEs assume pixels don't correlate, which is a simplification. Real images have strong pixel correlations (nearby pixels tend to have similar values). This is one reason why VAEs sometimes produce slightly blurry images compared to other generative models like GANs or diffusion models.
+
+**The Gaussian is already normalized!** The formula for a multivariate Gaussian is:
+
+$$p_\theta(x \mid z) = \frac{1}{(2\pi\sigma^2)^{D/2}} \exp\left(-\frac{\|x - \mu_\theta(z)\|^2}{2\sigma^2}\right)$$
+
+The normalization constant $(2\pi\sigma^2)^{-D/2}$ is **known and computable**—we don't need to sum over all $x$ to compute it! It's determined by the variance $\sigma^2$ and dimensionality $D$.
+
+**For binary data** (like black/white images), the decoder outputs Bernoulli parameters:
+
+$$p_\theta(x \mid z) = \prod_{i=1}^D \text{Bernoulli}(x_i; p_i(\theta, z))$$
+
+where $p_i(\theta, z) = \text{sigmoid}(\text{decoder}(z)_i)$.
+
+**Bernoulli distributions are also already normalized!** For each pixel:
+
+$$\text{Bernoulli}(x_i; p_i) = p_i^{x_i}(1-p_i)^{1-x_i}$$
+
+This automatically sums to 1 over $x_i \in \{0, 1\}$: $p_i + (1-p_i) = 1$.
+
+**The key difference from energy-based models**:
+
+- **Energy-based**: $p(x) = \frac{\exp(-E(x))}{Z}$ where $Z = \sum_x \exp(-E(x))$ is intractable
+  - We compute an energy $E(x)$ but then need to normalize over *all possible $x$*
+  
+- **VAE decoder**: $p_\theta(x \mid z) = \mathcal{N}(x; \mu_\theta(z), \sigma^2 I)$
+  - We directly output parameters of a *known, normalized distribution*
+  - The normalization constant is analytically known!
+
+**In practice**: When we evaluate $\log p_\theta(x \mid z)$, we just compute:
+
+$$\log p_\theta(x \mid z) = -\frac{D}{2}\log(2\pi\sigma^2) - \frac{\|x - \mu_\theta(z)\|^2}{2\sigma^2}$$
+
+No summation over $x$, no intractable integral—just a simple calculation!
 
 **Term 2: KL divergence**
 $$\text{KL}(q_\phi(z \mid x) \| p(z))$$
