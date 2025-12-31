@@ -60,6 +60,8 @@ As $h \to 0$, the variance explodes to infinity! There's no convergence.
 
 **Visual intuition**: Zoom into a Brownian path—it looks just as jagged as before. It never smooths out.
 
+*For a detailed mathematical analysis of non-differentiability including multiple rigorous proofs, Hölder continuity bounds, and the law of iterated logarithm, see the [Non-Differentiability section]({{ site.baseurl }}{% link _posts/2025-12-30-mathematical-properties-brownian-motion.md %}#non-differentiability) in our Brownian motion properties post.*
+
 ### Infinite Total Variation
 
 For smooth functions, the **total variation** (sum of absolute changes) is finite:
@@ -355,7 +357,7 @@ Optimal control of systems with noise:
 
 **Itô calculus is necessary because**:
 
-1. **Brownian motion is nowhere differentiable** → Can't use ordinary derivatives
+1. **Brownian motion is [nowhere differentiable]({{ site.baseurl }}{% link _posts/2025-12-30-mathematical-properties-brownian-motion.md %}#non-differentiability)** → Can't use ordinary derivatives
 
 2. **Quadratic variation is first-order** → $(dW)^2 = dt$ is not negligible
 
