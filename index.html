@@ -82,6 +82,23 @@ description: Explore the long-form research and learning projects stored in this
         </aside>
       {%- endif -%}
 
+      {%- assign about_post = site.posts | where_exp: "post", "post.title contains 'About Atul Singh'" | first -%}
+      {%- if about_post -%}
+        <aside class="home-blog__feature" aria-labelledby="homepage-about">
+          <h3 id="homepage-about" class="home-blog__feature-title">
+            <a href="{{ about_post.url | relative_url }}">{{ about_post.title }}</a>
+          </h3>
+          <p class="home-blog__feature-meta">
+            <time datetime="{{ about_post.date | date_to_xmlschema }}">{{ about_post.date | date: "%B %-d, %Y" }}</time>
+            · {{ about_post.tags | join: ", " }}
+          </p>
+          <p class="home-blog__feature-description">
+            Technical portfolio showcasing 50+ posts across computer vision, generative models, high-performance computing, and applied mathematics. Explore comprehensive series on VAEs, contrast measurement, Kalman filtering, and more.
+          </p>
+          <a class="home-blog__feature-cta" href="{{ about_post.url | relative_url }}">View technical portfolio →</a>
+        </aside>
+      {%- endif -%}
+
       {%- if site.posts and site.posts.size > 0 -%}
         <div class="home-blog__list">
           {%- for post in site.posts limit: 4 -%}

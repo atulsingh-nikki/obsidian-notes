@@ -13,6 +13,42 @@ description: "Short updates and essays that complement the long-form notes in th
     </p>
   </header>
 
+  <!-- Featured/Pinned Posts -->
+  <div class="blog-pinned">
+    {%- assign cadence_post = site.posts | where: "title", "Publishing Cadence Summary" | first -%}
+    {%- assign about_post = site.posts | where_exp: "post", "post.title contains 'About Atul Singh'" | first -%}
+    
+    {%- if cadence_post or about_post -%}
+      <div class="blog-pinned__grid">
+        {%- if cadence_post -%}
+          <aside class="blog-pinned__item" aria-labelledby="pinned-cadence">
+            <h3 id="pinned-cadence" class="blog-pinned__title">
+              <span class="blog-pinned__pin">📌</span>
+              <a href="{{ cadence_post.url | relative_url }}">{{ cadence_post.title }}</a>
+            </h3>
+            <p class="blog-pinned__description">
+              All 50 posts organized by month, quarter, and year—perfect for catching up on the entire publishing history.
+            </p>
+            <a class="blog-pinned__cta" href="{{ cadence_post.url | relative_url }}">View cadence →</a>
+          </aside>
+        {%- endif -%}
+        
+        {%- if about_post -%}
+          <aside class="blog-pinned__item" aria-labelledby="pinned-about">
+            <h3 id="pinned-about" class="blog-pinned__title">
+              <span class="blog-pinned__pin">📌</span>
+              <a href="{{ about_post.url | relative_url }}">About Me</a>
+            </h3>
+            <p class="blog-pinned__description">
+              Technical portfolio showcasing expertise across computer vision, generative models, HPC, and applied mathematics.
+            </p>
+            <a class="blog-pinned__cta" href="{{ about_post.url | relative_url }}">View portfolio →</a>
+          </aside>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+
   {%- if site.posts and site.posts.size > 0 -%}
     <!-- Tag Filter Section -->
     <div class="blog-filter">

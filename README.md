@@ -4,7 +4,9 @@ This repository contains long-form research notes, two in-progress learning proj
 
 👉 View the published site on GitHub Pages: <https://atulsingh-nikki.github.io/obsidian-notes/>
 
-🗂️ Need a birds-eye view? Consult the [Publishing Cadence Summary](https://atulsingh-nikki.github.io/obsidian-notes/2025/03/10/publishing-cadence-summary.html) for monthly, quarterly, semiannual, and annual rollups.
+📌 **Quick Links**:
+- 🗂️ [Publishing Cadence Summary](https://atulsingh-nikki.github.io/obsidian-notes/2025/03/10/publishing-cadence-summary.html) — All 50 posts organized by month, quarter, and year
+- 👤 [About Me](https://atulsingh-nikki.github.io/obsidian-notes/2025/12/31/about-atul-singh.html) — Technical portfolio and expertise overview
 
 The collection currently features:
 

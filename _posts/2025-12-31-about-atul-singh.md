@@ -1,26 +1,26 @@
 ---
 layout: post
 title: "About Atul Singh: Technical Portfolio and Expertise"
-description: "Technical portfolio showcasing expertise in computer vision, machine learning, high-performance computing, and color science through 45+ technical blog posts and deep dives into production-grade systems."
+description: "Technical portfolio showcasing expertise in computer vision, generative models, machine learning, high-performance computing, and color science through 50+ technical blog posts and deep dives into production-grade systems."
 tags: [portfolio, about, expertise, computer-vision, machine-learning, hpc, color-science]
 ---
 
 # About Atul Singh
 
-## Computer Vision Engineer | ML Practitioner | Technical Writer
+## Computer Vision Engineer | ML Leader | Technical Writer
 
-Welcome to my technical portfolio. I'm Atul Singh, and I use this notebook to document deep dives into computer vision, machine learning infrastructure, high-performance computing, and the mathematical foundations that underpin production systems. What you see here isn't just theoretical exploration—it's battle-tested knowledge from building real-world pipelines, optimizing performance-critical code, and solving problems at the intersection of perception, computation, and human vision science.
+Welcome to my technical portfolio. I'm Atul Singh, and I use this notebook to document deep dives into computer vision, machine learning, high-performance computing, and the mathematical foundations that underpin production systems. What you see here isn't just theoretical exploration—it's battle-tested knowledge from building real-world pipelines, optimizing performance-critical code, and solving problems at the intersection of perception, computation, and human vision science.
 
 ### Snapshot
-- **Output**: 45+ longform technical posts (~80k words) across 19 months
-- **Roles**: CV/HPC engineer, ML infrastructure builder, and technical writer
-- **Depth**: Multi-part series on contrast, Kalman filtering, C++ concurrency, sampling theory
+- **Output**: 50+ longform technical posts (~90k words) across 20 months
+- **Roles**: Computer Vision Engineer, ML Leader, Technical Writer
+- **Depth**: Multi-part series on contrast, generative models, Kalman filtering, stochastic processes, C++ concurrency
 - **Tooling**: Python (NumPy, PyTorch, OpenCV), C++17/20, CUDA, LaTeX
 - **Philosophy**: Production rigor + mathematical grounding + accessible explanations
 
 ## What This Portfolio Demonstrates
 
-Over **45+ technical posts** spanning 2024-2025, I've built a comprehensive technical curriculum covering:
+Over **50+ technical posts** spanning 2024-2026, I've built a comprehensive technical curriculum covering:
 
 ### 🎯 Core Expertise Areas
 
@@ -72,6 +72,14 @@ Over **45+ technical posts** spanning 2024-2025, I've built a comprehensive tech
 - Why direct PDF sampling is fundamentally hard
 - See: [Stochastic Processes & Sampling](https://atulsingh-nikki.github.io/obsidian-notes/2025/02/21/stochastic-processes-and-sampling.html), [Advanced Sampling Techniques](https://atulsingh-nikki.github.io/obsidian-notes/2025/02/22/advanced-sampling-techniques.html), [Why Direct Sampling Is Hard](https://atulsingh-nikki.github.io/obsidian-notes/2025/10/04/why-direct-sampling-from-pdfs-is-hard.html)
 
+**Generative Models & Variational Inference** (NEW 2026)
+- Complete series on the partition function problem and why it's intractable
+- How VAEs avoid computing Z through the Evidence Lower Bound (ELBO)
+- Mathematical foundations of expectation and variational inference
+- Historical context: why discriminative learning dominated first
+- ML paradigms: modeling distributions vs learning functions
+- See: [The Z Problem]({{ "/2025/12/24/normalization-constant-problem.html" | relative_url }}), [VAEs & ELBO]({{ "/2026/01/01/how-vaes-avoid-computing-partition-function.html" | relative_url }}), [Expected Value Foundations]({{ "/2026/01/01/expected-value-expectation-mathematical-foundations.html" | relative_url }})
+
 **ML Infrastructure**
 - PyTorch tensor indexing from 1D to N-dimensional views
 - Unsupervised learning for contrast prediction without ground truth
@@ -91,6 +99,13 @@ Over **45+ technical posts** spanning 2024-2025, I've built a comprehensive tech
 - Normalized power sums from elementary math to vision algorithms
 - Random vs. stochastic: clarifying variables, processes, and optimization
 - See: [Inverse Trig Symmetry](https://atulsingh-nikki.github.io/obsidian-notes/2025/01/15/hidden-symmetry-inverse-trig.html), [Elementary Math to Vision](https://atulsingh-nikki.github.io/obsidian-notes/2025/09/22/elementary-math-to-vision-algorithms.html)
+
+**Stochastic Processes & Diffusion Models** (NEW 2025)
+- Brownian motion: mathematical properties and infinite total variation
+- Itô calculus and stochastic differential equations (SDEs)
+- Connection to modern diffusion and flow-based generative models
+- Total variation and its role in understanding stochastic behavior
+- See: [Brownian Motion & Diffusion]({{ "/2025/12/31/brownian-motion-diffusion-flow-models.html" | relative_url }}), [Mathematical Properties]({{ "/2025/12/30/mathematical-properties-brownian-motion.html" | relative_url }}), [Itô Calculus]({{ "/2025/12-28/ito-calculus-stochastic-differential-equations.html" | relative_url }})
 
 ## Writing Philosophy
 
@@ -159,6 +174,27 @@ Understanding uncertainty in ML and CV:
 
 **Research Applications**: Monte Carlo methods, MCMC, probabilistic inference
 
+### 📔 Generative Models & VAEs (5 posts, ~12,000 words) **NEW 2025-2026**
+Complete treatment of the partition function problem and variational inference:
+- The curse of dimensionality and why high-dimensional spaces are strange
+- The normalization constant (Z) problem and why it's intractable
+- Historical context: why discriminative learning came first
+- ML paradigms: distributions vs functions
+- How VAEs cleverly avoid Z through ELBO derivation
+- Mathematical foundations of expectation for variational inference
+
+**Industry Impact**: Essential for understanding modern generative models (VAEs, GANs, diffusion models) and why certain architectural choices exist
+
+### 📓 Stochastic Processes & Diffusion (5 posts) **NEW 2025**
+From Brownian motion to modern generative models:
+- Brownian motion mathematical properties
+- Total variation and why Brownian paths are "badly behaved"
+- Itô calculus and stochastic differential equations
+- Connection to diffusion models and score-based generative models
+- Flow matching and modern generative modeling
+
+**Research Relevance**: Foundation for understanding diffusion models (DDPM, score-based models) and continuous normalizing flows
+
 ## Technical Breadth: Full Topic Coverage
 
 ### Computer Vision & Imaging (16 posts)
@@ -167,11 +203,14 @@ Contrast measurement • Color science • ACES workflows • Gamut mapping • 
 ### High-Performance Computing (6 posts)
 SIMD intrinsics • GPU kernels • C++ concurrency • ISA architecture • Performance optimization • Template metaprogramming
 
-### Machine Learning (8 posts)
-Kalman filtering • PyTorch indexing • Knowledge distillation • Distribution shifts • Unsupervised learning • State estimation • Video models
+### Machine Learning (13 posts)
+Kalman filtering • PyTorch indexing • Knowledge distillation • Distribution shifts • Unsupervised learning • State estimation • Video models • VAEs • ELBO • Partition function • Generative models
 
-### Mathematics (6 posts)
-Optimization (gradients, Hessians, Lagrange multipliers) • Functional analysis (implicit function theorem) • Inverse trig symmetry • Normalized power sums
+### Mathematics (11 posts)
+Optimization (gradients, Hessians, Lagrange multipliers) • Functional analysis (implicit function theorem) • Inverse trig symmetry • Normalized power sums • Brownian motion • Stochastic calculus • Itô's lemma • Total variation
+
+### Generative Models & Variational Inference (5 posts)
+Partition function problem • Curse of dimensionality • VAEs • ELBO derivation • Expected value foundations • Discriminative vs generative history
 
 ### Sampling & Probability (4 posts)
 Stochastic processes • Importance sampling • Gibbs sampling • Direct PDF sampling challenges
@@ -181,9 +220,9 @@ Technical writing • Word studies (culpable, resent, gripe/complaint/grievance)
 
 ## Impact & Reach
 
-**Blog Statistics** (as of Dec 2025):
-- **45 technical posts** across 19 months
-- **~80,000 words** of technical content
+**Blog Statistics** (as of Jan 2026):
+- **50 technical posts** across 20 months
+- **~90,000 words** of technical content
 - **Multiple comprehensive series** equivalent to graduate-level courses
 - **Production-ready code examples** in Python, C++, CUDA
 
@@ -272,17 +311,20 @@ If you read through this entire collection systematically, you'll gain:
 **Time Investment**: ~30-40 hours of focused reading  
 **Payoff**: Equivalent to multiple graduate-level courses + production experience
 
-## Current Focus (Dec 2025)
+## Current Focus (Jan 2026)
 
 **Active Series**:
 - ✅ **Image Contrast Masterclass** (6/6 complete) — From grayscale to unsupervised ML
+- ✅ **Generative Models & VAEs** (5/5 complete) — From partition function problem to ELBO
+- ✅ **Stochastic Processes & Diffusion** (5/5 complete) — From Brownian motion to modern generative models
 - 🔄 **Color Science Deep Dive** (ongoing) — ACES, gamut mapping, HDR workflows
-- 📝 **ML Infrastructure** (planned) — Training pipelines, distributed systems
+- 📝 **Advanced Generative Models** (planned) — Diffusion models, score matching, flow matching
 
 **Upcoming Topics**:
+- Denoising diffusion probabilistic models (DDPM)
+- Score-based generative models
 - Neural radiance fields (NeRF) and 3D reconstruction
-- Advanced tone mapping algorithms
-- Real-time ray tracing for computer graphics
+- Continuous normalizing flows
 - Transformer architectures for vision tasks
 
 ## Connect & Explore
@@ -290,11 +332,13 @@ If you read through this entire collection systematically, you'll gain:
 **Portfolio Site**: [atulsingh-nikki.github.io/obsidian-notes](https://atulsingh-nikki.github.io/obsidian-notes/)
 
 **Navigation**:
-- [Publishing Cadence Summary](https://atulsingh-nikki.github.io/obsidian-notes/2025/03/10/publishing-cadence-summary.html) — All 45 posts organized by month, quarter, year
+- [Publishing Cadence Summary](https://atulsingh-nikki.github.io/obsidian-notes/2025/03/10/publishing-cadence-summary.html) — All 50 posts organized by month, quarter, year
 - [Blog Index](https://atulsingh-nikki.github.io/obsidian-notes/blog/) — Browse by tag or date
 
 **Featured Series**:
-- [Contrast Measurement Masterclass]({{ "/2025/12/27/understanding-image-contrast.html" | relative_url }}) (start here)
+- [Generative Models & VAEs]({{ "/2025/12/24/normalization-constant-problem.html" | relative_url }}) (NEW - start here!)
+- [Contrast Measurement Masterclass]({{ "/2025/12/27/understanding-image-contrast.html" | relative_url }})
+- [Stochastic Processes & Diffusion]({{ "/2025/12/31/brownian-motion-diffusion-flow-models.html" | relative_url }}) (NEW)
 - [Kalman Filtering Curriculum](https://atulsingh-nikki.github.io/obsidian-notes/2024/09/20/introduction-to-kalman-filtering.html)
 - [C++ Concurrency Trilogy](https://atulsingh-nikki.github.io/obsidian-notes/2025/02/18/understanding-futures-promises-cpp.html)
 
@@ -308,20 +352,22 @@ This portfolio is a living document of continuous learning and knowledge sharing
 
 ---
 
-*This portfolio reflects 19 months of systematic exploration across computer vision, machine learning, high-performance computing, and applied mathematics. The journey continues—new posts added regularly as I dive deeper into the intersection of perception, computation, and human vision science.*
+*This portfolio reflects 20 months of systematic exploration across computer vision, machine learning, generative models, high-performance computing, and applied mathematics. The journey continues—new posts added regularly as I dive deeper into the intersection of perception, computation, probabilistic inference, and modern generative modeling.*
 
-**Last Updated**: December 31, 2025  
-**Total Posts**: 45  
-**Total Words**: ~80,000  
-**Active Series**: 6 complete, 2 ongoing
+**Last Updated**: January 1, 2026  
+**Total Posts**: 50  
+**Total Words**: ~90,000  
+**Active Series**: 9 complete, 2 ongoing
 
 ---
 
 ## Keep Reading
 
-* [Publishing Cadence Summary](https://atulsingh-nikki.github.io/obsidian-notes/2025/03/10/publishing-cadence-summary.html) — Complete index of all 45 posts
-* [Contrast Measurement Masterclass]({{ "/2025/12/27/understanding-image-contrast.html" | relative_url }}) — Start the 6-part series
+* [Publishing Cadence Summary](https://atulsingh-nikki.github.io/obsidian-notes/2025/03/10/publishing-cadence-summary.html) — Complete index of all 50 posts
+* [Generative Models & VAEs Series]({{ "/2025/12/24/normalization-constant-problem.html" | relative_url }}) — NEW 5-part series on the partition function problem
+* [Contrast Measurement Masterclass]({{ "/2025/12/27/understanding-image-contrast.html" | relative_url }}) — 6-part series from grayscale to ML
+* [Stochastic Processes & Diffusion]({{ "/2025/12/31/brownian-motion-diffusion-flow-models.html" | relative_url }}) — NEW 5-part series on Brownian motion to modern generative models
 * [Kalman Filtering Curriculum](https://atulsingh-nikki.github.io/obsidian-notes/2024/09/20/introduction-to-kalman-filtering.html) — 8-part state estimation series
 * [Blog Home](https://atulsingh-nikki.github.io/obsidian-notes/) — Browse all content
 
-*Want to discuss computer vision, color science, or HPC optimization? These posts are conversation starters—I'd love to hear your perspective on these topics.*
+*Want to discuss computer vision, generative models, color science, or HPC optimization? These posts are conversation starters—I'd love to hear your perspective on these topics.*
