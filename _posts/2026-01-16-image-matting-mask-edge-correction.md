@@ -3,9 +3,16 @@ layout: post
 title: "Image Matting: Estimating Accurate Mask Edges for Professional Compositing"
 description: "A comprehensive guide to image matting techniques for precise mask edge estimation, from classical alpha matting formulations to modern deep learning approaches for high-quality foreground extraction."
 tags: [computer-vision, image-matting, alpha-matting, segmentation, compositing, deep-learning, image-processing]
+reading_time: "30 min read"
 ---
 
 *This post explores how to extract foreground objects with accurate transparency information at edges, enabling professional-quality compositing. We'll cover the mathematical foundations of alpha matting, classical optimization methods, and modern neural network approaches. Basic understanding of linear algebra and image processing is helpful.*
+
+**Reading Time:** ~30 minutes
+
+**Related Post:** [Video Matting: Temporal Consistency and Real-Time Foreground Extraction]({% post_url 2026-01-17-video-matting-temporal-consistency %}) - Learn how to extend image matting to video sequences with temporal coherence.
+
+---
 
 ## Table of Contents
 
