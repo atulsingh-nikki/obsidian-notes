@@ -91,23 +91,31 @@ This isn't just theoretical—every post is grounded in **applied, production-gr
 ## Table of Contents
 
 - [Monthly Rollup](#monthly-rollup)
+  - [July 2013 — 1 post](#july-2013--1-post)
+  - [August 2013 — 1 post](#august-2013--1-post)
   - [May 2024 — 2 posts](#may-2024-2-posts)
   - [September 2024 — 9 posts](#september-2024-9-posts)
   - [October 2024 — 1 post](#october-2024-1-post)
   - [December 2024 — 1 post](#december-2024-1-post)
   - [January 2025 — 3 posts](#january-2025-3-posts)
-  - [February 2025 — 10 posts](#february-2025-10-posts)
-  - [March 2025 — 4 posts](#march-2025-4-posts)
+  - [February 2025 — 12 posts](#february-2025-12-posts)
+  - [March 2025 — 7 posts](#march-2025-7-posts)
   - [September 2025 — 4 posts](#september-2025-4-posts)
   - [October 2025 — 3 posts](#october-2025-3-posts)
   - [November 2025 — 2 posts](#november-2025-2-posts)
-  - [December 2025 — 10 posts](#december-2025-10-posts)
-  - [January 2026 — 2 posts](#january-2026-2-posts)
+  - [December 2025 — 17 posts](#december-2025-17-posts)
+  - [January 2026 — 6 posts](#january-2026-6-posts)
 - [Quarterly Rollup](#quarterly-rollup)
 - [Semiannual Rollup](#semiannual-rollup)
 - [Annual Rollup](#annual-rollup)
 
 ## Monthly Rollup
+
+### July 2013 — 1 post
+- Jul 15: [Edge Detection Operators: A 2013 Snapshot]({{ site.baseurl }}{% link _posts/2013-07-15-edge-detection-operators.md %})
+
+### August 2013 — 1 post
+- Aug 10: [Canny Edge Detector in Practice (circa 2013)]({{ site.baseurl }}{% link _posts/2013-08-10-canny-edge-detector-practice.md %})
 
 ### May 2024 — 2 posts
 - May 01: [Introducing the Atul Singh Notes Blog]({{ site.baseurl }}{% link _posts/2024-05-01-introducing-the-blog.md %})
@@ -135,7 +143,7 @@ This isn't just theoretical—every post is grounded in **applied, production-gr
 - Jan 15: [The Hidden Symmetry of Inverse Sine and Cosine]({{ site.baseurl }}{% link _posts/2025-01-15-hidden-symmetry-inverse-trig.md %})
 - Jan 27: [Why Intersection Fails in Lagrange Multipliers: The Geometry of Optimization]({{ site.baseurl }}{% link _posts/2025-01-27-why-intersection-fails-lagrange-multipliers.md %})
 
-### February 2025 — 10 posts
+### February 2025 — 12 posts
 - Feb 01: [From Gradients to Hessians: How Optimization Shapes Vision & ML]({{ site.baseurl }}{% link _posts/2025-02-01-from-gradients-to-hessians.md %})
 - Feb 10: [Understanding the Implicit Function Theorem]({{ site.baseurl }}{% link _posts/2025-02-10-understanding-implicit-function-theorem.md %})
 - Feb 15: [Culpable: Word Family, Nuance, and Indian Newsroom Examples]({{ site.baseurl }}{% link _posts/2025-02-15-culpable-word-study.md %})
@@ -146,13 +154,17 @@ This isn't just theoretical—every post is grounded in **applied, production-gr
 - Feb 22: [Beyond Basics: Importance, Gibbs, and Stratified Sampling]({{ site.baseurl }}{% link _posts/2025-02-22-advanced-sampling-techniques.md %})
 - Feb 24: [Logarithmic Color Spaces, PCA, and the lαβ Intuition]({{ site.baseurl }}{% link _posts/2025-02-24-logarithmic-color-pca.md %})
 - Feb 26: [SIMD Intrinsics: From SSE to AVX2 in Practice]({{ site.baseurl }}{% link _posts/2025-02-26-intrinsics-simd-avx.md %})
+- Feb 27: [Template Programming Frontiers]({{ site.baseurl }}{% link _posts/2025-02-27-template-metaprogramming-frontiers.md %})
 - Feb 28: [GPU Kernel Programming: Grids, Blocks, and Warps Explained]({{ site.baseurl }}{% link _posts/2025-02-28-gpu-kernel-programming-basics.md %})
 
-### March 2025 — 4 posts
+### March 2025 — 7 posts
 - Mar 05: [Random vs Stochastic: Clarifying Variables, Processes, Sampling, and Optimization]({{ site.baseurl }}{% link _posts/2025-03-05-random-vs-stochastic-foundations.md %})
 - Mar 08: [From ISA to GPU Kernels: Bridging SIMD Mindsets]({{ site.baseurl }}{% link _posts/2025-03-08-isa-to-gpu-kernel-bridge.md %})
+- Mar 10: [Publishing Cadence Summary]({{ site.baseurl }}{% link _posts/2025-03-10-publishing-cadence-summary.md %})
 - Mar 12: [PyTorch Tensor Indexing: From 1D Slices to N-Dimensional Views]({{ site.baseurl }}{% link _posts/2025-03-12-pytorch-indexing-slicing.md %})
 - Mar 18: [Bitmap-Based Gamut Precomputation for Real-Time Color Management]({{ site.baseurl }}{% link _posts/2025-03-18-bitmap-gamut-precomputation.md %})
+- Mar 20: [Understanding KL Divergence: Measuring One Distribution Against Another]({{ site.baseurl }}{% link _posts/2025-03-20-understanding-kl-divergence.md %})
+- Mar 22: [Frequency Domain vs Spatial Domain: How Images Reveal Different Stories]({{ site.baseurl }}{% link _posts/2025-03-22-frequency-domain-vs-spatial-domain.md %})
 
 ### September 2025 — 4 posts
 - Sep 22: [From Elementary Mathematics to Vision Algorithms: The Hidden Life of Normalized Power Sums]({{ site.baseurl }}{% link _posts/2025-09-22-elementary-math-to-vision-algorithms.md %})
@@ -169,42 +181,56 @@ This isn't just theoretical—every post is grounded in **applied, production-gr
 - Nov 14: [Adaptive Dual-Teacher Distillation for Lightweight Video Models]({{ site.baseurl }}{% link _posts/2025-11-14-adaptive-dual-teacher-distillation-lightweight-video-models.md %})
 - Nov 16: [From Funnels to Loops: Distribution Shifts in the AI Era]({{ site.baseurl }}{% link _posts/2025-11-16-from-funnels-to-loops-distribution-shifts-in-the-ai-era.md %})
 
-### December 2025 — 8 posts
+### December 2025 — 17 posts
 - Dec 23: [The Curse of Dimensionality: Why High-Dimensional Spaces Are So Strange]({{ site.baseurl }}{% link _posts/2025-12-23-curse-of-dimensionality.md %})
 - Dec 24: [The Normalization Constant Problem: Why Computing Z Is So Hard]({{ site.baseurl }}{% link _posts/2025-12-24-normalization-constant-problem.md %})
 - Dec 25: [Why Discriminative Learning Dominated First: The Z Problem in Historical Context]({{ site.baseurl }}{% link _posts/2025-12-25-why-discriminative-learning-came-first.md %})
 - Dec 26: [Machine Learning Paradigms: Distributions vs Functions]({{ site.baseurl }}{% link _posts/2025-12-26-machine-learning-paradigms-distributions-vs-functions.md %})
+- Dec 27: [Infinite Total Variation of Brownian Motion: Why the Path Length Diverges]({{ site.baseurl }}{% link _posts/2025-12-27-total-variation-brownian-motion.md %})
 - Dec 27: [Understanding Contrast in Images: From Perception to Computation]({{ site.baseurl }}{% link _posts/2025-12-27-understanding-image-contrast.md %})
 - Dec 27: [Understanding Contrast in Color Images: Beyond Luminance]({{ site.baseurl }}{% link _posts/2025-12-27-understanding-color-contrast.md %})
+- Dec 28: [Itô Calculus: Why We Need New Rules for Stochastic Differential Equations]({{ site.baseurl }}{% link _posts/2025-12-28-ito-calculus-stochastic-differential-equations.md %})
 - Dec 28: [Measuring Contrast Between Two Color Images: Comparison Metrics and Methods]({{ site.baseurl }}{% link _posts/2025-12-28-measuring-contrast-between-images.md %})
 - Dec 29: [Comparing Contrast Across Different Images: Content-Independent Metrics]({{ site.baseurl }}{% link _posts/2025-12-29-comparing-contrast-across-different-images.md %})
+- Dec 29: [The Landscape of Differential Equations: From ODEs to PDEs to SDEs]({{ site.baseurl }}{% link _posts/2025-12-29-differential-equations-ode-pde-sde.md %})
+- Dec 30: [Mathematical Properties of Brownian Motion: A Visual Guide]({{ site.baseurl }}{% link _posts/2025-12-30-mathematical-properties-brownian-motion.md %})
 - Dec 30: [Measuring Contrast Between SDR and HDR Images: Bridging Dynamic Range Domains]({{ site.baseurl }}{% link _posts/2025-12-30-sdr-hdr-contrast-comparison.md %})
-- Dec 31: [Unsupervised Learning for Contrast Prediction Without Ground Truth]({{ site.baseurl }}{% link _posts/2025-12-31-unsupervised-learning-contrast-prediction.md %}})
+- Dec 30: [Understanding Color Balance in Images and Video]({{ site.baseurl }}{% link _posts/2025-12-30-understanding-color-balance.md %})
+- Dec 31: [About Atul Singh: Technical Portfolio and Expertise]({{ site.baseurl }}{% link _posts/2025-12-31-about-atul-singh.md %})
+- Dec 31: [From Brownian Motion to Modern Generative Models: The Stochastic Foundation of Diffusion and Flow Models]({{ site.baseurl }}{% link _posts/2025-12-31-brownian-motion-diffusion-flow-models.md %})
+- Dec 31: [Unsupervised Learning for Contrast Prediction Without Ground Truth]({{ site.baseurl }}{% link _posts/2025-12-31-unsupervised-learning-contrast-prediction.md %})
 
-### January 2026 — 2 posts
+### January 2026 — 6 posts
 - Jan 01: [How Variational Autoencoders Avoid Computing the Partition Function]({{ site.baseurl }}{% link _posts/2026-01-01-how-vaes-avoid-computing-partition-function.md %})
 - Jan 01: [Expected Value & Expectation: Mathematical Foundations]({{ site.baseurl }}{% link _posts/2026-01-01-expected-value-expectation-mathematical-foundations.md %})
+- Jan 15: [Interactive Depth vs Disparity Visualization]({{ site.baseurl }}{% link _posts/2026-01-15-depth-disparity-interactive.md %})
+- Jan 15: [Depth Maps in Computer Vision: From Stereo Geometry to Neural Networks]({{ site.baseurl }}{% link _posts/2026-01-15-depth-maps-computer-vision.md %})
+- Jan 16: [Image Matting: Estimating Accurate Mask Edges for Professional Compositing]({{ site.baseurl }}{% link _posts/2026-01-16-image-matting-mask-edge-correction.md %})
+- Jan 17: [Video Matting: Temporal Consistency and Real-Time Foreground Extraction]({{ site.baseurl }}{% link _posts/2026-01-17-video-matting-temporal-consistency.md %})
 
 ## Quarterly Rollup
 
+- **2013 Q3 (Jul–Sep)** — 2 early posts revisiting edge detection operators and the Canny detector workflow.
 - **2024 Q2 (Apr–Jun)** — 2 posts launching the site and documenting the learning pipeline in May.
 - **2024 Q3 (Jul–Sep)** — 9 posts that build the Kalman Filtering series end-to-end, capped by a MathJax rendering check.
 - **2024 Q4 (Oct–Dec)** — 2 posts mixing affective semantics with a look at OCR's leap from Tesseract to transformers.
-- **2025 Q1 (Jan–Mar)** — 18 posts spanning optimization math, language studies, the C++ futures trilogy, SIMD/GPU programming, tensor indexing, color science, and a multi-part sampling primer.
+- **2025 Q1 (Jan–Mar)** — 22 posts spanning optimization math, language studies, the C++ futures trilogy, SIMD/GPU programming, tensor indexing, template metaprogramming, KL divergence, frequency-domain intuition, color science, and a multi-part sampling primer.
 - **2025 Q3 (Jul–Sep)** — 4 posts blending vision research write-ups with a language usage study.
-- **2025 Q4 (Oct–Dec)** — 18 posts covering C++ reference semantics, knowledge distillation, distribution shifts, sampling theory, panoptic segmentation, the curse of dimensionality, generative models and the partition function problem, discriminative vs generative learning history, ML paradigms, comprehensive 6-part image contrast series (grayscale, color, same-content comparison, different-content comparison, SDR/HDR cross-domain analysis, and unsupervised ML prediction), plus Brownian motion, diffusion models, stochastic calculus, and total variation concepts.
-- **2026 Q1 (Jan–Mar)** — 2 posts (so far) on variational autoencoders and the mathematical foundations of expectation.
+- **2025 Q4 (Oct–Dec)** — 22 posts covering C++ reference semantics, knowledge distillation, distribution shifts, sampling theory, panoptic segmentation, the curse of dimensionality, generative models and the partition function problem, discriminative vs generative learning history, ML paradigms, differential equation primers, color balance, the comprehensive 6-part image contrast series, plus Brownian motion, diffusion models, stochastic calculus, and total variation concepts.
+- **2026 Q1 (Jan–Mar)** — 6 posts (so far) on variational autoencoders, expected value foundations, depth estimation, and image/video matting.
 
 ## Semiannual Rollup
 
+- **2013 H2 (Jul–Dec)** — 2 posts capturing classic edge detection workflows.
 - **2024 H1 (Jan–Jun)** — 2 foundational posts laying out the project mission and note-taking workflow.
 - **2024 H2 (Jul–Dec)** — 11 posts focused on probabilistic state estimation, affective semantics, and the evolution of OCR tooling.
-- **2025 H1 (Jan–Jun)** — 18 posts covering advanced calculus, optimization, C++ concurrency, SIMD/GPU programming, color science, tensor indexing, and sampling methods.
-- **2025 H2 (Jul–Dec)** — 22 posts summarizing vision research, C++ reference semantics, knowledge distillation, distribution shifts, probabilistic modeling, the curse of dimensionality, generative modeling and the partition function problem, discriminative vs generative learning history, ML paradigms, Brownian motion, diffusion models, stochastic calculus, total variation, and a comprehensive 6-part image contrast series spanning grayscale, color, same-content comparison, different-content comparison, SDR/HDR cross-domain analysis, and unsupervised ML prediction.
-- **2026 H1 (Jan–Jun)** — 2 posts (so far) covering variational autoencoders and expected value mathematical foundations.
+- **2025 H1 (Jan–Jun)** — 22 posts covering advanced calculus, optimization, C++ concurrency, SIMD/GPU programming, color science, tensor indexing, template metaprogramming, KL divergence, and sampling methods.
+- **2025 H2 (Jul–Dec)** — 22 posts summarizing vision research, C++ reference semantics, knowledge distillation, distribution shifts, probabilistic modeling, the curse of dimensionality, generative modeling and the partition function problem, discriminative vs generative learning history, ML paradigms, differential equation primers, color balance, Brownian motion, diffusion models, stochastic calculus, total variation, and a comprehensive 6-part image contrast series spanning grayscale, color, same-content comparison, different-content comparison, SDR/HDR cross-domain analysis, and unsupervised ML prediction.
+- **2026 H1 (Jan–Jun)** — 6 posts (so far) covering variational autoencoders, expected value foundations, depth estimation, and image/video matting.
 
 ## Annual Rollup
 
+- **2013 — 2 posts**: Early explorations in edge detection operators and the Canny detector workflow.
 - **2024 — 13 posts**: From the site introduction to a comprehensive Kalman Filtering curriculum, affective vocabulary studies, and a survey of OCR advances.
-- **2025 — 40 posts**: Deep dives into color science, optimization, functional analysis, C++ concurrency (futures/promises, std::async, reference types), SIMD/GPU programming, tensor indexing, sampling theory, computer vision research notes (knowledge distillation, panoptic segmentation, distribution shifts), the curse of dimensionality, generative models and the partition function problem, discriminative vs generative learning history, ML paradigms (distributions vs functions), Brownian motion, diffusion models, stochastic calculus (Itô calculus, SDEs), total variation, and a comprehensive 6-part image contrast series covering grayscale contrast fundamentals, color contrast, same-content comparison metrics, content-independent comparison methods, SDR/HDR cross-domain analysis with tone mapping, and unsupervised ML for contrast prediction.
-- **2026 (Jan–)** — 2 posts (ongoing): Variational autoencoders and how they avoid computing the partition function, plus mathematical foundations of expected value and expectation.
+- **2025 — 48 posts**: Deep dives into color science, optimization, functional analysis, C++ concurrency (futures/promises, std::async, reference types), SIMD/GPU programming, tensor indexing, template metaprogramming, KL divergence, frequency-domain intuition, sampling theory, computer vision research notes (knowledge distillation, panoptic segmentation, distribution shifts), the curse of dimensionality, generative models and the partition function problem, discriminative vs generative learning history, ML paradigms (distributions vs functions), differential equations, color balance, Brownian motion, diffusion models, stochastic calculus (Itô calculus, SDEs), total variation, and a comprehensive 6-part image contrast series covering grayscale contrast fundamentals, color contrast, same-content comparison metrics, content-independent comparison methods, SDR/HDR cross-domain analysis with tone mapping, and unsupervised ML for contrast prediction.
+- **2026 (Jan–)** — 6 posts (ongoing): Variational autoencoders, expected value foundations, depth estimation, and image/video matting.
