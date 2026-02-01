@@ -10,7 +10,9 @@ reading_time: "30 min read"
 
 **Reading Time:** ~30 minutes
 
-**Related Post:** [Video Matting: Temporal Consistency and Real-Time Foreground Extraction]({% post_url 2026-01-17-video-matting-temporal-consistency %}) - Learn how to extend image matting to video sequences with temporal coherence.
+**Related Posts:** 
+- [Video Matting: Temporal Consistency and Real-Time Foreground Extraction]({% post_url 2026-01-17-video-matting-temporal-consistency %}) - Learn how to extend image matting to video sequences with temporal coherence.
+- [Mask Refinement in Professional Video Editing: Premiere Pro vs DaVinci Resolve]({% post_url 2026-01-18-mask-refinement-premiere-resolve %}) - See how these matting techniques are implemented in professional editing software.
 
 ---
 

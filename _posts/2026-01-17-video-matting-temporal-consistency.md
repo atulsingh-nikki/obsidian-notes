@@ -10,7 +10,9 @@ reading_time: "40 min read"
 
 **Reading Time:** ~40 minutes
 
-**Related Post:** [Image Matting: Estimating Accurate Mask Edges for Professional Compositing]({% post_url 2026-01-16-image-matting-mask-edge-correction %}) - Learn the fundamentals of image matting that form the foundation for video matting techniques.
+**Related Posts:** 
+- [Image Matting: Estimating Accurate Mask Edges for Professional Compositing]({% post_url 2026-01-16-image-matting-mask-edge-correction %}) - Learn the fundamentals of image matting that form the foundation for video matting techniques.
+- [Mask Refinement in Professional Video Editing: Premiere Pro vs DaVinci Resolve]({% post_url 2026-01-18-mask-refinement-premiere-resolve %}) - See how video matting is implemented in professional editing software.
 
 ---
 
