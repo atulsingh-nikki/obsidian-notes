@@ -46,12 +46,6 @@ tags: [optimization, hessian, computer-vision, machine-learning]
 
 Optimization isn’t academic trivia—it is the control room behind 3D reconstruction, optical flow, and billion-parameter networks. This note stitches together the classic conditions for extrema from Avriel with concrete computer-vision cases, including the scenarios where the Hessian turns degenerate and why that matters.
 
-
-**Related Posts:**
-- [Matrix Determinants and Leibniz Theorem]({% post_url 2026-01-27-matrix-determinants-leibniz-theorem %}) - The determinant of the Hessian matrix determines the type of critical point
-- [Signed Volume: Geometric Interpretation]({% post_url 2026-01-28-signed-volume-geometric-interpretation %}) - Understanding what the sign of det(Hessian) tells us about curvature
-- [Bijective Functions: The Perfect Correspondence]({% post_url 2026-01-29-bijective-functions-invertibility %}) - Invertibility and bijection in the context of optimization
-- [Why Intersection Fails in Lagrange Multipliers]({% post_url 2025-01-27-why-intersection-fails-lagrange-multipliers %}) - Related constrained optimization concepts
 ---
 
 ## First-Order Condition: Where Extrema Can Even Happen

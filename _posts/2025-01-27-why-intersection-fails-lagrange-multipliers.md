@@ -7,6 +7,12 @@ tags: [optimization, calculus, lagrange-multipliers, geometry, mathematical-anal
 
 # Why Intersection Fails in Lagrange Multipliers: The Geometry of Optimization
 
+**Related Posts:**
+- [From Gradients to Hessians]({% post_url 2025-02-01-from-gradients-to-hessians %}) - Second-order conditions and Hessian analysis in optimization
+- [Matrix Determinants and Leibniz Theorem]({% post_url 2026-01-27-matrix-determinants-leibniz-theorem %}) - Linear algebra foundations for understanding gradients and critical points
+- [Signed Volume: Geometric Interpretation]({% post_url 2026-01-28-signed-volume-geometric-interpretation %}) - Geometric intuition that complements optimization theory
+
+---
 
 ## Table of Contents
 

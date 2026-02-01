@@ -11,8 +11,9 @@ reading_time: "25 min read"
 **Reading Time:** ~25 minutes
 
 **Related Posts:** 
-- [Image Matting: Estimating Accurate Mask Edges for Professional Compositing]({% post_url 2026-01-16-image-matting-mask-edge-correction %})
-- [Video Matting: Temporal Consistency and Real-Time Foreground Extraction]({% post_url 2026-01-17-video-matting-temporal-consistency %})
+- [Image Matting: Estimating Accurate Mask Edges for Professional Compositing]({% post_url 2026-01-16-image-matting-mask-edge-correction %}) - Mathematical foundations of alpha matting
+- [Video Matting: Temporal Consistency and Real-Time Foreground Extraction]({% post_url 2026-01-17-video-matting-temporal-consistency %}) - Temporal consistency theory behind these tools
+- [Depth Maps in Computer Vision]({% post_url 2026-01-15-depth-maps-computer-vision %}) - Complementary 3D vision technique
 
 ---
 
