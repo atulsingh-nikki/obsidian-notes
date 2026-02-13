@@ -11,11 +11,11 @@ reading_time: "35 min read"
 **Reading Time:** ~35 minutes
 
 **Related Posts:**
-- [Signed Volume: The Geometric Soul of Determinants]({% post_url 2026-01-28-signed-volume-geometric-interpretation %}) - Deep dive into what "signed" means and why orientation matters
-- [Symmetric Groups: Understanding Permutations from First Principles]({% post_url 2026-01-30-symmetric-groups-first-principles %}) - The Leibniz formula sums over the symmetric group S_n
-- [Bijective Functions: The Perfect Correspondence]({% post_url 2026-01-29-bijective-functions-invertibility %}) - Why det(A) ≠ 0 means invertibility (bijection)
-- [From Gradients to Hessians]({% post_url 2025-02-01-from-gradients-to-hessians %}) - How Hessian matrices (which use determinants) shape optimization
-- [Why Intersection Fails in Lagrange Multipliers]({% post_url 2025-01-27-why-intersection-fails-lagrange-multipliers %}) - Optimization theory that relies on linear algebra foundations
+- [Signed Volume: The Geometric Soul of Determinants]({{ site.baseurl }}{% post_url 2026-01-28-signed-volume-geometric-interpretation %}) - Deep dive into what "signed" means and why orientation matters
+- [Symmetric Groups: Understanding Permutations from First Principles]({{ site.baseurl }}{% post_url 2026-01-30-symmetric-groups-first-principles %}) - The Leibniz formula sums over the symmetric group S_n
+- [Bijective Functions: The Perfect Correspondence]({{ site.baseurl }}{% post_url 2026-01-29-bijective-functions-invertibility %}) - Why det(A) ≠ 0 means invertibility (bijection)
+- [From Gradients to Hessians]({{ site.baseurl }}{% post_url 2025-02-01-from-gradients-to-hessians %}) - How Hessian matrices (which use determinants) shape optimization
+- [Why Intersection Fails in Lagrange Multipliers]({{ site.baseurl }}{% post_url 2025-01-27-why-intersection-fails-lagrange-multipliers %}) - Optimization theory that relies on linear algebra foundations
 
 ---
 

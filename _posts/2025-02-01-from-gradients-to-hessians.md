@@ -6,9 +6,9 @@ tags: [optimization, hessian, computer-vision, machine-learning]
 ---
 
 
-<div class="hessian-figures">
-<h3 class="hessian-section-title">Interactive Figures</h3>
-<p>Spin, zoom, and inspect these plots to see how gradient and Hessian information shapes the local geometry and degeneracies we meet in vision pipelines.</p>
+### Interactive Figures
+
+Spin, zoom, and inspect these plots to see how gradient and Hessian information shapes the local geometry and degeneracies we meet in vision pipelines.
 
 
 ## Table of Contents
@@ -16,13 +16,15 @@ tags: [optimization, hessian, computer-vision, machine-learning]
 - [From Gradients to Hessians: How Optimization Shapes Vision & ML](#from-gradients-to-hessians-how-optimization-shapes-vision-ml)
 - [First-Order Condition: Where Extrema Can Even Happen](#first-order-condition-where-extrema-can-even-happen)
 - [Second-Order Condition: The Hessian Tells the Local Shape](#second-order-condition-the-hessian-tells-the-local-shape)
-- [A One-Line Family That Shows the Difference (Avriel’s Example 2.1.1)](#a-one-line-family-that-shows-the-difference-avriels-example-211)
-- [When Semidefinite Isn’t Enough: Degenerate Saddles](#when-semidefinite-isnt-enough-degenerate-saddles)
+- [A One-Line Family That Shows the Difference (Avriel’s Example 2.1.1)](#one-line-family-avriel-example-211)
+- [When Semidefinite Isn’t Enough: Degenerate Saddles](#semidefinite-isnt-enough-degenerate-saddles)
 - [Where Degenerate Hessians Show Up in Vision](#where-degenerate-hessians-show-up-in-vision)
 - [Practical Compass](#practical-compass)
 - [Suggested Figures](#suggested-figures)
 - [References](#references)
 - [TL;DR](#tldr)
+
+<div class="hessian-figures">
 
 <div class="hessian-plot">
   <div id="hessian-surfaces" class="hessian-plot__canvas" aria-label="Hessian surface comparisons"></div>
@@ -41,6 +43,7 @@ tags: [optimization, hessian, computer-vision, machine-learning]
 </div>
 
 ## From Gradients to Hessians: How Optimization Shapes Vision & ML
+{: #from-gradients-to-hessians-how-optimization-shapes-vision-ml}
 
 **Anchor text**: Avriel, *Nonlinear Programming: Analysis and Methods* (Dover), Chapter 2.
 
@@ -48,13 +51,15 @@ Optimization isn’t academic trivia—it is the control room behind 3D reconstr
 
 
 **Related Posts:**
-- [Matrix Determinants and Leibniz Theorem]({% post_url 2026-01-27-matrix-determinants-leibniz-theorem %}) - The determinant of the Hessian matrix determines the type of critical point
-- [Signed Volume: Geometric Interpretation]({% post_url 2026-01-28-signed-volume-geometric-interpretation %}) - Understanding what the sign of det(Hessian) tells us about curvature
-- [Bijective Functions: The Perfect Correspondence]({% post_url 2026-01-29-bijective-functions-invertibility %}) - Invertibility and bijection in the context of optimization
-- [Why Intersection Fails in Lagrange Multipliers]({% post_url 2025-01-27-why-intersection-fails-lagrange-multipliers %}) - Related constrained optimization concepts
+- [Matrix Determinants and Leibniz Theorem]({{ site.baseurl }}{% post_url 2026-01-27-matrix-determinants-leibniz-theorem %}) - The determinant of the Hessian matrix determines the type of critical point
+- [Signed Volume: Geometric Interpretation]({{ site.baseurl }}{% post_url 2026-01-28-signed-volume-geometric-interpretation %}) - Understanding what the sign of det(Hessian) tells us about curvature
+- [Bijective Functions: The Perfect Correspondence]({{ site.baseurl }}{% post_url 2026-01-29-bijective-functions-invertibility %}) - Invertibility and bijection in the context of optimization
+- [Why Intersection Fails in Lagrange Multipliers]({{ site.baseurl }}{% post_url 2025-01-27-why-intersection-fails-lagrange-multipliers %}) - Related constrained optimization concepts
+
 ---
 
 ## First-Order Condition: Where Extrema Can Even Happen
+{: #first-order-condition-where-extrema-can-even-happen}
 
 For a smooth function $f: \mathbb{R}^n \to \mathbb{R}$, any local extremum $x^*$ must satisfy the **first-order necessary condition**
 
@@ -69,6 +74,7 @@ This only gives candidate points. To tell what kind of critical point you have r
 ---
 
 ## Second-Order Condition: The Hessian Tells the Local Shape
+{: #second-order-condition-the-hessian-tells-the-local-shape}
 
 Let $H = \nabla^2 f(x^*)$. The quadratic form $h^\top H h$ measures the second-order change of $f$ along direction $h$.
 
@@ -84,6 +90,7 @@ Avriel’s Theorem 2.2 (sufficient condition) says: if $\nabla f(x^*) = 0$ and $
 ---
 
 ## A One-Line Family That Shows the Difference (Avriel’s Example 2.1.1)
+{: #one-line-family-avriel-example-211}
 
 Consider $f(x) = x^{2p}$ with $p \in \mathbb{Z}_{>0}$.
 
@@ -95,6 +102,7 @@ Consider $f(x) = x^{2p}$ with $p \in \mathbb{Z}_{>0}$.
 ---
 
 ## When Semidefinite Isn’t Enough: Degenerate Saddles
+{: #semidefinite-isnt-enough-degenerate-saddles}
 
 A point can satisfy Theorem 2.3 and still not be a minimum when higher-order terms matter.
 
@@ -104,6 +112,7 @@ A point can satisfy Theorem 2.3 and still not be a minimum when higher-order ter
 ---
 
 ## Where Degenerate Hessians Show Up in Vision
+{: #where-degenerate-hessians-show-up-in-vision}
 
 - **Bundle adjustment (SfM/SLAM): gauge freedoms.** Reprojection error is unchanged by global translation/rotation and, in monocular setups, by global scale. The Hessian is rank-deficient (zero eigenvalues). Fixing a camera, point, or scale removes the degeneracy. (Triggs et al., IJCV 2000.)
 - **Optical flow: the aperture problem.** Along a clean edge, motion parallel to the edge is unobservable, so the data-term Hessian is almost rank-1. Smoothness priors increase the rank. (Horn & Schunck, AI 1981.)
@@ -113,6 +122,7 @@ A point can satisfy Theorem 2.3 and still not be a minimum when higher-order ter
 ---
 
 ## Practical Compass
+{: #practical-compass}
 
 - Use Theorem 2.2 when you can show $H \succ 0$ to certify strict minima.
 - Use Theorem 2.3 to screen candidates: any minimum must satisfy $H \succeq 0$, but check higher-order terms or structural invariances to rule out degenerate saddles.
@@ -121,6 +131,7 @@ A point can satisfy Theorem 2.3 and still not be a minimum when higher-order ter
 ---
 
 ## Suggested Figures
+{: #suggested-figures}
 
 1. Bowl vs. saddle vs. flat-bottom surfaces.
 2. Level-set and constraint tangency for Lagrange multipliers.
@@ -129,6 +140,7 @@ A point can satisfy Theorem 2.3 and still not be a minimum when higher-order ter
 ---
 
 ## References
+{: #references}
 
 - M. Avriel, *Nonlinear Programming: Analysis and Methods*, Dover. See Theorems 2.2 (Sufficient) and 2.3 (Necessary).
 - B. Triggs et al., “Bundle Adjustment—A Modern Synthesis,” *International Journal of Computer Vision*, 2000.
@@ -138,6 +150,7 @@ A point can satisfy Theorem 2.3 and still not be a minimum when higher-order ter
 ---
 
 ## TL;DR
+{: #tldr}
 
 - Gradient zero gets you to the door.
 - Hessian sign tells you what room you are in: bowl, dome, saddle, or flat.

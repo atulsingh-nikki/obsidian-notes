@@ -11,11 +11,11 @@ reading_time: "25 min read"
 **Reading Time:** ~25 minutes
 
 **Related Posts:**
-- [Matrix Determinants: From Leibniz Formula to Geometric Intuition]({% post_url 2026-01-27-matrix-determinants-leibniz-theorem %}) - The full mathematical treatment of determinants
-- [Bijective Functions: The Perfect Correspondence]({% post_url 2026-01-29-bijective-functions-invertibility %}) - Non-zero determinant means bijective (invertible) transformation
-- [From Gradients to Hessians]({% post_url 2025-02-01-from-gradients-to-hessians %}) - Optimization using second derivatives (Hessian determinant indicates local shape)
-- [Why Intersection Fails in Lagrange Multipliers]({% post_url 2025-01-27-why-intersection-fails-lagrange-multipliers %}) - Constrained optimization and geometric intuition
-- [Hidden Symmetry in Inverse Trigonometry]({% post_url 2025-01-15-hidden-symmetry-inverse-trig %}) - Another example of beautiful geometric relationships
+- [Matrix Determinants: From Leibniz Formula to Geometric Intuition]({{ site.baseurl }}{% post_url 2026-01-27-matrix-determinants-leibniz-theorem %}) - The full mathematical treatment of determinants
+- [Bijective Functions: The Perfect Correspondence]({{ site.baseurl }}{% post_url 2026-01-29-bijective-functions-invertibility %}) - Non-zero determinant means bijective (invertible) transformation
+- [From Gradients to Hessians]({{ site.baseurl }}{% post_url 2025-02-01-from-gradients-to-hessians %}) - Optimization using second derivatives (Hessian determinant indicates local shape)
+- [Why Intersection Fails in Lagrange Multipliers]({{ site.baseurl }}{% post_url 2025-01-27-why-intersection-fails-lagrange-multipliers %}) - Constrained optimization and geometric intuition
+- [Hidden Symmetry in Inverse Trigonometry]({{ site.baseurl }}{% post_url 2025-01-15-hidden-symmetry-inverse-trig %}) - Another example of beautiful geometric relationships
 
 ---
 

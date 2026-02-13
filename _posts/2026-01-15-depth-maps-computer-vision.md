@@ -8,9 +8,9 @@ tags: [computer-vision, depth-estimation, stereo-vision, 3d-reconstruction, deep
 *This post explores how computers perceive depth in images, bridging classical geometric methods with modern neural approaches. Familiarity with basic linear algebra, projective geometry, and convolutional neural networks is helpful but not required.*
 
 **Related Posts:**
-- [Image Matting: Estimating Accurate Mask Edges]({% post_url 2026-01-16-image-matting-mask-edge-correction %}) - Complementary segmentation technique for foreground extraction
-- [Video Matting: Temporal Consistency]({% post_url 2026-01-17-video-matting-temporal-consistency %}) - Temporal processing for video, similar to depth sequence processing
-- [Matrix Determinants and Linear Algebra]({% post_url 2026-01-27-matrix-determinants-leibniz-theorem %}) - Mathematical foundations used in epipolar geometry
+- [Image Matting: Estimating Accurate Mask Edges]({{ site.baseurl }}{% post_url 2026-01-16-image-matting-mask-edge-correction %}) - Complementary segmentation technique for foreground extraction
+- [Video Matting: Temporal Consistency]({{ site.baseurl }}{% post_url 2026-01-17-video-matting-temporal-consistency %}) - Temporal processing for video, similar to depth sequence processing
+- [Matrix Determinants and Linear Algebra]({{ site.baseurl }}{% post_url 2026-01-27-matrix-determinants-leibniz-theorem %}) - Mathematical foundations used in epipolar geometry
 
 ---
 

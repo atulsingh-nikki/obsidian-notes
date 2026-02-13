@@ -15,10 +15,10 @@ reading_time: "20 min read"
 Bijective functions are the mathematical gold standard for "perfect matching"—every input maps to a unique output, and every output comes from exactly one input. This seemingly simple concept underlies invertibility in linear algebra, coordinate transformations in computer graphics, cryptographic systems, and much more.
 
 **Related Posts:**
-- [Matrix Determinants and Leibniz Theorem]({% post_url 2026-01-27-matrix-determinants-leibniz-theorem %}) - Determinants determine if linear transformations are bijective
-- [Symmetric Groups: Understanding Permutations from First Principles]({% post_url 2026-01-30-symmetric-groups-first-principles %}) - Permutations are bijective functions from a set to itself
-- [Signed Volume: Geometric Interpretation]({% post_url 2026-01-28-signed-volume-geometric-interpretation %}) - Non-zero determinant means bijective transformation
-- [From Gradients to Hessians]({% post_url 2025-02-01-from-gradients-to-hessians %}) - Invertibility of the Hessian in optimization
+- [Matrix Determinants and Leibniz Theorem]({{ site.baseurl }}{% post_url 2026-01-27-matrix-determinants-leibniz-theorem %}) - Determinants determine if linear transformations are bijective
+- [Symmetric Groups: Understanding Permutations from First Principles]({{ site.baseurl }}{% post_url 2026-01-30-symmetric-groups-first-principles %}) - Permutations are bijective functions from a set to itself
+- [Signed Volume: Geometric Interpretation]({{ site.baseurl }}{% post_url 2026-01-28-signed-volume-geometric-interpretation %}) - Non-zero determinant means bijective transformation
+- [From Gradients to Hessians]({{ site.baseurl }}{% post_url 2025-02-01-from-gradients-to-hessians %}) - Invertibility of the Hessian in optimization
 
 ---
 

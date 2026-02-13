@@ -15,8 +15,8 @@ reading_time: "30 min read"
 The symmetric group is one of the most fundamental objects in mathematics—it's the group of all ways to rearrange a finite set. Despite its simple definition, symmetric groups appear everywhere: in solving polynomial equations, computing determinants, analyzing molecular symmetry, cryptography, and even understanding Rubik's cubes. This post builds the theory from scratch, assuming only basic set theory.
 
 **Related Posts:**
-- [Bijective Functions: The Perfect Correspondence]({% post_url 2026-01-29-bijective-functions-invertibility %}) - Permutations are bijective functions from a set to itself
-- [Matrix Determinants and Leibniz Theorem]({% post_url 2026-01-27-matrix-determinants-leibniz-theorem %}) - The Leibniz formula sums over the symmetric group
+- [Bijective Functions: The Perfect Correspondence]({{ site.baseurl }}{% post_url 2026-01-29-bijective-functions-invertibility %}) - Permutations are bijective functions from a set to itself
+- [Matrix Determinants and Leibniz Theorem]({{ site.baseurl }}{% post_url 2026-01-27-matrix-determinants-leibniz-theorem %}) - The Leibniz formula sums over the symmetric group
 
 ---
 

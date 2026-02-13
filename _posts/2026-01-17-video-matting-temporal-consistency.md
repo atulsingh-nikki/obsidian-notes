@@ -11,9 +11,9 @@ reading_time: "40 min read"
 **Reading Time:** ~40 minutes
 
 **Related Posts:** 
-- [Image Matting: Estimating Accurate Mask Edges for Professional Compositing]({% post_url 2026-01-16-image-matting-mask-edge-correction %}) - Learn the fundamentals of image matting that form the foundation for video matting techniques.
-- [Mask Refinement in Professional Video Editing: Premiere Pro vs DaVinci Resolve]({% post_url 2026-01-18-mask-refinement-premiere-resolve %}) - See how video matting is implemented in professional editing software.
-- [Depth Maps in Computer Vision]({% post_url 2026-01-15-depth-maps-computer-vision %}) - Depth estimation and matting often work together in 3D computer vision pipelines.
+- [Image Matting: Estimating Accurate Mask Edges for Professional Compositing]({{ site.baseurl }}{% post_url 2026-01-16-image-matting-mask-edge-correction %}) - Learn the fundamentals of image matting that form the foundation for video matting techniques.
+- [Mask Refinement in Professional Video Editing: Premiere Pro vs DaVinci Resolve]({{ site.baseurl }}{% post_url 2026-01-18-mask-refinement-premiere-resolve %}) - See how video matting is implemented in professional editing software.
+- [Depth Maps in Computer Vision]({{ site.baseurl }}{% post_url 2026-01-15-depth-maps-computer-vision %}) - Depth estimation and matting often work together in 3D computer vision pipelines.
 
 ---
 
