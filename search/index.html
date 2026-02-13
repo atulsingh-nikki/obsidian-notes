@@ -24,6 +24,8 @@ description: "Search across blog posts and notes."
     new PagefindUI({
       element: "#search",
       showSubResults: true,
+      openFilters: ["Type"],
+      showEmptyFilters: false,
       highlightParam: "highlight",
       baseUrl: "{{ '/' | relative_url }}",
       translations: {
