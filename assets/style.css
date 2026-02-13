@@ -1468,3 +1468,27 @@ article .blog-post__content {
     padding: 0.5rem 0 1rem;
   }
 }
+
+.blog-index__search-link {
+  margin-top: 0.85rem;
+  color: #5f6b7a;
+}
+
+.search-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.25rem 1.5rem 3rem;
+}
+
+.search-page__header {
+  margin-bottom: 1rem;
+}
+
+.search-page__description {
+  margin-bottom: 1rem;
+  color: #5f6b7a;
+}
+
+.search-page__ui .pagefind-ui__search-input {
+  min-height: 46px;
+}

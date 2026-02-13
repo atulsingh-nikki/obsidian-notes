@@ -94,6 +94,11 @@ layout: default
           Blog index
         </a>
       </li>
+      <li class="blog-post__nav-item">
+        <a class="blog-post__nav-link blog-post__nav-link--search" href="{{ '/search/' | relative_url }}">
+          Search
+        </a>
+      </li>
       {%- if page.previous -%}
         <li class="blog-post__nav-item">
           <a class="blog-post__nav-link blog-post__nav-link--prev" href="{{ page.previous.url | relative_url }}">
