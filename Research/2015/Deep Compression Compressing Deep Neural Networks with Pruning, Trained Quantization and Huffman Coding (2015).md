@@ -85,6 +85,12 @@ Deep Compression (Han et al., 2015) introduced a practical **three-stage pipelin
 - Index overhead matters; compressed sparse formats must be designed carefully.
 - Layer-wise sensitivity differs: fully connected layers compress heavily, while some convolutional layers are more sensitive.
 - Retraining after each stage is critical for maintaining accuracy.
+- **Why setting weights to zero does not “break differentiability”**:
+  - In pruning, weights are typically multiplied by a binary mask \(m\in\{0,1\}\), so the effective parameter is \(\tilde w = m\odot w\).
+  - For active connections (\(m=1\)), gradients flow normally.
+  - For pruned connections (\(m=0\)), gradient to that weight is intentionally zero (it is frozen/removed), which is expected behavior, not a mathematical failure.
+  - The network remains differentiable with respect to all remaining active parameters; training proceeds on the reduced parameter subspace.
+  - In practice, Deep Compression prunes then fine-tunes, so optimization simply continues over surviving weights.
 
 # Critiques / Limitations
 - Compression ratio does not translate linearly to wall-clock speedup.
