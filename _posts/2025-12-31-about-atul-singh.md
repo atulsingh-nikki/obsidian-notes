@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "About Atul Singh: Technical Portfolio and Expertise"
-description: "Technical notebook documenting deep explorations across computer vision, generative models, machine learning, high-performance computing, and applied mathematics. 78 comprehensive posts serving as both learning material and technical reference."
+description: "Technical notebook documenting deep explorations across computer vision, generative models, machine learning, high-performance computing, and applied mathematics. 81 comprehensive posts serving as both learning material and technical reference."
 tags: [portfolio, about, expertise, computer-vision, machine-learning, hpc, color-science]
 ---
 
@@ -14,7 +14,7 @@ Welcome to my technical notebook. I'm Atul Singh, and I use this space to docume
 Think of this as my **"second brain"**—comprehensive explorations that help me understand algorithms and techniques deeply, serving as reference material when tackling real-world problems. Each post represents the groundwork needed to make informed decisions in production environments: understanding VAEs deeply enables better architectural choices, mastering contrast metrics guides quality assessment design, and grasping stochastic processes informs robust system development.
 
 ### Snapshot
-- **Output**: 78 longform technical posts (~152k words) across 2013-2026
+- **Output**: 81 longform technical posts (~149k+ words) across 2013-2026
 - **Roles**: Computer Vision Engineer, ML Leader, Technical Writer
 - **Depth**: Multi-part series on contrast, generative models, Kalman filtering, stochastic processes, C++ concurrency
 - **Tooling**: Python (NumPy, PyTorch, OpenCV), C++17/20, CUDA, LaTeX
@@ -22,7 +22,7 @@ Think of this as my **"second brain"**—comprehensive explorations that help me
 
 ## What This Notebook Covers
 
-Over **78 technical posts** spanning 2013-2026, I've built a comprehensive technical curriculum covering:
+Over **81 technical posts** spanning 2013-2026, I've built a comprehensive technical curriculum covering:
 
 ### 🎯 Core Expertise Areas
 
@@ -222,9 +222,9 @@ Technical writing • Word studies (culpable, resent, gripe/complaint/grievance)
 
 ## Impact & Reach
 
-**Blog Statistics** (as of Feb 2026):
-- **78 technical posts** across 2013-2026
-- **~152,000 words** of technical content
+**Blog Statistics** (as of Feb 14, 2026):
+- **81 technical posts** across 2013-2026
+- **~149,000+ words** of technical content
 - **Multiple comprehensive series** equivalent to graduate-level courses
 - **Complete, runnable code examples** in Python, C++, CUDA
 
@@ -334,7 +334,7 @@ If you read through this entire collection systematically, you'll gain:
 **Portfolio Site**: [atulsingh-nikki.github.io/obsidian-notes](https://atulsingh-nikki.github.io/obsidian-notes/)
 
 **Navigation**:
-- [Publishing Cadence Summary](https://atulsingh-nikki.github.io/obsidian-notes/2025/03/10/publishing-cadence-summary.html) — All 78 posts organized by month, quarter, year
+- [Publishing Cadence Summary](https://atulsingh-nikki.github.io/obsidian-notes/2025/03/10/publishing-cadence-summary.html) — All 81 posts organized by month, quarter, year
 - [Blog Index](https://atulsingh-nikki.github.io/obsidian-notes/blog/) — Browse by tag or date
 
 **Featured Series**:
@@ -358,16 +358,16 @@ This is a living document of continuous learning and knowledge sharing. Every po
 
 *This notebook reflects a multi-year arc (2013-2026) of systematic exploration across computer vision, machine learning, generative models, high-performance computing, and applied mathematics. Each post is both a learning artifact and a reference for future work. The journey continues—new posts added regularly as I dive deeper into the intersection of perception, computation, probabilistic inference, and modern generative modeling.*
 
-**Last Updated**: February 3, 2026  
-**Total Posts**: 78  
-**Total Words**: ~152,000  
+**Last Updated**: February 14, 2026  
+**Total Posts**: 81  
+**Total Words**: ~149,000+  
 **Active Series**: 9 complete, 2 ongoing
 
 ---
 
 ## Keep Reading
 
-* [Publishing Cadence Summary](https://atulsingh-nikki.github.io/obsidian-notes/2025/03/10/publishing-cadence-summary.html) — Complete index of all 78 posts
+* [Publishing Cadence Summary](https://atulsingh-nikki.github.io/obsidian-notes/2025/03/10/publishing-cadence-summary.html) — Complete index of all 81 posts
 * [Generative Models & VAEs Series]({{ "/2025/12/24/normalization-constant-problem.html" | relative_url }}) — NEW 5-part series on the partition function problem
 * [Contrast Measurement Masterclass]({{ "/2025/12/27/understanding-image-contrast.html" | relative_url }}) — 6-part series from grayscale to ML
 * [Stochastic Processes & Diffusion]({{ "/2025/12/31/brownian-motion-diffusion-flow-models.html" | relative_url }}) — NEW 5-part series on Brownian motion to modern generative models
