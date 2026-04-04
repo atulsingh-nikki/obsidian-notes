@@ -7,6 +7,7 @@ tags: [kalman-filter, bayesian-inference, probability, series]
 
 *This is Part 3 of an 8-part series on Kalman Filtering. [Part 2]({{ site.baseurl }}{% link _posts/2024-09-21-fundamentals-recursive-filtering.md %}) explored recursive filtering fundamentals.*
 
+*For a compact tour of Bayesian inference in general (prior, likelihood, posterior, and when updates are exact versus approximate), see [Bayesian Inference: A Short Primer]({{ site.baseurl }}{% post_url 2026-04-05-bayesian-inference-short-primer %}). The development below specializes Bayes to **recursive state estimation**.*
 
 ## Table of Contents
 
