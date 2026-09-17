@@ -22,6 +22,7 @@ A good answer to Q1 is **no** — a linear probe alone cannot establish disentan
 
 **Related Posts:**
 - [What Is a Linear Probe? A Practical Guide to Probing Classifiers]({{ site.baseurl }}{% post_url 2026-09-17-what-is-a-linear-probe %})
+- [Representation Intervention: Proving a Direction Is Causal, Not Just Correlational]({{ site.baseurl }}{% post_url 2026-09-17-representation-intervention-activation-patching %})
 
 ---
 

@@ -16,6 +16,7 @@ If you read papers on representation learning or interpretability, you'll consta
 
 **Related Posts:**
 - [Decodability Is Not Disentanglement: Testing for Factorized Representations]({{ site.baseurl }}{% post_url 2026-09-17-disentanglement-vs-decodability-factorized-testing %})
+- [Representation Intervention: Proving a Direction Is Causal, Not Just Correlational]({{ site.baseurl }}{% post_url 2026-09-17-representation-intervention-activation-patching %})
 
 ---
 
