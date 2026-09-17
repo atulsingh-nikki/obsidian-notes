@@ -23,6 +23,7 @@ All three point to the same missing concept: **decoding a factor and controlling
 **Related Posts:**
 - [What Is a Linear Probe? A Practical Guide to Probing Classifiers]({{ site.baseurl }}{% post_url 2026-09-17-what-is-a-linear-probe %})
 - [Decodability Is Not Disentanglement: Testing for Factorized Representations]({{ site.baseurl }}{% post_url 2026-09-17-disentanglement-vs-decodability-factorized-testing %})
+- [When There's No Single Direction: Subspaces, Distributed Codes, and a Ladder of Evidence]({{ site.baseurl }}{% post_url 2026-09-17-single-direction-vs-subspace-representations %})
 
 > **Intervention** means deliberately modifying an internal representation in a controlled way, then observing whether the model's behavior changes as predicted.
 

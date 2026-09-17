@@ -36,6 +36,20 @@ body .main-content {
   }
 }
 
+/* Override Cayman theme's default blue-green header gradient with a blue pastel shade */
+.page-header {
+  background-color: #7fb2e0;
+  background-image: linear-gradient(120deg, #6fa8dc 0%, #a9d6e5 100%);
+}
+
+.page-header .project-tagline {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.btn {
+  color: #5b8fc7;
+}
+
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .main-content {
     max-width: 95% !important;
