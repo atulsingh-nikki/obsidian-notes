@@ -24,13 +24,10 @@ POSTS_DIR = os.path.join(ROOT, "_posts")
 RESEARCH_DIR = os.path.join(ROOT, "Research")
 DATA_DIR = os.path.join(ROOT, "_data")
 ASSETS_DIR = os.path.join(ROOT, "assets")
+SERIES_DEF = os.path.join(os.path.dirname(os.path.abspath(__file__)), "series.json")
 
 POST_NAME_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})-(.+)\.md$")
 LINK_RE = re.compile(r"\{%\s*link\s+_posts/([^\s%]+)\.md\s*%\}")
-SERIES_RE = re.compile(
-    r"Part\s+(\d+)(?:\s*\(Final\))?\s+of\s+an?\s+(\d+)-part series on\s+([^.\n*]+)",
-    re.IGNORECASE,
-)
 FRONT_MATTER_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)
 
 # Skip non-note files that live under Research/ or _posts/.
@@ -92,46 +89,46 @@ def load_posts():
             rm = POST_NAME_RE.match(ref + ".md")
             if rm and rm.group(2) not in outlinks:
                 outlinks.append(rm.group(2))
-        series = None
-        sm = SERIES_RE.search(text)
-        if sm:
-            series = {
-                "part": int(sm.group(1)),
-                "total": int(sm.group(2)),
-                "name": sm.group(3).strip().strip(".").strip(),
-            }
         posts[slug] = {
             "slug": slug,
             "date": date,
             "title": title or slug.replace("-", " ").title(),
             "tags": [t for t in tags if t != "series"],
             "outlinks": outlinks,
-            "series": series,
+            "series": None,  # filled in from series.json by build_series()
         }
     return posts
 
 
 def build_series(posts):
-    groups = defaultdict(list)
-    for slug, p in posts.items():
-        if p["series"]:
-            groups[p["series"]["name"]].append(slug)
+    """Build series from the authored scripts/series.json (ordered slug lists),
+    and stamp each member post with its series/part/prev/next."""
+    with open(SERIES_DEF, "r", encoding="utf-8") as f:
+        definitions = json.load(f)
+
     series_list = []
-    for name, slugs in groups.items():
-        parts = sorted(slugs, key=lambda s: posts[s]["series"]["part"])
+    for d in definitions:
+        parts = [s for s in d["slugs"] if s in posts]  # keep only existing posts, in order
+        if not parts:
+            continue
+        total = len(parts)
         entry = {
-            "name": name,
+            "name": d["name"],
+            "description": d.get("description", ""),
             "parts": [
-                {"slug": s, "part": posts[s]["series"]["part"], "title": posts[s]["title"]}
-                for s in parts
+                {"slug": s, "part": i + 1, "title": posts[s]["title"]}
+                for i, s in enumerate(parts)
             ],
         }
         series_list.append(entry)
-        # Attach prev/next to each member post's series dict.
         for i, s in enumerate(parts):
-            posts[s]["series"]["prev"] = parts[i - 1] if i > 0 else None
-            posts[s]["series"]["next"] = parts[i + 1] if i < len(parts) - 1 else None
-    series_list.sort(key=lambda e: e["name"])
+            posts[s]["series"] = {
+                "name": d["name"],
+                "part": i + 1,
+                "total": total,
+                "prev": parts[i - 1] if i > 0 else None,
+                "next": parts[i + 1] if i < total - 1 else None,
+            }
     return series_list
 
 

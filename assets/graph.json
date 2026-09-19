@@ -243,7 +243,7 @@
         "futures",
         "promises"
       ],
-      "group": "c++",
+      "group": "C++ Concurrency",
       "degree": 4
     },
     {
@@ -255,7 +255,7 @@
         "futures",
         "async"
       ],
-      "group": "c++",
+      "group": "C++ Concurrency",
       "degree": 4
     },
     {
@@ -267,7 +267,7 @@
         "async",
         "futures"
       ],
-      "group": "c++",
+      "group": "C++ Concurrency",
       "degree": 4
     },
     {
@@ -279,7 +279,7 @@
         "stochastic-processes",
         "sampling"
       ],
-      "group": "probability",
+      "group": "Sampling Theory",
       "degree": 6
     },
     {
@@ -291,7 +291,7 @@
         "monte-carlo",
         "data-collection"
       ],
-      "group": "statistics",
+      "group": "Sampling Theory",
       "degree": 1
     },
     {
@@ -500,7 +500,7 @@
         "monte-carlo",
         "numerical-methods"
       ],
-      "group": "probability",
+      "group": "Sampling Theory",
       "degree": 3
     },
     {
@@ -523,7 +523,7 @@
         "move-semantics",
         "perfect-forwarding"
       ],
-      "group": "c++",
+      "group": "C++ Concurrency",
       "degree": 4
     },
     {
@@ -563,7 +563,7 @@
         "geometry",
         "high-dimensions"
       ],
-      "group": "machine-learning",
+      "group": "Generative Models & VAEs",
       "degree": 4
     },
     {
@@ -575,7 +575,7 @@
         "generative-models",
         "statistical-mechanics"
       ],
-      "group": "probability",
+      "group": "Generative Models & VAEs",
       "degree": 5
     },
     {
@@ -587,7 +587,7 @@
         "deep-learning",
         "generative-models"
       ],
-      "group": "machine-learning",
+      "group": "Generative Models & VAEs",
       "degree": 7
     },
     {
@@ -600,7 +600,7 @@
         "discriminative-models",
         "deep-learning"
       ],
-      "group": "machine-learning",
+      "group": "Generative Models & VAEs",
       "degree": 8
     },
     {
@@ -613,7 +613,7 @@
         "mathematics",
         "measure-theory"
       ],
-      "group": "brownian-motion",
+      "group": "Stochastic Processes & Diffusion",
       "degree": 5
     },
     {
@@ -627,7 +627,7 @@
         "contrast",
         "quality-assessment"
       ],
-      "group": "computer-vision",
+      "group": "The Contrast Masterclass",
       "degree": 1
     },
     {
@@ -640,7 +640,7 @@
         "contrast",
         "quality-assessment"
       ],
-      "group": "computer-vision",
+      "group": "The Contrast Masterclass",
       "degree": 1
     },
     {
@@ -653,7 +653,7 @@
         "brownian-motion",
         "mathematics"
       ],
-      "group": "stochastic-calculus",
+      "group": "Stochastic Processes & Diffusion",
       "degree": 6
     },
     {
@@ -667,7 +667,7 @@
         "metrics",
         "perceptual-models"
       ],
-      "group": "computer-vision",
+      "group": "The Contrast Masterclass",
       "degree": 1
     },
     {
@@ -681,7 +681,7 @@
         "dataset-analysis",
         "image-retrieval"
       ],
-      "group": "computer-vision",
+      "group": "The Contrast Masterclass",
       "degree": 1
     },
     {
@@ -695,7 +695,7 @@
         "sde",
         "foundations"
       ],
-      "group": "mathematics",
+      "group": "Stochastic Processes & Diffusion",
       "degree": 6
     },
     {
@@ -707,7 +707,7 @@
         "brownian-motion",
         "mathematics"
       ],
-      "group": "stochastic-processes",
+      "group": "Stochastic Processes & Diffusion",
       "degree": 6
     },
     {
@@ -722,7 +722,7 @@
         "tone-mapping",
         "quality-assessment"
       ],
-      "group": "computer-vision",
+      "group": "The Contrast Masterclass",
       "degree": 1
     },
     {
@@ -765,7 +765,7 @@
         "normalizing-flows",
         "generative-ai"
       ],
-      "group": "stochastic-processes",
+      "group": "Stochastic Processes & Diffusion",
       "degree": 8
     },
     {
@@ -780,7 +780,7 @@
         "autoencoders",
         "self-supervised"
       ],
-      "group": "machine-learning",
+      "group": "The Contrast Masterclass",
       "degree": 1
     },
     {
@@ -792,7 +792,7 @@
         "mathematics",
         "machine-learning"
       ],
-      "group": "probability",
+      "group": "Generative Models & VAEs",
       "degree": 2
     },
     {
@@ -805,7 +805,7 @@
         "probability",
         "machine-learning"
       ],
-      "group": "deep-learning",
+      "group": "Generative Models & VAEs",
       "degree": 4
     },
     {
@@ -1083,7 +1083,7 @@
         "vlm",
         "research-methods"
       ],
-      "group": "representation-learning",
+      "group": "Representation Interpretability & Probing",
       "degree": 1
     },
     {
@@ -1097,7 +1097,7 @@
         "vlm",
         "research-methods"
       ],
-      "group": "representation-learning",
+      "group": "Representation Interpretability & Probing",
       "degree": 1
     },
     {
@@ -1111,7 +1111,7 @@
         "vlm",
         "research-methods"
       ],
-      "group": "representation-learning",
+      "group": "Representation Interpretability & Probing",
       "degree": 1
     },
     {
@@ -1124,7 +1124,7 @@
         "linear-probe",
         "research-methods"
       ],
-      "group": "representation-learning",
+      "group": "Representation Interpretability & Probing",
       "degree": 1
     },
     {
@@ -1137,7 +1137,7 @@
         "supervised-learning",
         "backbones"
       ],
-      "group": "computer-vision",
+      "group": "Vision Encoders & Representation Learning",
       "degree": 0
     },
     {
@@ -1149,7 +1149,7 @@
         "representation-learning",
         "computer-vision"
       ],
-      "group": "self-supervised-learning",
+      "group": "Vision Encoders & Representation Learning",
       "degree": 1
     },
     {
@@ -1162,7 +1162,7 @@
         "foundation-models",
         "transfer-learning"
       ],
-      "group": "computer-vision",
+      "group": "Vision Encoders & Representation Learning",
       "degree": 0
     },
     {
@@ -1174,7 +1174,7 @@
         "foundation-models",
         "transformers"
       ],
-      "group": "computer-vision",
+      "group": "Vision Encoders & Representation Learning",
       "degree": 0
     },
     {
@@ -1186,7 +1186,7 @@
         "exponential-moving-average",
         "representation-learning"
       ],
-      "group": "self-supervised-learning",
+      "group": "Vision Encoders & Representation Learning",
       "degree": 1
     },
     {
@@ -1199,7 +1199,7 @@
         "computer-vision",
         "representation-learning"
       ],
-      "group": "vision-transformers",
+      "group": "Vision Encoders & Representation Learning",
       "degree": 1
     },
     {
@@ -1211,7 +1211,7 @@
         "positional-embeddings",
         "survey"
       ],
-      "group": "transformers",
+      "group": "Vision Encoders & Representation Learning",
       "degree": 0
     },
     {
@@ -1225,7 +1225,7 @@
         "representation-learning",
         "interpretability"
       ],
-      "group": "computer-vision",
+      "group": "Vision Encoders & Representation Learning",
       "degree": 0
     },
     {
@@ -1238,7 +1238,7 @@
         "video-understanding",
         "multimodal-learning"
       ],
-      "group": "computer-vision",
+      "group": "Vision Encoders & Representation Learning",
       "degree": 0
     },
     {
@@ -1251,7 +1251,7 @@
         "foundation-models",
         "representation-learning"
       ],
-      "group": "computer-vision",
+      "group": "Vision Encoders & Representation Learning",
       "degree": 0
     },
     {
@@ -1264,7 +1264,7 @@
         "dense-prediction",
         "deployment"
       ],
-      "group": "computer-vision",
+      "group": "Vision Encoders & Representation Learning",
       "degree": 0
     },
     {
@@ -1277,7 +1277,7 @@
         "attention",
         "backbones"
       ],
-      "group": "computer-vision",
+      "group": "Vision Encoders & Representation Learning",
       "degree": 0
     },
     {
@@ -1290,7 +1290,7 @@
         "computer-vision",
         "representation-learning"
       ],
-      "group": "vision-transformers",
+      "group": "Vision Encoders & Representation Learning",
       "degree": 1
     }
   ],

@@ -15,11 +15,14 @@ description: "Multi-part deep dives, read in order — from first principles to 
   {%- if site.data.series and site.data.series.size > 0 -%}
     <div class="series-list">
       {%- for series in site.data.series -%}
-        <section class="series-block">
+        <section class="series-block" id="{{ series.name | slugify }}">
           <header class="series-block__header">
             <h2 class="series-block__title">{{ series.name }}</h2>
             <span class="series-block__count">{{ series.parts | size }} parts</span>
           </header>
+          {%- if series.description -%}
+            <p class="series-block__desc">{{ series.description }}</p>
+          {%- endif -%}
           <ol class="series-block__parts">
             {%- for part in series.parts -%}
               {%- assign p = site.posts | where: "slug", part.slug | first -%}

@@ -2206,7 +2206,9 @@ html.theme-light .theme-toggle__icon::before { content: "\1F319"; }
   padding: 1.5rem 1.75rem;
   box-shadow: var(--shadow);
 }
-.series-block__header { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.series-block { scroll-margin-top: 5rem; }
+.series-block__desc { margin: 0 0 1rem; color: var(--text-muted); line-height: 1.6; }
+.series-block__header { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 0.75rem; }
 .series-block__title { margin: 0; font-size: 1.4rem; }
 .series-block__count { color: var(--text-muted); font-size: 0.85rem; white-space: nowrap; }
 .series-block__parts { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; counter-reset: none; }

@@ -1,6 +1,7 @@
 [
   {
     "name": "Kalman Filtering",
+    "description": "From Bayesian foundations to nonlinear extensions — a graduate-level state-estimation curriculum.",
     "parts": [
       {
         "slug": "introduction-to-kalman-filtering",
@@ -41,6 +42,253 @@
         "slug": "advanced-kalman-topics",
         "part": 8,
         "title": "Advanced Topics and Future Directions in Kalman Filtering"
+      }
+    ]
+  },
+  {
+    "name": "The Contrast Masterclass",
+    "description": "Measuring image contrast, from grayscale fundamentals to SDR/HDR cross-domain comparison and unsupervised prediction.",
+    "parts": [
+      {
+        "slug": "understanding-image-contrast",
+        "part": 1,
+        "title": "Understanding Contrast in Images: From Perception to Computation"
+      },
+      {
+        "slug": "understanding-color-contrast",
+        "part": 2,
+        "title": "Understanding Contrast in Color Images: Beyond Luminance"
+      },
+      {
+        "slug": "measuring-contrast-between-images",
+        "part": 3,
+        "title": "Measuring Contrast Between Two Color Images: Comparison Metrics and Methods"
+      },
+      {
+        "slug": "comparing-contrast-across-different-images",
+        "part": 4,
+        "title": "Comparing Contrast Across Different Images: Content-Independent Metrics"
+      },
+      {
+        "slug": "sdr-hdr-contrast-comparison",
+        "part": 5,
+        "title": "Measuring Contrast Between SDR and HDR Images: Bridging Dynamic Range Domains"
+      },
+      {
+        "slug": "unsupervised-learning-contrast-prediction",
+        "part": 6,
+        "title": "Building Contrast Prediction Models with Unsupervised Learning: When Ground Truth Doesn't Exist"
+      }
+    ]
+  },
+  {
+    "name": "Generative Models & VAEs",
+    "description": "The partition-function problem and how variational inference sidesteps it.",
+    "parts": [
+      {
+        "slug": "curse-of-dimensionality",
+        "part": 1,
+        "title": "The Curse of Dimensionality: Why High Dimensions Break Intuition"
+      },
+      {
+        "slug": "normalization-constant-problem",
+        "part": 2,
+        "title": "The Normalization Constant Problem: Why Computing Z Is So Hard"
+      },
+      {
+        "slug": "why-discriminative-learning-came-first",
+        "part": 3,
+        "title": "Why Discriminative Learning Dominated First: The Pragmatic Path to Modern AI"
+      },
+      {
+        "slug": "machine-learning-paradigms-distributions-vs-functions",
+        "part": 4,
+        "title": "Machine Learning Paradigms: Learning Distributions vs Approximating Functions"
+      },
+      {
+        "slug": "how-vaes-avoid-computing-partition-function",
+        "part": 5,
+        "title": "How Variational Autoencoders Avoid Computing the Partition Function"
+      },
+      {
+        "slug": "expected-value-expectation-mathematical-foundations",
+        "part": 6,
+        "title": "Expected Value & Expectation: Mathematical Foundations"
+      }
+    ]
+  },
+  {
+    "name": "Stochastic Processes & Diffusion",
+    "description": "From Brownian motion and Itô calculus to score-based diffusion and flow models.",
+    "parts": [
+      {
+        "slug": "mathematical-properties-brownian-motion",
+        "part": 1,
+        "title": "Mathematical Properties of Brownian Motion: A Visual Guide"
+      },
+      {
+        "slug": "total-variation-brownian-motion",
+        "part": 2,
+        "title": "Infinite Total Variation of Brownian Motion: Why the Path Length Diverges"
+      },
+      {
+        "slug": "differential-equations-ode-pde-sde",
+        "part": 3,
+        "title": "The Landscape of Differential Equations: From ODEs to PDEs to SDEs"
+      },
+      {
+        "slug": "ito-calculus-stochastic-differential-equations",
+        "part": 4,
+        "title": "Itô Calculus: Why We Need New Rules for Stochastic Differential Equations"
+      },
+      {
+        "slug": "brownian-motion-diffusion-flow-models",
+        "part": 5,
+        "title": "From Brownian Motion to Modern Generative Models: The Stochastic Foundation of Diffusion and Flow Models"
+      }
+    ]
+  },
+  {
+    "name": "C++ Concurrency",
+    "description": "Production-grade modern C++ concurrency — futures, promises, and std::async.",
+    "parts": [
+      {
+        "slug": "understanding-futures-promises-cpp",
+        "part": 1,
+        "title": "Understanding Futures and Promises in Modern C++"
+      },
+      {
+        "slug": "compound-futures-modern-cpp",
+        "part": 2,
+        "title": "Composing Futures in Modern C++"
+      },
+      {
+        "slug": "mastering-std-async",
+        "part": 3,
+        "title": "Mastering std::async in Modern C++"
+      },
+      {
+        "slug": "cpp-reference-types-explained",
+        "part": 4,
+        "title": "Understanding Reference Types in Modern C++"
+      }
+    ]
+  },
+  {
+    "name": "Sampling Theory",
+    "description": "Understanding uncertainty — stochastic processes, importance/Gibbs sampling, and why direct PDF sampling is hard.",
+    "parts": [
+      {
+        "slug": "stochastic-processes-and-sampling",
+        "part": 1,
+        "title": "Stochastic Processes and the Art of Sampling Uncertainty"
+      },
+      {
+        "slug": "advanced-sampling-techniques",
+        "part": 2,
+        "title": "Beyond Basics: Importance, Gibbs, and Stratified Sampling"
+      },
+      {
+        "slug": "why-direct-sampling-from-pdfs-is-hard",
+        "part": 3,
+        "title": "Why Direct Sampling from PDFs or PMFs Is So Hard"
+      }
+    ]
+  },
+  {
+    "name": "Vision Encoders & Representation Learning",
+    "description": "How visual representations are learned — from classical backbones and ViTs to self-supervised foundation encoders, multimodal models, and promptable specialists.",
+    "parts": [
+      {
+        "slug": "classical-supervised-vision-backbones",
+        "part": 1,
+        "title": "Classical Supervised Vision Backbones: The Ideas Behind the Encoders"
+      },
+      {
+        "slug": "probing-supervised-backbone-representations",
+        "part": 2,
+        "title": "What Have We Learned by Probing Supervised Vision Backbones?"
+      },
+      {
+        "slug": "vision-transformers",
+        "part": 3,
+        "title": "Vision Transformers: From Image Patches to General-Purpose Encoders"
+      },
+      {
+        "slug": "vit-patch-embeddings-cls-token-explained",
+        "part": 4,
+        "title": "What Does a Vision Transformer Actually Output? Patches, Positions, and the [CLS] Token"
+      },
+      {
+        "slug": "positional-embeddings-in-vision-transformers",
+        "part": 5,
+        "title": "Positional Embeddings in ViT: Why Add Them, and How the Shapes Actually Match"
+      },
+      {
+        "slug": "positional-embeddings-survey",
+        "part": 6,
+        "title": "Positional Embeddings Across the Literature: Sinusoidal, Learned, Relative, RoPE, ALiBi and Beyond"
+      },
+      {
+        "slug": "self-supervised-foundation-encoders",
+        "part": 7,
+        "title": "Self-Supervised Foundation Encoders: Learning Vision Without Labels"
+      },
+      {
+        "slug": "dino-self-distillation-no-labels-vision-transformers",
+        "part": 8,
+        "title": "DINO: Self-Distillation With No Labels for Vision Transformers"
+      },
+      {
+        "slug": "momentum-encoder-why-ema-teachers-work",
+        "part": 9,
+        "title": "The Momentum Encoder: Why EMA Teachers Work in Self-Supervised Learning"
+      },
+      {
+        "slug": "generalist-multimodal-encoders",
+        "part": 10,
+        "title": "Generalist Multimodal Encoders: One Visual Representation, Many Tasks"
+      },
+      {
+        "slug": "task-specific-vision-specialists",
+        "part": 11,
+        "title": "Task-Specific Vision Specialists: When Narrow Models Win"
+      },
+      {
+        "slug": "sam-sam2-sam3-evolution",
+        "part": 12,
+        "title": "SAM, SAM 2, and SAM 3: How Promptable Segmentation Evolved"
+      },
+      {
+        "slug": "how-many-vision-encoders",
+        "part": 13,
+        "title": "How Many Vision Encoders Are There?"
+      }
+    ]
+  },
+  {
+    "name": "Representation Interpretability & Probing",
+    "description": "How to test what a representation encodes — linear probes, subspaces, disentanglement, and causal activation patching.",
+    "parts": [
+      {
+        "slug": "what-is-a-linear-probe",
+        "part": 1,
+        "title": "What Is a Linear Probe? A Practical Guide to Probing Classifiers"
+      },
+      {
+        "slug": "single-direction-vs-subspace-representations",
+        "part": 2,
+        "title": "When There's No Single Direction: Subspaces, Distributed Codes, and a Ladder of Evidence"
+      },
+      {
+        "slug": "disentanglement-vs-decodability-factorized-testing",
+        "part": 3,
+        "title": "Decodability Is Not Disentanglement: Testing for Factorized Representations"
+      },
+      {
+        "slug": "representation-intervention-activation-patching",
+        "part": 4,
+        "title": "Representation Intervention: Proving a Direction Is Causal, Not Just Correlational"
       }
     ]
   }

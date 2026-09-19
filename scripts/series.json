@@ -1,0 +1,99 @@
+[
+  {
+    "name": "Kalman Filtering",
+    "description": "From Bayesian foundations to nonlinear extensions — a graduate-level state-estimation curriculum.",
+    "slugs": [
+      "introduction-to-kalman-filtering",
+      "fundamentals-recursive-filtering",
+      "bayesian-foundations-kalman",
+      "kalman-filter-derivation",
+      "kalman-filter-implementation",
+      "kalman-filter-applications",
+      "nonlinear-kalman-extensions",
+      "advanced-kalman-topics"
+    ]
+  },
+  {
+    "name": "The Contrast Masterclass",
+    "description": "Measuring image contrast, from grayscale fundamentals to SDR/HDR cross-domain comparison and unsupervised prediction.",
+    "slugs": [
+      "understanding-image-contrast",
+      "understanding-color-contrast",
+      "measuring-contrast-between-images",
+      "comparing-contrast-across-different-images",
+      "sdr-hdr-contrast-comparison",
+      "unsupervised-learning-contrast-prediction"
+    ]
+  },
+  {
+    "name": "Generative Models & VAEs",
+    "description": "The partition-function problem and how variational inference sidesteps it.",
+    "slugs": [
+      "curse-of-dimensionality",
+      "normalization-constant-problem",
+      "why-discriminative-learning-came-first",
+      "machine-learning-paradigms-distributions-vs-functions",
+      "how-vaes-avoid-computing-partition-function",
+      "expected-value-expectation-mathematical-foundations"
+    ]
+  },
+  {
+    "name": "Stochastic Processes & Diffusion",
+    "description": "From Brownian motion and Itô calculus to score-based diffusion and flow models.",
+    "slugs": [
+      "mathematical-properties-brownian-motion",
+      "total-variation-brownian-motion",
+      "differential-equations-ode-pde-sde",
+      "ito-calculus-stochastic-differential-equations",
+      "brownian-motion-diffusion-flow-models"
+    ]
+  },
+  {
+    "name": "C++ Concurrency",
+    "description": "Production-grade modern C++ concurrency — futures, promises, and std::async.",
+    "slugs": [
+      "understanding-futures-promises-cpp",
+      "compound-futures-modern-cpp",
+      "mastering-std-async",
+      "cpp-reference-types-explained"
+    ]
+  },
+  {
+    "name": "Sampling Theory",
+    "description": "Understanding uncertainty — stochastic processes, importance/Gibbs sampling, and why direct PDF sampling is hard.",
+    "slugs": [
+      "stochastic-processes-and-sampling",
+      "advanced-sampling-techniques",
+      "why-direct-sampling-from-pdfs-is-hard"
+    ]
+  },
+  {
+    "name": "Vision Encoders & Representation Learning",
+    "description": "How visual representations are learned — from classical backbones and ViTs to self-supervised foundation encoders, multimodal models, and promptable specialists.",
+    "slugs": [
+      "classical-supervised-vision-backbones",
+      "probing-supervised-backbone-representations",
+      "vision-transformers",
+      "vit-patch-embeddings-cls-token-explained",
+      "positional-embeddings-in-vision-transformers",
+      "positional-embeddings-survey",
+      "self-supervised-foundation-encoders",
+      "dino-self-distillation-no-labels-vision-transformers",
+      "momentum-encoder-why-ema-teachers-work",
+      "generalist-multimodal-encoders",
+      "task-specific-vision-specialists",
+      "sam-sam2-sam3-evolution",
+      "how-many-vision-encoders"
+    ]
+  },
+  {
+    "name": "Representation Interpretability & Probing",
+    "description": "How to test what a representation encodes — linear probes, subspaces, disentanglement, and causal activation patching.",
+    "slugs": [
+      "what-is-a-linear-probe",
+      "single-direction-vs-subspace-representations",
+      "disentanglement-vs-decodability-factorized-testing",
+      "representation-intervention-activation-patching"
+    ]
+  }
+]

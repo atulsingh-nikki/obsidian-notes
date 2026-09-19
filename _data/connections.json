@@ -67,9 +67,9 @@
       "kalman-filter-derivation"
     ],
     "series": {
+      "name": "Kalman Filtering",
       "part": 1,
       "total": 8,
-      "name": "Kalman Filtering",
       "prev": null,
       "next": "fundamentals-recursive-filtering"
     }
@@ -94,9 +94,9 @@
       "kalman-filter-derivation"
     ],
     "series": {
+      "name": "Kalman Filtering",
       "part": 2,
       "total": 8,
-      "name": "Kalman Filtering",
       "prev": "introduction-to-kalman-filtering",
       "next": "bayesian-foundations-kalman"
     }
@@ -122,9 +122,9 @@
       "demystifying-simulation-random-variables"
     ],
     "series": {
+      "name": "Kalman Filtering",
       "part": 3,
       "total": 8,
-      "name": "Kalman Filtering",
       "prev": "fundamentals-recursive-filtering",
       "next": "kalman-filter-derivation"
     }
@@ -149,9 +149,9 @@
       "matrix-determinants-leibniz-theorem"
     ],
     "series": {
+      "name": "Kalman Filtering",
       "part": 4,
       "total": 8,
-      "name": "Kalman Filtering",
       "prev": "bayesian-foundations-kalman",
       "next": "kalman-filter-implementation"
     }
@@ -176,9 +176,9 @@
       "introduction-to-kalman-filtering"
     ],
     "series": {
+      "name": "Kalman Filtering",
       "part": 5,
       "total": 8,
-      "name": "Kalman Filtering",
       "prev": "kalman-filter-derivation",
       "next": "kalman-filter-applications"
     }
@@ -203,9 +203,9 @@
       "depth-maps-computer-vision"
     ],
     "series": {
+      "name": "Kalman Filtering",
       "part": 6,
       "total": 8,
-      "name": "Kalman Filtering",
       "prev": "kalman-filter-implementation",
       "next": "nonlinear-kalman-extensions"
     }
@@ -230,9 +230,9 @@
       "kalman-filter-derivation"
     ],
     "series": {
+      "name": "Kalman Filtering",
       "part": 7,
       "total": 8,
-      "name": "Kalman Filtering",
       "prev": "kalman-filter-applications",
       "next": "advanced-kalman-topics"
     }
@@ -255,9 +255,9 @@
       "dijkstra-ml-uses"
     ],
     "series": {
+      "name": "Kalman Filtering",
       "part": 8,
       "total": 8,
-      "name": "Kalman Filtering",
       "prev": "nonlinear-kalman-extensions",
       "next": null
     }
@@ -399,7 +399,13 @@
       "intrinsics-simd-avx",
       "template-metaprogramming-frontiers"
     ],
-    "series": null
+    "series": {
+      "name": "C++ Concurrency",
+      "part": 1,
+      "total": 4,
+      "prev": null,
+      "next": "compound-futures-modern-cpp"
+    }
   },
   "compound-futures-modern-cpp": {
     "title": "Composing Futures in Modern C++",
@@ -420,7 +426,13 @@
       "intrinsics-simd-avx",
       "template-metaprogramming-frontiers"
     ],
-    "series": null
+    "series": {
+      "name": "C++ Concurrency",
+      "part": 2,
+      "total": 4,
+      "prev": "understanding-futures-promises-cpp",
+      "next": "mastering-std-async"
+    }
   },
   "mastering-std-async": {
     "title": "Mastering std::async in Modern C++",
@@ -442,7 +454,13 @@
       "intrinsics-simd-avx",
       "template-metaprogramming-frontiers"
     ],
-    "series": null
+    "series": {
+      "name": "C++ Concurrency",
+      "part": 3,
+      "total": 4,
+      "prev": "compound-futures-modern-cpp",
+      "next": "cpp-reference-types-explained"
+    }
   },
   "stochastic-processes-and-sampling": {
     "title": "Stochastic Processes and the Art of Sampling Uncertainty",
@@ -463,7 +481,13 @@
       "beta-distribution-primer",
       "expected-value-expectation-mathematical-foundations"
     ],
-    "series": null
+    "series": {
+      "name": "Sampling Theory",
+      "part": 1,
+      "total": 3,
+      "prev": null,
+      "next": "advanced-sampling-techniques"
+    }
   },
   "advanced-sampling-techniques": {
     "title": "Beyond Basics: Importance, Gibbs, and Stratified Sampling",
@@ -479,7 +503,13 @@
       "bayesian-inference-short-primer",
       "beta-distribution-primer"
     ],
-    "series": null
+    "series": {
+      "name": "Sampling Theory",
+      "part": 2,
+      "total": 3,
+      "prev": "stochastic-processes-and-sampling",
+      "next": "why-direct-sampling-from-pdfs-is-hard"
+    }
   },
   "logarithmic-color-pca": {
     "title": "Logarithmic Color Spaces, PCA, and the lαβ Intuition",
@@ -841,7 +871,13 @@
       "bayesian-inference-short-primer",
       "beta-distribution-intuition-compressed-parameterization"
     ],
-    "series": null
+    "series": {
+      "name": "Sampling Theory",
+      "part": 3,
+      "total": 3,
+      "prev": "advanced-sampling-techniques",
+      "next": null
+    }
   },
   "pix2seqd-panoptic-masks-without-inductive-biases": {
     "title": "How Pix2Seq-D Generates Panoptic Masks Without Heavy Inductive Biases",
@@ -878,7 +914,13 @@
       "template-metaprogramming-frontiers",
       "understanding-futures-promises-cpp"
     ],
-    "series": null
+    "series": {
+      "name": "C++ Concurrency",
+      "part": 4,
+      "total": 4,
+      "prev": "mastering-std-async",
+      "next": null
+    }
   },
   "adaptive-dual-teacher-distillation-lightweight-video-models": {
     "title": "Adaptive Dual-Teacher Distillation for Lightweight Video Models",
@@ -924,7 +966,13 @@
       "how-vaes-avoid-computing-partition-function",
       "machine-learning-paradigms-distributions-vs-functions"
     ],
-    "series": null
+    "series": {
+      "name": "Generative Models & VAEs",
+      "part": 1,
+      "total": 6,
+      "prev": null,
+      "next": "normalization-constant-problem"
+    }
   },
   "normalization-constant-problem": {
     "title": "The Normalization Constant Problem: Why Computing Z Is So Hard",
@@ -947,7 +995,13 @@
       "beta-distribution-primer",
       "expected-value-expectation-mathematical-foundations"
     ],
-    "series": null
+    "series": {
+      "name": "Generative Models & VAEs",
+      "part": 2,
+      "total": 6,
+      "prev": "curse-of-dimensionality",
+      "next": "why-discriminative-learning-came-first"
+    }
   },
   "why-discriminative-learning-came-first": {
     "title": "Why Discriminative Learning Dominated First: The Pragmatic Path to Modern AI",
@@ -973,7 +1027,13 @@
       "normalization-constant-problem",
       "about-atul-singh"
     ],
-    "series": null
+    "series": {
+      "name": "Generative Models & VAEs",
+      "part": 3,
+      "total": 6,
+      "prev": "normalization-constant-problem",
+      "next": "machine-learning-paradigms-distributions-vs-functions"
+    }
   },
   "machine-learning-paradigms-distributions-vs-functions": {
     "title": "Machine Learning Paradigms: Learning Distributions vs Approximating Functions",
@@ -998,7 +1058,13 @@
       "beta-distribution-intuition-compressed-parameterization",
       "beta-distribution-primer"
     ],
-    "series": null
+    "series": {
+      "name": "Generative Models & VAEs",
+      "part": 4,
+      "total": 6,
+      "prev": "why-discriminative-learning-came-first",
+      "next": "how-vaes-avoid-computing-partition-function"
+    }
   },
   "total-variation-brownian-motion": {
     "title": "Infinite Total Variation of Brownian Motion: Why the Path Length Diverges",
@@ -1021,7 +1087,13 @@
       "differential-equations-ode-pde-sde",
       "expected-value-expectation-mathematical-foundations"
     ],
-    "series": null
+    "series": {
+      "name": "Stochastic Processes & Diffusion",
+      "part": 2,
+      "total": 5,
+      "prev": "mathematical-properties-brownian-motion",
+      "next": "differential-equations-ode-pde-sde"
+    }
   },
   "understanding-color-contrast": {
     "title": "Understanding Contrast in Color Images: Beyond Luminance",
@@ -1037,7 +1109,13 @@
       "understanding-color-balance",
       "image-matting-mask-edge-correction"
     ],
-    "series": null
+    "series": {
+      "name": "The Contrast Masterclass",
+      "part": 2,
+      "total": 6,
+      "prev": "understanding-image-contrast",
+      "next": "measuring-contrast-between-images"
+    }
   },
   "understanding-image-contrast": {
     "title": "Understanding Contrast in Images: From Perception to Computation",
@@ -1053,7 +1131,13 @@
       "image-matting-mask-edge-correction",
       "understanding-color-balance"
     ],
-    "series": null
+    "series": {
+      "name": "The Contrast Masterclass",
+      "part": 1,
+      "total": 6,
+      "prev": null,
+      "next": "understanding-color-contrast"
+    }
   },
   "ito-calculus-stochastic-differential-equations": {
     "title": "Itô Calculus: Why We Need New Rules for Stochastic Differential Equations",
@@ -1079,7 +1163,13 @@
       "matrix-determinants-leibniz-theorem",
       "elementary-math-to-vision-algorithms"
     ],
-    "series": null
+    "series": {
+      "name": "Stochastic Processes & Diffusion",
+      "part": 4,
+      "total": 5,
+      "prev": "differential-equations-ode-pde-sde",
+      "next": "brownian-motion-diffusion-flow-models"
+    }
   },
   "measuring-contrast-between-images": {
     "title": "Measuring Contrast Between Two Color Images: Comparison Metrics and Methods",
@@ -1095,7 +1185,13 @@
       "image-matting-mask-edge-correction",
       "understanding-color-balance"
     ],
-    "series": null
+    "series": {
+      "name": "The Contrast Masterclass",
+      "part": 3,
+      "total": 6,
+      "prev": "understanding-color-contrast",
+      "next": "comparing-contrast-across-different-images"
+    }
   },
   "comparing-contrast-across-different-images": {
     "title": "Comparing Contrast Across Different Images: Content-Independent Metrics",
@@ -1111,7 +1207,13 @@
       "image-matting-mask-edge-correction",
       "understanding-color-balance"
     ],
-    "series": null
+    "series": {
+      "name": "The Contrast Masterclass",
+      "part": 4,
+      "total": 6,
+      "prev": "measuring-contrast-between-images",
+      "next": "sdr-hdr-contrast-comparison"
+    }
   },
   "differential-equations-ode-pde-sde": {
     "title": "The Landscape of Differential Equations: From ODEs to PDEs to SDEs",
@@ -1136,7 +1238,13 @@
       "matrix-determinants-leibniz-theorem",
       "elementary-math-to-vision-algorithms"
     ],
-    "series": null
+    "series": {
+      "name": "Stochastic Processes & Diffusion",
+      "part": 3,
+      "total": 5,
+      "prev": "total-variation-brownian-motion",
+      "next": "ito-calculus-stochastic-differential-equations"
+    }
   },
   "mathematical-properties-brownian-motion": {
     "title": "Mathematical Properties of Brownian Motion: A Visual Guide",
@@ -1162,7 +1270,13 @@
       "stochastic-processes-and-sampling",
       "bayesian-inference-short-primer"
     ],
-    "series": null
+    "series": {
+      "name": "Stochastic Processes & Diffusion",
+      "part": 1,
+      "total": 5,
+      "prev": null,
+      "next": "total-variation-brownian-motion"
+    }
   },
   "sdr-hdr-contrast-comparison": {
     "title": "Measuring Contrast Between SDR and HDR Images: Bridging Dynamic Range Domains",
@@ -1178,7 +1292,13 @@
       "image-matting-mask-edge-correction",
       "understanding-color-balance"
     ],
-    "series": null
+    "series": {
+      "name": "The Contrast Masterclass",
+      "part": 5,
+      "total": 6,
+      "prev": "comparing-contrast-across-different-images",
+      "next": "unsupervised-learning-contrast-prediction"
+    }
   },
   "understanding-color-balance": {
     "title": "Understanding Color Balance in Images and Video",
@@ -1237,7 +1357,13 @@
       "video-matting-temporal-consistency",
       "zeroing-model-weights-differentiability"
     ],
-    "series": null
+    "series": {
+      "name": "Stochastic Processes & Diffusion",
+      "part": 5,
+      "total": 5,
+      "prev": "ito-calculus-stochastic-differential-equations",
+      "next": null
+    }
   },
   "unsupervised-learning-contrast-prediction": {
     "title": "Building Contrast Prediction Models with Unsupervised Learning: When Ground Truth Doesn't Exist",
@@ -1253,7 +1379,13 @@
       "iitjee_math_to_vision_blog",
       "measuring-contrast-between-images"
     ],
-    "series": null
+    "series": {
+      "name": "The Contrast Masterclass",
+      "part": 6,
+      "total": 6,
+      "prev": "sdr-hdr-contrast-comparison",
+      "next": null
+    }
   },
   "expected-value-expectation-mathematical-foundations": {
     "title": "Expected Value & Expectation: Mathematical Foundations",
@@ -1272,7 +1404,13 @@
       "how-vaes-avoid-computing-partition-function",
       "curse-of-dimensionality"
     ],
-    "series": null
+    "series": {
+      "name": "Generative Models & VAEs",
+      "part": 6,
+      "total": 6,
+      "prev": "how-vaes-avoid-computing-partition-function",
+      "next": null
+    }
   },
   "how-vaes-avoid-computing-partition-function": {
     "title": "How Variational Autoencoders Avoid Computing the Partition Function",
@@ -1293,7 +1431,13 @@
       "beta-distribution-intuition-compressed-parameterization",
       "beta-distribution-primer"
     ],
-    "series": null
+    "series": {
+      "name": "Generative Models & VAEs",
+      "part": 5,
+      "total": 6,
+      "prev": "machine-learning-paradigms-distributions-vs-functions",
+      "next": "expected-value-expectation-mathematical-foundations"
+    }
   },
   "depth-disparity-interactive": {
     "title": "Interactive Depth vs Disparity Visualization",
@@ -1594,7 +1738,13 @@
       "dino-self-distillation-no-labels-vision-transformers",
       "momentum-encoder-why-ema-teachers-work"
     ],
-    "series": null
+    "series": {
+      "name": "Representation Interpretability & Probing",
+      "part": 3,
+      "total": 4,
+      "prev": "single-direction-vs-subspace-representations",
+      "next": "representation-intervention-activation-patching"
+    }
   },
   "representation-intervention-activation-patching": {
     "title": "Representation Intervention: Proving a Direction Is Causal, Not Just Correlational",
@@ -1610,7 +1760,13 @@
       "dino-self-distillation-no-labels-vision-transformers",
       "momentum-encoder-why-ema-teachers-work"
     ],
-    "series": null
+    "series": {
+      "name": "Representation Interpretability & Probing",
+      "part": 4,
+      "total": 4,
+      "prev": "disentanglement-vs-decodability-factorized-testing",
+      "next": null
+    }
   },
   "single-direction-vs-subspace-representations": {
     "title": "When There's No Single Direction: Subspaces, Distributed Codes, and a Ladder of Evidence",
@@ -1626,7 +1782,13 @@
       "dino-self-distillation-no-labels-vision-transformers",
       "momentum-encoder-why-ema-teachers-work"
     ],
-    "series": null
+    "series": {
+      "name": "Representation Interpretability & Probing",
+      "part": 2,
+      "total": 4,
+      "prev": "what-is-a-linear-probe",
+      "next": "disentanglement-vs-decodability-factorized-testing"
+    }
   },
   "what-is-a-linear-probe": {
     "title": "What Is a Linear Probe? A Practical Guide to Probing Classifiers",
@@ -1642,7 +1804,13 @@
       "dino-self-distillation-no-labels-vision-transformers",
       "momentum-encoder-why-ema-teachers-work"
     ],
-    "series": null
+    "series": {
+      "name": "Representation Interpretability & Probing",
+      "part": 1,
+      "total": 4,
+      "prev": null,
+      "next": "single-direction-vs-subspace-representations"
+    }
   },
   "classical-supervised-vision-backbones": {
     "title": "Classical Supervised Vision Backbones: The Ideas Behind the Encoders",
@@ -1656,7 +1824,13 @@
       "self-supervised-foundation-encoders",
       "task-specific-vision-specialists"
     ],
-    "series": null
+    "series": {
+      "name": "Vision Encoders & Representation Learning",
+      "part": 1,
+      "total": 13,
+      "prev": null,
+      "next": "probing-supervised-backbone-representations"
+    }
   },
   "dino-self-distillation-no-labels-vision-transformers": {
     "title": "DINO: Self-Distillation With No Labels for Vision Transformers",
@@ -1672,7 +1846,13 @@
       "probing-supervised-backbone-representations",
       "classical-supervised-vision-backbones"
     ],
-    "series": null
+    "series": {
+      "name": "Vision Encoders & Representation Learning",
+      "part": 8,
+      "total": 13,
+      "prev": "self-supervised-foundation-encoders",
+      "next": "momentum-encoder-why-ema-teachers-work"
+    }
   },
   "generalist-multimodal-encoders": {
     "title": "Generalist Multimodal Encoders: One Visual Representation, Many Tasks",
@@ -1686,7 +1866,13 @@
       "probing-supervised-backbone-representations",
       "task-specific-vision-specialists"
     ],
-    "series": null
+    "series": {
+      "name": "Vision Encoders & Representation Learning",
+      "part": 10,
+      "total": 13,
+      "prev": "momentum-encoder-why-ema-teachers-work",
+      "next": "task-specific-vision-specialists"
+    }
   },
   "how-many-vision-encoders": {
     "title": "How Many Vision Encoders Are There?",
@@ -1700,7 +1886,13 @@
       "probing-supervised-backbone-representations",
       "sam-sam2-sam3-evolution"
     ],
-    "series": null
+    "series": {
+      "name": "Vision Encoders & Representation Learning",
+      "part": 13,
+      "total": 13,
+      "prev": "sam-sam2-sam3-evolution",
+      "next": null
+    }
   },
   "momentum-encoder-why-ema-teachers-work": {
     "title": "The Momentum Encoder: Why EMA Teachers Work in Self-Supervised Learning",
@@ -1716,7 +1908,13 @@
       "vit-patch-embeddings-cls-token-explained",
       "disentanglement-vs-decodability-factorized-testing"
     ],
-    "series": null
+    "series": {
+      "name": "Vision Encoders & Representation Learning",
+      "part": 9,
+      "total": 13,
+      "prev": "dino-self-distillation-no-labels-vision-transformers",
+      "next": "generalist-multimodal-encoders"
+    }
   },
   "positional-embeddings-in-vision-transformers": {
     "title": "Positional Embeddings in ViT: Why Add Them, and How the Shapes Actually Match",
@@ -1732,7 +1930,13 @@
       "vision-transformers",
       "classical-supervised-vision-backbones"
     ],
-    "series": null
+    "series": {
+      "name": "Vision Encoders & Representation Learning",
+      "part": 5,
+      "total": 13,
+      "prev": "vit-patch-embeddings-cls-token-explained",
+      "next": "positional-embeddings-survey"
+    }
   },
   "positional-embeddings-survey": {
     "title": "Positional Embeddings Across the Literature: Sinusoidal, Learned, Relative, RoPE, ALiBi and Beyond",
@@ -1746,7 +1950,13 @@
       "adaptive-dual-teacher-distillation-lightweight-video-models",
       "tesseract-ocr-evolution"
     ],
-    "series": null
+    "series": {
+      "name": "Vision Encoders & Representation Learning",
+      "part": 6,
+      "total": 13,
+      "prev": "positional-embeddings-in-vision-transformers",
+      "next": "self-supervised-foundation-encoders"
+    }
   },
   "probing-supervised-backbone-representations": {
     "title": "What Have We Learned by Probing Supervised Vision Backbones?",
@@ -1760,7 +1970,13 @@
       "dino-self-distillation-no-labels-vision-transformers",
       "generalist-multimodal-encoders"
     ],
-    "series": null
+    "series": {
+      "name": "Vision Encoders & Representation Learning",
+      "part": 2,
+      "total": 13,
+      "prev": "classical-supervised-vision-backbones",
+      "next": "vision-transformers"
+    }
   },
   "sam-sam2-sam3-evolution": {
     "title": "SAM, SAM 2, and SAM 3: How Promptable Segmentation Evolved",
@@ -1774,7 +1990,13 @@
       "classical-supervised-vision-backbones",
       "dino-self-distillation-no-labels-vision-transformers"
     ],
-    "series": null
+    "series": {
+      "name": "Vision Encoders & Representation Learning",
+      "part": 12,
+      "total": 13,
+      "prev": "task-specific-vision-specialists",
+      "next": "how-many-vision-encoders"
+    }
   },
   "self-supervised-foundation-encoders": {
     "title": "Self-Supervised Foundation Encoders: Learning Vision Without Labels",
@@ -1788,7 +2010,13 @@
       "classical-supervised-vision-backbones",
       "momentum-encoder-why-ema-teachers-work"
     ],
-    "series": null
+    "series": {
+      "name": "Vision Encoders & Representation Learning",
+      "part": 7,
+      "total": 13,
+      "prev": "positional-embeddings-survey",
+      "next": "dino-self-distillation-no-labels-vision-transformers"
+    }
   },
   "task-specific-vision-specialists": {
     "title": "Task-Specific Vision Specialists: When Narrow Models Win",
@@ -1802,7 +2030,13 @@
       "self-supervised-foundation-encoders",
       "vision-transformers"
     ],
-    "series": null
+    "series": {
+      "name": "Vision Encoders & Representation Learning",
+      "part": 11,
+      "total": 13,
+      "prev": "generalist-multimodal-encoders",
+      "next": "sam-sam2-sam3-evolution"
+    }
   },
   "vision-transformers": {
     "title": "Vision Transformers: From Image Patches to General-Purpose Encoders",
@@ -1816,7 +2050,13 @@
       "probing-supervised-backbone-representations",
       "self-supervised-foundation-encoders"
     ],
-    "series": null
+    "series": {
+      "name": "Vision Encoders & Representation Learning",
+      "part": 3,
+      "total": 13,
+      "prev": "probing-supervised-backbone-representations",
+      "next": "vit-patch-embeddings-cls-token-explained"
+    }
   },
   "vit-patch-embeddings-cls-token-explained": {
     "title": "What Does a Vision Transformer Actually Output? Patches, Positions, and the [CLS] Token",
@@ -1832,6 +2072,12 @@
       "vision-transformers",
       "classical-supervised-vision-backbones"
     ],
-    "series": null
+    "series": {
+      "name": "Vision Encoders & Representation Learning",
+      "part": 4,
+      "total": 13,
+      "prev": "vision-transformers",
+      "next": "positional-embeddings-in-vision-transformers"
+    }
   }
 }
