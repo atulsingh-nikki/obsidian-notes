@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <marker id="u_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <marker id="u_skip" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#4f46e5"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="380" rx="14" fill="#ffffff" stroke="#d6dae1"/>
+  <text x="24" y="34" font-size="16" font-weight="700" fill="#111827">U-Net: symmetric encoder–decoder with skip connections</text>
+  <text x="24" y="54" font-size="12" fill="#52606d">Contracting path (left) captures context; expanding path (right) recovers localization.</text>
+
+  <!-- Encoder blocks (left, descending) -->
+  <g fill="#eef2ff" stroke="#4f46e5">
+    <rect x="70"  y="80"  width="70" height="34" rx="4"/>
+    <rect x="110" y="140" width="70" height="34" rx="4"/>
+    <rect x="150" y="200" width="70" height="34" rx="4"/>
+    <rect x="190" y="260" width="70" height="34" rx="4"/>
+  </g>
+  <!-- Bottleneck -->
+  <rect x="300" y="315" width="160" height="36" rx="6" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="380" y="338" font-size="12" font-weight="700" fill="#3730a3" text-anchor="middle">bottleneck</text>
+  <!-- Decoder blocks (right, ascending) -->
+  <g fill="#eef2ff" stroke="#4f46e5">
+    <rect x="500" y="260" width="70" height="34" rx="4"/>
+    <rect x="540" y="200" width="70" height="34" rx="4"/>
+    <rect x="580" y="140" width="70" height="34" rx="4"/>
+    <rect x="620" y="80"  width="70" height="34" rx="4"/>
+  </g>
+
+  <text x="70" y="74" font-size="11" fill="#52606d">encoder (down)</text>
+  <text x="690" y="74" font-size="11" fill="#52606d" text-anchor="end">decoder (up)</text>
+
+  <!-- Down arrows -->
+  <g stroke="#475569" stroke-width="1.4" marker-end="url(#u_ar)" fill="none">
+    <path d="M105,114 L145,140"/>
+    <path d="M145,174 L185,200"/>
+    <path d="M185,234 L225,260"/>
+    <path d="M225,294 L305,320"/>
+  </g>
+  <!-- Up arrows -->
+  <g stroke="#475569" stroke-width="1.4" marker-end="url(#u_ar)" fill="none">
+    <path d="M455,320 L535,294"/>
+    <path d="M575,260 L615,234"/>
+    <path d="M615,200 L655,174"/>
+    <path d="M655,140 L690,114"/>
+  </g>
+
+  <!-- Skip connections (horizontal, encoder->decoder) -->
+  <g stroke="#4f46e5" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#u_skip)" fill="none">
+    <path d="M140,97 L620,97"/>
+    <path d="M180,157 L580,157"/>
+    <path d="M220,217 L540,217"/>
+    <path d="M260,277 L500,277"/>
+  </g>
+  <text x="380" y="92" font-size="10" fill="#4f46e5" text-anchor="middle">copy &amp; concatenate (skip)</text>
+</svg>

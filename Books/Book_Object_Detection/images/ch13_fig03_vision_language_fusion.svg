@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <marker id="vl_ar" markerWidth="8" markerHeight="8" refX="6" refY="2.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,2.5 L0,5 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="380" rx="14" fill="#ffffff" stroke="#d6dae1"/>
+  <text x="24" y="30" font-size="16" font-weight="700" fill="#111827">Three ways to fuse vision and language</text>
+
+  <!-- Panel dividers -->
+  <line x1="258" y1="52" x2="258" y2="360" stroke="#e2e8f0"/>
+  <line x1="506" y1="52" x2="506" y2="360" stroke="#e2e8f0"/>
+
+  <!-- (a) Two-stream: ViLBERT -->
+  <text x="129" y="72" font-size="12" font-weight="700" fill="#3730a3" text-anchor="middle">(a) Two-stream</text>
+  <text x="129" y="88" font-size="10" fill="#52606d" text-anchor="middle">ViLBERT</text>
+  <rect x="40" y="110" width="80" height="40" rx="6" fill="#eef2ff" stroke="#4f46e5"/><text x="80" y="135" font-size="10" fill="#3730a3" text-anchor="middle">image stream</text>
+  <rect x="140" y="110" width="80" height="40" rx="6" fill="#f1f5f9" stroke="#94a3b8"/><text x="180" y="135" font-size="10" fill="#334155" text-anchor="middle">text stream</text>
+  <rect x="40" y="210" width="80" height="40" rx="6" fill="#eef2ff" stroke="#4f46e5"/><text x="80" y="235" font-size="10" fill="#3730a3" text-anchor="middle">image stream</text>
+  <rect x="140" y="210" width="80" height="40" rx="6" fill="#f1f5f9" stroke="#94a3b8"/><text x="180" y="235" font-size="10" fill="#334155" text-anchor="middle">text stream</text>
+  <!-- co-attention arrows -->
+  <line x1="120" y1="170" x2="140" y2="170" stroke="#4f46e5" stroke-width="1.3" marker-end="url(#vl_ar)"/>
+  <line x1="140" y1="185" x2="120" y2="185" stroke="#4f46e5" stroke-width="1.3" marker-end="url(#vl_ar)"/>
+  <text x="129" y="182" font-size="8" fill="#4f46e5" text-anchor="middle">co-attn</text>
+  <line x1="80" y1="150" x2="80" y2="208" stroke="#475569" stroke-width="1.2" marker-end="url(#vl_ar)"/>
+  <line x1="180" y1="150" x2="180" y2="208" stroke="#475569" stroke-width="1.2" marker-end="url(#vl_ar)"/>
+  <text x="129" y="278" font-size="9" fill="#52606d" text-anchor="middle">streams exchange via</text>
+  <text x="129" y="290" font-size="9" fill="#52606d" text-anchor="middle">co-attention layers</text>
+
+  <!-- (b) Single-stream: UNITER -->
+  <text x="382" y="72" font-size="12" font-weight="700" fill="#3730a3" text-anchor="middle">(b) Single-stream</text>
+  <text x="382" y="88" font-size="10" fill="#52606d" text-anchor="middle">UNITER</text>
+  <g font-size="9" text-anchor="middle">
+    <rect x="292" y="110" width="42" height="26" rx="4" fill="#eef2ff" stroke="#4f46e5"/><text x="313" y="127" fill="#3730a3">img₁</text>
+    <rect x="338" y="110" width="42" height="26" rx="4" fill="#eef2ff" stroke="#4f46e5"/><text x="359" y="127" fill="#3730a3">img₂</text>
+    <rect x="384" y="110" width="42" height="26" rx="4" fill="#f1f5f9" stroke="#94a3b8"/><text x="405" y="127" fill="#334155">w₁</text>
+    <rect x="430" y="110" width="42" height="26" rx="4" fill="#f1f5f9" stroke="#94a3b8"/><text x="451" y="127" fill="#334155">w₂</text>
+  </g>
+  <rect x="292" y="165" width="180" height="60" rx="8" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="382" y="190" font-size="11" font-weight="700" fill="#3730a3" text-anchor="middle">single Transformer</text>
+  <text x="382" y="207" font-size="9" fill="#3730a3" text-anchor="middle">joint self-attention</text>
+  <line x1="382" y1="138" x2="382" y2="163" stroke="#475569" stroke-width="1.3" marker-end="url(#vl_ar)"/>
+  <text x="382" y="250" font-size="9" fill="#52606d" text-anchor="middle">image + word tokens</text>
+  <text x="382" y="262" font-size="9" fill="#52606d" text-anchor="middle">concatenated into one sequence</text>
+
+  <!-- (c) Dual-encoder contrastive: CLIP -->
+  <text x="632" y="72" font-size="12" font-weight="700" fill="#3730a3" text-anchor="middle">(c) Dual-encoder</text>
+  <text x="632" y="88" font-size="10" fill="#52606d" text-anchor="middle">CLIP (contrastive)</text>
+  <rect x="540" y="110" width="84" height="40" rx="6" fill="#eef2ff" stroke="#4f46e5"/><text x="582" y="135" font-size="10" fill="#3730a3" text-anchor="middle">image enc</text>
+  <rect x="642" y="110" width="84" height="40" rx="6" fill="#f1f5f9" stroke="#94a3b8"/><text x="684" y="135" font-size="10" fill="#334155" text-anchor="middle">text enc</text>
+  <!-- shared space -->
+  <rect x="560" y="190" width="150" height="44" rx="8" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="635" y="210" font-size="10" font-weight="700" fill="#3730a3" text-anchor="middle">shared embedding</text>
+  <text x="635" y="224" font-size="9" fill="#3730a3" text-anchor="middle">space (cosine)</text>
+  <line x1="582" y1="150" x2="612" y2="188" stroke="#475569" stroke-width="1.3" marker-end="url(#vl_ar)"/>
+  <line x1="684" y1="150" x2="658" y2="188" stroke="#475569" stroke-width="1.3" marker-end="url(#vl_ar)"/>
+  <text x="635" y="262" font-size="9" fill="#52606d" text-anchor="middle">match image ↔ its caption;</text>
+  <text x="635" y="274" font-size="9" fill="#52606d" text-anchor="middle">enables zero-shot transfer</text>
+
+  <text x="24" y="352" font-size="10" fill="#64748b">Fusion tightness decreases left→right; open-vocabulary reach increases (CLIP aligns modalities in a shared space).</text>
+</svg>

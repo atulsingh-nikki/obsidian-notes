@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <marker id="c_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="400" rx="14" fill="#ffffff" stroke="#d6dae1"/>
+  <text x="24" y="34" font-size="16" font-weight="700" fill="#111827">Contrastive learning: agreement between augmented views</text>
+
+  <!-- Source image -->
+  <rect x="30" y="150" width="70" height="70" rx="6" fill="#eef2ff" stroke="#4f46e5"/>
+  <text x="65" y="190" font-size="11" font-weight="700" fill="#3730a3" text-anchor="middle">image x</text>
+
+  <!-- Two augmentations -->
+  <text x="150" y="120" font-size="11" fill="#52606d" text-anchor="middle">augment t</text>
+  <text x="150" y="270" font-size="11" fill="#52606d" text-anchor="middle">augment t′</text>
+  <rect x="180" y="70"  width="70" height="60" rx="6" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="215" y="105" font-size="11" fill="#334155" text-anchor="middle">view 1</text>
+  <rect x="180" y="240" width="70" height="60" rx="6" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="215" y="275" font-size="11" fill="#334155" text-anchor="middle">view 2</text>
+
+  <path d="M100,175 C140,175 140,100 178,100" fill="none" stroke="#475569" stroke-width="1.4" marker-end="url(#c_ar)"/>
+  <path d="M100,195 C140,195 140,270 178,270" fill="none" stroke="#475569" stroke-width="1.4" marker-end="url(#c_ar)"/>
+
+  <!-- Encoders (shared weights) -->
+  <rect x="300" y="70"  width="80" height="60" rx="6" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="340" y="98" font-size="11" font-weight="700" fill="#3730a3" text-anchor="middle">encoder f</text>
+  <text x="340" y="114" font-size="9" fill="#3730a3" text-anchor="middle">→ h₁</text>
+  <rect x="300" y="240" width="80" height="60" rx="6" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="340" y="268" font-size="11" font-weight="700" fill="#3730a3" text-anchor="middle">encoder f</text>
+  <text x="340" y="284" font-size="9" fill="#3730a3" text-anchor="middle">→ h₂</text>
+  <text x="340" y="190" font-size="10" fill="#4f46e5" text-anchor="middle" font-style="italic">shared weights</text>
+  <line x1="340" y1="132" x2="340" y2="238" stroke="#4f46e5" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <line x1="250" y1="100" x2="298" y2="100" stroke="#475569" stroke-width="1.4" marker-end="url(#c_ar)"/>
+  <line x1="250" y1="270" x2="298" y2="270" stroke="#475569" stroke-width="1.4" marker-end="url(#c_ar)"/>
+
+  <!-- Projection heads -->
+  <rect x="430" y="78"  width="70" height="44" rx="6" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="465" y="105" font-size="11" fill="#334155" text-anchor="middle">proj g → z₁</text>
+  <rect x="430" y="248" width="70" height="44" rx="6" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="465" y="275" font-size="11" fill="#334155" text-anchor="middle">proj g → z₂</text>
+  <line x1="380" y1="100" x2="428" y2="100" stroke="#475569" stroke-width="1.4" marker-end="url(#c_ar)"/>
+  <line x1="380" y1="270" x2="428" y2="270" stroke="#475569" stroke-width="1.4" marker-end="url(#c_ar)"/>
+
+  <!-- Agreement -->
+  <rect x="560" y="150" width="170" height="70" rx="8" fill="#eef2ff" stroke="#4f46e5"/>
+  <text x="645" y="180" font-size="12" font-weight="700" fill="#3730a3" text-anchor="middle">maximize agreement</text>
+  <text x="645" y="200" font-size="10" fill="#3730a3" text-anchor="middle">pull z₁,z₂ together</text>
+  <text x="645" y="214" font-size="10" fill="#52606d" text-anchor="middle">push negatives apart</text>
+  <path d="M500,100 C540,100 560,150 585,150" fill="none" stroke="#4f46e5" stroke-width="1.4" marker-end="url(#c_ar)"/>
+  <path d="M500,270 C540,270 560,220 585,220" fill="none" stroke="#4f46e5" stroke-width="1.4" marker-end="url(#c_ar)"/>
+
+  <!-- Variant note -->
+  <text x="24" y="356" font-size="11" fill="#52606d">Where negatives come from:</text>
+  <text x="24" y="374" font-size="11" fill="#334155"><tspan font-weight="700" fill="#3730a3">SimCLR</tspan> — the current batch    ·    <tspan font-weight="700" fill="#3730a3">MoCo</tspan> — a queue + momentum encoder    ·    <tspan font-weight="700" fill="#3730a3">BYOL</tspan> — none (predictor + stop-grad + EMA target)</text>
+</svg>

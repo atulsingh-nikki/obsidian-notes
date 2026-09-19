@@ -19,7 +19,7 @@ The core insight of the FCN paper is that the fully-connected layers at the end 
 #### A Deeper Look: How to "Convolutionalize" a Fully-Connected Layer
 A fully-connected (FC) layer can be viewed as a convolution with a kernel that has the exact same spatial dimensions as its input feature map. For example, consider the first FC layer in VGG, which takes a 7x7x512 feature map as input and produces a 4096-dimensional vector. This layer has a weight matrix of size `[4096, 25088]` (where 25088 = 7*7*512). This exact same transformation can be achieved by a convolutional layer with 4096 kernels, each of size 7x7x512. The subsequent FC layers can then be mimicked by 1x1 convolutions. This "convolutionalization" produces a network that is mathematically identical to the original classifier but is now spatially aware and can produce a coarse heatmap as its output.
 
-![Figure 7.1: The FCN-8s architecture. The diagram shows how a classification network (VGG) is transformed into a fully convolutional network. Skip connections combine coarse, deep semantic features with fine, shallow spatial features at multiple scales to produce a precise, dense segmentation. Image Source: Long, Shelhamer, & Darrell, 2015 [1].](Books/Book_Object_Detection/images/ch07_fig01_fcn_architecture.png)
+![Figure 7.1: The FCN-8s architecture. A classification network (VGG) is transformed into a fully convolutional network; skip connections combine coarse, deep semantic features with fine, shallow spatial features at multiple scales to produce a precise, dense segmentation. Schematic; after Long, Shelhamer, & Darrell, 2015 [1].](Books/Book_Object_Detection/images/ch07_fig01_fcn_architecture.svg)
 
 ### 7.2.2 The FCN Pipeline: Upsampling and Skip Connections
 
@@ -63,7 +63,7 @@ Biomedical image segmentation presents a unique set of challenges. First, the ta
 
 The solution proposed by the authors was an elegant, fully symmetric, U-shaped architecture that became known as the **U-Net**. Like FCN, it consisted of a downsampling path to capture context and an upsampling path to produce a full-resolution output. The key innovation, however, was in how these two paths were connected.
 
-![Figure 7.2: The U-Net architecture. The symmetric, U-shaped design consists of a contracting path (encoder) on the left and an expansive path (decoder) on the right. Powerful skip connections concatenate high-resolution feature maps from the encoder to the decoder at every level, enabling precise localization. Image Source: Ronneberger, Fischer, & Brox, 2015 [3].](Books/Book_Object_Detection/images/ch07_fig02_unet_architecture.png)
+![Figure 7.2: The U-Net architecture. The symmetric, U-shaped design consists of a contracting path (encoder) on the left and an expansive path (decoder) on the right. Skip connections concatenate high-resolution feature maps from the encoder to the decoder at every level, enabling precise localization. Schematic; after Ronneberger, Fischer, & Brox, 2015 [3].](Books/Book_Object_Detection/images/ch07_fig02_unet_architecture.svg)
 
 ### 7.3.3 A Deeper Look: The U-Net Architecture
 
@@ -117,7 +117,7 @@ $$
 ### 7.4.3 ASPP: Multi-Scale Context in Parallel
 DeepLab v2/v3 introduce **Atrous Spatial Pyramid Pooling (ASPP)**: several parallel atrous convolutions with different dilation rates, plus image-level pooling, whose outputs are concatenated. This captures objects at multiple scales in a parameter-efficient way [5, 6].
 
-![Figure 7.3: The Atrous Spatial Pyramid Pooling (ASPP) module from DeepLabv3. It uses multiple parallel atrous convolutions with different rates to probe the incoming feature map at multiple scales, capturing rich multi-scale context. Image Source: Chen et al., 2017 [6].](Books/Book_Object_Detection/images/ch07_fig03_aspp_module.png)
+![Figure 7.3: The Atrous Spatial Pyramid Pooling (ASPP) module from DeepLabv3. It uses multiple parallel atrous convolutions with different rates to probe the incoming feature map at multiple scales, capturing rich multi-scale context. Schematic; after Chen et al., 2017 [6].](Books/Book_Object_Detection/images/ch07_fig03_aspp_module.svg)
 
 ### 7.4.4 CRF Post-Processing: Edge-Aligned Masks
 Early DeepLab variants pair the CNN output with a **fully connected Conditional Random Field (CRF)** to sharpen boundaries and respect low-level edges. Dense pairwise terms with Gaussian kernels enable efficient mean-field inference and align predictions to image gradients [5, 8]. Later variants rely less on CRFs as decoders improve (v3+).

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <marker id="a_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="360" rx="14" fill="#ffffff" stroke="#d6dae1"/>
+  <text x="24" y="34" font-size="16" font-weight="700" fill="#111827">Atrous Spatial Pyramid Pooling (ASPP)</text>
+  <text x="24" y="54" font-size="12" fill="#52606d">Parallel atrous convolutions probe the feature map at multiple scales without losing resolution.</text>
+
+  <!-- Input feature map -->
+  <rect x="30" y="150" width="90" height="60" rx="6" fill="#eef2ff" stroke="#4f46e5"/>
+  <text x="75" y="176" font-size="11" font-weight="700" fill="#3730a3" text-anchor="middle">input</text>
+  <text x="75" y="192" font-size="10" fill="#3730a3" text-anchor="middle">feature map</text>
+
+  <!-- Parallel branches -->
+  <g font-size="11" text-anchor="middle">
+    <rect x="230" y="60"  width="180" height="34" rx="6" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="320" y="82" fill="#334155">1×1 conv</text>
+    <rect x="230" y="104" width="180" height="34" rx="6" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="320" y="126" fill="#334155">3×3 atrous conv, rate 6</text>
+    <rect x="230" y="148" width="180" height="34" rx="6" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="320" y="170" fill="#334155">3×3 atrous conv, rate 12</text>
+    <rect x="230" y="192" width="180" height="34" rx="6" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="320" y="214" fill="#334155">3×3 atrous conv, rate 18</text>
+    <rect x="230" y="236" width="180" height="34" rx="6" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="320" y="258" fill="#334155">image pooling (global)</text>
+  </g>
+
+  <!-- Input to branches -->
+  <g stroke="#475569" stroke-width="1.3" marker-end="url(#a_ar)" fill="none">
+    <path d="M120,175 C170,175 170,77  228,77"/>
+    <path d="M120,178 C175,178 175,121 228,121"/>
+    <path d="M120,180 L228,165"/>
+    <path d="M120,182 C175,182 175,209 228,209"/>
+    <path d="M120,185 C170,185 170,253 228,253"/>
+  </g>
+
+  <!-- Concat -->
+  <rect x="470" y="140" width="90" height="80" rx="6" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="515" y="176" font-size="11" font-weight="700" fill="#3730a3" text-anchor="middle">concat</text>
+  <text x="515" y="192" font-size="10" fill="#3730a3" text-anchor="middle">(channels)</text>
+
+  <g stroke="#475569" stroke-width="1.3" marker-end="url(#a_ar)" fill="none">
+    <path d="M410,77  C450,77  450,150 468,150"/>
+    <path d="M410,121 C450,121 450,160 468,160"/>
+    <path d="M410,165 L468,175"/>
+    <path d="M410,209 C450,209 450,190 468,190"/>
+    <path d="M410,253 C450,253 450,205 468,205"/>
+  </g>
+
+  <!-- Output 1x1 conv -->
+  <rect x="620" y="150" width="110" height="60" rx="6" fill="#eef2ff" stroke="#4f46e5"/>
+  <text x="675" y="176" font-size="11" font-weight="700" fill="#3730a3" text-anchor="middle">1×1 conv</text>
+  <text x="675" y="192" font-size="10" fill="#3730a3" text-anchor="middle">fused features</text>
+  <line x1="560" y1="180" x2="618" y2="180" stroke="#475569" stroke-width="1.4" marker-end="url(#a_ar)"/>
+</svg>

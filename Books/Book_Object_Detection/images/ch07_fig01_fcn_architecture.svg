@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <marker id="arA" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#4f46e5"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="340" rx="14" fill="#ffffff" stroke="#d6dae1"/>
+  <text x="24" y="34" font-size="16" font-weight="700" fill="#111827">FCN-8s: fully convolutional network with skip connections</text>
+
+  <!-- Encoder (contracting) blocks -->
+  <g fill="#eef2ff" stroke="#4f46e5">
+    <rect x="30" y="70" width="34" height="120" rx="4"/>
+    <rect x="86" y="84" width="30" height="92" rx="4"/>
+    <rect x="138" y="98" width="26" height="64" rx="4"/>
+    <rect x="186" y="110" width="22" height="40" rx="4"/>
+    <rect x="230" y="118" width="20" height="24" rx="4"/>
+  </g>
+  <text x="24" y="210" font-size="12" fill="#52606d">Input</text>
+  <text x="120" y="210" font-size="12" fill="#52606d">conv + pool stages (VGG)  →  spatial ↓, semantics ↑</text>
+
+  <!-- 1x1 conv (fully convolutional) -->
+  <rect x="286" y="104" width="70" height="52" rx="6" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="321" y="126" font-size="11" font-weight="700" fill="#3730a3" text-anchor="middle">1×1 conv</text>
+  <text x="321" y="142" font-size="10" fill="#3730a3" text-anchor="middle">(fc → conv)</text>
+
+  <line x1="252" y1="130" x2="284" y2="130" stroke="#475569" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- Upsampling path -->
+  <rect x="392" y="104" width="60" height="52" rx="6" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="422" y="127" font-size="10" fill="#334155" text-anchor="middle">×2 up</text>
+  <text x="422" y="142" font-size="10" fill="#334155" text-anchor="middle">+ pool4</text>
+
+  <rect x="486" y="104" width="60" height="52" rx="6" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="516" y="127" font-size="10" fill="#334155" text-anchor="middle">×2 up</text>
+  <text x="516" y="142" font-size="10" fill="#334155" text-anchor="middle">+ pool3</text>
+
+  <rect x="580" y="90" width="150" height="80" rx="6" fill="#eef2ff" stroke="#4f46e5"/>
+  <text x="655" y="124" font-size="11" font-weight="700" fill="#3730a3" text-anchor="middle">×8 upsample</text>
+  <text x="655" y="142" font-size="10" fill="#3730a3" text-anchor="middle">dense prediction</text>
+
+  <line x1="356" y1="130" x2="390" y2="130" stroke="#475569" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="452" y1="130" x2="484" y2="130" stroke="#475569" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="546" y1="130" x2="578" y2="130" stroke="#475569" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- Skip connections from encoder to upsampling -->
+  <path d="M151,98 C151,250 422,250 422,158" fill="none" stroke="#4f46e5" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arA)"/>
+  <path d="M199,110 C199,285 516,285 516,158" fill="none" stroke="#4f46e5" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arA)"/>
+  <text x="300" y="245" font-size="11" fill="#4f46e5">skip: pool4 (coarse)</text>
+  <text x="330" y="300" font-size="11" fill="#4f46e5">skip: pool3 (finer)</text>
+
+  <text x="655" y="188" font-size="10" fill="#52606d" text-anchor="middle">= pixel-wise class map</text>
+</svg>

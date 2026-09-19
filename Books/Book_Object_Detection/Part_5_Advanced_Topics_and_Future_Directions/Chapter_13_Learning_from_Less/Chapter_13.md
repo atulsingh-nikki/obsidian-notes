@@ -28,6 +28,8 @@ $$
 
 Here $q$ is the anchor (query), $k^{+}$ is its positive match, the $k_i$ range over the positive plus $K$ negatives, $\text{sim}(\cdot,\cdot)$ is cosine similarity, and $\tau$ is a temperature that sharpens or softens the distribution. Minimizing this loss pulls the query toward its positive and pushes it away from all negatives simultaneously. The number and quality of negatives turns out to be decisive, and much of the story of contrastive learning is the story of how different methods supply them.
 
+![Figure 13.1: The contrastive learning framework. Two augmented views of the same image pass through a shared encoder and projection head; the loss pulls the two resulting embeddings together (a positive pair) while pushing them away from negatives. SimCLR, MoCo, and BYOL differ chiefly in where — or whether — they source negatives.](Books/Book_Object_Detection/images/ch13_fig01_contrastive_learning.svg)
+
 ### 13.2.2 SimCLR: Contrastive Learning Made Simple
 
 The 2020 paper "A Simple Framework for Contrastive Learning of Visual Representations" by Chen et al. presented **SimCLR** and showed, for the first time, that a conceptually simple contrastive method could rival supervised pretraining [2]. Its architecture has four parts:
@@ -100,6 +102,8 @@ $$
 
 where $Q$, $K$, and $V$ are linear projections (queries, keys, values) of the token embeddings and $d_k$ is the key dimension. The crucial contrast with the convolutions of Chapter 2 is **receptive field**: a convolution aggregates local neighborhoods and must stack many layers to see globally, whereas self-attention is global from the very first layer. Every patch can, in principle, integrate information from the entire image immediately.
 
+![Figure 13.2: The Vision Transformer. The image is split into fixed-size patches, each linearly projected into a token; a learnable `[CLS]` token and positional embeddings are added, and the sequence is processed by a standard Transformer encoder. The final `[CLS]` state feeds a lightweight head. Schematic; after Dosovitskiy et al., 2021 [7].](Books/Book_Object_Detection/images/ch13_fig02_vit_architecture.svg)
+
 ### 13.3.2 Data Hunger and the Absence of Inductive Bias
 
 That global flexibility comes at a price. Convolutional networks bake in strong **inductive biases** — locality (nearby pixels are related) and translation equivariance (a feature detector works the same everywhere). These priors are a form of built-in knowledge that lets CNNs learn from modest data. ViT discards them almost entirely; it must *learn* locality and spatial structure from scratch.
@@ -142,6 +146,8 @@ The two ideas of this chapter — contrastive learning and vision-language groun
 CLIP trains two encoders — one for images, one for text — with a contrastive objective over a batch of image-caption pairs: the representation of an image is pulled toward the representation of its true caption and pushed away from all other captions in the batch, and symmetrically for text. Trained on roughly 400 million web image-text pairs, CLIP learns a **shared embedding space** in which images and their descriptions land near one another.
 
 The payoff is **zero-shot transfer**. To classify an image among arbitrary categories, one simply embeds the candidate class names as text ("a photo of a dog," "a photo of a car"), embeds the image, and picks the nearest text — with no task-specific training. This is the InfoNCE idea of Section 13.2 applied across modalities, and it is the mechanism behind open-vocabulary detection and segmentation systems, including the text-grounded pipelines that pair a language model with the Segment Anything Model of Chapter 8.
+
+![Figure 13.3: Three ways to fuse vision and language. (a) ViLBERT keeps separate image and text streams that exchange information through co-attention; (b) UNITER concatenates image-region and word tokens into a single Transformer; (c) CLIP uses two independent encoders aligned in a shared embedding space by a contrastive objective, which is what unlocks zero-shot, open-vocabulary transfer.](Books/Book_Object_Detection/images/ch13_fig03_vision_language_fusion.svg)
 
 ## 13.5 From Representations to Foundation Models
 

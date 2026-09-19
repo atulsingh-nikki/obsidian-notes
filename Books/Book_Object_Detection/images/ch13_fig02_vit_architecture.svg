@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <marker id="v_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="380" rx="14" fill="#ffffff" stroke="#d6dae1"/>
+  <text x="24" y="34" font-size="16" font-weight="700" fill="#111827">Vision Transformer (ViT): an image as a sequence of patch tokens</text>
+
+  <!-- Patch grid -->
+  <g stroke="#4f46e5" fill="#eef2ff">
+    <rect x="30" y="70" width="40" height="40"/>
+    <rect x="70" y="70" width="40" height="40"/>
+    <rect x="110" y="70" width="40" height="40"/>
+    <rect x="30" y="110" width="40" height="40"/>
+    <rect x="70" y="110" width="40" height="40"/>
+    <rect x="110" y="110" width="40" height="40"/>
+    <rect x="30" y="150" width="40" height="40"/>
+    <rect x="70" y="150" width="40" height="40"/>
+    <rect x="110" y="150" width="40" height="40"/>
+  </g>
+  <text x="90" y="212" font-size="11" fill="#52606d" text-anchor="middle">image → patches</text>
+
+  <!-- Flatten + linear projection -->
+  <rect x="190" y="95" width="90" height="70" rx="6" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="235" y="125" font-size="10" font-weight="700" fill="#3730a3" text-anchor="middle">flatten +</text>
+  <text x="235" y="140" font-size="10" font-weight="700" fill="#3730a3" text-anchor="middle">linear proj</text>
+  <line x1="152" y1="130" x2="188" y2="130" stroke="#475569" stroke-width="1.4" marker-end="url(#v_ar)"/>
+
+  <!-- Token sequence -->
+  <g font-size="10" text-anchor="middle">
+    <rect x="310" y="105" width="40" height="30" rx="4" fill="#fde68a" stroke="#d97706"/>
+    <text x="330" y="124" fill="#92400e">[CLS]</text>
+    <rect x="354" y="105" width="34" height="30" rx="4" fill="#f1f5f9" stroke="#94a3b8"/><text x="371" y="124" fill="#334155">p₁</text>
+    <rect x="392" y="105" width="34" height="30" rx="4" fill="#f1f5f9" stroke="#94a3b8"/><text x="409" y="124" fill="#334155">p₂</text>
+    <rect x="430" y="105" width="34" height="30" rx="4" fill="#f1f5f9" stroke="#94a3b8"/><text x="447" y="124" fill="#334155">p₃</text>
+    <text x="482" y="124" fill="#64748b">…</text>
+    <rect x="496" y="105" width="34" height="30" rx="4" fill="#f1f5f9" stroke="#94a3b8"/><text x="513" y="124" fill="#334155">pₙ</text>
+  </g>
+  <text x="420" y="158" font-size="10" fill="#4f46e5" text-anchor="middle">+ positional embeddings</text>
+  <line x1="280" y1="120" x2="308" y2="120" stroke="#475569" stroke-width="1.4" marker-end="url(#v_ar)"/>
+
+  <!-- Transformer encoder -->
+  <rect x="310" y="185" width="220" height="70" rx="8" fill="#eef2ff" stroke="#4f46e5"/>
+  <text x="420" y="212" font-size="12" font-weight="700" fill="#3730a3" text-anchor="middle">Transformer encoder ×L</text>
+  <text x="420" y="230" font-size="10" fill="#3730a3" text-anchor="middle">multi-head self-attention</text>
+  <text x="420" y="244" font-size="10" fill="#52606d" text-anchor="middle">+ MLP, residual, norm</text>
+  <line x1="420" y1="140" x2="420" y2="183" stroke="#475569" stroke-width="1.4" marker-end="url(#v_ar)"/>
+
+  <!-- Head -->
+  <rect x="590" y="185" width="140" height="70" rx="8" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="660" y="214" font-size="11" font-weight="700" fill="#3730a3" text-anchor="middle">MLP head</text>
+  <text x="660" y="232" font-size="10" fill="#3730a3" text-anchor="middle">on [CLS] token</text>
+  <text x="660" y="246" font-size="10" fill="#52606d" text-anchor="middle">→ prediction</text>
+  <line x1="530" y1="220" x2="588" y2="220" stroke="#475569" stroke-width="1.4" marker-end="url(#v_ar)"/>
+
+  <text x="24" y="320" font-size="11" fill="#52606d">Self-attention is global from the first layer — unlike a convolution, every patch can attend to every other patch.</text>
+  <text x="24" y="340" font-size="11" fill="#52606d">The tradeoff: ViT discards the CNN's locality/translation priors, so it needs large-scale (often self-supervised) pretraining.</text>
+</svg>
