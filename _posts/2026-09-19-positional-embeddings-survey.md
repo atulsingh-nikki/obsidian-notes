@@ -23,7 +23,7 @@ Quick takeaways
 
 Read the full technical survey
 
-The detailed treatment with formulas, references, and implementation notes is here: [Research/2026-09-19-positional-embeddings-survey.md](Research/2026-09-19-positional-embeddings-survey.md).
+The detailed treatment with formulas, references, and implementation notes is here: [Research/2026-09-19-positional-embeddings-survey]({{ site.baseurl }}/Research/2026-09-19-positional-embeddings-survey.html).
 
 Where the deeper material lives
 
