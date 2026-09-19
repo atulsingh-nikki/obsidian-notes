@@ -78,6 +78,10 @@ MoCo (Momentum Contrast) introduced a **dynamic memory queue and momentum encode
 - Works on GPUs without needing TPU-scale batches.
 - Pretrained weights available (ResNet-50 backbone).
 
+# Repro / Resources
+- Paper: [arXiv:1911.05722](https://arxiv.org/abs/1911.05722)
+- Companion blog post: [The Momentum Encoder: Why EMA Teachers Work in Self-Supervised Learning](https://atulsingh-nikki.github.io/obsidian-notes/2026/09/19/momentum-encoder-why-ema-teachers-work/)
+
 # Critiques / Limitations
 - Still requires careful tuning of queue size, momentum coefficient.
 - Relies on negatives; contrastive-only formulation.

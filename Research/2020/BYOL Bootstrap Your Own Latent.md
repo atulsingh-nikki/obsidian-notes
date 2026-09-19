@@ -101,6 +101,7 @@ BYOL introduced a surprising result: **self-supervised representation learning w
 - Official TensorFlow implementation (DeepMind).
 - PyTorch reimplementations available (solo-learn, VISSL).
 - Dataset: [[ImageNet]]
+- Companion blog post: [The Momentum Encoder: Why EMA Teachers Work in Self-Supervised Learning](https://atulsingh-nikki.github.io/obsidian-notes/2026/09/19/momentum-encoder-why-ema-teachers-work/)
 
 ---
 

@@ -50,7 +50,7 @@ $$
 
   The student is trained to minimize the cross-entropy $H(P_t(x), P_s(x)) = -P_t(x)\log P_s(x)$ against the teacher's distribution, with a stop-gradient on the teacher so only the student receives gradients.
 
-The surprising empirical finding: the teacher, despite being nothing but an average of past students, **consistently outperforms the student throughout training** — a form of Polyak-Ruppert averaging (model ensembling via exponential decay) that keeps handing the student a slightly-better target to chase, so both keep improving together.
+The surprising empirical finding: the teacher, despite being nothing but an average of past students, **consistently outperforms the student throughout training** — a form of Polyak-Ruppert averaging (model ensembling via exponential decay) that keeps handing the student a slightly-better target to chase, so both keep improving together. For the full story on why this works (and why a raw copy of the student collapses instead), see [The Momentum Encoder: Why EMA Teachers Work in Self-Supervised Learning]({{ site.baseurl }}{% post_url 2026-09-19-momentum-encoder-why-ema-teachers-work %}).
 
 ---
 
