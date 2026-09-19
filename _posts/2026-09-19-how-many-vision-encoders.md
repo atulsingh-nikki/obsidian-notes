@@ -11,13 +11,15 @@ The short answer is that nobody can give one exact number. The phrase *vision en
 
 A useful answer is therefore not a census. It is a map.
 
-## The count depends on what we count
+## Three levels of counting
 
-There are at least three different quantities hiding inside the question:
+There are at least three different levels hiding inside the question. They are not mutually exclusive categories; they are different ways of counting the same ecosystem:
 
 1. **Architectures:** the design families, such as ResNet, ViT, Swin, and ConvNeXt.
 2. **Pretraining families:** models trained with a particular objective and dataset, such as CLIP, DINOv2, or MAE.
 3. **Checkpoints:** downloadable weights, fine-tunes, conversions, and quantized variants.
+
+For example, DINOv2 is a **pretraining family** built with a Vision Transformer **architecture**, and each released model size or fine-tune is a separate **checkpoint**. The same architecture can therefore appear in several pretraining families, and one pretraining family can produce many checkpoints.
 
 At the architecture level, the number is manageable: a few dozen influential families. At the checkpoint level, the number is already in the thousands, and public repositories continue to grow every day. A search of Hugging Face's narrow image-feature-extraction category alone returns hundreds of entries, before counting models published under different task labels or stored outside that hub.
 
@@ -27,7 +29,19 @@ So the useful working estimate is:
 - **Hundreds to thousands of serious public model variants.**
 - **Tens of thousands of checkpoints** if fine-tunes, conversions, and task-specific derivatives are included.
 
-## A practical taxonomy
+These three dimensions connect to the practical taxonomy in different ways:
+
+| Counting dimension | What it tells us | Where it appears below |
+|---|---|---|
+| Architecture | How the encoder is built | Classical backbones and Vision Transformers |
+| Pretraining family | How the representation learned visual structure | Self-supervised, vision-language, and generalist encoders |
+| Checkpoint | Which concrete weights can be downloaded or deployed | Every section, including specialist models |
+
+The taxonomy below is therefore not a second competing classification. It is the practical expansion of the table: first we identify the architecture or training lineage, then we choose the particular checkpoint for the task.
+
+## A practical taxonomy by model role
+
+We can now expand the connection one step further. The first sections below begin with architecture, move through pretraining family, and end with the task role that determines why a checkpoint exists. These groups can overlap. For example, a ViT can be a supervised backbone, a DINOv2 encoder, or the image tower inside a vision-language model.
 
 ### 1. Classical supervised backbones
 
