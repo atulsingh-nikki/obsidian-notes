@@ -112,6 +112,7 @@ DINO introduced a **self-supervised learning framework for Vision Transformers (
 - Pretrained checkpoints widely available.
 - Companion blog post: [DINO — Self-Distillation With No Labels](https://atulsingh-nikki.github.io/obsidian-notes/2026/09/19/dino-self-distillation-no-labels-vision-transformers/)
 - Deep dive on the collapse-avoidance mechanism: [The Momentum Encoder: Why EMA Teachers Work in Self-Supervised Learning](https://atulsingh-nikki.github.io/obsidian-notes/2026/09/19/momentum-encoder-why-ema-teachers-work/)
+- Deep dive on the `[CLS]` token: [What Does a Vision Transformer Actually Output?](https://atulsingh-nikki.github.io/obsidian-notes/2026/09/19/vit-patch-embeddings-cls-token-explained/)
 
 ---
 

@@ -102,6 +102,7 @@ ViT demonstrated that **pure Transformer architectures** (without convolutions) 
 - Official JAX/Flax implementation (Google Research).
 - PyTorch implementations (timm, HuggingFace).
 - Pretrained models widely available.
+- Companion blog post: [What Does a Vision Transformer Actually Output? Patches, Positions, and the \[CLS\] Token](https://atulsingh-nikki.github.io/obsidian-notes/2026/09/19/vit-patch-embeddings-cls-token-explained/)
 
 ---
 

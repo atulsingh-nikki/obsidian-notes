@@ -72,6 +72,8 @@ DINO generates several distorted "views" of each image: two **global** crops (22
 ### The Emergent Property: Segmentation for Free
 This is the headline result. If you look at the self-attention of the `[CLS]` token in the last Transformer block — a token that is never attached to any label — different attention heads spontaneously attend to different objects or object parts in the image, with clean boundaries around them.
 
+(For what the `[CLS]` token actually is and what a ViT outputs more generally, see [What Does a Vision Transformer Actually Output?]({{ site.baseurl }}{% post_url 2026-09-19-vit-patch-embeddings-cls-token-explained %}).)
+
 Quantifying this: thresholding the attention map to keep 60% of the attention mass and comparing against ground-truth masks on PASCAL VOC12 gives a Jaccard similarity of **45.9** for a DINO-trained ViT-S/8, versus **27.3** for the *same architecture* trained with plain supervised labels. Same model, same patch size, same data — the only difference is the training objective, and it's the difference between "no real segmentation signal" and "usable object masks." Supervised ViTs and convnets don't show this property nearly as clearly.
 
 ---
