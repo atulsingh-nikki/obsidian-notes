@@ -6,3 +6,5 @@ _site/
 .jekyll-cache/
 vendor/
 .playwright-mcp/
+.claude/
+.venv/

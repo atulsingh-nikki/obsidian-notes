@@ -11,7 +11,55 @@ const booksIndexUrl = siteConfig.booksIndexUrl || "books.json";
 const navigationEl = document.getElementById("book-navigation");
 const contentEl = document.getElementById("book-content");
 const mainEl = document.getElementById("main");
+const booksColumnEl = document.querySelector(".home-page__column--books");
+const sidebarIntroEl = document.querySelector(".bookshelf-sidebar__intro");
 const navRegistry = new Map();
+
+// Toggle the books column between the shelf (card grid) and the reader (sidebar + content).
+function setBooksMode(mode) {
+  if (booksColumnEl) {
+    booksColumnEl.classList.toggle("is-shelf", mode === "shelf");
+    booksColumnEl.classList.toggle("is-reading", mode === "reading");
+    // Always reveal the chapter nav when (re)entering a book.
+    if (mode !== "reading") {
+      booksColumnEl.classList.remove("sidebar-hidden");
+    }
+  }
+  if (sidebarIntroEl) {
+    sidebarIntroEl.hidden = mode !== "reading";
+  }
+  if (mainEl) {
+    mainEl.style.display = mode === "reading" ? "" : "none";
+  }
+  if (mode === "reading") {
+    ensureSidebarToggle();
+    updateSidebarToggle();
+  }
+}
+
+// Add the "Contents" show/hide control once, above the chapter content.
+function ensureSidebarToggle() {
+  if (!mainEl || document.getElementById("sidebar-toggle")) return;
+  const button = document.createElement("button");
+  button.id = "sidebar-toggle";
+  button.type = "button";
+  button.className = "bookshelf-toggle";
+  button.setAttribute("aria-controls", "sidebar");
+  button.addEventListener("click", () => {
+    if (!booksColumnEl) return;
+    booksColumnEl.classList.toggle("sidebar-hidden");
+    updateSidebarToggle();
+  });
+  mainEl.insertBefore(button, mainEl.firstChild);
+}
+
+function updateSidebarToggle() {
+  const button = document.getElementById("sidebar-toggle");
+  if (!button || !booksColumnEl) return;
+  const hidden = booksColumnEl.classList.contains("sidebar-hidden");
+  button.setAttribute("aria-expanded", String(!hidden));
+  button.textContent = hidden ? "☰ Show contents" : "✕ Hide contents";
+}
 
 if (window.marked) {
   window.marked.setOptions({
@@ -64,9 +112,9 @@ function showBooksOverview() {
   state.selectedBook = null;
   state.activePath = null;
   history.replaceState(null, "", window.location.pathname);
-  
+
+  setBooksMode('shelf');
   renderBooksOverview();
-  renderBooksOverviewContent();
   showBlogSection();
 }
 
@@ -119,11 +167,11 @@ function renderBooksOverview() {
       <p class="book-card__arrow">Explore book →</p>
     `;
     
-    card.addEventListener("click", () => selectBookInNewTab(book));
+    card.addEventListener("click", () => selectBook(book));
     card.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
-        selectBookInNewTab(book);
+        selectBook(book);
       }
     });
     
@@ -134,39 +182,17 @@ function renderBooksOverview() {
   navigationEl.appendChild(overviewContainer);
 }
 
-function renderBooksOverviewContent() {
-  // Hide the main content area completely when showing book overview
-  if (mainEl) {
-    mainEl.style.display = 'none';
-  }
-}
-
 function selectBook(book) {
   state.viewMode = 'chapter';
   state.selectedBook = book;
   buildNavigation(state.books);
   hideBlogSection();
-  
-  // Show main content area when selecting a book
-  if (mainEl) {
-    mainEl.style.display = '';
-  }
-  
+  setBooksMode('reading');
+
   // Load the first chapter of the selected book
   const firstPath = firstChapterPathForBook(book);
   if (firstPath) {
     navigateToChapter(firstPath);
-  }
-}
-
-function selectBookInNewTab(book) {
-  // Get the first chapter path for this book
-  const firstPath = firstChapterPathForBook(book);
-  if (firstPath) {
-    // Construct the URL with the chapter hash
-    const currentUrl = window.location.href.split('#')[0];
-    const newUrl = `${currentUrl}#${encodeURIComponent(firstPath)}`;
-    window.open(newUrl, '_blank');
   }
 }
 
@@ -314,14 +340,10 @@ async function displayChapter(path) {
     }
   }
   
-  // Hide blog section when viewing a chapter
+  // Hide blog section and switch to the reader when viewing a chapter
   hideBlogSection();
-  
-  // Show main content area when displaying a chapter
-  if (mainEl) {
-    mainEl.style.display = '';
-  }
-  
+  setBooksMode('reading');
+
   const registryEntry = navRegistry.get(path);
   if (!registryEntry) {
     renderError("The requested chapter is not part of the current index.");

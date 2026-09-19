@@ -104,6 +104,34 @@
     ]
   },
   {
+    "title": "Deep Learning Architectures",
+    "path": "Books/Book_Deep_Learning_Architectures",
+    "sections": [
+      {
+        "title": "Overview",
+        "items": [
+          {
+            "title": "Introduction",
+            "path": "Books/Book_Deep_Learning_Architectures/Introduction.md"
+          },
+          {
+            "title": "Table of Contents",
+            "path": "Books/Book_Deep_Learning_Architectures/TableOfContents.md"
+          }
+        ]
+      },
+      {
+        "title": "Part 1: Spatial Architectures",
+        "items": [
+          {
+            "title": "Chapter 1 \u2013 The Convolutional Foundation",
+            "path": "Books/Book_Deep_Learning_Architectures/Part_1_Spatial_Architectures/Chapter_1_The_Convolutional_Foundation.md"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "title": "Object Detection",
     "path": "Books/Book_Object_Detection",
     "sections": [
@@ -189,25 +217,12 @@
         ]
       },
       {
-        "title": "Part 5: Advanced Topics",
+        "title": "Part 5: Advanced Topics and Future Directions",
         "items": [
           {
             "title": "Chapter 13 \u2013 Learning from Less",
-            "path": "Books/Book_Object_Detection/Part_5_Advanced_Topics/Chapter_13_Learning_from_Less/Chapter_13.md"
+            "path": "Books/Book_Object_Detection/Part_5_Advanced_Topics_and_Future_Directions/Chapter_13_Learning_from_Less/Chapter_13.md"
           },
-          {
-            "title": "Chapter 14 \u2013 Stepping into the Third Dimension",
-            "path": "Books/Book_Object_Detection/Part_5_Advanced_Topics/Chapter_14_Stepping_into_the_Third_Dimension/Chapter_14.md"
-          },
-          {
-            "title": "Chapter 15 \u2013 The Future",
-            "path": "Books/Book_Object_Detection/Part_5_Advanced_Topics/Chapter_15_The_Future/Chapter_15.md"
-          }
-        ]
-      },
-      {
-        "title": "Part 5: Advanced Topics and Future Directions",
-        "items": [
           {
             "title": "Chapter 14 \u2013 Stepping into the Third Dimension",
             "path": "Books/Book_Object_Detection/Part_5_Advanced_Topics_and_Future_Directions/Chapter_14_Stepping_into_the_Third_Dimension/Chapter_14.md"
@@ -215,34 +230,6 @@
           {
             "title": "Chapter 15 \u2013 The Future",
             "path": "Books/Book_Object_Detection/Part_5_Advanced_Topics_and_Future_Directions/Chapter_15_The_Future/Chapter_15.md"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "title": "Deep Learning Architectures",
-    "path": "Books/Book_Deep_Learning_Architectures",
-    "sections": [
-      {
-        "title": "Overview",
-        "items": [
-          {
-            "title": "Introduction",
-            "path": "Books/Book_Deep_Learning_Architectures/Introduction.md"
-          },
-          {
-            "title": "Table of Contents",
-            "path": "Books/Book_Deep_Learning_Architectures/TableOfContents.md"
-          }
-        ]
-      },
-      {
-        "title": "Part I: Spatial Architectures",
-        "items": [
-          {
-            "title": "Chapter 1: The Convolutional Foundation",
-            "path": "Books/Book_Deep_Learning_Architectures/Part_1_Spatial_Architectures/Chapter_1_The_Convolutional_Foundation.md"
           }
         ]
       }
@@ -269,7 +256,7 @@
         "title": "Part 1: Foundations",
         "items": [
           {
-            "title": "Chapter 1 – Understanding Model Training",
+            "title": "Chapter 01 \u2013 Understanding Model Training",
             "path": "Books/Book_Training_Strategies/Part_1_Foundations/Chapter_01_Understanding_Model_Training/Chapter_01.md"
           }
         ]
@@ -278,24 +265,24 @@
         "title": "Part 2: Optimization Techniques",
         "items": [
           {
-            "title": "Chapter 2 – Gradient Descent and Variants",
+            "title": "Chapter 02 \u2013 Gradient Descent and Variants",
             "path": "Books/Book_Training_Strategies/Part_2_Optimization_Techniques/Chapter_02_Gradient_Descent_and_Variants/Chapter_02.md"
           },
           {
-            "title": "Chapter 3 – Advanced Optimizers",
+            "title": "Chapter 03 \u2013 Advanced Optimizers",
             "path": "Books/Book_Training_Strategies/Part_2_Optimization_Techniques/Chapter_03_Advanced_Optimizers/Chapter_03.md"
           }
         ]
       },
       {
-        "title": "Part 3: Regularization Strategies",
+        "title": "Part 3: Regularization",
         "items": [
           {
-            "title": "Chapter 4 – Preventing Overfitting",
+            "title": "Chapter 04 \u2013 Preventing Overfitting",
             "path": "Books/Book_Training_Strategies/Part_3_Regularization/Chapter_04_Preventing_Overfitting/Chapter_04.md"
           },
           {
-            "title": "Chapter 5 – Data Augmentation",
+            "title": "Chapter 05 \u2013 Data Augmentation",
             "path": "Books/Book_Training_Strategies/Part_3_Regularization/Chapter_05_Data_Augmentation/Chapter_05.md"
           }
         ]
@@ -304,11 +291,11 @@
         "title": "Part 4: Transfer Learning",
         "items": [
           {
-            "title": "Chapter 6 – Foundation Models",
+            "title": "Chapter 06 \u2013 Foundation Models",
             "path": "Books/Book_Training_Strategies/Part_4_Transfer_Learning/Chapter_06_Foundation_Models/Chapter_06.md"
           },
           {
-            "title": "Chapter 7 – Fine-Tuning Strategies",
+            "title": "Chapter 07 \u2013 Fine Tuning Strategies",
             "path": "Books/Book_Training_Strategies/Part_4_Transfer_Learning/Chapter_07_Fine_Tuning_Strategies/Chapter_07.md"
           }
         ]
@@ -317,11 +304,11 @@
         "title": "Part 5: Advanced Topics",
         "items": [
           {
-            "title": "Chapter 8 – Multi-Task Learning",
+            "title": "Chapter 08 \u2013 Multi Task Learning",
             "path": "Books/Book_Training_Strategies/Part_5_Advanced_Topics/Chapter_08_Multi_Task_Learning/Chapter_08.md"
           },
           {
-            "title": "Chapter 9 – Self-Supervised Learning",
+            "title": "Chapter 09 \u2013 Self Supervised Learning",
             "path": "Books/Book_Training_Strategies/Part_5_Advanced_Topics/Chapter_09_Self_Supervised_Learning/Chapter_09.md"
           }
         ]
