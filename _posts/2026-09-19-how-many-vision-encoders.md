@@ -47,7 +47,7 @@ We can now expand the connection one step further. The first sections below begi
 
 These models were trained mainly for image classification and then reused as feature extractors.
 
-- [ResNet]({{ site.baseurl }}/Research/2015/Deep%20Residual%20Learning%20for%20Image%20Recognition.html) and ResNeXt
+- [ResNet]({{ site.baseurl }}/Research/2015/Deep%20Residual%20Learning%20for%20Image%20Recognition.html) and [ResNeXt]({{ site.baseurl }}/Research/2017/ResNeXt%20Aggregated%20Residual%20Transformations%20for%20Deep%20Neural%20Networks%20(2017).html)
 - [EfficientNet]({{ site.baseurl }}/Research/2019/EfficientNet%20Rethinking%20Model%20Scaling%20for%20Convolutional%20Neural%20Networks.html)
 - RegNet
 - [ConvNeXt]({{ site.baseurl }}/Research/2022/ConvNeXt%20A%20ConvNet%20for%20the%202020s%20(2022).html)
