@@ -1511,11 +1511,11 @@
     ],
     "related": [
       "sam-sam2-sam3-evolution",
+      "sam2-as-a-vision-encoder",
       "video-matting-temporal-consistency",
       "canny-edge-detector-practice",
       "comparing-contrast-across-different-images",
-      "depth-maps-computer-vision",
-      "edge-detection-operators"
+      "depth-maps-computer-vision"
     ],
     "series": null
   },
@@ -1857,14 +1857,14 @@
       "vision-transformers",
       "generalist-multimodal-encoders",
       "how-many-vision-encoders",
-      "self-supervised-foundation-encoders",
-      "task-specific-vision-specialists"
+      "sam2-as-a-vision-encoder",
+      "self-supervised-foundation-encoders"
     ],
     "series": {
       "name": "Vision Encoders & Representation Learning",
       "ordered": true,
       "part": 1,
-      "total": 13,
+      "total": 14,
       "prev": null,
       "next": "probing-supervised-backbone-representations"
     }
@@ -1887,7 +1887,7 @@
       "name": "Vision Encoders & Representation Learning",
       "ordered": true,
       "part": 8,
-      "total": 13,
+      "total": 14,
       "prev": "self-supervised-foundation-encoders",
       "next": "momentum-encoder-why-ema-teachers-work"
     }
@@ -1897,18 +1897,18 @@
     "outlinks": [],
     "backlinks": [],
     "related": [
+      "sam2-as-a-vision-encoder",
       "how-many-vision-encoders",
       "sam-sam2-sam3-evolution",
       "self-supervised-foundation-encoders",
       "classical-supervised-vision-backbones",
-      "probing-supervised-backbone-representations",
-      "task-specific-vision-specialists"
+      "probing-supervised-backbone-representations"
     ],
     "series": {
       "name": "Vision Encoders & Representation Learning",
       "ordered": true,
       "part": 10,
-      "total": 13,
+      "total": 14,
       "prev": "momentum-encoder-why-ema-teachers-work",
       "next": "task-specific-vision-specialists"
     }
@@ -1919,18 +1919,18 @@
     "backlinks": [],
     "related": [
       "generalist-multimodal-encoders",
+      "sam2-as-a-vision-encoder",
       "self-supervised-foundation-encoders",
       "vision-transformers",
       "classical-supervised-vision-backbones",
-      "probing-supervised-backbone-representations",
-      "sam-sam2-sam3-evolution"
+      "probing-supervised-backbone-representations"
     ],
     "series": {
       "name": "Vision Encoders & Representation Learning",
       "ordered": true,
-      "part": 13,
-      "total": 13,
-      "prev": "sam-sam2-sam3-evolution",
+      "part": 14,
+      "total": 14,
+      "prev": "sam2-as-a-vision-encoder",
       "next": null
     }
   },
@@ -1952,7 +1952,7 @@
       "name": "Vision Encoders & Representation Learning",
       "ordered": true,
       "part": 9,
-      "total": 13,
+      "total": 14,
       "prev": "dino-self-distillation-no-labels-vision-transformers",
       "next": "generalist-multimodal-encoders"
     }
@@ -1975,7 +1975,7 @@
       "name": "Vision Encoders & Representation Learning",
       "ordered": true,
       "part": 5,
-      "total": 13,
+      "total": 14,
       "prev": "vit-patch-embeddings-cls-token-explained",
       "next": "positional-embeddings-survey"
     }
@@ -1996,7 +1996,7 @@
       "name": "Vision Encoders & Representation Learning",
       "ordered": true,
       "part": 6,
-      "total": 13,
+      "total": 14,
       "prev": "positional-embeddings-in-vision-transformers",
       "next": "self-supervised-foundation-encoders"
     }
@@ -2017,7 +2017,7 @@
       "name": "Vision Encoders & Representation Learning",
       "ordered": true,
       "part": 2,
-      "total": 13,
+      "total": 14,
       "prev": "classical-supervised-vision-backbones",
       "next": "vision-transformers"
     }
@@ -2027,19 +2027,40 @@
     "outlinks": [],
     "backlinks": [],
     "related": [
+      "sam2-as-a-vision-encoder",
       "generalist-multimodal-encoders",
       "how-many-vision-encoders",
       "self-supervised-foundation-encoders",
       "image-matting-mask-edge-correction",
-      "classical-supervised-vision-backbones",
-      "dino-self-distillation-no-labels-vision-transformers"
+      "classical-supervised-vision-backbones"
     ],
     "series": {
       "name": "Vision Encoders & Representation Learning",
       "ordered": true,
       "part": 12,
-      "total": 13,
+      "total": 14,
       "prev": "task-specific-vision-specialists",
+      "next": "sam2-as-a-vision-encoder"
+    }
+  },
+  "sam2-as-a-vision-encoder": {
+    "title": "SAM 2 as a Vision Encoder: Reusing Promptable Features Beyond Segmentation",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "generalist-multimodal-encoders",
+      "sam-sam2-sam3-evolution",
+      "how-many-vision-encoders",
+      "self-supervised-foundation-encoders",
+      "classical-supervised-vision-backbones",
+      "probing-supervised-backbone-representations"
+    ],
+    "series": {
+      "name": "Vision Encoders & Representation Learning",
+      "ordered": true,
+      "part": 13,
+      "total": 14,
+      "prev": "sam-sam2-sam3-evolution",
       "next": "how-many-vision-encoders"
     }
   },
@@ -2052,14 +2073,14 @@
       "generalist-multimodal-encoders",
       "how-many-vision-encoders",
       "probing-supervised-backbone-representations",
-      "classical-supervised-vision-backbones",
-      "momentum-encoder-why-ema-teachers-work"
+      "sam2-as-a-vision-encoder",
+      "classical-supervised-vision-backbones"
     ],
     "series": {
       "name": "Vision Encoders & Representation Learning",
       "ordered": true,
       "part": 7,
-      "total": 13,
+      "total": 14,
       "prev": "positional-embeddings-survey",
       "next": "dino-self-distillation-no-labels-vision-transformers"
     }
@@ -2073,14 +2094,14 @@
       "generalist-multimodal-encoders",
       "how-many-vision-encoders",
       "probing-supervised-backbone-representations",
-      "self-supervised-foundation-encoders",
-      "vision-transformers"
+      "sam2-as-a-vision-encoder",
+      "self-supervised-foundation-encoders"
     ],
     "series": {
       "name": "Vision Encoders & Representation Learning",
       "ordered": true,
       "part": 11,
-      "total": 13,
+      "total": 14,
       "prev": "generalist-multimodal-encoders",
       "next": "sam-sam2-sam3-evolution"
     }
@@ -2095,13 +2116,13 @@
       "generalist-multimodal-encoders",
       "positional-embeddings-in-vision-transformers",
       "probing-supervised-backbone-representations",
-      "self-supervised-foundation-encoders"
+      "sam2-as-a-vision-encoder"
     ],
     "series": {
       "name": "Vision Encoders & Representation Learning",
       "ordered": true,
       "part": 3,
-      "total": 13,
+      "total": 14,
       "prev": "probing-supervised-backbone-representations",
       "next": "vit-patch-embeddings-cls-token-explained"
     }
@@ -2124,7 +2145,7 @@
       "name": "Vision Encoders & Representation Learning",
       "ordered": true,
       "part": 4,
-      "total": 13,
+      "total": 14,
       "prev": "vision-transformers",
       "next": "positional-embeddings-in-vision-transformers"
     }

@@ -267,8 +267,13 @@
         "title": "SAM, SAM 2, and SAM 3: How Promptable Segmentation Evolved"
       },
       {
-        "slug": "how-many-vision-encoders",
+        "slug": "sam2-as-a-vision-encoder",
         "part": 13,
+        "title": "SAM 2 as a Vision Encoder: Reusing Promptable Features Beyond Segmentation"
+      },
+      {
+        "slug": "how-many-vision-encoders",
+        "part": 14,
         "title": "How Many Vision Encoders Are There?"
       }
     ]

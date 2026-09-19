@@ -1242,6 +1242,20 @@
       "degree": 0
     },
     {
+      "id": "sam2-as-a-vision-encoder",
+      "title": "SAM 2 as a Vision Encoder: Reusing Promptable Features Beyond Segmentation",
+      "tags": [
+        "computer-vision",
+        "vision-encoders",
+        "segmentation",
+        "foundation-models",
+        "video-understanding",
+        "transfer-learning"
+      ],
+      "group": "Vision Encoders & Representation Learning",
+      "degree": 0
+    },
+    {
       "id": "self-supervised-foundation-encoders",
       "title": "Self-Supervised Foundation Encoders: Learning Vision Without Labels",
       "tags": [

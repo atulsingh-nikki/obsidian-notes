@@ -83,6 +83,7 @@
       "generalist-multimodal-encoders",
       "task-specific-vision-specialists",
       "sam-sam2-sam3-evolution",
+      "sam2-as-a-vision-encoder",
       "how-many-vision-encoders"
     ]
   },
