@@ -31,4 +31,4 @@ description: "An interactive graph of how the notes link to one another."
   };
   window.__GRAPH_URL__ = "{{ '/assets/graph.json' | relative_url }}";
 </script>
-<script src="{{ '/assets/graph.js' | relative_url }}" type="module" defer></script>
+<script src="{{ '/assets/graph.js' | relative_url }}?v={{ site.github.build_revision | default: site.time | date: '%s' }}" type="module" defer></script>
