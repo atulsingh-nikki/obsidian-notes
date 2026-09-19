@@ -30,7 +30,7 @@ A Transformer expects a sequence of vectors — that's what made it work for tex
 Split a 224×224 image into 16×16 patches and you get a 14×14 grid — 196 patches. Flatten each one and pass it through a single learned linear layer, and you get 196 embedding vectors — the same shape as 196 word embeddings feeding a text Transformer.
 
 Two things are added before this sequence goes anywhere:
-- **Position embeddings.** Self-attention has no built-in sense of order, so a learned position vector is added to each patch embedding — otherwise the model couldn't tell a patch in the top-left from one in the bottom-right.
+- **Position embeddings.** Self-attention has no built-in sense of order, so a learned position vector is added to each patch embedding — otherwise the model couldn't tell a patch in the top-left from one in the bottom-right. (For the full mechanics — why it's addition and not concatenation, and what happens when patch counts change — see [Positional Embeddings in ViT: Why Add Them, and How the Shapes Actually Match]({{ site.baseurl }}{% post_url 2026-09-19-positional-embeddings-in-vision-transformers %}).)
 - **The `[CLS]` token**, described next.
 
 It's a deliberately simple way to "look" at an image — no convolutions, no multi-scale pyramid, just chop and project. Everything more sophisticated is built by the self-attention layers afterward.
@@ -89,3 +89,4 @@ Not spatially — it still gets a learned position vector, but that's mostly jus
 - Devlin et al. "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding." arXiv:1810.04805, 2018 — origin of the `[CLS]` token idea.
 - Caron et al. "Emerging Properties in Self-Supervised Vision Transformers" (DINO). arXiv:2104.14294, 2021 — [Research/2021/DINO Emerging Properties in Self-Supervised Vision Transformers.md]({{ site.baseurl }}/Research/2021/DINO%20Emerging%20Properties%20in%20Self-Supervised%20Vision%20Transformers.html)
 - Companion post: [DINO — Self-Distillation With No Labels for Vision Transformers]({{ site.baseurl }}{% post_url 2026-09-19-dino-self-distillation-no-labels-vision-transformers %})
+- Companion post: [Positional Embeddings in ViT: Why Add Them, and How the Shapes Actually Match]({{ site.baseurl }}{% post_url 2026-09-19-positional-embeddings-in-vision-transformers %})

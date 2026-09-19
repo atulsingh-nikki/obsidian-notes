@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "About Atul Singh: Technical Portfolio and Expertise"
-description: "Technical notebook documenting deep explorations across computer vision, generative models, machine learning, high-performance computing, and applied mathematics. 81 comprehensive posts serving as both learning material and technical reference."
+description: "Technical notebook documenting deep explorations across computer vision, generative models, machine learning, high-performance computing, and applied mathematics. 94 comprehensive posts serving as both learning material and technical reference."
 tags: [portfolio, about, expertise, computer-vision, machine-learning, hpc, color-science]
 ---
 
@@ -14,7 +14,7 @@ Welcome to my technical notebook. I'm Atul Singh, and I use this space to docume
 Think of this as my **"second brain"**—comprehensive explorations that help me understand algorithms and techniques deeply, serving as reference material when tackling real-world problems. Each post represents the groundwork needed to make informed decisions in production environments: understanding VAEs deeply enables better architectural choices, mastering contrast metrics guides quality assessment design, and grasping stochastic processes informs robust system development.
 
 ### Snapshot
-- **Output**: 81 longform technical posts (~149k+ words) across 2013-2026
+- **Output**: 94 longform technical posts (~157k+ words) across 2013-2026
 - **Roles**: Computer Vision Engineer, ML Leader, Technical Writer
 - **Depth**: Multi-part series on contrast, generative models, Kalman filtering, stochastic processes, C++ concurrency
 - **Tooling**: Python (NumPy, PyTorch, OpenCV), C++17/20, CUDA, LaTeX
@@ -22,7 +22,7 @@ Think of this as my **"second brain"**—comprehensive explorations that help me
 
 ## What This Notebook Covers
 
-Over **81 technical posts** spanning 2013-2026, I've built a comprehensive technical curriculum covering:
+Over **94 technical posts** spanning 2013-2026, I've built a comprehensive technical curriculum covering:
 
 ### 🎯 Core Expertise Areas
 
@@ -44,6 +44,13 @@ Over **81 technical posts** spanning 2013-2026, I've built a comprehensive techn
 - Knowledge distillation for lightweight video models
 - OCR evolution from Tesseract to transformers
 - See: [Pix2Seq-D Panoptic Masks](https://atulsingh-nikki.github.io/obsidian-notes/2025/10/13/pix2seqd-panoptic-masks-without-inductive-biases.html), [Adaptive Dual-Teacher Distillation](https://atulsingh-nikki.github.io/obsidian-notes/2025/11/14/adaptive-dual-teacher-distillation-lightweight-video-models.html)
+
+**Self-Supervised Learning & Vision Transformers** (NEW Sep 2026)
+- How DINO trains a Vision Transformer with no labels via self-distillation, and why that produces object segmentation for free in its attention maps
+- The momentum-encoder/EMA mechanism DINO, BYOL, and MoCo all rely on to avoid representational collapse
+- What a Vision Transformer's patch tokens and `[CLS]` token actually output, and how different downstream tasks use them
+- Why positional embeddings are added (not concatenated) to patch embeddings, and how ViT handles resolution changes via interpolation
+- See: [DINO: Self-Distillation With No Labels]({{ site.baseurl }}{% post_url 2026-09-19-dino-self-distillation-no-labels-vision-transformers %}), [The Momentum Encoder: Why EMA Teachers Work]({{ site.baseurl }}{% post_url 2026-09-19-momentum-encoder-why-ema-teachers-work %}), [What Does a Vision Transformer Actually Output?]({{ site.baseurl }}{% post_url 2026-09-19-vit-patch-embeddings-cls-token-explained %}), [Positional Embeddings in ViT]({{ site.baseurl }}{% post_url 2026-09-19-positional-embeddings-in-vision-transformers %})
 
 #### High-Performance Computing
 
@@ -217,14 +224,17 @@ Partition function problem • Curse of dimensionality • VAEs • ELBO derivat
 ### Sampling & Probability (4 posts)
 Stochastic processes • Importance sampling • Gibbs sampling • Direct PDF sampling challenges
 
+### Self-Supervised Learning & Interpretability (8 posts) **NEW Sep 2026**
+DINO self-distillation • Momentum encoders / EMA teachers • ViT patch and `[CLS]` tokens • Positional embeddings • Linear probes • Disentanglement vs. decodability • Causal activation patching • Distributed/subspace representations
+
 ### Linguistics & Communication (5 posts)
 Technical writing • Word studies (culpable, resent, gripe/complaint/grievance) • Precision in language
 
 ## Impact & Reach
 
-**Blog Statistics** (as of Feb 14, 2026):
-- **81 technical posts** across 2013-2026
-- **~149,000+ words** of technical content
+**Blog Statistics** (as of Sep 19, 2026):
+- **94 technical posts** across 2013-2026
+- **~157,000+ words** of technical content
 - **Multiple comprehensive series** equivalent to graduate-level courses
 - **Complete, runnable code examples** in Python, C++, CUDA
 
@@ -313,12 +323,14 @@ If you read through this entire collection systematically, you'll gain:
 **Time Investment**: ~30-40 hours of focused reading  
 **Payoff**: Equivalent to multiple graduate-level courses in depth and rigor
 
-## Current Focus (Feb 2026)
+## Current Focus (Sep 2026)
 
 **Active Series**:
 - ✅ **Image Contrast Masterclass** (6/6 complete) — From grayscale to unsupervised ML
 - ✅ **Generative Models & VAEs** (5/5 complete) — From partition function problem to ELBO
 - ✅ **Stochastic Processes & Diffusion** (5/5 complete) — From Brownian motion to modern generative models
+- ✅ **Representation Interpretability** (4/4 complete) — Linear probes through distributed/subspace codes
+- ✅ **Self-Supervised Vision Transformers** (4/4 complete) — DINO, momentum encoders, ViT patch/`[CLS]` tokens, positional embeddings
 - 🔄 **Color Science Deep Dive** (ongoing) — ACES, gamut mapping, HDR workflows
 - 📝 **Advanced Generative Models** (planned) — Diffusion models, score matching, flow matching
 
@@ -334,7 +346,7 @@ If you read through this entire collection systematically, you'll gain:
 **Portfolio Site**: [atulsingh-nikki.github.io/obsidian-notes](https://atulsingh-nikki.github.io/obsidian-notes/)
 
 **Navigation**:
-- [Publishing Cadence Summary](https://atulsingh-nikki.github.io/obsidian-notes/2025/03/10/publishing-cadence-summary.html) — All 81 posts organized by month, quarter, year
+- [Publishing Cadence Summary](https://atulsingh-nikki.github.io/obsidian-notes/2025/03/10/publishing-cadence-summary.html) — All 94 posts organized by month, quarter, year
 - [Blog Index](https://atulsingh-nikki.github.io/obsidian-notes/blog/) — Browse by tag or date
 
 **Featured Series**:
@@ -358,16 +370,16 @@ This is a living document of continuous learning and knowledge sharing. Every po
 
 *This notebook reflects a multi-year arc (2013-2026) of systematic exploration across computer vision, machine learning, generative models, high-performance computing, and applied mathematics. Each post is both a learning artifact and a reference for future work. The journey continues—new posts added regularly as I dive deeper into the intersection of perception, computation, probabilistic inference, and modern generative modeling.*
 
-**Last Updated**: February 14, 2026  
-**Total Posts**: 81  
-**Total Words**: ~149,000+  
-**Active Series**: 9 complete, 2 ongoing
+**Last Updated**: September 19, 2026  
+**Total Posts**: 94  
+**Total Words**: ~157,000+  
+**Active Series**: 11 complete, 2 ongoing
 
 ---
 
 ## Keep Reading
 
-* [Publishing Cadence Summary](https://atulsingh-nikki.github.io/obsidian-notes/2025/03/10/publishing-cadence-summary.html) — Complete index of all 81 posts
+* [Publishing Cadence Summary](https://atulsingh-nikki.github.io/obsidian-notes/2025/03/10/publishing-cadence-summary.html) — Complete index of all 94 posts
 * [Generative Models & VAEs Series]({{ "/2025/12/24/normalization-constant-problem.html" | relative_url }}) — NEW 5-part series on the partition function problem
 * [Contrast Measurement Masterclass]({{ "/2025/12/27/understanding-image-contrast.html" | relative_url }}) — 6-part series from grayscale to ML
 * [Stochastic Processes & Diffusion]({{ "/2025/12/31/brownian-motion-diffusion-flow-models.html" | relative_url }}) — NEW 5-part series on Brownian motion to modern generative models
