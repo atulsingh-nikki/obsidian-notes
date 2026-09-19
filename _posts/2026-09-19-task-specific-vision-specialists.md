@@ -48,7 +48,7 @@ A broad foundation encoder may know that an object is present. A specialist may 
 
 Segmentation models assign labels or instance identities to pixels. Unlike image classification, they must preserve spatial correspondence between the input and the output.
 
-[SAM]({{ site.baseurl }}/Research/2023/Segment%20Anything%20(SAM,%202023).html) is a notable specialist-oriented system even though it has broad promptable behavior. Its task is explicit: given an image and a prompt such as a point, box, or mask, produce a segmentation mask. [SAM 2]({{ site.baseurl }}/Research/2024/SAM%202%20Segment%20Anything%20in%20Images%20and%20Videos%20(2024).html) extends this idea into images and videos.
+[SAM]({{ site.baseurl }}/Research/2023/Segment%20Anything%20(SAM,%202023).html) is a notable specialist-oriented system even though it has broad promptable behavior. Its task is explicit: given an image and a prompt such as a point, box, or mask, produce a segmentation mask. [SAM 2]({{ site.baseurl }}/Research/2024/SAM%202%20Segment%20Anything%20in%20Images%20and%20Videos%20(2024).html) extends this idea into images and videos. See [SAM, SAM 2, and SAM 3: How Promptable Segmentation Evolved]({{ site.baseurl }}/2026/09/19/sam-sam2-sam3-evolution.html) for the full progression.
 
 Other segmentation systems optimize semantic, instance, or panoptic segmentation with task-specific decoders and losses. Mask2Former, for example, treats segmentation as a set of mask predictions that can cover several segmentation settings.
 

@@ -1334,12 +1334,12 @@
       "publishing-cadence-summary"
     ],
     "related": [
+      "sam-sam2-sam3-evolution",
       "video-matting-temporal-consistency",
       "canny-edge-detector-practice",
       "comparing-contrast-across-different-images",
       "depth-maps-computer-vision",
-      "edge-detection-operators",
-      "measuring-contrast-between-images"
+      "edge-detection-operators"
     ],
     "series": null
   },
@@ -1680,11 +1680,11 @@
     "backlinks": [],
     "related": [
       "how-many-vision-encoders",
+      "sam-sam2-sam3-evolution",
       "self-supervised-foundation-encoders",
       "classical-supervised-vision-backbones",
       "probing-supervised-backbone-representations",
-      "task-specific-vision-specialists",
-      "vision-transformers"
+      "task-specific-vision-specialists"
     ],
     "series": null
   },
@@ -1698,7 +1698,7 @@
       "vision-transformers",
       "classical-supervised-vision-backbones",
       "probing-supervised-backbone-representations",
-      "task-specific-vision-specialists"
+      "sam-sam2-sam3-evolution"
     ],
     "series": null
   },
@@ -1759,6 +1759,20 @@
       "what-is-a-linear-probe",
       "dino-self-distillation-no-labels-vision-transformers",
       "generalist-multimodal-encoders"
+    ],
+    "series": null
+  },
+  "sam-sam2-sam3-evolution": {
+    "title": "SAM, SAM 2, and SAM 3: How Promptable Segmentation Evolved",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "generalist-multimodal-encoders",
+      "how-many-vision-encoders",
+      "self-supervised-foundation-encoders",
+      "image-matting-mask-edge-correction",
+      "classical-supervised-vision-backbones",
+      "dino-self-distillation-no-labels-vision-transformers"
     ],
     "series": null
   },

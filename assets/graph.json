@@ -1229,6 +1229,19 @@
       "degree": 0
     },
     {
+      "id": "sam-sam2-sam3-evolution",
+      "title": "SAM, SAM 2, and SAM 3: How Promptable Segmentation Evolved",
+      "tags": [
+        "computer-vision",
+        "segmentation",
+        "foundation-models",
+        "video-understanding",
+        "multimodal-learning"
+      ],
+      "group": "computer-vision",
+      "degree": 0
+    },
+    {
       "id": "self-supervised-foundation-encoders",
       "title": "Self-Supervised Foundation Encoders: Learning Vision Without Labels",
       "tags": [
