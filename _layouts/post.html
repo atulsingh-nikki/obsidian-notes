@@ -15,9 +15,13 @@ layout: default
       <nav id="readingToc" class="reading__toc-nav"></nav>
       {%- if conn.series -%}
         <div class="reading__toc-series">
-          <span class="reading__toc-series-label">Series</span>
+          <span class="reading__toc-series-label">{% if conn.series.ordered %}Series{% else %}Collection{% endif %}</span>
           <a href="{{ '/series/' | relative_url }}#{{ conn.series.name | slugify }}">{{ conn.series.name }}</a>
-          <span class="reading__toc-series-part">Part {{ conn.series.part }} of {{ conn.series.total }}</span>
+          {%- if conn.series.ordered -%}
+            <span class="reading__toc-series-part">Part {{ conn.series.part }} of {{ conn.series.total }}</span>
+          {%- else -%}
+            <span class="reading__toc-series-part">{{ conn.series.total }} posts</span>
+          {%- endif -%}
         </div>
       {%- endif -%}
     </aside>
@@ -25,7 +29,7 @@ layout: default
     <div class="reading__main">
       <header class="reading__header">
         {%- if conn.series -%}
-          <a class="reading__series-badge" href="{{ '/series/' | relative_url }}">🔗 {{ conn.series.name }} · Part {{ conn.series.part }}/{{ conn.series.total }}</a>
+          <a class="reading__series-badge" href="{{ '/series/' | relative_url }}#{{ conn.series.name | slugify }}">🔗 {{ conn.series.name }}{% if conn.series.ordered %} · Part {{ conn.series.part }}/{{ conn.series.total }}{% endif %}</a>
         {%- endif -%}
         <h1 class="reading__title">{{ page.title }}</h1>
         <p class="reading__meta">
@@ -55,7 +59,7 @@ layout: default
       </div>
 
       <footer class="reading__chain">
-        {%- if conn.series -%}
+        {%- if conn.series and conn.series.ordered -%}
           <nav class="chain-series" aria-label="Series navigation">
             {%- if prevp -%}
               <a class="chain-series__link chain-series__prev" href="{{ prevp.url | relative_url }}">

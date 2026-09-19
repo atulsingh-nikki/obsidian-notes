@@ -2,6 +2,7 @@
   {
     "name": "Kalman Filtering",
     "description": "From Bayesian foundations to nonlinear extensions — a graduate-level state-estimation curriculum.",
+    "ordered": true,
     "parts": [
       {
         "slug": "introduction-to-kalman-filtering",
@@ -48,6 +49,7 @@
   {
     "name": "The Contrast Masterclass",
     "description": "Measuring image contrast, from grayscale fundamentals to SDR/HDR cross-domain comparison and unsupervised prediction.",
+    "ordered": true,
     "parts": [
       {
         "slug": "understanding-image-contrast",
@@ -84,6 +86,7 @@
   {
     "name": "Generative Models & VAEs",
     "description": "The partition-function problem and how variational inference sidesteps it.",
+    "ordered": true,
     "parts": [
       {
         "slug": "curse-of-dimensionality",
@@ -120,6 +123,7 @@
   {
     "name": "Stochastic Processes & Diffusion",
     "description": "From Brownian motion and Itô calculus to score-based diffusion and flow models.",
+    "ordered": true,
     "parts": [
       {
         "slug": "mathematical-properties-brownian-motion",
@@ -151,6 +155,7 @@
   {
     "name": "C++ Concurrency",
     "description": "Production-grade modern C++ concurrency — futures, promises, and std::async.",
+    "ordered": true,
     "parts": [
       {
         "slug": "understanding-futures-promises-cpp",
@@ -177,6 +182,7 @@
   {
     "name": "Sampling Theory",
     "description": "Understanding uncertainty — stochastic processes, importance/Gibbs sampling, and why direct PDF sampling is hard.",
+    "ordered": true,
     "parts": [
       {
         "slug": "stochastic-processes-and-sampling",
@@ -198,6 +204,7 @@
   {
     "name": "Vision Encoders & Representation Learning",
     "description": "How visual representations are learned — from classical backbones and ViTs to self-supervised foundation encoders, multimodal models, and promptable specialists.",
+    "ordered": true,
     "parts": [
       {
         "slug": "classical-supervised-vision-backbones",
@@ -269,6 +276,7 @@
   {
     "name": "Representation Interpretability & Probing",
     "description": "How to test what a representation encodes — linear probes, subspaces, disentanglement, and causal activation patching.",
+    "ordered": true,
     "parts": [
       {
         "slug": "what-is-a-linear-probe",

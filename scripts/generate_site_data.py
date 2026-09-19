@@ -112,9 +112,13 @@ def build_series(posts):
         if not parts:
             continue
         total = len(parts)
+        # ordered defaults to True; set "ordered": false for a not-yet-sequenced
+        # collection (grouped, but no part numbers / prev-next until you order it).
+        ordered = d.get("ordered", True)
         entry = {
             "name": d["name"],
             "description": d.get("description", ""),
+            "ordered": ordered,
             "parts": [
                 {"slug": s, "part": i + 1, "title": posts[s]["title"]}
                 for i, s in enumerate(parts)
@@ -124,10 +128,11 @@ def build_series(posts):
         for i, s in enumerate(parts):
             posts[s]["series"] = {
                 "name": d["name"],
-                "part": i + 1,
+                "ordered": ordered,
+                "part": (i + 1) if ordered else None,
                 "total": total,
-                "prev": parts[i - 1] if i > 0 else None,
-                "next": parts[i + 1] if i < total - 1 else None,
+                "prev": parts[i - 1] if (ordered and i > 0) else None,
+                "next": parts[i + 1] if (ordered and i < total - 1) else None,
             }
     return series_list
 

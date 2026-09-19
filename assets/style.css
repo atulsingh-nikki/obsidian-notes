@@ -2225,6 +2225,14 @@ html.theme-light .theme-toggle__icon::before { content: "\1F319"; }
 }
 .series-block__part a { text-decoration: none; color: var(--text); font-weight: 500; }
 .series-block__part a:hover { color: var(--accent); }
+.series-block__dot {
+  flex-shrink: 0;
+  width: 26px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1;
+}
 
 /* =======================================================================
    Research vault

@@ -28,6 +28,38 @@ Data is keyed by **slug**; final URLs are resolved at render time — in Liquid 
 `site.posts | where: "slug", <slug>`, and in JS via the `window.__POST_URLS__` map
 rendered on the `/map/` page. The generator never hardcodes permalinks.
 
+## Editing series
+
+Series are defined by hand in **`scripts/series.json`** (the source of truth — the
+generator no longer infers series from prose). It is a JSON list of entries:
+
+```json
+{
+  "name": "The Contrast Masterclass",
+  "description": "One-line summary shown on /series/.",
+  "ordered": true,
+  "slugs": ["understanding-image-contrast", "understanding-color-contrast", "..."]
+}
+```
+
+- A **slug** is the post filename minus the `YYYY-MM-DD-` date prefix and `.md`
+  (e.g. `_posts/2025-12-27-understanding-color-contrast.md` → `understanding-color-contrast`).
+- Slugs that don't match an existing post are skipped silently.
+
+**Workflow — start as a group, promote to a series later:**
+
+1. **Collect first (unordered).** Add an entry with `"ordered": false` and the slugs in
+   any order. It renders on `/series/` as a *Collection* (bulleted, no part numbers), and
+   each member post shows a `🔗 <name>` badge linking to the collection — but **no**
+   Part N/M and **no** prev/next sequence nav.
+2. **Order it later.** Put the slugs in reading order and set `"ordered": true` (or just
+   delete the `ordered` key — it defaults to `true`). Now the posts get numbered parts,
+   a `Part N/M` badge, and in-series prev/next navigation.
+
+After editing, run `python3 scripts/generate_site_data.py` (CI does this automatically on
+deploy). Everything downstream — `/series/`, per-post badges/prev-next, and the graph —
+updates from that one file.
+
 ## Layout / page structure
 
 - `_layouts/default.html` — global chrome (top nav, footer, light/dark toggle). It
