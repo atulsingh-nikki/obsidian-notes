@@ -145,8 +145,14 @@ body .main-content {
   min-height: 100%;
 }
 
+/* The books reader is a flat reading surface, not a boxed card. */
 .home-page__column--books {
-  overflow: hidden;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: visible;
+  min-height: 0;
 }
 
 .home-page__column--books .bookshelf-header,
@@ -173,7 +179,7 @@ body .main-content {
   max-width: none;
   margin: 0;
   width: 100%;
-  padding: 0 2.5rem 2.5rem;
+  padding: 0;
 }
 
 .home-page__column--books .bookshelf-content {
@@ -432,24 +438,25 @@ body .main-content {
 }
 
 .home-page__column--books.sidebar-hidden .bookshelf-content {
-  max-width: 900px;
+  max-width: 46rem;
   margin: 0 auto;
 }
 
 .bookshelf-sidebar {
   position: sticky;
-  top: 1.5rem;
+  top: 5rem;
   align-self: start;
 }
 
 .bookshelf-sidebar__inner {
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 1.5rem;
-  box-shadow: var(--shadow);
-  max-height: none;
-  overflow: visible;
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--border);
+  border-radius: 0;
+  padding: 0 1.5rem 0 0;
+  box-shadow: none;
+  max-height: calc(100vh - 7rem);
+  overflow-y: auto;
 }
 
 .bookshelf-sidebar__intro h2 {
@@ -545,23 +552,23 @@ body .main-content {
 }
 
 .bookshelf-main {
-  padding-left: 2rem;
+  padding-left: 3rem;
 }
 
+/* Flat, centered reading column — no card, comfortable measure and type. */
 .bookshelf-content {
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: var(--shadow);
-  min-height: calc(100vh - 8rem);
-  overflow: hidden;
-}
-
-.bookshelf-content {
-  line-height: 1.7;
-  font-size: 1.05rem;
-  max-width: 820px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  min-height: calc(100vh - 12rem);
+  overflow: visible;
+  line-height: 1.85;
+  font-size: 1.18rem;
+  max-width: 44rem;
+  margin: 0 auto;
+  color: var(--text);
 }
 
 .bookshelf-content h1,
@@ -577,22 +584,24 @@ body .main-content {
 }
 
 .bookshelf-content h1 {
-  font-size: 2rem;
-  margin: 0 0 1.25rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 2px solid var(--border);
+  font-size: 2.4rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.5rem;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
 .bookshelf-content h2 {
-  font-size: 1.55rem;
-  margin: 2.25rem 0 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--border);
+  font-size: 1.75rem;
+  margin: 2.75rem 0 1rem;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
 .bookshelf-content h3 {
-  font-size: 1.25rem;
-  margin: 1.75rem 0 0.85rem;
+  font-size: 1.35rem;
+  margin: 2rem 0 0.85rem;
 }
 
 .bookshelf-content h4 {
@@ -616,8 +625,8 @@ body .main-content {
 }
 
 .bookshelf-content p {
-  line-height: 1.7;
-  margin: 1rem 0;
+  line-height: 1.85;
+  margin: 0 0 1.35rem;
   color: var(--text);
 }
 
