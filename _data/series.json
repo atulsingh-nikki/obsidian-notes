@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Kalman Filtering",
+    "parts": [
+      {
+        "slug": "introduction-to-kalman-filtering",
+        "part": 1,
+        "title": "Introduction to Kalman Filtering and State Estimation"
+      },
+      {
+        "slug": "fundamentals-recursive-filtering",
+        "part": 2,
+        "title": "Fundamentals of Recursive Filtering"
+      },
+      {
+        "slug": "bayesian-foundations-kalman",
+        "part": 3,
+        "title": "Bayesian Foundations of Kalman Filtering"
+      },
+      {
+        "slug": "kalman-filter-derivation",
+        "part": 4,
+        "title": "Complete Mathematical Derivation of the Kalman Filter"
+      },
+      {
+        "slug": "kalman-filter-implementation",
+        "part": 5,
+        "title": "Implementing the Kalman Filter in Python"
+      },
+      {
+        "slug": "kalman-filter-applications",
+        "part": 6,
+        "title": "Real-World Applications of Kalman Filtering"
+      },
+      {
+        "slug": "nonlinear-kalman-extensions",
+        "part": 7,
+        "title": "Nonlinear Extensions: EKF, UKF, and Particle Filters"
+      },
+      {
+        "slug": "advanced-kalman-topics",
+        "part": 8,
+        "title": "Advanced Topics and Future Directions in Kalman Filtering"
+      }
+    ]
+  }
+]

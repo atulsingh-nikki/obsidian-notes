@@ -1,0 +1,34 @@
+---
+layout: default
+title: "Connections map"
+permalink: /map/
+description: "An interactive graph of how the notes link to one another."
+---
+
+<div class="page">
+  <div class="page__header">
+    <p class="page__eyebrow">Chain connections</p>
+    <h1 class="page__title">Connections map</h1>
+    <p class="page__lead">Each dot is a note; each line is a link between notes. Drag to pan, scroll to zoom, hover to highlight a note’s neighbours, and click to open it.</p>
+  </div>
+
+  <div class="graph">
+    <input type="search" id="graphSearch" class="research-search graph__search" placeholder="Find a note…" autocomplete="off" aria-label="Find a note">
+    <div class="graph__canvas-wrap">
+      <canvas id="graphCanvas" role="img" aria-label="Graph of connected notes"></canvas>
+      <div class="graph__tooltip" id="graphTooltip" hidden></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Jekyll knows each post's final URL; hand the graph a slug -> url map so it
+  // can navigate without the generator replicating permalink logic.
+  window.__POST_URLS__ = {
+    {%- for post in site.posts -%}
+      "{{ post.slug }}": "{{ post.url | relative_url }}"{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+  };
+  window.__GRAPH_URL__ = "{{ '/assets/graph.json' | relative_url }}";
+</script>
+<script src="{{ '/assets/graph.js' | relative_url }}" type="module" defer></script>

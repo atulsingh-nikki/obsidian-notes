@@ -1,0 +1,1505 @@
+{
+  "by_year": {
+    "2025": [
+      {
+        "title": "Advancing White Balance Correction through Deep Feature Statistics and Feature Distribution Matching",
+        "path": "Research/2025/Advancing White Balance Correction through Deep Feature Statistics and Feature Distribution Matching.md",
+        "topic": "Color / Imaging"
+      },
+      {
+        "title": "AnyUp Universal Feature Upsampling",
+        "path": "Research/2025/AnyUp Universal Feature Upsampling.md",
+        "topic": "Other"
+      },
+      {
+        "title": "Feature Distribution Statistics as a Loss Objective for Robust White Balance Correction",
+        "path": "Research/2025/Feature Distribution Statistics as a Loss Objective for Robust White Balance Correction (2025).md",
+        "topic": "Color / Imaging"
+      },
+      {
+        "title": "Foraging with the Eyes Dynamics in Human Visual Gaze and Deep Predictive Modeling",
+        "path": "Research/2025/Foraging with the Eyes Dynamics in Human Visual Gaze and Deep Predictive Modeling.md",
+        "topic": "Other"
+      },
+      {
+        "title": "HDRSDR-VQA A Subjective Video Quality Dataset for HDR and SDR Comparative Evaluation",
+        "path": "Research/2025/HDRSDR-VQA A Subjective Video Quality Dataset for HDR and SDR Comparative Evaluation (2025).md",
+        "topic": "Color / Imaging"
+      },
+      {
+        "title": "MDP Multidimensional Vision Model Pruning with Latency Constraint",
+        "path": "Research/2025/MDP Multidimensional Vision Model Pruning with Latency Constraint (2025).md",
+        "topic": "Other"
+      }
+    ],
+    "2024": [
+      {
+        "title": "MOTRv3 Scalable End-to-End Transformer-Based Multi-Object Tracking",
+        "path": "Research/2024/MOTRv3 Scalable End-to-End Transformer-Based Multi-Object Tracking (2024).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "SAM 2 Segment Anything in Images and Videos",
+        "path": "Research/2024/SAM 2 Segment Anything in Images and Videos (2024).md",
+        "topic": "Segmentation"
+      }
+    ],
+    "2023": [
+      {
+        "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+        "path": "Research/2023/3D Gaussian Splatting for Real-Time Radiance Field Rendering (2023).md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "A Generalist Framework for Panoptic Segmentation of Images and Videos",
+        "path": "Research/2023/A Generalist Framework for Panoptic Segmentation of Images and Videos (2023).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "BoT-SORT Robust Associations with Appearance Boost for Multi-Object Tracking",
+        "path": "Research/2023/BoT-SORT Robust Associations with Appearance Boost for Multi-Object Tracking (2023).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "Consistency Distillation",
+        "path": "Research/2023/Consistency Distillation (2023).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Consistency Models",
+        "path": "Research/2023/Consistency Models (2023).md",
+        "topic": "Other"
+      },
+      {
+        "title": "ConvNeXt V2 Co-designing and Scaling ConvNets with Masked Autoencoders",
+        "path": "Research/2023/ConvNeXt V2 Co-designing and Scaling ConvNets with Masked Autoencoders (2023).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "DINO DETR with Improved DeNoising Anchor Boxes for End-to-End Object Detection",
+        "path": "Research/2023/DINO DETR with Improved DeNoising Anchor Boxes for End-to-End Object Detection (2023).md",
+        "topic": "Detection"
+      },
+      {
+        "title": "DINOv2 Learning Robust Visual Features without Supervision",
+        "path": "Research/2023/DINOv2 Learning Robust Visual Features without Supervision (2023).md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "FlowFormer++ Transformer with Dual-level Global-Local Context for Optical Flow",
+        "path": "Research/2023/FlowFormer++ Transformer with Dual-level Global-Local Context for Optical Flow (2023).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "GMFlow+ Iterative Global Matching for Optical Flow",
+        "path": "Research/2023/GMFlow+ Iterative Global Matching for Optical Flow (2023).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "MOTRv2 Improved End-to-End Multi-Object Tracking with Transformers",
+        "path": "Research/2023/MOTRv2 Improved End-to-End Multi-Object Tracking with Transformers (2023).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "Muse Text-to-Image Generation via Masked Generative Transformers",
+        "path": "Research/2023/Muse Text-to-Image Generation via Masked Generative Transformers (2023).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "OC-SORT Observation-Centric SORT",
+        "path": "Research/2023/OC-SORT Observation-Centric SORT (2023).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "RDeAOT Recurrent Decoupling for Efficient Video Object Segmentation",
+        "path": "Research/2023/RDeAOT Recurrent Decoupling for Efficient Video Object Segmentation (2023).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "Segment Anything",
+        "path": "Research/2023/Segment Anything (SAM, 2023).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "Stable Diffusion Turbo",
+        "path": "Research/2023/Stable Diffusion Turbo (2023).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "Stable Diffusion XL",
+        "path": "Research/2023/Stable Diffusion XL (SDXL, 2023).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "Tracking Everything Everywhere All at Once",
+        "path": "Research/2023/Tracking Everything Everywhere All at Once (TEEAO, 2023).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "Zip-NeRF Anti-Aliased Grid-Based Neural Radiance Fields",
+        "path": "Research/2023/Zip-NeRF Anti-Aliased Grid-Based Neural Radiance Fields (2023).md",
+        "topic": "3D / SLAM / NeRF"
+      }
+    ],
+    "2022": [
+      {
+        "title": "A Comprehensive Survey on Activation Functions in Deep Learning",
+        "path": "Research/2022/A Comprehensive Survey on Activation Functions in Deep Learning (2022).md",
+        "topic": "Other"
+      },
+      {
+        "title": "ByteTrack Multi-Object Tracking By Associating Every Detection Box",
+        "path": "Research/2022/ByteTrack Multi-Object Tracking By Associating Every Detection Box (2022).md",
+        "topic": "Detection"
+      },
+      {
+        "title": "ConvNeXt A ConvNet for the 2020s",
+        "path": "Research/2022/ConvNeXt A ConvNet for the 2020s (2022).md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "DN-DETR Accelerate DETR Training by Introducing Query DeNoising",
+        "path": "Research/2022/DN-DETR Accelerate DETR Training by Introducing Query DeNoising (2022).md",
+        "topic": "Other"
+      },
+      {
+        "title": "DanceTrack A Benchmark for Multi-Object Tracking in Crowded Scenes",
+        "path": "Research/2022/DanceTrack A Benchmark for Multi-Object Tracking in Crowded Scenes (2022).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "DeAOT Decoupling Object Association and Propagation for Transformer-based Video Object Segmentation",
+        "path": "Research/2022/DeAOT Decoupling Object Association and Propagation for Transformer-based Video Object Segmentation (2022).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "DeepGaze III Modeling Human Visual Attention with Transformers",
+        "path": "Research/2022/DeepGaze III Modeling Human Visual Attention with Transformers (2022).md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "Dual-Shutter Optical Vibration Sensing",
+        "path": "Research/2022/Dual-Shutter Optical Vibration Sensing (2022).md",
+        "topic": "Other"
+      },
+      {
+        "title": "EPro-PnP Generalized End-to-End Probabilistic Perspective-n-Points",
+        "path": "Research/2022/EPro-PnP Generalized End-to-End Probabilistic Perspective-n-Points (2022).md",
+        "topic": "Other"
+      },
+      {
+        "title": "EnlightenGAN-v2 Domain-Adaptive Unsupervised Low-Light Enhancement",
+        "path": "Research/2022/EnlightenGAN-v2 Domain-Adaptive Unsupervised Low-Light Enhancement (2021-2022).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "FlowFormer A Transformer Architecture for Optical Flow",
+        "path": "Research/2022/FlowFormer A Transformer Architecture for Optical Flow (2022).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "GMFlow Learning Optical Flow via Global Matching",
+        "path": "Research/2022/GMFlow Learning Optical Flow via Global Matching (2022).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "GTR Graph Transformer for Multi-Object Tracking",
+        "path": "Research/2022/GTR Graph Transformer for Multi-Object Tracking (2022).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "High-Resolution Image Synthesis with Latent Diffusion Models (LDMs)",
+        "path": "Research/2022/High-Resolution Image Synthesis with Latent Diffusion Models (LDMs).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "HumanNeRF Free-viewpoint Rendering of Moving People from Monocular Video",
+        "path": "Research/2022/HumanNeRF Free-viewpoint Rendering of Moving People from Monocular Video (2022).md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "Imagen Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding",
+        "path": "Research/2022/Imagen Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding (2022).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "Instant-NGP Instant Neural Graphics Primitives with a Multiresolution Hash Encoding",
+        "path": "Research/2022/Instant-NGP Instant Neural Graphics Primitives with a Multiresolution Hash Encoding (2022).md",
+        "topic": "Other"
+      },
+      {
+        "title": "LAION-5B An Open Large-Scale Dataset for Training Next Generation Image-Text Models",
+        "path": "Research/2022/LAION-5B An Open Large-Scale Dataset for Training Next Generation Image-Text Models (2022).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Learning to Solve Hard Minimal Problems",
+        "path": "Research/2022/Learning to Solve Hard Minimal Problems (2022).md",
+        "topic": "Other"
+      },
+      {
+        "title": "MOTR End-to-End Multiple-Object Tracking with Transformers",
+        "path": "Research/2022/MOTR End-to-End Multiple-Object Tracking with Transformers (2022).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "MeMOT Memory-Enhanced Multiple Object Tracking with Transformers",
+        "path": "Research/2022/MeMOT Memory-Enhanced Multiple Object Tracking with Transformers (2022).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "Mip-NeRF 360 Unbounded Anti-Aliased Neural Radiance Fields",
+        "path": "Research/2022/Mip-NeRF 360 Unbounded Anti-Aliased Neural Radiance Fields (2022).md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "On the Versatile Uses of Partial Distance Correlation in Deep Learning",
+        "path": "Research/2022/On the Versatile Uses of Partial Distance Correlation in Deep Learning (2022).md",
+        "topic": "Other"
+      },
+      {
+        "title": "PWStableNet++ Towards Temporally Consistent Video Stabilization",
+        "path": "Research/2022/PWStableNet++ Towards Temporally Consistent Video Stabilization (2022).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Parti Scaling Autoregressive Models for Content-Rich Text-to-Image Generation",
+        "path": "Research/2022/Parti Scaling Autoregressive Models for Content-Rich Text-to-Image Generation (2022).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Stable Diffusion",
+        "path": "Research/2022/Stable Diffusion (2022).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "XMem Long-Term Video Object Segmentation with an Atkinson-Shiffrin Memory Model",
+        "path": "Research/2022/XMem Long-Term Video Object Segmentation with an Atkinson-Shiffrin Memory Model (2022).md",
+        "topic": "Segmentation"
+      }
+    ],
+    "2021": [
+      {
+        "title": "AOT Associating Objects with Transformers",
+        "path": "Research/2021/AOT Associating Objects with Transformers (2021).md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "Animatable NeRF Deformable Neural Radiance Fields",
+        "path": "Research/2021/Animatable NeRF Deformable Neural Radiance Fields (2021).md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "Binary TTC A Temporal Geofence for Autonomous Navigation",
+        "path": "Research/2021/Binary TTC A Temporal Geofence for Autonomous Navigation (2021).md",
+        "topic": "Other"
+      },
+      {
+        "title": "CLIP Learning Transferable Visual Models From Natural Language Supervision",
+        "path": "Research/2021/CLIP Learning Transferable Visual Models From Natural Language Supervision.md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "D-NeRF Neural Radiance Fields for Dynamic Scenes",
+        "path": "Research/2021/D-NeRF Neural Radiance Fields for Dynamic Scenes (2021).md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "DINO Emerging Properties in Self-Supervised Vision Transformers",
+        "path": "Research/2021/DINO Emerging Properties in Self-Supervised Vision Transformers.md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "Deformable DETR Deformable Transformers for End-to-End Object Detection",
+        "path": "Research/2021/Deformable DETR Deformable Transformers for End-to-End Object Detection (2021).md",
+        "topic": "Detection"
+      },
+      {
+        "title": "DeiT Training Data-Efficient Image Transformers & Distillation through Attention",
+        "path": "Research/2021/DeiT Training Data-Efficient Image Transformers & Distillation through Attention (2021).md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "Diffusion Models Beat GANs on Image Synthesis",
+        "path": "Research/2021/Diffusion Models Beat GANs on Image Synthesis (2021).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "Eigen-CAM Low-Cost Visual Explanations via Principal Components",
+        "path": "Research/2021/Eigen-CAM Low-Cost Visual Explanations via Principal Components (2021).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Exploring Simple Siamese Representation Learning",
+        "path": "Research/2021/Exploring Simple Siamese Representation Learning (SimSiam, 2021).md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "GIRAFFE Representing Scenes as Compositional Generative Neural Feature Fields",
+        "path": "Research/2021/GIRAFFE Representing Scenes as Compositional Generative Neural Feature Fields (2021).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "GLIDE Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models",
+        "path": "Research/2021/GLIDE Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models (2021).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "GMA Learning to Estimate Optical Flow with Global Motion Aggregation",
+        "path": "Research/2021/GMA Learning to Estimate Optical Flow with Global Motion Aggregation (2021).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "HyperNeRF A Higher-Dimensional Representation for Topologically Varying Neural Radiance Fields",
+        "path": "Research/2021/HyperNeRF A Higher-Dimensional Representation for Topologically Varying Neural Radiance Fields (2021).md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "Layer-CAM Exploring Hierarchical Class Activation Maps for Localization",
+        "path": "Research/2021/Layer-CAM Exploring Hierarchical Class Activation Maps for Localization (2021).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Learning High Fidelity Depths of Dressed Humans by Watching Social Media Dance Videos",
+        "path": "Research/2021/Learning High Fidelity Depths of Dressed Humans by Watching Social Media Dance Videos (2021).md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "Less is More ClipBERT for Video-and-Language Learning via Sparse Sampling",
+        "path": "Research/2021/Less is More ClipBERT for Video-and-Language Learning via Sparse Sampling (2021).md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "MAE Masked Autoencoders Are Scalable Vision Learners",
+        "path": "Research/2021/MAE Masked Autoencoders Are Scalable Vision Learners.md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "MLP-Mixer An all-MLP Architecture for Vision",
+        "path": "Research/2021/MLP-Mixer An all-MLP Architecture for Vision (2021).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Mip-NeRF A Multiscale Representation for Anti-Aliasing Neural Radiance Fields",
+        "path": "Research/2021/Mip-NeRF A Multiscale Representation for Anti-Aliasing Neural Radiance Fields (2021).md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "Neural Body Implicit Neural Representations with Structured Latent Codes for Human Bodies",
+        "path": "Research/2021/Neural Body Implicit Neural Representations with Structured Latent Codes for Human Bodies (2021).md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "OpenGAN Open-Set Recognition via Open Data Generation",
+        "path": "Research/2021/OpenGAN Open-Set Recognition via Open Data Generation (2021).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "PWStableNet Progressive Warping Network for Video Stabilization",
+        "path": "Research/2021/PWStableNet Progressive Warping Network for Video Stabilization (2021).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Pixel-Perfect Structure-from-Motion with Featuremetric Refinement",
+        "path": "Research/2021/Pixel-Perfect Structure-from-Motion with Featuremetric Refinement (2021).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "Real-Time High-Resolution Background Matting",
+        "path": "Research/2021/Real-Time High-Resolution Background Matting (2021).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "Rethinking Spatio-Temporal Correspondence Learning",
+        "path": "Research/2021/Rethinking Spatio-Temporal Correspondence Learning (2021).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Robust Video Matting",
+        "path": "Research/2021/Robust Video Matting (RVM, 2021).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "Swin Transformer Hierarchical Vision Transformer using Shifted Windows",
+        "path": "Research/2021/Swin Transformer Hierarchical Vision Transformer using Shifted Windows (2021).md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "Task Programming Learning Data Efficient Behavior Representations",
+        "path": "Research/2021/Task Programming Learning Data Efficient Behavior Representations (2021).md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "TrackFormer Multi-Object Tracking with Transformers",
+        "path": "Research/2021/TrackFormer Multi-Object Tracking with Transformers (2021).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "TransTrack Multiple-Object Tracking with Transformer",
+        "path": "Research/2021/TransTrack Multiple-Object Tracking with Transformer (2021).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "Transformer-based Video Stabilization",
+        "path": "Research/2021/Transformer-based Video Stabilization (2021–2022).md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "Viewing Graph Solvability via Cycle Consistency",
+        "path": "Research/2021/Viewing Graph Solvability via Cycle Consistency (2021).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Zero-DCE++ Zero-Reference Deep Curve Estimation Improved",
+        "path": "Research/2021/Zero-DCE++ Zero-Reference Deep Curve Estimation Improved (2021).md",
+        "topic": "Estimation / Filtering"
+      },
+      {
+        "title": "Zero-Shot Text-to-Image Generation",
+        "path": "Research/2021/Zero-Shot Text-to-Image Generation (DALL·E, 2021).md",
+        "topic": "Other"
+      }
+    ],
+    "2020": [
+      {
+        "title": "Ablation-CAM Visual Explanations via Ablating Feature Maps",
+        "path": "Research/2020/Ablation-CAM Visual Explanations via Ablating Feature Maps (2020).md",
+        "topic": "Other"
+      },
+      {
+        "title": "An Image is Worth 16x16 Words Transformers for Image Recognition at Scale",
+        "path": "Research/2020/An Image is Worth 16x16 Words Transformers for Image Recognition at Scale (ViT 2020 2021).md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "BSP-Net Generating Compact Meshes via Binary Space Partitioning",
+        "path": "Research/2020/BSP-Net Generating Compact Meshes via Binary Space Partitioning (2020).md",
+        "topic": "Other"
+      },
+      {
+        "title": "BYOL Bootstrap Your Own Latent",
+        "path": "Research/2020/BYOL Bootstrap Your Own Latent.md",
+        "topic": "Other"
+      },
+      {
+        "title": "Benign Overfitting in Linear Regression",
+        "path": "Research/2020/Benign Overfitting in Linear Regression (2020).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Bringing Old Photos Back to Life",
+        "path": "Research/2020/Bringing Old Photos Back to Life (2020).md",
+        "topic": "Other"
+      },
+      {
+        "title": "CenterTrack Tracking Objects as Points",
+        "path": "Research/2020/CenterTrack Tracking Objects as Points (2020).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "DETR End-to-End Object Detection with Transformers",
+        "path": "Research/2020/DETR End-to-End Object Detection with Transformers (2020).md",
+        "topic": "Detection"
+      },
+      {
+        "title": "Deep Motion Blind Video Stabilization",
+        "path": "Research/2020/Deep Motion Blind Video Stabilization (2020).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "DeepCap Monocular Human Performance Capture Using Weak Supervision",
+        "path": "Research/2020/DeepCap Monocular Human Performance Capture Using Weak Supervision (2020).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Denoising Diffusion Implicit Models",
+        "path": "Research/2020/Denoising Diffusion Implicit Models (DDIM, 2020).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "Denoising Diffusion Probabilistic Models",
+        "path": "Research/2020/Denoising Diffusion Probabilistic Models (DDPM, 2020).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "FairMOT On the Fairness of Detection and Re-Identification in Multi-Object Tracking",
+        "path": "Research/2020/FairMOT On the Fairness of Detection and Re-Identification in Multi-Object Tracking (2020).md",
+        "topic": "Detection"
+      },
+      {
+        "title": "FullGrad A Class Activation Method for Deep Networks",
+        "path": "Research/2020/FullGrad A Class Activation Method for Deep Networks (2020).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Learning Video Stabilization Using Optical Flow",
+        "path": "Research/2020/Learning Video Stabilization Using Optical Flow (DeepFlow, 2020).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "Learning to Simulate Dynamic Environments with GameGAN",
+        "path": "Research/2020/Learning to Simulate Dynamic Environments with GameGAN (2020).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "MODNet Mobile Portrait Matting",
+        "path": "Research/2020/MODNet Mobile Portrait Matting (2020).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "MOT20 A Benchmark for Multi-Object Tracking in Crowded Scenes",
+        "path": "Research/2020/MOT20 A Benchmark for Multi-Object Tracking in Crowded Scenes (2020).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "MoCo Momentum Contrast for Unsupervised Visual Representation Learning",
+        "path": "Research/2020/MoCo Momentum Contrast for Unsupervised Visual Representation Learning.md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "NeRF Representing Scenes as Neural Radiance Fields for View Synthesis",
+        "path": "Research/2020/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis (2020).md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "NeRF Representing Scenes as Neural Radiance Fields for View Synthesis",
+        "path": "Research/2020/NeRF Representing Scenes as Neural Radiance Fields for View Synthesis.md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "PIFuHD Multi-Level Pixel-Aligned Implicit Function for High-Resolution 3D Human Digitization",
+        "path": "Research/2020/PIFuHD Multi-Level Pixel-Aligned Implicit Function for High-Resolution 3D Human Digitization (2020).md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "PointRend Image Segmentation as Rendering",
+        "path": "Research/2020/PointRend Image Segmentation as Rendering (2020).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "RAFT Recurrent All-Pairs Field Transforms for Optical Flow",
+        "path": "Research/2020/RAFT Recurrent All-Pairs Field Transforms for Optical Flow (2020).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "RepPointsV2 Verification Meets Regression for Object Detection",
+        "path": "Research/2020/RepPointsV2 Verification Meets Regression for Object Detection (2020).md",
+        "topic": "Detection"
+      },
+      {
+        "title": "SimCLR A Simple Framework for Contrastive Learning of Visual Representations",
+        "path": "Research/2020/SimCLR A Simple Framework for Contrastive Learning of Visual Representations.md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "Space-Time Correspondence as a Contrastive Random Walk",
+        "path": "Research/2020/Space-Time Correspondence as a Contrastive Random Walk (2020).md",
+        "topic": "Other"
+      },
+      {
+        "title": "UNITER UNiversal Image-TExt Representation Learning",
+        "path": "Research/2020/UNITER UNiversal Image-TExt Representation Learning (2020).md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "Unsupervised Learning of Probably Symmetric Deformable 3D Objects from Images in the Wild",
+        "path": "Research/2020/Unsupervised Learning of Probably Symmetric Deformable 3D Objects from Images in the Wild (2020).md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "Vision Transformer (ViT) An Image is Worth 16×16 Words",
+        "path": "Research/2020/Vision Transformer (ViT) An Image is Worth 16×16 Words.md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "XGrad-CAM Visual Explanations via Normalized Gradients",
+        "path": "Research/2020/XGrad-CAM Visual Explanations via Normalized Gradients (2020).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Zero-DCE Zero-Reference Deep Curve Estimation for Low-Light Image Enhancement",
+        "path": "Research/2020/Zero-DCE Zero-Reference Deep Curve Estimation for Low-Light Image Enhancement (2020).md",
+        "topic": "Estimation / Filtering"
+      },
+      {
+        "title": "pi-GAN Periodic Implicit Generative Adversarial Networks",
+        "path": "Research/2020/pi-GAN Periodic Implicit Generative Adversarial Networks (2021).md",
+        "topic": "Generative"
+      }
+    ],
+    "2019": [
+      {
+        "title": "A Style-Based Generator Architecture for GANs",
+        "path": "Research/2019/A Style-Based Generator Architecture for GANs (StyleGAN, 2019).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "A Theory of Fermat Paths for Non-Line-of-Sight Shape Reconstruction",
+        "path": "Research/2019/A Theory of Fermat Paths for Non-Line-of-Sight Shape Reconstruction (2019).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Auto-DeepLab Hierarchical Neural Architecture Search for Semantic Image Segmentation",
+        "path": "Research/2019/Auto-DeepLab Hierarchical Neural Architecture Search for Semantic Image Segmentation (2019).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "AutoGAN Neural Architecture Search for Generative Adversarial Networks",
+        "path": "Research/2019/AutoGAN Neural Architecture Search for Generative Adversarial Networks (2019).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "CenterNet Keypoint Triplets for Object Detection",
+        "path": "Research/2019/CenterNet Keypoint Triplets for Object Detection (2019).md",
+        "topic": "Detection"
+      },
+      {
+        "title": "Deep Online Video Stabilization",
+        "path": "Research/2019/Deep Online Video Stabilization (2019).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Designing and Interpreting Probes with Control Tasks",
+        "path": "Research/2019/Designing and Interpreting Probes with Control Tasks (2019).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Distribution-Independent PAC Learning of Halfspaces with Massart Noise",
+        "path": "Research/2019/Distribution-Independent PAC Learning of Halfspaces with Massart Noise (2019).md",
+        "topic": "Other"
+      },
+      {
+        "title": "EfficientNet Rethinking Model Scaling for Convolutional Neural Networks",
+        "path": "Research/2019/EfficientNet Rethinking Model Scaling for Convolutional Neural Networks.md",
+        "topic": "Other"
+      },
+      {
+        "title": "EnlightenGAN Deep Light Enhancement via Unsupervised GANs",
+        "path": "Research/2019/EnlightenGAN Deep Light Enhancement via Unsupervised GANs (2019).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "FCOS Fully Convolutional One-Stage Object Detection",
+        "path": "Research/2019/FCOS Fully Convolutional One-Stage Object Detection (2019).md",
+        "topic": "Detection"
+      },
+      {
+        "title": "Kimera Metric-Semantic Visual-Inertial SLAM",
+        "path": "Research/2019/Kimera Metric-Semantic Visual-Inertial SLAM (2019).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "KinD Kindling the Darkness — A Practical Low-Light Image Enhancer",
+        "path": "Research/2019/KinD Kindling the Darkness — A Practical Low-Light Image Enhancer (2019).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Learning Correspondence from the Cycle-Consistency of Time",
+        "path": "Research/2019/Learning Correspondence from the Cycle-Consistency of Time (2019).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Learning Structure-and-Motion-Aware Rolling Shutter Correction",
+        "path": "Research/2019/Learning Structure-and-Motion-Aware Rolling Shutter Correction (2019).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "Learning the Depths of Moving People by Watching Frozen People",
+        "path": "Research/2019/Learning the Depths of Moving People by Watching Frozen People (2019).md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "Mish A Self Regularized Non-Monotonic Activation Function",
+        "path": "Research/2019/Mish A Self Regularized Non-Monotonic Activation Function (2019).md",
+        "topic": "Other"
+      },
+      {
+        "title": "PIFu Pixel-Aligned Implicit Function for High-Resolution Clothed Human Digitization",
+        "path": "Research/2019/PIFu Pixel-Aligned Implicit Function for High-Resolution Clothed Human Digitization (2019).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Reconciling Modern Machine Learning and the Bias-Variance Trade-off",
+        "path": "Research/2019/Reconciling Modern Machine Learning and the Bias-Variance Trade-off (Double Descent, 2019).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Reinforced Cross-Modal Matching & Self-Supervised Imitation Learning for Vision-Language Navigation",
+        "path": "Research/2019/Reinforced Cross-Modal Matching & Self-Supervised Imitation Learning for Vision-Language Navigation (2019).md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "RepPoints Point Set Representation for Object Detection",
+        "path": "Research/2019/RepPoints Point Set Representation for Object Detection (2019).md",
+        "topic": "Detection"
+      },
+      {
+        "title": "Revisiting Self-Supervised Visual Representation Learning",
+        "path": "Research/2019/Revisiting Self-Supervised Visual Representation Learning (2019).md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "S4L Self-Supervised Semi-Supervised Learning",
+        "path": "Research/2019/S4L Self-Supervised Semi-Supervised Learning (2019).md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "Score-CAM Score-Weighted Visual Explanations for CNNs",
+        "path": "Research/2019/Score-CAM Score-Weighted Visual Explanations for CNNs (2019).md",
+        "topic": "Other"
+      },
+      {
+        "title": "SinGAN Learning a Generative Model from a Single Natural Image",
+        "path": "Research/2019/SinGAN Learning a Generative Model from a Single Natural Image (2019).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "Smooth Grad-CAM++ Sharper Visual Explanations with Second-Order Gradients",
+        "path": "Research/2019/Smooth Grad-CAM++ Sharper Visual Explanations with Second-Order Gradients (2019).md",
+        "topic": "Other"
+      },
+      {
+        "title": "The Lottery Ticket Hypothesis Finding Sparse, Trainable Neural Networks",
+        "path": "Research/2019/The Lottery Ticket Hypothesis Finding Sparse, Trainable Neural Networks (2019).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Tracktor Tracking by Detection with Regression",
+        "path": "Research/2019/Tracktor Tracking by Detection with Regression (2019).md",
+        "topic": "Detection"
+      },
+      {
+        "title": "Uniform Convergence May Be Unable to Explain Generalization in Deep Learning",
+        "path": "Research/2019/Uniform Convergence May Be Unable to Explain Generalization in Deep Learning (2019).md",
+        "topic": "Other"
+      },
+      {
+        "title": "ViLBERT Pretraining Task-Agnostic Visiolinguistic Representations",
+        "path": "Research/2019/ViLBERT Pretraining Task-Agnostic Visiolinguistic Representations (2019).md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "Video Object Segmentation using Space-Time Memory Networks",
+        "path": "Research/2019/Video Object Segmentation using Space-Time Memory Networks (STM, 2019).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "VideoBERT A Joint Model for Video and Language Representation Learning",
+        "path": "Research/2019/VideoBERT A Joint Model for Video and Language Representation Learning (2019).md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "Waymo Open Dataset",
+        "path": "Research/2019/Waymo Open Dataset (2019).md",
+        "topic": "Other"
+      },
+      {
+        "title": "nuScenes A Multimodal Dataset for Autonomous Driving",
+        "path": "Research/2019/nuScenes A Multimodal Dataset for Autonomous Driving (2019).md",
+        "topic": "Recognition / Classification"
+      }
+    ],
+    "2018": [
+      {
+        "title": "CodeSLAM Learning a Compact, Optimisable Representation for Dense Visual SLAM",
+        "path": "Research/2018/CodeSLAM Learning a Compact, Optimisable Representation for Dense Visual SLAM (2018).md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "Confocal Non-Line-of-Sight Imaging",
+        "path": "Research/2018/Confocal Non-Line-of-Sight Imaging (2018).md",
+        "topic": "Other"
+      },
+      {
+        "title": "CornerNet Detecting Objects as Paired Keypoints",
+        "path": "Research/2018/CornerNet Detecting Objects as Paired Keypoints (2018).md",
+        "topic": "Other"
+      },
+      {
+        "title": "DeepStab Deep Learning for Video Stabilization",
+        "path": "Research/2018/DeepStab Deep Learning for Video Stabilization (2018).md",
+        "topic": "Other"
+      },
+      {
+        "title": "GANimation Anatomically-aware Facial Animation from a Single Image",
+        "path": "Research/2018/GANimation Anatomically-aware Facial Animation from a Single Image (2018).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "Group Normalization",
+        "path": "Research/2018/Group Normalization (2018).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Implicit 3D Orientation Learning for 6D Object Detection from RGB Images",
+        "path": "Research/2018/Implicit 3D Orientation Learning for 6D Object Detection from RGB Images (2017).md",
+        "topic": "Detection"
+      },
+      {
+        "title": "Large Scale GAN Training for High Fidelity Natural Image Synthesis",
+        "path": "Research/2018/Large Scale GAN Training for High Fidelity Natural Image Synthesis (2019).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "Neural Ordinary Differential Equations",
+        "path": "Research/2018/Neural Ordinary Differential Equations (2018).md",
+        "topic": "Other"
+      },
+      {
+        "title": "RetinexNet Deep Retinex Decomposition for Low-Light Image Enhancement",
+        "path": "Research/2018/RetinexNet Deep Retinex Decomposition for Low-Light Image Enhancement (2018).md",
+        "topic": "Color / Imaging"
+      },
+      {
+        "title": "SPLATNet Sparse Lattice Networks for Point Cloud Processing",
+        "path": "Research/2018/SPLATNet Sparse Lattice Networks for Point Cloud Processing (2018).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Self-Attention Generative Adversarial Networks",
+        "path": "Research/2018/Self-Attention Generative Adversarial Networks (2019).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "Spherical CNNs",
+        "path": "Research/2018/Spherical CNNs (2018).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Taskonomy Disentangling Task Transfer Learning",
+        "path": "Research/2018/Taskonomy Disentangling Task Transfer Learning (2018).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Total Capture A 3D Deformation Model for Tracking Faces, Hands, and Bodies",
+        "path": "Research/2018/Total Capture A 3D Deformation Model for Tracking Faces, Hands, and Bodies (2018).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "VINS-Mono A Robust and Versatile Monocular Visual-Inertial State Estimator",
+        "path": "Research/2018/VINS-Mono A Robust and Versatile Monocular Visual-Inertial State Estimator (2018).md",
+        "topic": "Other"
+      },
+      {
+        "title": "World Models Generative Models as Agents’ Internal Simulators",
+        "path": "Research/2018/World Models Generative Models as Agents’ Internal Simulators (2018).md",
+        "topic": "Generative"
+      }
+    ],
+    "2017": [
+      {
+        "title": "Attention Is All You Need",
+        "path": "Research/2017/Attention Is All You Need (2017).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Deep Image Matting",
+        "path": "Research/2017/Deep Image Matting (2017).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "DeepGaze II Predicting Fixations with Deeper Features and Probabilistic Modeling",
+        "path": "Research/2017/DeepGaze II Predicting Fixations with Deeper Features and Probabilistic Modeling (2017).md",
+        "topic": "Other"
+      },
+      {
+        "title": "DeepLab Atrous Convolution and Semantic Image Segmentation",
+        "path": "Research/2017/DeepLab Atrous Convolution and Semantic Image Segmentation (2017–2018).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "DeepSORT Deep Learning for Multiple Object Tracking",
+        "path": "Research/2017/DeepSORT Deep Learning for Multiple Object Tracking (2017).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "Densely Connected Convolutional Networks",
+        "path": "Research/2017/Densely Connected Convolutional Networks (2017).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Fast Fourier Color Constancy",
+        "path": "Research/2017/Fast Fourier Color Constancy (2017).md",
+        "topic": "Color / Imaging"
+      },
+      {
+        "title": "Feature Pyramid Networks for Object Detection",
+        "path": "Research/2017/Feature Pyramid Networks for Object Detection (2017).md",
+        "topic": "Detection"
+      },
+      {
+        "title": "Focal Loss for Dense Object Detection",
+        "path": "Research/2017/Focal Loss for Dense Object Detection (2017).md",
+        "topic": "Detection"
+      },
+      {
+        "title": "Grad-CAM Visual Explanations from Deep Networks via Gradient-Based Localization",
+        "path": "Research/2017/Grad-CAM Visual Explanations from Deep Networks via Gradient-Based Localization (2017).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Learning from Simulated and Unsupervised Images through Adversarial Training",
+        "path": "Research/2017/Learning from Simulated and Unsupervised Images through Adversarial Training (2017).md",
+        "topic": "Other"
+      },
+      {
+        "title": "MOT17 Multi-Object Tracking Benchmark",
+        "path": "Research/2017/MOT17 Multi-Object Tracking Benchmark (2017).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "Mask R-CNN",
+        "path": "Research/2017/Mask R-CNN.md",
+        "topic": "Detection"
+      },
+      {
+        "title": "PointNet Deep Learning on Point Sets for 3D Classification and Segmentation",
+        "path": "Research/2017/PointNet Deep Learning on Point Sets for 3D Classification and Segmentation (2017).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "ResNeXt Aggregated Residual Transformations for Deep Neural Networks",
+        "path": "Research/2017/ResNeXt Aggregated Residual Transformations for Deep Neural Networks (2017).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Searching for Activation Functions",
+        "path": "Research/2017/Searching for Activation Functions (2017).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks",
+        "path": "Research/2017/Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks (2017).md",
+        "topic": "Other"
+      },
+      {
+        "title": "YOLO9000 Better, Faster, Stronger",
+        "path": "Research/2017/YOLO9000 Better, Faster, Stronger (2017).md",
+        "topic": "Detection"
+      }
+    ],
+    "2016": [
+      {
+        "title": "A Guide to Convolution Arithmetic for Deep Learning",
+        "path": "Research/2016/A Guide to Convolution Arithmetic for Deep Learning (2016).md",
+        "topic": "Other"
+      },
+      {
+        "title": "DSO Direct Sparse Odometry",
+        "path": "Research/2016/DSO Direct Sparse Odometry (2016).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Gaussian Error Linear Units (GELU)",
+        "path": "Research/2016/Gaussian Error Linear Units (GELU).md",
+        "topic": "Other"
+      },
+      {
+        "title": "HyperNet Towards Accurate Region Proposal Generation and Joint Object Detection",
+        "path": "Research/2016/HyperNet Towards Accurate Region Proposal Generation and Joint Object Detection (2016).md",
+        "topic": "Detection"
+      },
+      {
+        "title": "Instance-Aware Semantic Segmentation via Multi-task Network Cascades",
+        "path": "Research/2016/Instance-Aware Semantic Segmentation via Multi-task Network Cascades (2016).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "Learning Deep Features for Discriminative Localization",
+        "path": "Research/2016/Learning Deep Features for Discriminative Localization (2016).md",
+        "topic": "Other"
+      },
+      {
+        "title": "MOT16 Multi-Object Tracking Benchmark",
+        "path": "Research/2016/MOT16 Multi-Object Tracking Benchmark (2016).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "Perceptual Losses for Real-Time Style Transfer and Super-Resolution",
+        "path": "Research/2016/Perceptual Losses for Real-Time Style Transfer and Super-Resolution (2016).md",
+        "topic": "Other"
+      },
+      {
+        "title": "SORT Simple Online and Realtime Tracking",
+        "path": "Research/2016/SORT Simple Online and Realtime Tracking (2016).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "Structural-RNN Deep Learning on Spatio-Temporal Graphs",
+        "path": "Research/2016/Structural-RNN Deep Learning on Spatio-Temporal Graphs (2016).md",
+        "topic": "Other"
+      },
+      {
+        "title": "The Cityscapes Dataset for Semantic Urban Scene Understanding",
+        "path": "Research/2016/The Cityscapes Dataset for Semantic Urban Scene Understanding (2016).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "V-Net Fully Convolutional Neural Networks for Volumetric Medical Image Segmentation",
+        "path": "Research/2016/V-Net Fully Convolutional Neural Networks for Volumetric Medical Image Segmentation (2016).md",
+        "topic": "Segmentation"
+      }
+    ],
+    "2015": [
+      {
+        "title": "Adam A Method for Stochastic Optimization",
+        "path": "Research/2015/Adam A Method for Stochastic Optimization (2015).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Category-Specific Object Reconstruction from a Single Image",
+        "path": "Research/2015/Category-Specific Object Reconstruction from a Single Image (2015).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Convolutional Color Constancy",
+        "path": "Research/2015/Convolutional Color Constancy (2015).md",
+        "topic": "Color / Imaging"
+      },
+      {
+        "title": "Deep Compression Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding",
+        "path": "Research/2015/Deep Compression Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding (2015).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Deep Neural Decision Forests",
+        "path": "Research/2015/Deep Neural Decision Forests (2015).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Deep Residual Learning for Image Recognition",
+        "path": "Research/2015/Deep Residual Learning for Image Recognition.md",
+        "topic": "Recognition / Classification"
+      },
+      {
+        "title": "DeepGaze I Deep Features for Predicting Human Eye Fixations",
+        "path": "Research/2015/DeepGaze I Deep Features for Predicting Human Eye Fixations (2015).md",
+        "topic": "Other"
+      },
+      {
+        "title": "DynamicFusion Reconstruction and Tracking of Non-rigid Scenes in Real-Time",
+        "path": "Research/2015/DynamicFusion Reconstruction and Tracking of Non-rigid Scenes in Real-Time (2015).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "Efficient Globally Optimal Consensus Maximisation with Tree Search",
+        "path": "Research/2015/Efficient Globally Optimal Consensus Maximisation with Tree Search (2016).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Empirical Evaluation of Rectified Activations in Convolutional Networks",
+        "path": "Research/2015/Empirical Evaluation of Rectified Activations in Convolutional Networks (2015).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Fast R-CNN",
+        "path": "Research/2015/Fast R-CNN (2015).md",
+        "topic": "Detection"
+      },
+      {
+        "title": "Faster R-CNN Towards Real-Time Object Detection with Region Proposal Networks",
+        "path": "Research/2015/Faster R-CNN Towards Real-Time Object Detection with Region Proposal Networks.md",
+        "topic": "Detection"
+      },
+      {
+        "title": "Fully Convolutional Networks for Semantic Segmentation",
+        "path": "Research/2015/Fully Convolutional Networks for Semantic Segmentation (2015).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "Holistically-Nested Edge Detection",
+        "path": "Research/2015/Holistically-Nested Edge Detection (2015).md",
+        "topic": "Detection"
+      },
+      {
+        "title": "ORB-SLAM A Versatile and Accurate Monocular SLAM System",
+        "path": "Research/2015/ORB-SLAM A Versatile and Accurate Monocular SLAM System (2015).md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "Picture A Probabilistic Programming Language for Scene Perception",
+        "path": "Research/2015/Picture A Probabilistic Programming Language for Scene Perception (2015).md",
+        "topic": "Recognition / Classification"
+      },
+      {
+        "title": "Show and Tell A Neural Image Caption Generator",
+        "path": "Research/2015/Show and Tell A Neural Image Caption Generator (2015).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Show, Attend and Tell Neural Image Caption Generation with Visual Attention",
+        "path": "Research/2015/Show, Attend and Tell Neural Image Caption Generation with Visual Attention (2015).md",
+        "topic": "Other"
+      },
+      {
+        "title": "U-Net Convolutional Networks for Biomedical Image Segmentation",
+        "path": "Research/2015/U-Net Convolutional Networks for Biomedical Image Segmentation (2015).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "VQA Visual Question Answering",
+        "path": "Research/2015/VQA Visual Question Answering (2015).md",
+        "topic": "Other"
+      },
+      {
+        "title": "YOLO You Only Look Once — Unified, Real-Time Object Detection",
+        "path": "Research/2015/YOLO You Only Look Once — Unified, Real-Time Object Detection.md",
+        "topic": "Detection"
+      }
+    ],
+    "2014": [
+      {
+        "title": "3D Shape and Indirect Appearance by Structured Light Transport",
+        "path": "Research/2014/3D Shape and Indirect Appearance by Structured Light Transport (2014).md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "A* Sampling",
+        "path": "Research/2014/A* Sampling (2014).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Color Transfer Using Probabilistic Moving Least Squares (PMLS)",
+        "path": "Research/2014/Color Transfer Using Probabilistic Moving Least Squares (PMLS).md",
+        "topic": "Color / Imaging"
+      },
+      {
+        "title": "EdgeBoxes Locating Object Proposals from Edges",
+        "path": "Research/2014/EdgeBoxes Locating Object Proposals from Edges (2014).md",
+        "topic": "Detection"
+      },
+      {
+        "title": "Generative Adversarial Networks (GANs)",
+        "path": "Research/2014/Generative Adversarial Networks (GANs).md",
+        "topic": "Generative"
+      },
+      {
+        "title": "GoogLeNet Inception v1 Going Deeper with Convolutions",
+        "path": "Research/2014/GoogLeNet Inception v1 Going Deeper with Convolutions.md",
+        "topic": "Backbones / Representation"
+      },
+      {
+        "title": "LSD-SLAM Large-Scale Direct Monocular SLAM",
+        "path": "Research/2014/LSD-SLAM Large-Scale Direct Monocular SLAM (2014).md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "Large-Scale Object Classification using Label Relation Graphs",
+        "path": "Research/2014/Large-Scale Object Classification using Label Relation Graphs (ECCV 2014).md",
+        "topic": "Recognition / Classification"
+      },
+      {
+        "title": "Rich feature hierarchies for accurate object detection and semantic segmentation\" (R-CNN)",
+        "path": "Research/2014/Rich feature hierarchies for accurate object detection and semantic segmentation\" (R-CNN).md",
+        "topic": "Detection"
+      },
+      {
+        "title": "Robust Online Multi-Object Tracking based on Tracklet Confidence and Online Discriminative Appearance Learning",
+        "path": "Research/2014/Robust Online Multi-Object Tracking based on Tracklet Confidence and Online Discriminative Appearance Learning (2014).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+        "path": "Research/2014/Very Deep Convolutional Networks for Large-Scale Image Recognition.md",
+        "topic": "Recognition / Classification"
+      },
+      {
+        "title": "Visualizing and Understanding Convolutional Networks",
+        "path": "Research/2014/Visualizing and Understanding Convolutional Networks (2014).md",
+        "topic": "Other"
+      },
+      {
+        "title": "What Camera Motion Reveals About Shape with Unknown BRDF",
+        "path": "Research/2014/What Camera Motion Reveals About Shape with Unknown BRDF (2014).md",
+        "topic": "Tracking"
+      }
+    ],
+    "2013": [
+      {
+        "title": "DeViSE A Deep Visual-Semantic Embedding Model",
+        "path": "Research/2013/DeViSE A Deep Visual-Semantic Embedding Model.md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "Deep Neural Networks for Object Detection",
+        "path": "Research/2013/Deep Neural Networks for Object Detection (2013).md",
+        "topic": "Detection"
+      },
+      {
+        "title": "Learning Hierarchical Features for Scene Labeling",
+        "path": "Research/2013/Learning Hierarchical Features for Scene Labeling.md",
+        "topic": "Recognition / Classification"
+      },
+      {
+        "title": "Maxout Networks",
+        "path": "Research/2013/Maxout Networks.md",
+        "topic": "Other"
+      },
+      {
+        "title": "OverFeat Integrated Recognition, Localization and Detection using Convolutional Networks",
+        "path": "Research/2013/OverFeat Integrated Recognition, Localization and Detection using Convolutional Networks.md",
+        "topic": "Detection"
+      },
+      {
+        "title": "Selective Search for Object Recognition",
+        "path": "Research/2013/Selective Search for Object Recognition (2013).md",
+        "topic": "Recognition / Classification"
+      },
+      {
+        "title": "Visualizing and Understanding Convolutional Networks (ZFNet)",
+        "path": "Research/2013/Visualizing and Understanding Convolutional Networks (ZFNet).md",
+        "topic": "Other"
+      }
+    ],
+    "2012": [
+      {
+        "title": "AlexNet (ImageNet Classification with Deep Convolutional Neural Networks)",
+        "path": "Research/2012/AlexNet (ImageNet Classification with Deep Convolutional Neural Networks).md",
+        "topic": "Recognition / Classification"
+      },
+      {
+        "title": "Face Detection, Pose Estimation, and Landmark Localization in the Wild",
+        "path": "Research/2012/Face Detection, Pose Estimation, and Landmark Localization in the Wild.md",
+        "topic": "Detection"
+      },
+      {
+        "title": "KITTI Tracking Benchmark",
+        "path": "Research/2012/KITTI Tracking Benchmark (2012).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "Multi-Column Deep Neural Networks for Image Classification (MCDNN)",
+        "path": "Research/2012/Multi-Column Deep Neural Networks for Image Classification (MCDNN).md",
+        "topic": "Recognition / Classification"
+      },
+      {
+        "title": "Recovering 3D Shape Around a Corner Using Ultrafast Time-of-Flight Imaging",
+        "path": "Research/2012/Recovering 3D Shape Around a Corner Using Ultrafast Time-of-Flight Imaging (2012).md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "Three Things Everyone Should Know to Improve Object Retrieval",
+        "path": "Research/2012/Three Things Everyone Should Know to Improve Object Retrieval.md",
+        "topic": "Other"
+      },
+      {
+        "title": "iSAM2 Incremental Smoothing and Mapping Using the Bayes Tree",
+        "path": "Research/2012/iSAM2 Incremental Smoothing and Mapping Using the Bayes Tree (2012).md",
+        "topic": "Estimation / Filtering"
+      }
+    ],
+    "2011": [
+      {
+        "title": "Auto-Directed Video Stabilization with Robust L1 Optimal Camera Paths",
+        "path": "Research/2011/Auto-Directed Video Stabilization with Robust L1 Optimal Camera Paths (2011).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Subspace Video Stabilization",
+        "path": "Research/2011/Subspace Video Stabilization (2011).md",
+        "topic": "Other"
+      },
+      {
+        "title": "YouTube Video Stabilizer",
+        "path": "Research/2011/YouTube Video Stabilizer (2011–2018).md",
+        "topic": "Other"
+      }
+    ],
+    "2010": [
+      {
+        "title": "GTSAM Georgia Tech Smoothing And Mapping Library",
+        "path": "Research/2010/GTSAM Georgia Tech Smoothing And Mapping Library (2010s).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Rectified Linear Units (ReLU) for Deep Learning",
+        "path": "Research/2010/Rectified Linear Units (ReLU) for Deep Learning (2010–2012).md",
+        "topic": "Other"
+      },
+      {
+        "title": "SLIC Superpixels Simple Linear Iterative Clustering",
+        "path": "Research/2010/SLIC Superpixels Simple Linear Iterative Clustering (2010).md",
+        "topic": "Other"
+      }
+    ],
+    "2009": [
+      {
+        "title": "Content-Preserving Warps for 3D Video Stabilization",
+        "path": "Research/2009/Content-Preserving Warps for 3D Video Stabilization (2009).md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "Learning to Predict Where Humans Look",
+        "path": "Research/2009/Learning to Predict Where Humans Look (ICCV 2009).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Recognition Using Regions",
+        "path": "Research/2009/Recognition Using Regions (2009).md",
+        "topic": "Recognition / Classification"
+      }
+    ],
+    "2008": [
+      {
+        "title": "Bayesian Color Constancy",
+        "path": "Research/2008/Bayesian Color Constancy (2008).md",
+        "topic": "Color / Imaging"
+      }
+    ],
+    "2007": [
+      {
+        "title": "PTAM Parallel Tracking and Mapping for Small AR Workspaces",
+        "path": "Research/2007/PTAM Parallel Tracking and Mapping for Small AR Workspaces (2007).md",
+        "topic": "Tracking"
+      },
+      {
+        "title": "iSAM Incremental Smoothing and Mapping",
+        "path": "Research/2007/iSAM Incremental Smoothing and Mapping (2007).md",
+        "topic": "Other"
+      }
+    ],
+    "2004": [
+      {
+        "title": "Efficient Graph-Based Image Segmentation",
+        "path": "Research/2004/Efficient Graph-Based Image Segmentation (2004).md",
+        "topic": "Segmentation"
+      },
+      {
+        "title": "GraphSLAM Simultaneous Localization and Mapping via Graph Optimization",
+        "path": "Research/2004/GraphSLAM Simultaneous Localization and Mapping via Graph Optimization (2004).md",
+        "topic": "3D / SLAM / NeRF"
+      }
+    ],
+    "2002": [
+      {
+        "title": "FastSLAM A Factored Solution to the Simultaneous Localization and Mapping Problem",
+        "path": "Research/2002/FastSLAM A Factored Solution to the Simultaneous Localization and Mapping Problem (2002).md",
+        "topic": "3D / SLAM / NeRF"
+      },
+      {
+        "title": "MSRCR Multi-Scale Retinex with Color Restoration",
+        "path": "Research/2002/MSRCR Multi-Scale Retinex with Color Restoration.md",
+        "topic": "Color / Imaging"
+      },
+      {
+        "title": "Mean Shift A Robust Approach Toward Feature Space Analysis",
+        "path": "Research/2002/Mean Shift A Robust Approach Toward Feature Space Analysis (2002).md",
+        "topic": "Other"
+      }
+    ],
+    "2000": [
+      {
+        "title": "Normalized Cuts and Image Segmentation",
+        "path": "Research/2000/Normalized Cuts and Image Segmentation (2000).md",
+        "topic": "Segmentation"
+      }
+    ],
+    "1998": [
+      {
+        "title": "Gradient-Based Learning Applied to Document Recognition",
+        "path": "Research/1998/Gradient-Based Learning Applied to Document Recognition (1998).md",
+        "topic": "Recognition / Classification"
+      }
+    ],
+    "1997": [
+      {
+        "title": "Multi-Scale Retinex",
+        "path": "Research/1997/Multi-Scale Retinex (MSR, 1997).md",
+        "topic": "Color / Imaging"
+      },
+      {
+        "title": "Unscented Kalman Filter",
+        "path": "Research/1997/Unscented Kalman Filter (UKF, 1997).md",
+        "topic": "Estimation / Filtering"
+      }
+    ],
+    "1994": [
+      {
+        "title": "CLAHE Contrast Limited Adaptive Histogram Equalization",
+        "path": "Research/1994/CLAHE Contrast Limited Adaptive Histogram Equalization.md",
+        "topic": "Other"
+      }
+    ],
+    "1993": [
+      {
+        "title": "Particle Filter Sequential Monte Carlo Methods",
+        "path": "Research/1993/Particle Filter Sequential Monte Carlo Methods (1993).md",
+        "topic": "Estimation / Filtering"
+      }
+    ],
+    "1992": [
+      {
+        "title": "Optimal Brain Surgeon",
+        "path": "Research/1992/Optimal Brain Surgeon (1992).md",
+        "topic": "Other"
+      }
+    ],
+    "1989": [
+      {
+        "title": "Optimal Brain Damage",
+        "path": "Research/1989/Optimal Brain Damage (1989).md",
+        "topic": "Other"
+      }
+    ],
+    "1986": [
+      {
+        "title": "Backpropagation",
+        "path": "Research/1986/Backpropagation (1986).md",
+        "topic": "Other"
+      }
+    ],
+    "1980": [
+      {
+        "title": "Adaptive Histogram Equalization (AHE)",
+        "path": "Research/1980/Adaptive Histogram Equalization (AHE).md",
+        "topic": "Other"
+      },
+      {
+        "title": "Gray World Assumption",
+        "path": "Research/1980/Gray World Assumption (1980).md",
+        "topic": "Other"
+      }
+    ],
+    "1971": [
+      {
+        "title": "Retinex Theory of Color Vision",
+        "path": "Research/1971/Retinex Theory of Color Vision (1971).md",
+        "topic": "Color / Imaging"
+      }
+    ],
+    "1970": [
+      {
+        "title": "Histogram Equalization (HE)",
+        "path": "Research/1970/Histogram Equalization (HE).md",
+        "topic": "Other"
+      }
+    ],
+    "1969": [
+      {
+        "title": "Extended Kalman Filter",
+        "path": "Research/1969/Extended Kalman Filter (EKF, 1969).md",
+        "topic": "Estimation / Filtering"
+      }
+    ],
+    "1960": [
+      {
+        "title": "A New Approach to Linear Filtering and Prediction Problems",
+        "path": "Research/1960/A New Approach to Linear Filtering and Prediction Problems (1960).md",
+        "topic": "Estimation / Filtering"
+      }
+    ]
+  },
+  "topics": [
+    "3D / SLAM / NeRF",
+    "Backbones / Representation",
+    "Color / Imaging",
+    "Detection",
+    "Estimation / Filtering",
+    "Generative",
+    "Other",
+    "Recognition / Classification",
+    "Segmentation",
+    "Tracking"
+  ],
+  "count": 284
+}

@@ -2,127 +2,84 @@
 layout: default
 permalink: /
 title: Atul Singh Notes
-description: Explore the long-form research and learning projects stored in this repository.
+description: A connected second brain on computer vision, machine learning, and the mathematics underneath — long-form notes, book projects, and a research vault.
 ---
 
-<div class="home-page">
-  <nav class="home-page__nav" aria-label="Primary">
-    <div class="home-page__nav-inner">
-      <a class="home-page__brand" href="{{ '/' | relative_url }}">Atul Singh Notes</a>
-      <ul class="home-page__nav-links">
-        <li><a href="#learning-collection">Learning Collection</a></li>
-        <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
-        <li><a href="{{ '/search/' | relative_url }}">Search</a></li>
-      </ul>
-    </div>
-  </nav>
-  <div class="home-page__grid">
-    <section class="home-page__column home-page__column--books" aria-labelledby="learning-collection">
-      <header class="bookshelf-header">
-        <div class="bookshelf-header__content">
-          <h1 id="learning-collection">Learning Collection</h1>
-          <p class="bookshelf-header__tagline">
-            Explore the long-form research and learning projects stored in this repository.
-          </p>
-          <p class="bookshelf-header__blog-cta">
-            Looking for shorter updates? Visit the <a href="{{ '/blog/' | relative_url }}">blog</a> for essays and changelog-style notes.
-          </p>
-        </div>
-      </header>
+{%- assign all_tags = site.posts | map: 'tags' | compact | join: ',' | split: ',' | uniq -%}
+{%- assign series_count = site.data.series | size -%}
+{%- assign research_count = site.data.research.count | default: 0 -%}
 
-      <div class="bookshelf-layout">
-        <aside class="bookshelf-sidebar" id="sidebar" aria-label="Book navigation">
-          <div class="bookshelf-sidebar__inner">
-            <div class="bookshelf-sidebar__intro">
-              <h2>Contents</h2>
-              <p>Select a chapter to load it on the right.</p>
-            </div>
-            <nav id="book-navigation" class="bookshelf-navigation" aria-live="polite"></nav>
-          </div>
-        </aside>
+<section class="hero">
+  <h1 class="hero__title">A connected <span class="hero__accent">second brain</span> for vision &amp; ML.</h1>
+  <p class="hero__lead">
+    Long-form notes, book projects, and a research vault on computer vision, generative models,
+    high-performance computing, and the mathematics underneath — cross-linked so ideas connect.
+  </p>
+  <ul class="hero__stats">
+    <li class="hero__stat"><b>{{ site.posts.size }}</b><span>notes &amp; essays</span></li>
+    <li class="hero__stat"><b>{{ research_count }}</b><span>research papers</span></li>
+    <li class="hero__stat"><b>{{ all_tags.size }}</b><span>topics</span></li>
+    <li class="hero__stat"><b>{{ series_count }}</b><span>series</span></li>
+  </ul>
+</section>
 
-        <main id="main" class="bookshelf-main" tabindex="-1">
-          <article id="book-content" class="bookshelf-content">
-            <div class="bookshelf-placeholder">
-              <p>Use the navigation to choose a chapter. The content will appear here.</p>
-            </div>
-          </article>
-        </main>
-      </div>
+<nav class="explore-grid" aria-label="Explore the site">
+  <a class="explore-card" href="{{ '/topics/' | relative_url }}">
+    <span class="explore-card__icon" aria-hidden="true">🏷️</span>
+    <h2 class="explore-card__title">Topics</h2>
+    <p class="explore-card__desc">Browse every note by subject — computer vision, probability, optimization, color science, and more.</p>
+    <span class="explore-card__meta">{{ all_tags.size }} topics →</span>
+  </a>
+  <a class="explore-card" href="{{ '/series/' | relative_url }}">
+    <span class="explore-card__icon" aria-hidden="true">🔗</span>
+    <h2 class="explore-card__title">Series</h2>
+    <p class="explore-card__desc">Multi-part deep dives read in order, from first principles to advanced applications.</p>
+    <span class="explore-card__meta">{{ series_count }} series →</span>
+  </a>
+  <a class="explore-card" href="{{ '/books/' | relative_url }}">
+    <span class="explore-card__icon" aria-hidden="true">📚</span>
+    <h2 class="explore-card__title">Books</h2>
+    <p class="explore-card__desc">Structured book projects on object detection, color correction, and deep-learning architectures.</p>
+    <span class="explore-card__meta">Open the reader →</span>
+  </a>
+  <a class="explore-card" href="{{ '/research/' | relative_url }}">
+    <span class="explore-card__icon" aria-hidden="true">🔬</span>
+    <h2 class="explore-card__title">Research vault</h2>
+    <p class="explore-card__desc">A chronological archive of landmark papers, distilled into study notes by year and topic.</p>
+    <span class="explore-card__meta">{{ research_count }} papers →</span>
+  </a>
+  <a class="explore-card" href="{{ '/map/' | relative_url }}">
+    <span class="explore-card__icon" aria-hidden="true">🕸️</span>
+    <h2 class="explore-card__title">Connections map</h2>
+    <p class="explore-card__desc">An interactive graph of how the notes link to one another — follow a chain of ideas.</p>
+    <span class="explore-card__meta">Explore the graph →</span>
+  </a>
+  <a class="explore-card" href="{{ '/blog/' | relative_url }}">
+    <span class="explore-card__icon" aria-hidden="true">📝</span>
+    <h2 class="explore-card__title">Blog</h2>
+    <p class="explore-card__desc">Every post in one place, filterable by tag, newest first.</p>
+    <span class="explore-card__meta">All {{ site.posts.size }} posts →</span>
+  </a>
+</nav>
 
-      <footer class="bookshelf-footer">
-        <p>
-          Built with <a href="https://marked.js.org/" rel="noopener" target="_blank">Marked</a>. Markdown sources live in this repository,
-          so updates to the notes will automatically appear once the site is rebuilt.
-        </p>
-      </footer>
-    </section>
-
-    <section class="home-page__column home-page__column--blog" aria-labelledby="homepage-blog">
-      <header class="home-blog__header">
-        <h2 id="homepage-blog">Latest from the Blog</h2>
-        <p class="home-blog__description">
-          Short updates, context, and essays that complement the long-form notes in the bookshelf.
-        </p>
-      </header>
-
-      {%- assign cadence_post = site.posts | where: "title", "Publishing Cadence Summary" | first -%}
-      {%- if cadence_post -%}
-        <aside class="home-blog__feature" aria-labelledby="homepage-cadence">
-          <h3 id="homepage-cadence" class="home-blog__feature-title">
-            <a href="{{ cadence_post.url | relative_url }}">{{ cadence_post.title }}</a>
-          </h3>
-          <p class="home-blog__feature-meta">
-            <time datetime="{{ cadence_post.date | date_to_xmlschema }}">{{ cadence_post.date | date: "%B %-d, %Y" }}</time>
-            · {{ cadence_post.tags | join: ", " }}
-          </p>
-          <p class="home-blog__feature-description">
-            Monthly, quarterly, semiannual, and annual rollups of every post—perfect for catching up on the entire publishing cadence in one stop.
-          </p>
-          <a class="home-blog__feature-cta" href="{{ cadence_post.url | relative_url }}">Read the full cadence summary →</a>
-        </aside>
-      {%- endif -%}
-
-      {%- assign about_post = site.posts | where_exp: "post", "post.title contains 'About Atul Singh'" | first -%}
-      {%- if about_post -%}
-        <aside class="home-blog__feature" aria-labelledby="homepage-about">
-          <h3 id="homepage-about" class="home-blog__feature-title">
-            <a href="{{ about_post.url | relative_url }}">{{ about_post.title }}</a>
-          </h3>
-          <p class="home-blog__feature-meta">
-            <time datetime="{{ about_post.date | date_to_xmlschema }}">{{ about_post.date | date: "%B %-d, %Y" }}</time>
-            · {{ about_post.tags | join: ", " }}
-          </p>
-          <p class="home-blog__feature-description">
-            Technical portfolio showcasing 50+ posts across computer vision, generative models, high-performance computing, and applied mathematics. Explore comprehensive series on VAEs, contrast measurement, Kalman filtering, and more.
-          </p>
-          <a class="home-blog__feature-cta" href="{{ about_post.url | relative_url }}">View technical portfolio →</a>
-        </aside>
-      {%- endif -%}
-
-      {%- if site.posts and site.posts.size > 0 -%}
-        <div class="home-blog__list">
-          {%- for post in site.posts limit: 4 -%}
-            <article class="home-blog__item">
-              <h3 class="home-blog__item-title">
-                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-              </h3>
-              <p class="home-blog__item-meta">
-                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-                {%- if post.tags and post.tags.size > 0 -%}
-                  · <span class="home-blog__item-tags">{{ post.tags | join: ", " }}</span>
-                {%- endif -%}
-              </p>
-              <p class="home-blog__item-excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>
-              <a class="home-blog__item-read-more" href="{{ post.url | relative_url }}">Read more →</a>
-            </article>
-          {%- endfor -%}
-        </div>
-      {%- else -%}
-        <p class="home-blog__empty">No posts yet. Check back soon for updates.</p>
-      {%- endif -%}
-
-      <a class="home-blog__cta" href="{{ '/blog/' | relative_url }}">Explore all posts →</a>
-    </section>
+<section class="page">
+  <div class="page__header">
+    <p class="page__eyebrow">Fresh off the press</p>
+    <h2 class="page__title" style="font-size:1.9rem;">Recent notes</h2>
   </div>
-</div>
+  <div class="card-grid">
+    {%- for post in site.posts limit: 6 -%}
+      <a class="note-card" href="{{ post.url | relative_url }}">
+        <h3 class="note-card__title">{{ post.title }}</h3>
+        <p class="note-card__meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+          {%- if post.tags.size > 0 %} · {{ post.tags | first }}{% endif -%}
+        </p>
+        <p class="note-card__excerpt">{{ post.excerpt | strip_html | truncate: 130 }}</p>
+      </a>
+    {%- endfor -%}
+  </div>
+  <p style="margin-top:1.5rem;">
+    <a class="home-blog__cta" href="{{ '/blog/' | relative_url }}">Browse all posts →</a>
+  </p>
+</section>

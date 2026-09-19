@@ -2,117 +2,118 @@
 layout: default
 ---
 
-<article class="blog-post">
-  <header class="blog-post__header">
-    <h1 class="blog-post__title">{{ page.title }}</h1>
-    <p class="blog-post__meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
-      {%- if page.author -%}
-        · <span class="blog-post__author">{{ page.author }}</span>
-      {%- endif -%}
-      {%- if page.tags and page.tags.size > 0 -%}
-        · <span class="blog-post__tags">{{ page.tags | join: ", " }}</span>
-      {%- endif -%}
-    </p>
-  </header>
+{%- assign conn = site.data.connections[page.slug] -%}
+{%- assign words = content | number_of_words -%}
+{%- assign minutes = words | divided_by: 200 | plus: 1 -%}
 
-  <div class="blog-post__content">
-    {{ content }}
+<div class="reading__progress" id="readingProgress" aria-hidden="true"></div>
+
+<article class="reading">
+  <div class="reading__layout">
+    <aside class="reading__toc" aria-label="On this page">
+      <p class="reading__toc-title">On this page</p>
+      <nav id="readingToc" class="reading__toc-nav"></nav>
+      {%- if conn.series -%}
+        <div class="reading__toc-series">
+          <span class="reading__toc-series-label">Series</span>
+          <a href="{{ '/series/' | relative_url }}#{{ conn.series.name | slugify }}">{{ conn.series.name }}</a>
+          <span class="reading__toc-series-part">Part {{ conn.series.part }} of {{ conn.series.total }}</span>
+        </div>
+      {%- endif -%}
+    </aside>
+
+    <div class="reading__main">
+      <header class="reading__header">
+        {%- if conn.series -%}
+          <a class="reading__series-badge" href="{{ '/series/' | relative_url }}">🔗 {{ conn.series.name }} · Part {{ conn.series.part }}/{{ conn.series.total }}</a>
+        {%- endif -%}
+        <h1 class="reading__title">{{ page.title }}</h1>
+        <p class="reading__meta">
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+          · {{ minutes }} min read
+        </p>
+        {%- if page.tags and page.tags.size > 0 -%}
+          <p class="reading__tags chip-row">
+            {%- for tag in page.tags -%}
+              {%- unless tag == 'series' -%}
+                <a class="chip" href="{{ '/topics/' | relative_url }}?tag={{ tag | uri_escape }}">{{ tag }}</a>
+              {%- endunless -%}
+            {%- endfor -%}
+          </p>
+        {%- endif -%}
+      </header>
+
+      {%- if conn.series and conn.series.prev -%}
+        {%- assign prevp = site.posts | where: "slug", conn.series.prev | first -%}
+      {%- endif -%}
+      {%- if conn.series and conn.series.next -%}
+        {%- assign nextp = site.posts | where: "slug", conn.series.next | first -%}
+      {%- endif -%}
+
+      <div class="reading__content blog-post__content" id="readingContent">
+        {{ content }}
+      </div>
+
+      <footer class="reading__chain">
+        {%- if conn.series -%}
+          <nav class="chain-series" aria-label="Series navigation">
+            {%- if prevp -%}
+              <a class="chain-series__link chain-series__prev" href="{{ prevp.url | relative_url }}">
+                <span>← Part {{ conn.series.part | minus: 1 }}</span><b>{{ prevp.title }}</b>
+              </a>
+            {%- endif -%}
+            {%- if nextp -%}
+              <a class="chain-series__link chain-series__next" href="{{ nextp.url | relative_url }}">
+                <span>Part {{ conn.series.part | plus: 1 }} →</span><b>{{ nextp.title }}</b>
+              </a>
+            {%- endif -%}
+          </nav>
+        {%- endif -%}
+
+        {%- if conn.related and conn.related.size > 0 -%}
+          <section class="chain-section" aria-label="Related notes">
+            <h2 class="chain-section__title">Related by topic</h2>
+            <div class="card-grid">
+              {%- for slug in conn.related -%}
+                {%- assign rp = site.posts | where: "slug", slug | first -%}
+                {%- if rp -%}
+                  <a class="note-card" href="{{ rp.url | relative_url }}">
+                    <h3 class="note-card__title">{{ rp.title }}</h3>
+                    <p class="note-card__meta">{{ rp.date | date: "%b %Y" }}{% if rp.tags.size > 0 %} · {{ rp.tags | first }}{% endif %}</p>
+                  </a>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </section>
+        {%- endif -%}
+
+        {%- if conn.backlinks and conn.backlinks.size > 0 -%}
+          <section class="chain-section chain-backlinks" aria-label="Notes that link here">
+            <h2 class="chain-section__title">↩ Notes that link here</h2>
+            <ul class="chain-backlinks__list">
+              {%- for slug in conn.backlinks -%}
+                {%- assign bp = site.posts | where: "slug", slug | first -%}
+                {%- if bp -%}
+                  <li><a href="{{ bp.url | relative_url }}">{{ bp.title }}</a></li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </section>
+        {%- endif -%}
+
+        {%- unless conn.series -%}
+          <nav class="chain-adjacent" aria-label="Post navigation">
+            {%- if page.previous -%}
+              <a class="chain-series__link chain-series__prev" href="{{ page.previous.url | relative_url }}"><span>← Previous</span><b>{{ page.previous.title }}</b></a>
+            {%- endif -%}
+            {%- if page.next -%}
+              <a class="chain-series__link chain-series__next" href="{{ page.next.url | relative_url }}"><span>Next →</span><b>{{ page.next.title }}</b></a>
+            {%- endif -%}
+          </nav>
+        {%- endunless -%}
+      </footer>
+    </div>
   </div>
-
-  {% assign related_count = 0 %}
-  {% capture related_items %}
-    {% if page.tags and page.tags.size > 0 %}
-      {% for candidate in site.posts %}
-        {% if candidate.url != page.url %}
-          {% assign share = false %}
-          {% for tag in candidate.tags %}
-            {% if page.tags contains tag %}
-              {% assign share = true %}
-            {% endif %}
-          {% endfor %}
-          {% if share %}
-            {% assign related_count = related_count | plus: 1 %}
-            <li class="blog-post__related-item">
-              <a class="blog-post__related-link" href="{{ candidate.url | relative_url }}">{{ candidate.title }}</a>
-              <span class="blog-post__related-meta">
-                {{ candidate.date | date: "%B %-d, %Y" }}
-                {% if candidate.tags and candidate.tags.size > 0 %}
-                  · {{ candidate.tags | join: ", " }}
-                {% endif %}
-              </span>
-            </li>
-          {% endif %}
-          {% if related_count == 5 %}
-            {% break %}
-          {% endif %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-  {% endcapture %}
-  {% if related_count == 0 %}
-    {% assign fallback_count = 0 %}
-    {% capture related_items %}
-      {% for candidate in site.posts %}
-        {% if candidate.url != page.url %}
-          {% assign fallback_count = fallback_count | plus: 1 %}
-          <li class="blog-post__related-item">
-            <a class="blog-post__related-link" href="{{ candidate.url | relative_url }}">{{ candidate.title }}</a>
-            <span class="blog-post__related-meta">
-              {{ candidate.date | date: "%B %-d, %Y" }}
-              {% if candidate.tags and candidate.tags.size > 0 %}
-                · {{ candidate.tags | join: ", " }}
-              {% endif %}
-            </span>
-          </li>
-        {% endif %}
-        {% if fallback_count == 5 %}
-          {% break %}
-        {% endif %}
-      {% endfor %}
-    {% endcapture %}
-    {% assign related_count = fallback_count %}
-  {% endif %}
-  {% if related_count > 0 %}
-    <section class="blog-post__related" aria-label="Related posts">
-      <h2 class="blog-post__related-title">Keep Reading</h2>
-      <ul class="blog-post__related-list">
-        {{ related_items }}
-      </ul>
-    </section>
-  {% endif %}
-
-  <nav class="blog-post__nav" aria-label="Post navigation">
-    <ul class="blog-post__nav-list">
-      <li class="blog-post__nav-item">
-        <a class="blog-post__nav-link blog-post__nav-link--home" href="{{ '/' | relative_url }}">
-          ← Home
-        </a>
-      </li>
-      <li class="blog-post__nav-item">
-        <a class="blog-post__nav-link blog-post__nav-link--index" href="{{ '/blog/' | relative_url }}">
-          Blog index
-        </a>
-      </li>
-      <li class="blog-post__nav-item">
-        <a class="blog-post__nav-link blog-post__nav-link--search" href="{{ '/search/' | relative_url }}">
-          Search
-        </a>
-      </li>
-      {%- if page.previous -%}
-        <li class="blog-post__nav-item">
-          <a class="blog-post__nav-link blog-post__nav-link--prev" href="{{ page.previous.url | relative_url }}">
-            ← Previous: {{ page.previous.title }}
-          </a>
-        </li>
-      {%- endif -%}
-      {%- if page.next -%}
-        <li class="blog-post__nav-item">
-          <a class="blog-post__nav-link blog-post__nav-link--next" href="{{ page.next.url | relative_url }}">
-            Next: {{ page.next.title }} →
-          </a>
-        </li>
-      {%- endif -%}
-    </ul>
-  </nav>
 </article>
+
+<script src="{{ '/assets/reading.js' | relative_url }}" defer></script>

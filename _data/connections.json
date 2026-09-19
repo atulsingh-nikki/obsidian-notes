@@ -1,0 +1,1823 @@
+{
+  "edge-detection-operators": {
+    "title": "Edge Detection Operators: A 2013 Snapshot",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "canny-edge-detector-practice",
+      "comparing-contrast-across-different-images",
+      "image-matting-mask-edge-correction",
+      "measuring-contrast-between-images",
+      "sdr-hdr-contrast-comparison",
+      "understanding-color-balance"
+    ],
+    "series": null
+  },
+  "canny-edge-detector-practice": {
+    "title": "Canny Edge Detector in Practice (circa 2013)",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "comparing-contrast-across-different-images",
+      "image-matting-mask-edge-correction",
+      "measuring-contrast-between-images",
+      "sdr-hdr-contrast-comparison",
+      "understanding-color-balance",
+      "understanding-color-contrast"
+    ],
+    "series": null
+  },
+  "introducing-the-blog": {
+    "title": "Introducing the Atul Singh Notes Blog",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [],
+    "series": null
+  },
+  "bookshelf-pipeline-refresh": {
+    "title": "How the Learning Collection Gets Built Each Week",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [],
+    "series": null
+  },
+  "introduction-to-kalman-filtering": {
+    "title": "Introduction to Kalman Filtering and State Estimation",
+    "outlinks": [
+      "fundamentals-recursive-filtering"
+    ],
+    "backlinks": [
+      "fundamentals-recursive-filtering",
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "fundamentals-recursive-filtering",
+      "advanced-kalman-topics",
+      "bayesian-foundations-kalman",
+      "frequency-domain-vs-spatial-domain",
+      "kalman-filter-applications",
+      "kalman-filter-derivation"
+    ],
+    "series": {
+      "part": 1,
+      "total": 8,
+      "name": "Kalman Filtering",
+      "prev": null,
+      "next": "fundamentals-recursive-filtering"
+    }
+  },
+  "fundamentals-recursive-filtering": {
+    "title": "Fundamentals of Recursive Filtering",
+    "outlinks": [
+      "introduction-to-kalman-filtering",
+      "bayesian-foundations-kalman"
+    ],
+    "backlinks": [
+      "introduction-to-kalman-filtering",
+      "bayesian-foundations-kalman",
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "introduction-to-kalman-filtering",
+      "advanced-kalman-topics",
+      "bayesian-foundations-kalman",
+      "frequency-domain-vs-spatial-domain",
+      "kalman-filter-applications",
+      "kalman-filter-derivation"
+    ],
+    "series": {
+      "part": 2,
+      "total": 8,
+      "name": "Kalman Filtering",
+      "prev": "introduction-to-kalman-filtering",
+      "next": "bayesian-foundations-kalman"
+    }
+  },
+  "bayesian-foundations-kalman": {
+    "title": "Bayesian Foundations of Kalman Filtering",
+    "outlinks": [
+      "fundamentals-recursive-filtering",
+      "kalman-filter-derivation"
+    ],
+    "backlinks": [
+      "fundamentals-recursive-filtering",
+      "kalman-filter-derivation",
+      "publishing-cadence-summary",
+      "machine-learning-paradigms-distributions-vs-functions"
+    ],
+    "related": [
+      "bayesian-inference-short-primer",
+      "beta-distribution-intuition-compressed-parameterization",
+      "beta-distribution-primer",
+      "advanced-kalman-topics",
+      "curse-of-dimensionality",
+      "demystifying-simulation-random-variables"
+    ],
+    "series": {
+      "part": 3,
+      "total": 8,
+      "name": "Kalman Filtering",
+      "prev": "fundamentals-recursive-filtering",
+      "next": "kalman-filter-derivation"
+    }
+  },
+  "kalman-filter-derivation": {
+    "title": "Complete Mathematical Derivation of the Kalman Filter",
+    "outlinks": [
+      "bayesian-foundations-kalman",
+      "kalman-filter-implementation"
+    ],
+    "backlinks": [
+      "bayesian-foundations-kalman",
+      "kalman-filter-implementation",
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "advanced-kalman-topics",
+      "evolution-of-optimization-from-equations-to-gradients",
+      "kalman-filter-applications",
+      "kalman-filter-implementation",
+      "linear-algebra-journey-vector-spaces",
+      "matrix-determinants-leibniz-theorem"
+    ],
+    "series": {
+      "part": 4,
+      "total": 8,
+      "name": "Kalman Filtering",
+      "prev": "bayesian-foundations-kalman",
+      "next": "kalman-filter-implementation"
+    }
+  },
+  "kalman-filter-implementation": {
+    "title": "Implementing the Kalman Filter in Python",
+    "outlinks": [
+      "kalman-filter-derivation",
+      "kalman-filter-applications"
+    ],
+    "backlinks": [
+      "kalman-filter-derivation",
+      "kalman-filter-applications",
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "advanced-kalman-topics",
+      "kalman-filter-applications",
+      "nonlinear-kalman-extensions",
+      "bayesian-foundations-kalman",
+      "fundamentals-recursive-filtering",
+      "introduction-to-kalman-filtering"
+    ],
+    "series": {
+      "part": 5,
+      "total": 8,
+      "name": "Kalman Filtering",
+      "prev": "kalman-filter-derivation",
+      "next": "kalman-filter-applications"
+    }
+  },
+  "kalman-filter-applications": {
+    "title": "Real-World Applications of Kalman Filtering",
+    "outlinks": [
+      "kalman-filter-implementation",
+      "nonlinear-kalman-extensions"
+    ],
+    "backlinks": [
+      "kalman-filter-implementation",
+      "nonlinear-kalman-extensions",
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "about-atul-singh",
+      "advanced-kalman-topics",
+      "classical-supervised-vision-backbones",
+      "comparing-contrast-across-different-images",
+      "depth-disparity-interactive",
+      "depth-maps-computer-vision"
+    ],
+    "series": {
+      "part": 6,
+      "total": 8,
+      "name": "Kalman Filtering",
+      "prev": "kalman-filter-implementation",
+      "next": "nonlinear-kalman-extensions"
+    }
+  },
+  "nonlinear-kalman-extensions": {
+    "title": "Nonlinear Extensions: EKF, UKF, and Particle Filters",
+    "outlinks": [
+      "kalman-filter-applications",
+      "advanced-kalman-topics"
+    ],
+    "backlinks": [
+      "kalman-filter-applications",
+      "advanced-kalman-topics",
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "advanced-kalman-topics",
+      "bayesian-foundations-kalman",
+      "fundamentals-recursive-filtering",
+      "introduction-to-kalman-filtering",
+      "kalman-filter-applications",
+      "kalman-filter-derivation"
+    ],
+    "series": {
+      "part": 7,
+      "total": 8,
+      "name": "Kalman Filtering",
+      "prev": "kalman-filter-applications",
+      "next": "advanced-kalman-topics"
+    }
+  },
+  "advanced-kalman-topics": {
+    "title": "Advanced Topics and Future Directions in Kalman Filtering",
+    "outlinks": [
+      "nonlinear-kalman-extensions"
+    ],
+    "backlinks": [
+      "nonlinear-kalman-extensions",
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "about-atul-singh",
+      "bayesian-inference-short-primer",
+      "beta-distribution-intuition-compressed-parameterization",
+      "beta-distribution-primer",
+      "curse-of-dimensionality",
+      "dijkstra-ml-uses"
+    ],
+    "series": {
+      "part": 8,
+      "total": 8,
+      "name": "Kalman Filtering",
+      "prev": "nonlinear-kalman-extensions",
+      "next": null
+    }
+  },
+  "mathjax-test": {
+    "title": "MathJax Test Page",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [],
+    "series": null
+  },
+  "resent-family-spectrum": {
+    "title": "Understanding the Resent Family of Emotions",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [],
+    "series": null
+  },
+  "tesseract-ocr-evolution": {
+    "title": "From Tesseract to Transformers: The Evolution of OCR",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "how-many-vision-encoders",
+      "vision-transformers",
+      "about-atul-singh",
+      "classical-supervised-vision-backbones",
+      "comparing-contrast-across-different-images",
+      "depth-disparity-interactive"
+    ],
+    "series": null
+  },
+  "understanding-aces-scene-referred-workflows": {
+    "title": "Understanding ACES, Scene-Referred Workflows, and Color Space Conversions",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "hollywood-color-pipeline-dailies-di-show-lut",
+      "bitmap-gamut-precomputation",
+      "logarithmic-color-pca"
+    ],
+    "series": null
+  },
+  "hidden-symmetry-inverse-trig": {
+    "title": "The Hidden Symmetry of Inverse Sine and Cosine",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "beta-distribution-intuition-compressed-parameterization",
+      "differential-equations-ode-pde-sde",
+      "elementary-math-to-vision-algorithms",
+      "evolution-of-optimization-from-equations-to-gradients",
+      "expected-value-expectation-mathematical-foundations",
+      "iitjee_math_to_vision_blog"
+    ],
+    "series": null
+  },
+  "why-intersection-fails-lagrange-multipliers": {
+    "title": "Why Intersection Fails in Lagrange Multipliers: The Geometry of Optimization",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "taylor-series-expansion-intuition",
+      "what-is-a-hessian-matrix",
+      "bitmap-gamut-precomputation",
+      "curse-of-dimensionality",
+      "dijkstra-ml-uses",
+      "evolution-of-optimization-from-equations-to-gradients"
+    ],
+    "series": null
+  },
+  "from-gradients-to-hessians": {
+    "title": "From Gradients to Hessians: How Optimization Shapes Vision & ML",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "what-is-a-hessian-matrix",
+      "about-atul-singh",
+      "dijkstra-ml-uses",
+      "elementary-math-to-vision-algorithms",
+      "iitjee_math_to_vision_blog",
+      "learning-rate-schedulers-intuitions"
+    ],
+    "series": null
+  },
+  "understanding-implicit-function-theorem": {
+    "title": "Understanding the Implicit Function Theorem",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "taylor-series-expansion-intuition",
+      "what-is-a-hessian-matrix",
+      "why-intersection-fails-lagrange-multipliers"
+    ],
+    "series": null
+  },
+  "culpable-word-study": {
+    "title": "Culpable: Word Family, Nuance, and Indian Newsroom Examples",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [],
+    "series": null
+  },
+  "understanding-futures-promises-cpp": {
+    "title": "Understanding Futures and Promises in Modern C++",
+    "outlinks": [
+      "compound-futures-modern-cpp",
+      "cpp-reference-types-explained",
+      "mastering-std-async"
+    ],
+    "backlinks": [
+      "compound-futures-modern-cpp",
+      "mastering-std-async",
+      "publishing-cadence-summary",
+      "cpp-reference-types-explained"
+    ],
+    "related": [
+      "compound-futures-modern-cpp",
+      "mastering-std-async",
+      "cpp-reference-types-explained",
+      "intrinsics-simd-avx",
+      "template-metaprogramming-frontiers"
+    ],
+    "series": null
+  },
+  "compound-futures-modern-cpp": {
+    "title": "Composing Futures in Modern C++",
+    "outlinks": [
+      "understanding-futures-promises-cpp",
+      "cpp-reference-types-explained",
+      "mastering-std-async"
+    ],
+    "backlinks": [
+      "understanding-futures-promises-cpp",
+      "mastering-std-async",
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "mastering-std-async",
+      "understanding-futures-promises-cpp",
+      "cpp-reference-types-explained",
+      "intrinsics-simd-avx",
+      "template-metaprogramming-frontiers"
+    ],
+    "series": null
+  },
+  "mastering-std-async": {
+    "title": "Mastering std::async in Modern C++",
+    "outlinks": [
+      "understanding-futures-promises-cpp",
+      "compound-futures-modern-cpp",
+      "cpp-reference-types-explained"
+    ],
+    "backlinks": [
+      "understanding-futures-promises-cpp",
+      "compound-futures-modern-cpp",
+      "publishing-cadence-summary",
+      "cpp-reference-types-explained"
+    ],
+    "related": [
+      "compound-futures-modern-cpp",
+      "understanding-futures-promises-cpp",
+      "cpp-reference-types-explained",
+      "intrinsics-simd-avx",
+      "template-metaprogramming-frontiers"
+    ],
+    "series": null
+  },
+  "stochastic-processes-and-sampling": {
+    "title": "Stochastic Processes and the Art of Sampling Uncertainty",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary",
+      "machine-learning-paradigms-distributions-vs-functions",
+      "ito-calculus-stochastic-differential-equations",
+      "differential-equations-ode-pde-sde",
+      "mathematical-properties-brownian-motion",
+      "brownian-motion-diffusion-flow-models"
+    ],
+    "related": [
+      "demystifying-simulation-random-variables",
+      "random-vs-stochastic-foundations",
+      "advanced-sampling-techniques",
+      "bayesian-inference-short-primer",
+      "beta-distribution-primer",
+      "expected-value-expectation-mathematical-foundations"
+    ],
+    "series": null
+  },
+  "advanced-sampling-techniques": {
+    "title": "Beyond Basics: Importance, Gibbs, and Stratified Sampling",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "demystifying-simulation-random-variables",
+      "random-vs-stochastic-foundations",
+      "why-direct-sampling-from-pdfs-is-hard",
+      "stochastic-processes-and-sampling",
+      "bayesian-inference-short-primer",
+      "beta-distribution-primer"
+    ],
+    "series": null
+  },
+  "logarithmic-color-pca": {
+    "title": "Logarithmic Color Spaces, PCA, and the lαβ Intuition",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "bitmap-gamut-precomputation",
+      "hollywood-color-pipeline-dailies-di-show-lut",
+      "understanding-color-contrast",
+      "understanding-image-contrast",
+      "understanding-aces-scene-referred-workflows"
+    ],
+    "series": null
+  },
+  "intrinsics-simd-avx": {
+    "title": "SIMD Intrinsics: From SSE to AVX2 in Practice",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "cpp-reference-types-explained",
+      "isa-to-gpu-kernel-bridge",
+      "template-metaprogramming-frontiers",
+      "compound-futures-modern-cpp",
+      "mastering-std-async",
+      "understanding-futures-promises-cpp"
+    ],
+    "series": null
+  },
+  "template-metaprogramming-frontiers": {
+    "title": "Template Programming Frontiers",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "cpp-reference-types-explained",
+      "compound-futures-modern-cpp",
+      "intrinsics-simd-avx",
+      "mastering-std-async",
+      "understanding-futures-promises-cpp"
+    ],
+    "series": null
+  },
+  "gpu-kernel-programming-basics": {
+    "title": "GPU Kernel Programming: Grids, Blocks, and Warps Explained",
+    "outlinks": [
+      "isa-to-gpu-kernel-bridge"
+    ],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "isa-to-gpu-kernel-bridge"
+    ],
+    "series": null
+  },
+  "random-vs-stochastic-foundations": {
+    "title": "Random vs Stochastic: Clarifying Variables, Processes, Sampling, and Optimization",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "demystifying-simulation-random-variables",
+      "stochastic-processes-and-sampling",
+      "bayesian-inference-short-primer",
+      "beta-distribution-primer",
+      "expected-value-expectation-mathematical-foundations",
+      "why-direct-sampling-from-pdfs-is-hard"
+    ],
+    "series": null
+  },
+  "isa-to-gpu-kernel-bridge": {
+    "title": "From ISA to GPU Kernels: Bridging SIMD Mindsets",
+    "outlinks": [],
+    "backlinks": [
+      "gpu-kernel-programming-basics",
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "gpu-kernel-programming-basics",
+      "intrinsics-simd-avx"
+    ],
+    "series": null
+  },
+  "publishing-cadence-summary": {
+    "title": "Publishing Cadence Summary",
+    "outlinks": [
+      "edge-detection-operators",
+      "canny-edge-detector-practice",
+      "introducing-the-blog",
+      "bookshelf-pipeline-refresh",
+      "introduction-to-kalman-filtering",
+      "fundamentals-recursive-filtering",
+      "bayesian-foundations-kalman",
+      "kalman-filter-derivation",
+      "kalman-filter-implementation",
+      "kalman-filter-applications",
+      "nonlinear-kalman-extensions",
+      "advanced-kalman-topics",
+      "mathjax-test",
+      "resent-family-spectrum",
+      "tesseract-ocr-evolution",
+      "understanding-aces-scene-referred-workflows",
+      "hidden-symmetry-inverse-trig",
+      "why-intersection-fails-lagrange-multipliers",
+      "from-gradients-to-hessians",
+      "understanding-implicit-function-theorem",
+      "culpable-word-study",
+      "understanding-futures-promises-cpp",
+      "compound-futures-modern-cpp",
+      "mastering-std-async",
+      "stochastic-processes-and-sampling",
+      "advanced-sampling-techniques",
+      "logarithmic-color-pca",
+      "intrinsics-simd-avx",
+      "template-metaprogramming-frontiers",
+      "gpu-kernel-programming-basics",
+      "random-vs-stochastic-foundations",
+      "isa-to-gpu-kernel-bridge",
+      "publishing-cadence-summary",
+      "pytorch-indexing-slicing",
+      "evolution-of-optimization-from-equations-to-gradients",
+      "bitmap-gamut-precomputation",
+      "understanding-kl-divergence",
+      "frequency-domain-vs-spatial-domain",
+      "linear-algebra-journey-vector-spaces",
+      "elementary-math-to-vision-algorithms",
+      "how-cameras-and-eyes-ses-light-from-spectra-to-illuminants",
+      "iitjee_math_to_vision_blog",
+      "gripe-complaint-grievance",
+      "why-direct-sampling-from-pdfs-is-hard",
+      "pix2seqd-panoptic-masks-without-inductive-biases",
+      "cpp-reference-types-explained",
+      "adaptive-dual-teacher-distillation-lightweight-video-models",
+      "from-funnels-to-loops-distribution-shifts-in-the-ai-era",
+      "curse-of-dimensionality",
+      "normalization-constant-problem",
+      "why-discriminative-learning-came-first",
+      "machine-learning-paradigms-distributions-vs-functions",
+      "total-variation-brownian-motion",
+      "understanding-image-contrast",
+      "understanding-color-contrast",
+      "ito-calculus-stochastic-differential-equations",
+      "measuring-contrast-between-images",
+      "comparing-contrast-across-different-images",
+      "differential-equations-ode-pde-sde",
+      "mathematical-properties-brownian-motion",
+      "sdr-hdr-contrast-comparison",
+      "understanding-color-balance",
+      "about-atul-singh",
+      "brownian-motion-diffusion-flow-models",
+      "unsupervised-learning-contrast-prediction",
+      "how-vaes-avoid-computing-partition-function",
+      "expected-value-expectation-mathematical-foundations",
+      "depth-disparity-interactive",
+      "depth-maps-computer-vision",
+      "image-matting-mask-edge-correction",
+      "video-matting-temporal-consistency",
+      "mask-refinement-premiere-resolve",
+      "matrix-determinants-leibniz-theorem",
+      "signed-volume-geometric-interpretation",
+      "bijective-functions-invertibility",
+      "symmetric-groups-first-principles",
+      "dijkstra-ml-uses",
+      "learning-rate-schedulers-intuitions",
+      "taylor-series-expansion-intuition",
+      "what-is-a-hessian-matrix",
+      "zeroing-model-weights-differentiability",
+      "hollywood-color-pipeline-dailies-di-show-lut",
+      "beta-distribution-primer",
+      "beta-distribution-intuition-compressed-parameterization",
+      "bayesian-inference-short-primer",
+      "demystifying-simulation-random-variables",
+      "what-is-a-linear-probe",
+      "disentanglement-vs-decodability-factorized-testing",
+      "representation-intervention-activation-patching",
+      "single-direction-vs-subspace-representations",
+      "dino-self-distillation-no-labels-vision-transformers",
+      "momentum-encoder-why-ema-teachers-work",
+      "vit-patch-embeddings-cls-token-explained",
+      "positional-embeddings-in-vision-transformers"
+    ],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [],
+    "series": null
+  },
+  "pytorch-indexing-slicing": {
+    "title": "PyTorch Tensor Indexing: From 1D Slices to N-Dimensional Views",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "zeroing-model-weights-differentiability",
+      "brownian-motion-diffusion-flow-models",
+      "depth-maps-computer-vision",
+      "how-vaes-avoid-computing-partition-function",
+      "image-matting-mask-edge-correction",
+      "learning-rate-schedulers-intuitions"
+    ],
+    "series": null
+  },
+  "evolution-of-optimization-from-equations-to-gradients": {
+    "title": "The Evolution of Optimization: From Solving Equations to Gradient Descent and Poisson Solvers",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "differential-equations-ode-pde-sde",
+      "mathematical-properties-brownian-motion",
+      "matrix-determinants-leibniz-theorem",
+      "total-variation-brownian-motion",
+      "what-is-a-hessian-matrix",
+      "bitmap-gamut-precomputation"
+    ],
+    "series": null
+  },
+  "bitmap-gamut-precomputation": {
+    "title": "Bitmap Lookups for Fast YUV → RGB Gamut Decisions",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "dijkstra-ml-uses",
+      "hollywood-color-pipeline-dailies-di-show-lut",
+      "learning-rate-schedulers-intuitions",
+      "taylor-series-expansion-intuition",
+      "what-is-a-hessian-matrix",
+      "evolution-of-optimization-from-equations-to-gradients"
+    ],
+    "series": null
+  },
+  "understanding-kl-divergence": {
+    "title": "Understanding KL Divergence: Measuring One Distribution Against Another",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "bayesian-inference-short-primer",
+      "beta-distribution-intuition-compressed-parameterization",
+      "beta-distribution-primer",
+      "curse-of-dimensionality",
+      "expected-value-expectation-mathematical-foundations",
+      "how-vaes-avoid-computing-partition-function"
+    ],
+    "series": null
+  },
+  "frequency-domain-vs-spatial-domain": {
+    "title": "Frequency Domain vs Spatial Domain: How Images Reveal Different Stories",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "comparing-contrast-across-different-images",
+      "image-matting-mask-edge-correction",
+      "measuring-contrast-between-images",
+      "sdr-hdr-contrast-comparison",
+      "understanding-color-balance",
+      "understanding-color-contrast"
+    ],
+    "series": null
+  },
+  "linear-algebra-journey-vector-spaces": {
+    "title": "From Linear Equations to Vector Spaces",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "matrix-determinants-leibniz-theorem",
+      "signed-volume-geometric-interpretation",
+      "what-is-a-hessian-matrix",
+      "evolution-of-optimization-from-equations-to-gradients",
+      "kalman-filter-derivation"
+    ],
+    "series": null
+  },
+  "elementary-math-to-vision-algorithms": {
+    "title": "From Elementary Mathematics to Vision Algorithms: The Hidden Life of Normalized Power Sums",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "iitjee_math_to_vision_blog",
+      "about-atul-singh",
+      "expected-value-expectation-mathematical-foundations",
+      "how-cameras-and-eyes-ses-light-from-spectra-to-illuminants",
+      "unsupervised-learning-contrast-prediction",
+      "from-gradients-to-hessians"
+    ],
+    "series": null
+  },
+  "how-cameras-and-eyes-ses-light-from-spectra-to-illuminants": {
+    "title": "How Cameras and Eyes See Light: From Spectra to Illuminants",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "elementary-math-to-vision-algorithms",
+      "iitjee_math_to_vision_blog",
+      "understanding-color-balance",
+      "understanding-color-contrast",
+      "about-atul-singh",
+      "classical-supervised-vision-backbones"
+    ],
+    "series": null
+  },
+  "iitjee_math_to_vision_blog": {
+    "title": "From Elementary Mathematics to Vision Algorithms: The Hidden Life of Normalized Power Sums",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "elementary-math-to-vision-algorithms",
+      "about-atul-singh",
+      "expected-value-expectation-mathematical-foundations",
+      "how-cameras-and-eyes-ses-light-from-spectra-to-illuminants",
+      "unsupervised-learning-contrast-prediction",
+      "from-gradients-to-hessians"
+    ],
+    "series": null
+  },
+  "gripe-complaint-grievance": {
+    "title": "Gripe, Complaint, or Grievance? Understanding Usage in Indian Newspapers (September 2025)",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [],
+    "series": null
+  },
+  "why-direct-sampling-from-pdfs-is-hard": {
+    "title": "Why Direct Sampling from PDFs or PMFs Is So Hard",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary",
+      "why-discriminative-learning-came-first",
+      "machine-learning-paradigms-distributions-vs-functions"
+    ],
+    "related": [
+      "demystifying-simulation-random-variables",
+      "advanced-sampling-techniques",
+      "random-vs-stochastic-foundations",
+      "stochastic-processes-and-sampling",
+      "bayesian-inference-short-primer",
+      "beta-distribution-intuition-compressed-parameterization"
+    ],
+    "series": null
+  },
+  "pix2seqd-panoptic-masks-without-inductive-biases": {
+    "title": "How Pix2Seq-D Generates Panoptic Masks Without Heavy Inductive Biases",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "about-atul-singh",
+      "classical-supervised-vision-backbones",
+      "comparing-contrast-across-different-images",
+      "depth-disparity-interactive",
+      "depth-maps-computer-vision",
+      "dino-self-distillation-no-labels-vision-transformers"
+    ],
+    "series": null
+  },
+  "cpp-reference-types-explained": {
+    "title": "Understanding Reference Types in Modern C++",
+    "outlinks": [
+      "understanding-futures-promises-cpp",
+      "mastering-std-async"
+    ],
+    "backlinks": [
+      "understanding-futures-promises-cpp",
+      "compound-futures-modern-cpp",
+      "mastering-std-async",
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "compound-futures-modern-cpp",
+      "intrinsics-simd-avx",
+      "mastering-std-async",
+      "template-metaprogramming-frontiers",
+      "understanding-futures-promises-cpp"
+    ],
+    "series": null
+  },
+  "adaptive-dual-teacher-distillation-lightweight-video-models": {
+    "title": "Adaptive Dual-Teacher Distillation for Lightweight Video Models",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "classical-supervised-vision-backbones",
+      "positional-embeddings-in-vision-transformers",
+      "positional-embeddings-survey",
+      "probing-supervised-backbone-representations",
+      "vit-patch-embeddings-cls-token-explained"
+    ],
+    "series": null
+  },
+  "from-funnels-to-loops-distribution-shifts-in-the-ai-era": {
+    "title": "From Funnels to Loops: Distribution Shifts in the AI Era",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [],
+    "series": null
+  },
+  "curse-of-dimensionality": {
+    "title": "The Curse of Dimensionality: Why High Dimensions Break Intuition",
+    "outlinks": [
+      "why-discriminative-learning-came-first",
+      "machine-learning-paradigms-distributions-vs-functions",
+      "normalization-constant-problem"
+    ],
+    "backlinks": [
+      "publishing-cadence-summary",
+      "normalization-constant-problem",
+      "why-discriminative-learning-came-first"
+    ],
+    "related": [
+      "bayesian-inference-short-primer",
+      "beta-distribution-intuition-compressed-parameterization",
+      "beta-distribution-primer",
+      "expected-value-expectation-mathematical-foundations",
+      "how-vaes-avoid-computing-partition-function",
+      "machine-learning-paradigms-distributions-vs-functions"
+    ],
+    "series": null
+  },
+  "normalization-constant-problem": {
+    "title": "The Normalization Constant Problem: Why Computing Z Is So Hard",
+    "outlinks": [
+      "why-discriminative-learning-came-first",
+      "machine-learning-paradigms-distributions-vs-functions",
+      "curse-of-dimensionality"
+    ],
+    "backlinks": [
+      "publishing-cadence-summary",
+      "curse-of-dimensionality",
+      "why-discriminative-learning-came-first",
+      "how-vaes-avoid-computing-partition-function"
+    ],
+    "related": [
+      "how-vaes-avoid-computing-partition-function",
+      "machine-learning-paradigms-distributions-vs-functions",
+      "bayesian-inference-short-primer",
+      "beta-distribution-intuition-compressed-parameterization",
+      "beta-distribution-primer",
+      "expected-value-expectation-mathematical-foundations"
+    ],
+    "series": null
+  },
+  "why-discriminative-learning-came-first": {
+    "title": "Why Discriminative Learning Dominated First: The Pragmatic Path to Modern AI",
+    "outlinks": [
+      "machine-learning-paradigms-distributions-vs-functions",
+      "normalization-constant-problem",
+      "why-direct-sampling-from-pdfs-is-hard",
+      "curse-of-dimensionality",
+      "brownian-motion-diffusion-flow-models"
+    ],
+    "backlinks": [
+      "publishing-cadence-summary",
+      "curse-of-dimensionality",
+      "normalization-constant-problem",
+      "machine-learning-paradigms-distributions-vs-functions",
+      "how-vaes-avoid-computing-partition-function"
+    ],
+    "related": [
+      "how-vaes-avoid-computing-partition-function",
+      "machine-learning-paradigms-distributions-vs-functions",
+      "learning-rate-schedulers-intuitions",
+      "zeroing-model-weights-differentiability",
+      "normalization-constant-problem",
+      "about-atul-singh"
+    ],
+    "series": null
+  },
+  "machine-learning-paradigms-distributions-vs-functions": {
+    "title": "Machine Learning Paradigms: Learning Distributions vs Approximating Functions",
+    "outlinks": [
+      "why-discriminative-learning-came-first",
+      "bayesian-foundations-kalman",
+      "stochastic-processes-and-sampling",
+      "brownian-motion-diffusion-flow-models",
+      "why-direct-sampling-from-pdfs-is-hard"
+    ],
+    "backlinks": [
+      "publishing-cadence-summary",
+      "curse-of-dimensionality",
+      "normalization-constant-problem",
+      "why-discriminative-learning-came-first"
+    ],
+    "related": [
+      "how-vaes-avoid-computing-partition-function",
+      "normalization-constant-problem",
+      "why-discriminative-learning-came-first",
+      "bayesian-inference-short-primer",
+      "beta-distribution-intuition-compressed-parameterization",
+      "beta-distribution-primer"
+    ],
+    "series": null
+  },
+  "total-variation-brownian-motion": {
+    "title": "Infinite Total Variation of Brownian Motion: Why the Path Length Diverges",
+    "outlinks": [
+      "mathematical-properties-brownian-motion",
+      "ito-calculus-stochastic-differential-equations",
+      "brownian-motion-diffusion-flow-models",
+      "differential-equations-ode-pde-sde"
+    ],
+    "backlinks": [
+      "publishing-cadence-summary",
+      "ito-calculus-stochastic-differential-equations",
+      "mathematical-properties-brownian-motion"
+    ],
+    "related": [
+      "mathematical-properties-brownian-motion",
+      "ito-calculus-stochastic-differential-equations",
+      "evolution-of-optimization-from-equations-to-gradients",
+      "brownian-motion-diffusion-flow-models",
+      "differential-equations-ode-pde-sde",
+      "expected-value-expectation-mathematical-foundations"
+    ],
+    "series": null
+  },
+  "understanding-color-contrast": {
+    "title": "Understanding Contrast in Color Images: Beyond Luminance",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "understanding-image-contrast",
+      "measuring-contrast-between-images",
+      "sdr-hdr-contrast-comparison",
+      "comparing-contrast-across-different-images",
+      "understanding-color-balance",
+      "image-matting-mask-edge-correction"
+    ],
+    "series": null
+  },
+  "understanding-image-contrast": {
+    "title": "Understanding Contrast in Images: From Perception to Computation",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "understanding-color-contrast",
+      "measuring-contrast-between-images",
+      "sdr-hdr-contrast-comparison",
+      "comparing-contrast-across-different-images",
+      "image-matting-mask-edge-correction",
+      "understanding-color-balance"
+    ],
+    "series": null
+  },
+  "ito-calculus-stochastic-differential-equations": {
+    "title": "Itô Calculus: Why We Need New Rules for Stochastic Differential Equations",
+    "outlinks": [
+      "mathematical-properties-brownian-motion",
+      "differential-equations-ode-pde-sde",
+      "total-variation-brownian-motion",
+      "brownian-motion-diffusion-flow-models",
+      "stochastic-processes-and-sampling"
+    ],
+    "backlinks": [
+      "publishing-cadence-summary",
+      "total-variation-brownian-motion",
+      "differential-equations-ode-pde-sde",
+      "mathematical-properties-brownian-motion",
+      "brownian-motion-diffusion-flow-models"
+    ],
+    "related": [
+      "differential-equations-ode-pde-sde",
+      "mathematical-properties-brownian-motion",
+      "total-variation-brownian-motion",
+      "expected-value-expectation-mathematical-foundations",
+      "matrix-determinants-leibniz-theorem",
+      "elementary-math-to-vision-algorithms"
+    ],
+    "series": null
+  },
+  "measuring-contrast-between-images": {
+    "title": "Measuring Contrast Between Two Color Images: Comparison Metrics and Methods",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "comparing-contrast-across-different-images",
+      "sdr-hdr-contrast-comparison",
+      "understanding-color-contrast",
+      "understanding-image-contrast",
+      "image-matting-mask-edge-correction",
+      "understanding-color-balance"
+    ],
+    "series": null
+  },
+  "comparing-contrast-across-different-images": {
+    "title": "Comparing Contrast Across Different Images: Content-Independent Metrics",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "measuring-contrast-between-images",
+      "sdr-hdr-contrast-comparison",
+      "understanding-color-contrast",
+      "understanding-image-contrast",
+      "image-matting-mask-edge-correction",
+      "understanding-color-balance"
+    ],
+    "series": null
+  },
+  "differential-equations-ode-pde-sde": {
+    "title": "The Landscape of Differential Equations: From ODEs to PDEs to SDEs",
+    "outlinks": [
+      "brownian-motion-diffusion-flow-models",
+      "mathematical-properties-brownian-motion",
+      "stochastic-processes-and-sampling",
+      "ito-calculus-stochastic-differential-equations"
+    ],
+    "backlinks": [
+      "publishing-cadence-summary",
+      "total-variation-brownian-motion",
+      "ito-calculus-stochastic-differential-equations",
+      "mathematical-properties-brownian-motion",
+      "brownian-motion-diffusion-flow-models"
+    ],
+    "related": [
+      "evolution-of-optimization-from-equations-to-gradients",
+      "ito-calculus-stochastic-differential-equations",
+      "expected-value-expectation-mathematical-foundations",
+      "mathematical-properties-brownian-motion",
+      "matrix-determinants-leibniz-theorem",
+      "elementary-math-to-vision-algorithms"
+    ],
+    "series": null
+  },
+  "mathematical-properties-brownian-motion": {
+    "title": "Mathematical Properties of Brownian Motion: A Visual Guide",
+    "outlinks": [
+      "brownian-motion-diffusion-flow-models",
+      "total-variation-brownian-motion",
+      "ito-calculus-stochastic-differential-equations",
+      "differential-equations-ode-pde-sde",
+      "stochastic-processes-and-sampling"
+    ],
+    "backlinks": [
+      "publishing-cadence-summary",
+      "total-variation-brownian-motion",
+      "ito-calculus-stochastic-differential-equations",
+      "differential-equations-ode-pde-sde",
+      "brownian-motion-diffusion-flow-models"
+    ],
+    "related": [
+      "total-variation-brownian-motion",
+      "expected-value-expectation-mathematical-foundations",
+      "evolution-of-optimization-from-equations-to-gradients",
+      "ito-calculus-stochastic-differential-equations",
+      "stochastic-processes-and-sampling",
+      "bayesian-inference-short-primer"
+    ],
+    "series": null
+  },
+  "sdr-hdr-contrast-comparison": {
+    "title": "Measuring Contrast Between SDR and HDR Images: Bridging Dynamic Range Domains",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "measuring-contrast-between-images",
+      "understanding-color-contrast",
+      "understanding-image-contrast",
+      "comparing-contrast-across-different-images",
+      "image-matting-mask-edge-correction",
+      "understanding-color-balance"
+    ],
+    "series": null
+  },
+  "understanding-color-balance": {
+    "title": "Understanding Color Balance in Images and Video",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "understanding-color-contrast",
+      "image-matting-mask-edge-correction",
+      "sdr-hdr-contrast-comparison",
+      "canny-edge-detector-practice",
+      "comparing-contrast-across-different-images",
+      "edge-detection-operators"
+    ],
+    "series": null
+  },
+  "about-atul-singh": {
+    "title": "About Atul Singh: Technical Portfolio and Expertise",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "unsupervised-learning-contrast-prediction",
+      "elementary-math-to-vision-algorithms",
+      "from-gradients-to-hessians",
+      "iitjee_math_to_vision_blog",
+      "bayesian-inference-short-primer",
+      "beta-distribution-intuition-compressed-parameterization"
+    ],
+    "series": null
+  },
+  "brownian-motion-diffusion-flow-models": {
+    "title": "From Brownian Motion to Modern Generative Models: The Stochastic Foundation of Diffusion and Flow Models",
+    "outlinks": [
+      "stochastic-processes-and-sampling",
+      "differential-equations-ode-pde-sde",
+      "ito-calculus-stochastic-differential-equations",
+      "mathematical-properties-brownian-motion"
+    ],
+    "backlinks": [
+      "publishing-cadence-summary",
+      "why-discriminative-learning-came-first",
+      "machine-learning-paradigms-distributions-vs-functions",
+      "total-variation-brownian-motion",
+      "ito-calculus-stochastic-differential-equations",
+      "differential-equations-ode-pde-sde",
+      "mathematical-properties-brownian-motion"
+    ],
+    "related": [
+      "depth-maps-computer-vision",
+      "how-vaes-avoid-computing-partition-function",
+      "image-matting-mask-edge-correction",
+      "learning-rate-schedulers-intuitions",
+      "video-matting-temporal-consistency",
+      "zeroing-model-weights-differentiability"
+    ],
+    "series": null
+  },
+  "unsupervised-learning-contrast-prediction": {
+    "title": "Building Contrast Prediction Models with Unsupervised Learning: When Ground Truth Doesn't Exist",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "about-atul-singh",
+      "comparing-contrast-across-different-images",
+      "elementary-math-to-vision-algorithms",
+      "from-gradients-to-hessians",
+      "iitjee_math_to_vision_blog",
+      "measuring-contrast-between-images"
+    ],
+    "series": null
+  },
+  "expected-value-expectation-mathematical-foundations": {
+    "title": "Expected Value & Expectation: Mathematical Foundations",
+    "outlinks": [
+      "how-vaes-avoid-computing-partition-function"
+    ],
+    "backlinks": [
+      "publishing-cadence-summary",
+      "how-vaes-avoid-computing-partition-function"
+    ],
+    "related": [
+      "bayesian-inference-short-primer",
+      "beta-distribution-primer",
+      "beta-distribution-intuition-compressed-parameterization",
+      "demystifying-simulation-random-variables",
+      "how-vaes-avoid-computing-partition-function",
+      "curse-of-dimensionality"
+    ],
+    "series": null
+  },
+  "how-vaes-avoid-computing-partition-function": {
+    "title": "How Variational Autoencoders Avoid Computing the Partition Function",
+    "outlinks": [
+      "normalization-constant-problem",
+      "why-discriminative-learning-came-first",
+      "expected-value-expectation-mathematical-foundations"
+    ],
+    "backlinks": [
+      "publishing-cadence-summary",
+      "expected-value-expectation-mathematical-foundations"
+    ],
+    "related": [
+      "machine-learning-paradigms-distributions-vs-functions",
+      "normalization-constant-problem",
+      "why-discriminative-learning-came-first",
+      "bayesian-inference-short-primer",
+      "beta-distribution-intuition-compressed-parameterization",
+      "beta-distribution-primer"
+    ],
+    "series": null
+  },
+  "depth-disparity-interactive": {
+    "title": "Interactive Depth vs Disparity Visualization",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "depth-maps-computer-vision",
+      "classical-supervised-vision-backbones",
+      "dino-self-distillation-no-labels-vision-transformers",
+      "generalist-multimodal-encoders",
+      "how-many-vision-encoders",
+      "image-matting-mask-edge-correction"
+    ],
+    "series": null
+  },
+  "depth-maps-computer-vision": {
+    "title": "Depth Maps in Computer Vision: From Stereo Geometry to Neural Networks",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "depth-disparity-interactive",
+      "image-matting-mask-edge-correction",
+      "video-matting-temporal-consistency",
+      "classical-supervised-vision-backbones",
+      "dino-self-distillation-no-labels-vision-transformers",
+      "generalist-multimodal-encoders"
+    ],
+    "series": null
+  },
+  "image-matting-mask-edge-correction": {
+    "title": "Image Matting: Estimating Accurate Mask Edges for Professional Compositing",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "video-matting-temporal-consistency",
+      "canny-edge-detector-practice",
+      "comparing-contrast-across-different-images",
+      "depth-maps-computer-vision",
+      "edge-detection-operators",
+      "measuring-contrast-between-images"
+    ],
+    "series": null
+  },
+  "video-matting-temporal-consistency": {
+    "title": "Video Matting: Temporal Consistency and Real-Time Foreground Extraction",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "depth-maps-computer-vision",
+      "image-matting-mask-edge-correction",
+      "classical-supervised-vision-backbones",
+      "dino-self-distillation-no-labels-vision-transformers",
+      "generalist-multimodal-encoders",
+      "how-many-vision-encoders"
+    ],
+    "series": null
+  },
+  "mask-refinement-premiere-resolve": {
+    "title": "Mask Refinement in Professional Video Editing: Premiere Pro vs DaVinci Resolve Magic Mask 2.0",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "image-matting-mask-edge-correction"
+    ],
+    "series": null
+  },
+  "matrix-determinants-leibniz-theorem": {
+    "title": "Matrix Determinants: From Leibniz Formula to Geometric Intuition",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "signed-volume-geometric-interpretation",
+      "evolution-of-optimization-from-equations-to-gradients",
+      "bijective-functions-invertibility",
+      "what-is-a-hessian-matrix",
+      "differential-equations-ode-pde-sde",
+      "elementary-math-to-vision-algorithms"
+    ],
+    "series": null
+  },
+  "signed-volume-geometric-interpretation": {
+    "title": "Signed Volume: The Geometric Soul of Determinants",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "matrix-determinants-leibniz-theorem",
+      "bijective-functions-invertibility",
+      "what-is-a-hessian-matrix",
+      "curse-of-dimensionality",
+      "evolution-of-optimization-from-equations-to-gradients",
+      "kalman-filter-derivation"
+    ],
+    "series": null
+  },
+  "bijective-functions-invertibility": {
+    "title": "Bijective Functions: The Perfect Correspondence",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "matrix-determinants-leibniz-theorem",
+      "signed-volume-geometric-interpretation"
+    ],
+    "series": null
+  },
+  "symmetric-groups-first-principles": {
+    "title": "Symmetric Groups: Understanding Permutations from First Principles",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [],
+    "series": null
+  },
+  "dijkstra-ml-uses": {
+    "title": "Dijkstra’s Algorithm and Where Machine Learning Uses It",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "learning-rate-schedulers-intuitions",
+      "taylor-series-expansion-intuition",
+      "what-is-a-hessian-matrix",
+      "from-gradients-to-hessians",
+      "bayesian-inference-short-primer",
+      "beta-distribution-intuition-compressed-parameterization"
+    ],
+    "series": null
+  },
+  "learning-rate-schedulers-intuitions": {
+    "title": "Learning Rate Schedulers: Intuition, Tradeoffs, and When to Use Which",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "taylor-series-expansion-intuition",
+      "what-is-a-hessian-matrix",
+      "zeroing-model-weights-differentiability",
+      "dijkstra-ml-uses",
+      "from-gradients-to-hessians",
+      "how-vaes-avoid-computing-partition-function"
+    ],
+    "series": null
+  },
+  "taylor-series-expansion-intuition": {
+    "title": "Taylor Series Expansion: A Local Lens for Functions",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "what-is-a-hessian-matrix",
+      "dijkstra-ml-uses",
+      "from-gradients-to-hessians",
+      "learning-rate-schedulers-intuitions",
+      "why-intersection-fails-lagrange-multipliers",
+      "bayesian-inference-short-primer"
+    ],
+    "series": null
+  },
+  "what-is-a-hessian-matrix": {
+    "title": "What is a Hessian Matrix?",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "taylor-series-expansion-intuition",
+      "from-gradients-to-hessians",
+      "dijkstra-ml-uses",
+      "evolution-of-optimization-from-equations-to-gradients",
+      "learning-rate-schedulers-intuitions",
+      "why-intersection-fails-lagrange-multipliers"
+    ],
+    "series": null
+  },
+  "hollywood-color-pipeline-dailies-di-show-lut": {
+    "title": "Hollywood Color Pipeline: From Dailies to DI (and Why Show LUT Is the Film's Visual DNA)",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "understanding-aces-scene-referred-workflows",
+      "bitmap-gamut-precomputation",
+      "logarithmic-color-pca"
+    ],
+    "series": null
+  },
+  "zeroing-model-weights-differentiability": {
+    "title": "What Actually Happens When You Set Model Weights to Zero (and Why Gradients Still Work)",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "how-vaes-avoid-computing-partition-function",
+      "learning-rate-schedulers-intuitions",
+      "machine-learning-paradigms-distributions-vs-functions",
+      "pytorch-indexing-slicing",
+      "why-discriminative-learning-came-first",
+      "bayesian-inference-short-primer"
+    ],
+    "series": null
+  },
+  "beta-distribution-primer": {
+    "title": "Beta Distribution: A Short Primer",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "bayesian-inference-short-primer",
+      "beta-distribution-intuition-compressed-parameterization",
+      "expected-value-expectation-mathematical-foundations",
+      "demystifying-simulation-random-variables",
+      "bayesian-foundations-kalman",
+      "curse-of-dimensionality"
+    ],
+    "series": null
+  },
+  "beta-distribution-intuition-compressed-parameterization": {
+    "title": "Compressed Uncertainty: Beta Intuition Without the Formula Sheet",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "beta-distribution-primer",
+      "bayesian-inference-short-primer",
+      "bayesian-foundations-kalman",
+      "curse-of-dimensionality",
+      "expected-value-expectation-mathematical-foundations",
+      "how-vaes-avoid-computing-partition-function"
+    ],
+    "series": null
+  },
+  "bayesian-inference-short-primer": {
+    "title": "Bayesian Inference: A Short Primer",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "beta-distribution-primer",
+      "beta-distribution-intuition-compressed-parameterization",
+      "expected-value-expectation-mathematical-foundations",
+      "demystifying-simulation-random-variables",
+      "bayesian-foundations-kalman",
+      "curse-of-dimensionality"
+    ],
+    "series": null
+  },
+  "demystifying-simulation-random-variables": {
+    "title": "Demystifying Simulation: Why We Let Algorithms Play Dice",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "advanced-sampling-techniques",
+      "random-vs-stochastic-foundations",
+      "stochastic-processes-and-sampling",
+      "why-direct-sampling-from-pdfs-is-hard",
+      "bayesian-inference-short-primer",
+      "beta-distribution-primer"
+    ],
+    "series": null
+  },
+  "disentanglement-vs-decodability-factorized-testing": {
+    "title": "Decodability Is Not Disentanglement: Testing for Factorized Representations",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "representation-intervention-activation-patching",
+      "single-direction-vs-subspace-representations",
+      "what-is-a-linear-probe",
+      "probing-supervised-backbone-representations",
+      "dino-self-distillation-no-labels-vision-transformers",
+      "momentum-encoder-why-ema-teachers-work"
+    ],
+    "series": null
+  },
+  "representation-intervention-activation-patching": {
+    "title": "Representation Intervention: Proving a Direction Is Causal, Not Just Correlational",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "single-direction-vs-subspace-representations",
+      "disentanglement-vs-decodability-factorized-testing",
+      "what-is-a-linear-probe",
+      "probing-supervised-backbone-representations",
+      "dino-self-distillation-no-labels-vision-transformers",
+      "momentum-encoder-why-ema-teachers-work"
+    ],
+    "series": null
+  },
+  "single-direction-vs-subspace-representations": {
+    "title": "When There's No Single Direction: Subspaces, Distributed Codes, and a Ladder of Evidence",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "representation-intervention-activation-patching",
+      "disentanglement-vs-decodability-factorized-testing",
+      "what-is-a-linear-probe",
+      "probing-supervised-backbone-representations",
+      "dino-self-distillation-no-labels-vision-transformers",
+      "momentum-encoder-why-ema-teachers-work"
+    ],
+    "series": null
+  },
+  "what-is-a-linear-probe": {
+    "title": "What Is a Linear Probe? A Practical Guide to Probing Classifiers",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "disentanglement-vs-decodability-factorized-testing",
+      "probing-supervised-backbone-representations",
+      "representation-intervention-activation-patching",
+      "single-direction-vs-subspace-representations",
+      "dino-self-distillation-no-labels-vision-transformers",
+      "momentum-encoder-why-ema-teachers-work"
+    ],
+    "series": null
+  },
+  "classical-supervised-vision-backbones": {
+    "title": "Classical Supervised Vision Backbones: The Ideas Behind the Encoders",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "probing-supervised-backbone-representations",
+      "vision-transformers",
+      "generalist-multimodal-encoders",
+      "how-many-vision-encoders",
+      "self-supervised-foundation-encoders",
+      "task-specific-vision-specialists"
+    ],
+    "series": null
+  },
+  "dino-self-distillation-no-labels-vision-transformers": {
+    "title": "DINO: Self-Distillation With No Labels for Vision Transformers",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "positional-embeddings-in-vision-transformers",
+      "self-supervised-foundation-encoders",
+      "vit-patch-embeddings-cls-token-explained",
+      "momentum-encoder-why-ema-teachers-work",
+      "probing-supervised-backbone-representations",
+      "classical-supervised-vision-backbones"
+    ],
+    "series": null
+  },
+  "generalist-multimodal-encoders": {
+    "title": "Generalist Multimodal Encoders: One Visual Representation, Many Tasks",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "how-many-vision-encoders",
+      "self-supervised-foundation-encoders",
+      "classical-supervised-vision-backbones",
+      "probing-supervised-backbone-representations",
+      "task-specific-vision-specialists",
+      "vision-transformers"
+    ],
+    "series": null
+  },
+  "how-many-vision-encoders": {
+    "title": "How Many Vision Encoders Are There?",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "generalist-multimodal-encoders",
+      "self-supervised-foundation-encoders",
+      "vision-transformers",
+      "classical-supervised-vision-backbones",
+      "probing-supervised-backbone-representations",
+      "task-specific-vision-specialists"
+    ],
+    "series": null
+  },
+  "momentum-encoder-why-ema-teachers-work": {
+    "title": "The Momentum Encoder: Why EMA Teachers Work in Self-Supervised Learning",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "dino-self-distillation-no-labels-vision-transformers",
+      "self-supervised-foundation-encoders",
+      "positional-embeddings-in-vision-transformers",
+      "probing-supervised-backbone-representations",
+      "vit-patch-embeddings-cls-token-explained",
+      "disentanglement-vs-decodability-factorized-testing"
+    ],
+    "series": null
+  },
+  "positional-embeddings-in-vision-transformers": {
+    "title": "Positional Embeddings in ViT: Why Add Them, and How the Shapes Actually Match",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "vit-patch-embeddings-cls-token-explained",
+      "dino-self-distillation-no-labels-vision-transformers",
+      "probing-supervised-backbone-representations",
+      "self-supervised-foundation-encoders",
+      "vision-transformers",
+      "classical-supervised-vision-backbones"
+    ],
+    "series": null
+  },
+  "positional-embeddings-survey": {
+    "title": "Positional Embeddings Across the Literature: Sinusoidal, Learned, Relative, RoPE, ALiBi and Beyond",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "how-many-vision-encoders",
+      "positional-embeddings-in-vision-transformers",
+      "vision-transformers",
+      "vit-patch-embeddings-cls-token-explained",
+      "adaptive-dual-teacher-distillation-lightweight-video-models",
+      "tesseract-ocr-evolution"
+    ],
+    "series": null
+  },
+  "probing-supervised-backbone-representations": {
+    "title": "What Have We Learned by Probing Supervised Vision Backbones?",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "classical-supervised-vision-backbones",
+      "self-supervised-foundation-encoders",
+      "disentanglement-vs-decodability-factorized-testing",
+      "what-is-a-linear-probe",
+      "dino-self-distillation-no-labels-vision-transformers",
+      "generalist-multimodal-encoders"
+    ],
+    "series": null
+  },
+  "self-supervised-foundation-encoders": {
+    "title": "Self-Supervised Foundation Encoders: Learning Vision Without Labels",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "dino-self-distillation-no-labels-vision-transformers",
+      "generalist-multimodal-encoders",
+      "how-many-vision-encoders",
+      "probing-supervised-backbone-representations",
+      "classical-supervised-vision-backbones",
+      "momentum-encoder-why-ema-teachers-work"
+    ],
+    "series": null
+  },
+  "task-specific-vision-specialists": {
+    "title": "Task-Specific Vision Specialists: When Narrow Models Win",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "classical-supervised-vision-backbones",
+      "generalist-multimodal-encoders",
+      "how-many-vision-encoders",
+      "probing-supervised-backbone-representations",
+      "self-supervised-foundation-encoders",
+      "vision-transformers"
+    ],
+    "series": null
+  },
+  "vision-transformers": {
+    "title": "Vision Transformers: From Image Patches to General-Purpose Encoders",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "classical-supervised-vision-backbones",
+      "how-many-vision-encoders",
+      "generalist-multimodal-encoders",
+      "positional-embeddings-in-vision-transformers",
+      "probing-supervised-backbone-representations",
+      "self-supervised-foundation-encoders"
+    ],
+    "series": null
+  },
+  "vit-patch-embeddings-cls-token-explained": {
+    "title": "What Does a Vision Transformer Actually Output? Patches, Positions, and the [CLS] Token",
+    "outlinks": [],
+    "backlinks": [
+      "publishing-cadence-summary"
+    ],
+    "related": [
+      "positional-embeddings-in-vision-transformers",
+      "dino-self-distillation-no-labels-vision-transformers",
+      "probing-supervised-backbone-representations",
+      "self-supervised-foundation-encoders",
+      "vision-transformers",
+      "classical-supervised-vision-backbones"
+    ],
+    "series": null
+  }
+}

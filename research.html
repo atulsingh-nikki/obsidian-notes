@@ -1,0 +1,46 @@
+---
+layout: default
+title: "Research vault"
+permalink: /research/
+description: "A chronological archive of landmark computer-vision and ML papers, distilled into study notes."
+---
+
+<div class="page" id="researchIndex">
+  <div class="page__header">
+    <p class="page__eyebrow">Paper notes</p>
+    <h1 class="page__title">Research vault</h1>
+    <p class="page__lead">{{ site.data.research.count }} landmark papers distilled into study notes, organized by year. Filter by topic or search by title; open any note to read it here.</p>
+  </div>
+
+  <div class="research-controls">
+    <input type="search" id="researchSearch" class="research-search" placeholder="Search papers by title…" autocomplete="off" aria-label="Search papers">
+    <div class="chip-row" id="researchTopics" aria-label="Filter by topic">
+      <button class="chip is-active" data-topic="all">All topics</button>
+      {%- for topic in site.data.research.topics -%}
+        <button class="chip" data-topic="{{ topic }}">{{ topic }}</button>
+      {%- endfor -%}
+    </div>
+  </div>
+
+  <div id="researchList">
+    {%- for year in site.data.research.by_year -%}
+      <section class="research-year" data-year="{{ year[0] }}">
+        <h2 class="research-year__label">{{ year[0] }}</h2>
+        <ul class="research-year__list">
+          {%- for note in year[1] -%}
+            {%- assign note_url = note.path | replace: '.md', '.html' -%}
+            <li class="research-item" data-topic="{{ note.topic }}" data-title="{{ note.title | downcase }}">
+              <a href="{{ note_url | relative_url }}">
+                <span class="research-item__title">{{ note.title }}</span>
+                <span class="research-item__topic">{{ note.topic }}</span>
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </section>
+    {%- endfor -%}
+    <p class="research-empty" id="researchEmpty" hidden>No papers match your filter.</p>
+  </div>
+</div>
+
+<script src="{{ '/assets/research.js' | relative_url }}" defer></script>

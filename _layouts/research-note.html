@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<article class="page page--narrow research-note">
+  <a class="research-reader__back" href="{{ '/research/' | relative_url }}">← Research vault</a>
+  <header class="reading__header">
+    <h1 class="reading__title">{{ page.title | default: page.name }}</h1>
+    {%- if page.authors -%}
+      <p class="reading__meta">{{ page.authors | join: ", " }}</p>
+    {%- endif -%}
+    {%- if page.aliases -%}
+      <p class="research-note__aliases">Also known as: {{ page.aliases | join: " · " }}</p>
+    {%- endif -%}
+  </header>
+  <div class="reading__content blog-post__content">
+    {{ content }}
+  </div>
+</article>

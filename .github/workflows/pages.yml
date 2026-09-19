@@ -36,6 +36,9 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Generate site data (connections, series, research, graph)
+        run: python3 scripts/generate_site_data.py
+
       - name: Build Jekyll site
         env:
           JEKYLL_ENV: production

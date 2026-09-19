@@ -448,9 +448,21 @@ function resolveUrl(path) {
   if (/^(?:[a-z]+:)?\/\//i.test(rawPath)) {
     return rawPath;
   }
+  // Already an absolute site path (e.g. produced by Jekyll's relative_url).
+  if (rawPath.startsWith("/")) {
+    try {
+      return new URL(rawPath, location.origin).toString();
+    } catch (error) {
+      return rawPath;
+    }
+  }
 
+  // Repo-root-relative paths (e.g. "Books/…/Chapter_1.md") must resolve against
+  // the site baseurl, NOT the current page — the reader can live at /books/,
+  // /research/, etc. where document.baseURI would otherwise mangle the path.
+  const base = (siteConfig.basePath || "").replace(/\/$/, "");
   try {
-    return new URL(rawPath, document.baseURI).toString();
+    return new URL(base + "/" + rawPath.replace(/^\//, ""), location.origin).toString();
   } catch (error) {
     console.warn("Unable to resolve path", rawPath, error);
     return rawPath;
