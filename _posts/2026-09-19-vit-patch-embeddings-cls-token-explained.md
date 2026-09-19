@@ -8,6 +8,10 @@ description: "A plain-language look at how a Vision Transformer turns an image i
 
 ### TL;DR
 
+A ConvNet ends with a single prediction. A Vision Transformer (ViT) doesn't — it ends with a **sequence of vectors**, and it's up to whatever sits on top to decide which ones to use. That sequence has two kinds of entries: one `[CLS]` vector meant to summarize the whole image, and a grid of patch vectors, each still tied to one spot in the image. Understanding that split explains both plain ViT classification and later methods like DINO, which reuse the same output in very different ways.
+
+Full architecture details: [the ViT research note]({{ site.baseurl }}/Research/2020/Vision%20Transformer%20(ViT)%20An%20Image%20is%20Worth%2016%C3%9716%20Words.html). This post just walks through the part it assumes you already know.
+
 ## Table of Contents
 
   - [TL;DR](#tldr)
@@ -17,10 +21,6 @@ description: "A plain-language look at how a Vision Transformer turns an image i
   - [`[CLS]` vs. Patch Tokens, Side by Side](#cls-vs-patch-tokens-side-by-side)
   - [FAQs](#faqs)
   - [References](#references)
-
-A ConvNet ends with a single prediction. A Vision Transformer (ViT) doesn't — it ends with a **sequence of vectors**, and it's up to whatever sits on top to decide which ones to use. That sequence has two kinds of entries: one `[CLS]` vector meant to summarize the whole image, and a grid of patch vectors, each still tied to one spot in the image. Understanding that split explains both plain ViT classification and later methods like DINO, which reuse the same output in very different ways.
-
-Full architecture details: [the ViT research note]({{ site.baseurl }}/Research/2020/Vision%20Transformer%20(ViT)%20An%20Image%20is%20Worth%2016%C3%9716%20Words.html). This post just walks through the part it assumes you already know.
 
 ---
 

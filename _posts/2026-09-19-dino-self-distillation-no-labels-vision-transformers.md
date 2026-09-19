@@ -8,6 +8,12 @@ description: "How DINO trains a Vision Transformer with no labels and no negativ
 
 ### TL;DR
 
+DINO (**self-di**stillation with **no** labels) trains a Vision Transformer by having a "student" network match the output of a "teacher" network built purely from an exponential moving average of the student's own weights — no labels, no negatives, no contrastive loss, no clustering. The surprising payoff isn't just a strong classifier: the ViT's own attention maps spontaneously learn to outline objects, something that doesn't happen with supervised ViTs or with convnets. A small ViT trained this way reaches 78.3% top-1 on ImageNet with a plain k-NN classifier on frozen features, and a base ViT with small (8×8) patches hits 80.1% top-1 in linear evaluation.
+
+Reference: [Emerging Properties in Self-Supervised Vision Transformers](https://arxiv.org/abs/2104.14294) (Caron, Touvron, Misra, Jégou, Mairal, Bojanowski, Joulin — Facebook AI Research / Inria, ICCV 2021)
+
+Full research note with method details, all benchmark tables, and ablations: [DINO — Emerging Properties in Self-Supervised Vision Transformers]({{ site.baseurl }}/Research/2021/DINO%20Emerging%20Properties%20in%20Self-Supervised%20Vision%20Transformers.html).
+
 ## Table of Contents
 
   - [TL;DR](#tldr)
@@ -21,12 +27,6 @@ description: "How DINO trains a Vision Transformer with no labels and no negativ
   - [Why This Mattered](#why-this-mattered)
   - [FAQs](#faqs)
   - [References](#references)
-
-DINO (**self-di**stillation with **no** labels) trains a Vision Transformer by having a "student" network match the output of a "teacher" network built purely from an exponential moving average of the student's own weights — no labels, no negatives, no contrastive loss, no clustering. The surprising payoff isn't just a strong classifier: the ViT's own attention maps spontaneously learn to outline objects, something that doesn't happen with supervised ViTs or with convnets. A small ViT trained this way reaches 78.3% top-1 on ImageNet with a plain k-NN classifier on frozen features, and a base ViT with small (8×8) patches hits 80.1% top-1 in linear evaluation.
-
-Reference: [Emerging Properties in Self-Supervised Vision Transformers](https://arxiv.org/abs/2104.14294) (Caron, Touvron, Misra, Jégou, Mairal, Bojanowski, Joulin — Facebook AI Research / Inria, ICCV 2021)
-
-Full research note with method details, all benchmark tables, and ablations: [DINO — Emerging Properties in Self-Supervised Vision Transformers]({{ site.baseurl }}/Research/2021/DINO%20Emerging%20Properties%20in%20Self-Supervised%20Vision%20Transformers.html).
 
 ---
 

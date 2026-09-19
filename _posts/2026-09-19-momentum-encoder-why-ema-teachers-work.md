@@ -8,6 +8,8 @@ description: "Why exponential moving average teachers show up again and again in
 
 ### TL;DR
 
+An exponential moving average (EMA) "teacher" — a copy of a network whose weights are a running average of a "student" network's weights, updated every step and never touched by gradients — is one of the most reused tricks in self-supervised learning. MoCo used it to keep a queue of negative samples consistent. BYOL used it to remove negatives entirely. DINO used it to remove BYOL's predictor head too. In every case, the EMA teacher survives while everything built around it gets stripped away. The reason is simple once you see it: a *copy* of the student collapses training almost immediately, but an *average of past students* is provably a better, less noisy target — the same statistical idea behind Polyak-Ruppert averaging and stochastic weight averaging, applied online instead of after the fact.
+
 ## Table of Contents
 
   - [TL;DR](#tldr)
@@ -20,8 +22,6 @@ description: "Why exponential moving average teachers show up again and again in
   - [The Math, Minimal](#the-math-minimal)
   - [FAQs](#faqs)
   - [References](#references)
-
-An exponential moving average (EMA) "teacher" — a copy of a network whose weights are a running average of a "student" network's weights, updated every step and never touched by gradients — is one of the most reused tricks in self-supervised learning. MoCo used it to keep a queue of negative samples consistent. BYOL used it to remove negatives entirely. DINO used it to remove BYOL's predictor head too. In every case, the EMA teacher survives while everything built around it gets stripped away. The reason is simple once you see it: a *copy* of the student collapses training almost immediately, but an *average of past students* is provably a better, less noisy target — the same statistical idea behind Polyak-Ruppert averaging and stochastic weight averaging, applied online instead of after the fact.
 
 ---
 

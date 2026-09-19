@@ -8,6 +8,14 @@ description: "A concise walkthrough of a dual-teacher distillation framework (Vi
 
 ### TL;DR
 
+A dual-teacher knowledge distillation framework uses a heterogeneous Vision Transformer (ViT) teacher and a structurally similar CNN teacher to train a lightweight CNN student for video action recognition. Two key components drive gains:
+- Discrepancy‑Aware Teacher Weighting (DATW): adaptively mixes teacher logits per sample using teacher confidence and student–teacher discrepancy.
+- Structure Discrepancy‑Aware Distillation (SDD): the student learns the residual between ViT and CNN teacher features via a lightweight auxiliary branch during training (removed at inference).
+
+On HMDB51, EPIC‑KITCHENS‑100, and Kinetics‑400, the student CNN surpasses strong ViT teachers while keeping CNN efficiency. FLOPs reduce dramatically (e.g., ~96% vs. a ViT teacher) with large parameter savings (e.g., ~89%), making deployment on mobile/edge devices practical.
+
+Reference: [Revisiting Cross‑Architecture Distillation: Adaptive Dual‑Teacher Transfer for Lightweight Video Models](https://arxiv.org/pdf/2511.09469.pdf)
+
 ## Table of Contents
 
   - [TL;DR](#tldr)
@@ -20,14 +28,6 @@ description: "A concise walkthrough of a dual-teacher distillation framework (Vi
   - [Efficiency and Deployment](#efficiency-and-deployment)
   - [FAQs](#faqs)
   - [References](#references)
-
-A dual-teacher knowledge distillation framework uses a heterogeneous Vision Transformer (ViT) teacher and a structurally similar CNN teacher to train a lightweight CNN student for video action recognition. Two key components drive gains:
-- Discrepancy‑Aware Teacher Weighting (DATW): adaptively mixes teacher logits per sample using teacher confidence and student–teacher discrepancy.
-- Structure Discrepancy‑Aware Distillation (SDD): the student learns the residual between ViT and CNN teacher features via a lightweight auxiliary branch during training (removed at inference).
-
-On HMDB51, EPIC‑KITCHENS‑100, and Kinetics‑400, the student CNN surpasses strong ViT teachers while keeping CNN efficiency. FLOPs reduce dramatically (e.g., ~96% vs. a ViT teacher) with large parameter savings (e.g., ~89%), making deployment on mobile/edge devices practical.
-
-Reference: [Revisiting Cross‑Architecture Distillation: Adaptive Dual‑Teacher Transfer for Lightweight Video Models](https://arxiv.org/pdf/2511.09469.pdf)
 
 ---
 

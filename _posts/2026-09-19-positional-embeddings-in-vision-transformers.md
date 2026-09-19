@@ -8,6 +8,10 @@ description: "Why Vision Transformers need positional embeddings, what happens i
 
 ### TL;DR
 
+Self-attention has no built-in sense of order — permute the input tokens and the output just gets permuted the same way. A Vision Transformer's patch embeddings, on their own, carry no information about *where* in the image a patch came from. Positional embeddings fix that. The mechanism is simpler than it sounds: the position embedding table is built with the exact same shape as the patch embeddings, so combining them is just element-wise **addition** — no concatenation, no learned projection at that step. The only place shapes genuinely stop matching is when the image resolution changes between pretraining and fine-tuning, and ViT handles that with a **resize**, not a redesign of the combination step.
+
+Full architecture background: [What Does a Vision Transformer Actually Output?]({{ site.baseurl }}{% post_url 2026-09-19-vit-patch-embeddings-cls-token-explained %}).
+
 ## Table of Contents
 
   - [TL;DR](#tldr)
@@ -18,10 +22,6 @@ description: "Why Vision Transformers need positional embeddings, what happens i
   - [When the Sizes Really Don't Match: Changing Resolution](#when-the-sizes-really-dont-match-changing-resolution)
   - [FAQs](#faqs)
   - [References](#references)
-
-Self-attention has no built-in sense of order — permute the input tokens and the output just gets permuted the same way. A Vision Transformer's patch embeddings, on their own, carry no information about *where* in the image a patch came from. Positional embeddings fix that. The mechanism is simpler than it sounds: the position embedding table is built with the exact same shape as the patch embeddings, so combining them is just element-wise **addition** — no concatenation, no learned projection at that step. The only place shapes genuinely stop matching is when the image resolution changes between pretraining and fine-tuning, and ViT handles that with a **resize**, not a redesign of the combination step.
-
-Full architecture background: [What Does a Vision Transformer Actually Output?]({{ site.baseurl }}{% post_url 2026-09-19-vit-patch-embeddings-cls-token-explained %}).
 
 ---
 
