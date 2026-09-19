@@ -219,3 +219,11 @@ Vision Transformers changed the unit of visual computation from a fixed local fi
 Their success depends on more than the Transformer block. Patch size, positional encoding, hierarchy, data scale, objective, and hardware all shape the result. ViT is best understood not as a single model that defeated CNNs, but as a design language for building visual encoders with different assumptions about data, context, and transfer.
 
 When those assumptions match the task and the available compute, a Transformer can serve as a classifier, a dense-prediction backbone, or the visual foundation for a larger multimodal system.
+
+## Continue the vision-encoder series
+
+- [How Many Vision Encoders Are There?]({{ site.baseurl }}/2026/09/19/how-many-vision-encoders.html)
+- [Classical Supervised Vision Backbones]({{ site.baseurl }}/2026/09/19/classical-supervised-vision-backbones.html)
+- [Self-Supervised Foundation Encoders]({{ site.baseurl }}/2026/09/19/self-supervised-foundation-encoders.html)
+- [Generalist Multimodal Encoders]({{ site.baseurl }}/2026/09/19/generalist-multimodal-encoders.html)
+- [Task-Specific Vision Specialists]({{ site.baseurl }}/2026/09/19/task-specific-vision-specialists.html)

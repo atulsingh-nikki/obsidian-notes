@@ -262,3 +262,11 @@ Self-supervised foundation encoders learn visual representations from relationsh
 The result is a reusable visual substrate that can support classification, retrieval, detection, segmentation, depth, and multimodal systems. But broad transfer is not magic. The pretraining data, augmentations, objective, architecture, and deployment constraints determine what the representation keeps and what it discards.
 
 The most useful mental model is therefore not “self-supervision removes labels.” It is: **self-supervision moves the design of the learning signal upstream, where the choice of views, targets, data, and invariances shapes every task that follows.**
+
+## Continue the vision-encoder series
+
+- [How Many Vision Encoders Are There?]({{ site.baseurl }}/2026/09/19/how-many-vision-encoders.html)
+- [Classical Supervised Vision Backbones]({{ site.baseurl }}/2026/09/19/classical-supervised-vision-backbones.html)
+- [Vision Transformers]({{ site.baseurl }}/2026/09/19/vision-transformers.html)
+- [Generalist Multimodal Encoders]({{ site.baseurl }}/2026/09/19/generalist-multimodal-encoders.html)
+- [Task-Specific Vision Specialists]({{ site.baseurl }}/2026/09/19/task-specific-vision-specialists.html)

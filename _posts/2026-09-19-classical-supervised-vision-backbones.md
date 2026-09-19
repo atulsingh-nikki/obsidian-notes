@@ -229,3 +229,11 @@ Classical supervised backbones are the first major chapter of practical visual r
 The important question is not whether they are newer than foundation models. It is whether their narrower training objective is an advantage for the problem at hand.
 
 When the task is known and the deployment constraints are real, a classical supervised backbone can still be the most sensible encoder in the room.
+
+## Continue the vision-encoder series
+
+- [How Many Vision Encoders Are There?]({{ site.baseurl }}/2026/09/19/how-many-vision-encoders.html)
+- [Vision Transformers]({{ site.baseurl }}/2026/09/19/vision-transformers.html)
+- [Self-Supervised Foundation Encoders]({{ site.baseurl }}/2026/09/19/self-supervised-foundation-encoders.html)
+- [Generalist Multimodal Encoders]({{ site.baseurl }}/2026/09/19/generalist-multimodal-encoders.html)
+- [Task-Specific Vision Specialists]({{ site.baseurl }}/2026/09/19/task-specific-vision-specialists.html)

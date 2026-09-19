@@ -160,3 +160,11 @@ For practical computer-vision work, the central decision is rarely “which of t
 > Do I need a broad representation that can be adapted to many tasks, or a narrow representation optimized for one task and one data distribution?
 
 That is the generalist-specialist trade-off in one sentence. The future is likely to contain both: generalist encoders for shared visual knowledge, plus specialist heads or specialist teachers for the precision that broad models often miss.
+
+## Continue the vision-encoder series
+
+- [Classical Supervised Vision Backbones]({{ site.baseurl }}/2026/09/19/classical-supervised-vision-backbones.html)
+- [Vision Transformers]({{ site.baseurl }}/2026/09/19/vision-transformers.html)
+- [Self-Supervised Foundation Encoders]({{ site.baseurl }}/2026/09/19/self-supervised-foundation-encoders.html)
+- [Generalist Multimodal Encoders]({{ site.baseurl }}/2026/09/19/generalist-multimodal-encoders.html)
+- [Task-Specific Vision Specialists]({{ site.baseurl }}/2026/09/19/task-specific-vision-specialists.html)
