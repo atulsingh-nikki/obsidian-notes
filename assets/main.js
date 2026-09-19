@@ -405,8 +405,15 @@ function wrapTables(container) {
 }
 
 // Flag images that fail to load so they degrade gracefully instead of showing a broken-image icon.
+// Also rewrite repo-root-relative image sources (e.g. "Books/…/fig.png") through the
+// site baseurl, so figures resolve correctly on the /books/ reader page and on the
+// case-sensitive production host — not just on a case-insensitive local filesystem.
 function markImageLoadErrors(container) {
   container.querySelectorAll("img").forEach((img) => {
+    const raw = img.getAttribute("src") || "";
+    if (raw && !/^(?:[a-z]+:)?\/\//i.test(raw) && !raw.startsWith("data:")) {
+      img.src = resolveUrl(raw);
+    }
     img.loading = "lazy";
     img.addEventListener("error", () => {
       img.classList.add("bookshelf-image--broken");
