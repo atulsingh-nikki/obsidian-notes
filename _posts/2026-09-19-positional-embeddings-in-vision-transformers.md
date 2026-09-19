@@ -59,6 +59,15 @@ The combination is **plain element-wise addition** — the same $D$-dimensional 
 
 The reason this works without any shape reconciliation is that $E_{pos}$ is **defined** with shape $(N+1) \times D$ from the start — matching the patch embeddings by construction, not by any adaptive step at combination time.
 
+**Walking through it with real numbers** (224×224 image, 16×16 patches, ViT-Base, $D=768$, so $N = 224^2/16^2 = 196$ patches):
+
+1. **Raw patch → projected patch.** Each patch $x_p^i$ starts as $16 \times 16 \times 3 = 768$ flattened pixel values. Multiplying by $E$ (shape $768 \times 768$ here) turns it into a length-768 vector the model actually understands. The *same* $E$ is reused for every one of the 196 patches.
+2. **Stack, `[CLS]` first.** $x_{\text{class}}$ is its own learned 768-dim vector (never passed through $E$ — patches are the only thing $E$ projects). Stacking `[CLS]` plus the 196 projected patches, in raster order (left-to-right, top-to-bottom), gives a sequence of **197 vectors, each 768-dimensional** — a $197 \times 768$ matrix. The semicolons in the equation are exactly this stacking step; nothing is combined yet.
+3. **Add $E_{pos}$, same shape.** $E_{pos}$ is also $197 \times 768$ — one learned row per position, 0 through 196. The $+$ adds row 0 of $E_{pos}$ to the `[CLS]` row, row 1 to patch 1's row, and so on, all at once.
+4. **$z_0$ comes out as $197 \times 768$** — still 197 tokens, same shape as the stack in step 2, except now every row carries *both* "what's in this patch" and "where this patch is," fused into one vector. This is the literal input handed to the first Transformer layer.
+
+The important detail this reveals: content and position are never kept in separate channels for the network to consult independently — they're summed together before self-attention ever runs, so every later computation only ever sees the combined signal.
+
 ---
 
 ### So Where Do Concatenation and Projection Actually Show Up?
