@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <marker id="p_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="300" rx="14" fill="#ffffff" stroke="#d6dae1"/>
+  <text x="24" y="32" font-size="16" font-weight="700" fill="#111827">PointNet: a permutation-invariant network for point sets</text>
+
+  <!-- Input point set -->
+  <rect x="26" y="70" width="96" height="150" rx="8" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="74" y="90" font-size="11" fill="#52606d" text-anchor="middle">n × 3 points</text>
+  <g fill="#4f46e5"><circle cx="50" cy="115" r="3"/><circle cx="95" cy="130" r="3"/><circle cx="66" cy="150" r="3"/><circle cx="104" cy="170" r="3"/><circle cx="45" cy="185" r="3"/><circle cx="80" cy="200" r="3"/><circle cx="70" cy="120" r="3"/></g>
+  <text x="74" y="235" font-size="10" fill="#64748b" text-anchor="middle">unordered (X,Y,Z)</text>
+
+  <!-- Shared MLP (per point) -->
+  <rect x="160" y="95" width="120" height="100" rx="8" fill="#eef2ff" stroke="#4f46e5"/>
+  <text x="220" y="140" font-size="11" font-weight="700" fill="#3730a3" text-anchor="middle">shared MLP</text>
+  <text x="220" y="158" font-size="10" fill="#3730a3" text-anchor="middle">per-point h(·)</text>
+  <text x="220" y="210" font-size="10" fill="#52606d" text-anchor="middle">n × d features</text>
+  <line x1="122" y1="145" x2="158" y2="145" stroke="#475569" stroke-width="1.4" marker-end="url(#p_ar)"/>
+
+  <!-- Symmetric max pool -->
+  <rect x="320" y="105" width="120" height="80" rx="8" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="380" y="140" font-size="11" font-weight="700" fill="#3730a3" text-anchor="middle">max pool</text>
+  <text x="380" y="158" font-size="10" fill="#3730a3" text-anchor="middle">(symmetric)</text>
+  <line x1="280" y1="145" x2="318" y2="145" stroke="#475569" stroke-width="1.4" marker-end="url(#p_ar)"/>
+  <text x="380" y="200" font-size="10" fill="#4f46e5" text-anchor="middle">order-invariant ✔</text>
+
+  <!-- Global feature -->
+  <rect x="480" y="115" width="80" height="60" rx="8" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="520" y="142" font-size="10" fill="#334155" text-anchor="middle">global</text>
+  <text x="520" y="157" font-size="10" fill="#334155" text-anchor="middle">feature</text>
+  <line x1="440" y1="145" x2="478" y2="145" stroke="#475569" stroke-width="1.4" marker-end="url(#p_ar)"/>
+
+  <!-- Output MLP -->
+  <rect x="600" y="105" width="134" height="80" rx="8" fill="#eef2ff" stroke="#4f46e5"/>
+  <text x="667" y="138" font-size="11" font-weight="700" fill="#3730a3" text-anchor="middle">MLP g(·)</text>
+  <text x="667" y="156" font-size="10" fill="#3730a3" text-anchor="middle">class / seg</text>
+  <line x1="560" y1="145" x2="598" y2="145" stroke="#475569" stroke-width="1.4" marker-end="url(#p_ar)"/>
+
+  <text x="24" y="268" font-size="11" fill="#52606d">Key identity:  f({x₁,…,xₙ}) ≈ g( MAXᵢ h(xᵢ) )  — a shared per-point map, then a symmetric aggregator, makes the output invariant to input order.</text>
+</svg>

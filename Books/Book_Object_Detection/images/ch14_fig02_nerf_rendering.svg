@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <marker id="n_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="320" rx="14" fill="#ffffff" stroke="#d6dae1"/>
+  <text x="24" y="32" font-size="16" font-weight="700" fill="#111827">NeRF: query an MLP along camera rays, then volume-render</text>
+
+  <!-- Camera -->
+  <path d="M40,150 l30,-18 l0,36 z" fill="#eef2ff" stroke="#4f46e5"/>
+  <text x="55" y="205" font-size="10" fill="#52606d" text-anchor="middle">camera</text>
+
+  <!-- Ray with sample points -->
+  <line x1="70" y1="150" x2="300" y2="150" stroke="#475569" stroke-width="1.4"/>
+  <g fill="#4f46e5"><circle cx="120" cy="150" r="4"/><circle cx="160" cy="150" r="4"/><circle cx="200" cy="150" r="4"/><circle cx="240" cy="150" r="4"/><circle cx="280" cy="150" r="4"/></g>
+  <text x="185" y="135" font-size="10" fill="#4f46e5" text-anchor="middle">sample points along ray</text>
+
+  <!-- MLP query -->
+  <rect x="330" y="100" width="150" height="100" rx="8" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="405" y="130" font-size="11" font-weight="700" fill="#3730a3" text-anchor="middle">MLP  F(x,y,z,θ,φ)</text>
+  <text x="405" y="150" font-size="10" fill="#3730a3" text-anchor="middle">→ density σ</text>
+  <text x="405" y="166" font-size="10" fill="#3730a3" text-anchor="middle">→ color c (RGB)</text>
+  <text x="405" y="188" font-size="9" fill="#52606d" text-anchor="middle">(with positional encoding γ)</text>
+  <line x1="300" y1="150" x2="328" y2="150" stroke="#475569" stroke-width="1.4" marker-end="url(#n_ar)"/>
+
+  <!-- Volume render -->
+  <rect x="520" y="110" width="130" height="80" rx="8" fill="#eef2ff" stroke="#4f46e5"/>
+  <text x="585" y="140" font-size="11" font-weight="700" fill="#3730a3" text-anchor="middle">volume render</text>
+  <text x="585" y="157" font-size="10" fill="#3730a3" text-anchor="middle">integrate (σ,c)</text>
+  <line x1="480" y1="150" x2="518" y2="150" stroke="#475569" stroke-width="1.4" marker-end="url(#n_ar)"/>
+
+  <!-- Pixel -->
+  <rect x="686" y="128" width="44" height="44" rx="6" fill="#4f46e5"/>
+  <text x="708" y="192" font-size="10" fill="#52606d" text-anchor="middle">pixel color</text>
+  <line x1="650" y1="150" x2="684" y2="150" stroke="#475569" stroke-width="1.4" marker-end="url(#n_ar)"/>
+
+  <text x="24" y="250" font-size="11" fill="#334155">Ĉ(r) = Σ Tᵢ (1 − e^(−σᵢδᵢ)) cᵢ ,   with transmittance  Tᵢ = exp( −Σⱼ&lt;ᵢ σⱼδⱼ )</text>
+  <text x="24" y="284" font-size="11" fill="#52606d">Trained by minimizing photometric error against the input photos. The scene lives entirely in the MLP weights —</text>
+  <text x="24" y="300" font-size="11" fill="#52606d">continuous and photorealistic, but slow to render (hundreds of network queries per pixel).</text>
+</svg>
