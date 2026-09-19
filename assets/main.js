@@ -375,7 +375,13 @@ async function loadChapter(path) {
     }
     let markdown = await response.text();
     markdown = stripFrontMatter(markdown);
-    const html = window.marked ? window.marked.parse(markdown) : markdown;
+    // Protect LaTeX from the Markdown parser (Marked treats "_" as emphasis and
+    // mangles subscripts before MathJax ever sees the math). Extract math spans,
+    // let Marked run, then restore the raw TeX for MathJax to typeset.
+    const math = [];
+    const protectedMd = protectMath(markdown, math);
+    let html = window.marked ? window.marked.parse(protectedMd) : protectedMd;
+    html = restoreMath(html, math);
     contentEl.innerHTML = html;
     wrapTables(contentEl);
     markImageLoadErrors(contentEl);
@@ -474,6 +480,32 @@ function resolveUrl(path) {
     console.warn("Unable to resolve path", rawPath, error);
     return rawPath;
   }
+}
+
+// Replace math spans ($$…$$, \[…\], $…$, \(…\)) with inert placeholders so the
+// Markdown parser cannot mangle the TeX (notably "_" subscripts). Longest/most
+// specific delimiters first. The original text (delimiters included) is stashed
+// in `store` and restored verbatim after Markdown runs.
+function protectMath(md, store) {
+  const patterns = [
+    /\$\$[\s\S]+?\$\$/g,       // display $$ … $$
+    /\\\[[\s\S]+?\\\]/g,        // display \[ … \]
+    /\\\([\s\S]+?\\\)/g,        // inline  \( … \)
+    /\$(?!\s)[^\n$]+?(?<!\s)\$/g // inline  $ … $  (no leading/trailing space)
+  ];
+  let out = md;
+  for (const re of patterns) {
+    out = out.replace(re, (m) => {
+      const token = `@@MATH${store.length}@@`;
+      store.push(m);
+      return token;
+    });
+  }
+  return out;
+}
+
+function restoreMath(html, store) {
+  return html.replace(/@@MATH(\d+)@@/g, (_, i) => store[Number(i)] ?? "");
 }
 
 function stripFrontMatter(markdown) {
