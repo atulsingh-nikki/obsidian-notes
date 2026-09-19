@@ -33,11 +33,11 @@ So the useful working estimate is:
 
 These models were trained mainly for image classification and then reused as feature extractors.
 
-- ResNet and ResNeXt
-- EfficientNet
+- [ResNet]({{ site.baseurl }}/Research/2015/Deep%20Residual%20Learning%20for%20Image%20Recognition.html) and ResNeXt
+- [EfficientNet]({{ site.baseurl }}/Research/2019/EfficientNet%20Rethinking%20Model%20Scaling%20for%20Convolutional%20Neural%20Networks.html)
 - RegNet
-- ConvNeXt
-- Inception and DenseNet
+- [ConvNeXt]({{ site.baseurl }}/Research/2022/ConvNeXt%20A%20ConvNet%20for%20the%202020s%20(2022).html)
+- [Inception]({{ site.baseurl }}/Research/2014/GoogLeNet%20Inception%20v1%20Going%20Deeper%20with%20Convolutions.html) and [DenseNet]({{ site.baseurl }}/Research/2017/Densely%20Connected%20Convolutional%20Networks%20(2017).html)
 
 They remain valuable because they are fast, well understood, and easy to deploy. Their representation is usually strongest near the distribution and label space used during supervised training.
 
@@ -45,9 +45,9 @@ They remain valuable because they are fast, well understood, and easy to deploy.
 
 ViT showed that a transformer could process an image as a sequence of patches. Later families improved its data efficiency, locality, scale, or training stability.
 
-- ViT
-- DeiT
-- Swin Transformer
+- [ViT]({{ site.baseurl }}/Research/2020/Vision%20Transformer%20(ViT)%20An%20Image%20is%20Worth%2016%C3%9716%20Words.html)
+- [DeiT]({{ site.baseurl }}/Research/2021/DeiT%20Training%20Data-Efficient%20Image%20Transformers%20%26%20Distillation%20through%20Attention%20(2021).html)
+- [Swin Transformer]({{ site.baseurl }}/Research/2021/Swin%20Transformer%20Hierarchical%20Vision%20Transformer%20using%20Shifted%20Windows%20(2021).html)
 - BEiT
 - PVT
 - MaxViT
@@ -59,10 +59,10 @@ The key shift was from hand-designed convolutional locality toward learned atten
 
 These models learn visual structure without requiring a class label for every image. They are often used as frozen or lightly fine-tuned backbones for downstream tasks.
 
-- MoCo and MoCo v3
-- SimCLR and BYOL
-- MAE
-- DINO and DINOv2
+- [MoCo]({{ site.baseurl }}/Research/2020/MoCo%20Momentum%20Contrast%20for%20Unsupervised%20Visual%20Representation%20Learning.html) and MoCo v3
+- [SimCLR]({{ site.baseurl }}/Research/2020/SimCLR%20A%20Simple%20Framework%20for%20Contrastive%20Learning%20of%20Visual%20Representations.html) and [BYOL]({{ site.baseurl }}/Research/2020/BYOL%20Bootstrap%20Your%20Own%20Latent.html)
+- [MAE]({{ site.baseurl }}/Research/2021/MAE%20Masked%20Autoencoders%20Are%20Scalable%20Vision%20Learners.html)
+- [DINO]({{ site.baseurl }}/Research/2021/DINO%20Emerging%20Properties%20in%20Self-Supervised%20Vision%20Transformers.html) and [DINOv2]({{ site.baseurl }}/Research/2023/DINOv2%20Learning%20Robust%20Visual%20Features%20without%20Supervision%20(2023).html)
 - iBOT
 - EsViT
 - DINOv3
@@ -73,7 +73,7 @@ DINO-style models are especially interesting because their features often preser
 
 A vision-language encoder learns a shared representation for images and text. The classic example is CLIP, which aligns an image with its corresponding caption and separates it from mismatched captions.
 
-- CLIP
+- [CLIP]({{ site.baseurl }}/Research/2021/CLIP%20Learning%20Transferable%20Visual%20Models%20From%20Natural%20Language%20Supervision.html)
 - OpenCLIP
 - SigLIP and SigLIP 2
 - ALIGN
@@ -96,12 +96,12 @@ This is one of the most important patterns in current vision research: **general
 
 A specialist is trained to be excellent at a narrower problem. Examples include:
 
-- SAM and SAM 2 for promptable segmentation
+- [SAM]({{ site.baseurl }}/Research/2023/Segment%20Anything%20(SAM,%202023).html) and [SAM 2]({{ site.baseurl }}/Research/2024/SAM%202%20Segment%20Anything%20in%20Images%20and%20Videos%20(2024).html) for promptable segmentation
 - Mask2Former for segmentation and panoptic prediction
-- DETR variants for object detection
+- [DETR]({{ site.baseurl }}/Research/2020/DETR%20End-to-End%20Object%20Detection%20with%20Transformers%20(2020).html) variants for object detection
 - HRNet and ViTPose for pose estimation
 - MiDaS and DPT for depth estimation
-- RAFT for optical flow
+- [RAFT]({{ site.baseurl }}/Research/2020/RAFT%20Recurrent%20All-Pairs%20Field%20Transforms%20for%20Optical%20Flow%20(2020).html) for optical flow
 - VideoMAE and InternVideo for video representation
 - TrOCR, Donut, and document models for text and layout
 - Medical, satellite, face, and industrial-inspection encoders
@@ -128,11 +128,11 @@ A generalist encoder can be understood as an amortized investment: expensive bro
 
 Trying to memorize every checkpoint is a losing strategy. A better curriculum is to understand the transitions between objectives:
 
-1. **Supervised CNNs:** learn what a strong task-trained representation looks like.
-2. **ViT:** understand patch tokens, attention, and positional information.
-3. **CLIP:** see how image-text alignment changes transfer behavior.
-4. **MAE and DINOv2:** compare reconstruction-based and invariance-based self-supervision.
-5. **SAM:** study how a general promptable model handles dense prediction.
+1. **Supervised CNNs:** learn what a strong task-trained representation looks like, starting with [ResNet]({{ site.baseurl }}/Research/2015/Deep%20Residual%20Learning%20for%20Image%20Recognition.html).
+2. **[ViT]({{ site.baseurl }}/Research/2020/Vision%20Transformer%20(ViT)%20An%20Image%20is%20Worth%2016%C3%9716%20Words.html):** understand patch tokens, attention, and positional information.
+3. **[CLIP]({{ site.baseurl }}/Research/2021/CLIP%20Learning%20Transferable%20Visual%20Models%20From%20Natural%20Language%20Supervision.html):** see how image-text alignment changes transfer behavior.
+4. **[MAE]({{ site.baseurl }}/Research/2021/MAE%20Masked%20Autoencoders%20Are%20Scalable%20Vision%20Learners.html) and [DINOv2]({{ site.baseurl }}/Research/2023/DINOv2%20Learning%20Robust%20Visual%20Features%20without%20Supervision%20(2023).html):** compare reconstruction-based and invariance-based self-supervision.
+5. **[SAM]({{ site.baseurl }}/Research/2023/Segment%20Anything%20(SAM,%202023).html):** study how a general promptable model handles dense prediction.
 6. **AIMV2 and 4M-21:** examine the move toward generalist and multimodal vision systems.
 
 That sequence is more valuable than a list of model names because it explains why the ecosystem keeps producing new encoders: each family changes the balance between semantic breadth, spatial precision, data efficiency, compute, and deployment cost.
