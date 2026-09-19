@@ -64,7 +64,15 @@ The reason this works without any shape reconciliation is that $E_{pos}$ is **de
 ### So Where Do Concatenation and Projection Actually Show Up?
 Both appear in this pipeline — just not at the point where patch and position embeddings meet.
 
-- **Projection** happens earlier, turning each patch's raw flattened pixels ($P^2 \cdot C$ dimensions, e.g. 768 for a 16×16 RGB patch) into the model's working dimension $D$ (e.g. 768 for ViT-Base, but not necessarily the same number). That's the learned matrix $E$ in the equation above — a genuine linear projection, resolving the one real dimensionality mismatch in the pipeline (raw pixel count vs. model width).
+- **Projection** happens earlier, turning each patch's raw flattened pixels ($P^2 \cdot C$ dimensions — fixed purely by patch geometry, e.g. $16 \times 16 \times 3 = 768$ for a 16×16 RGB patch) into the model's working dimension $D$ — a choice that depends only on which ViT variant you're using, not on patch size at all:
+
+  | Model | $D$ |
+  |---|---|
+  | ViT-Small | 384 |
+  | ViT-Base | 768 |
+  | ViT-Large | 1024 |
+
+  Whether $768$ and $D$ happen to match is pure coincidence — ViT-Base's $D=768$ lines up with the 16×16-patch raw size, but ViT-Small's 384 and ViT-Large's 1024 don't. That's exactly why a *learned* projection $E$ is needed rather than treating this as a shape that just happens to already fit: $E$ is what reshapes the fixed 768-dim raw patch into whatever $D$ the chosen model actually uses, smaller or larger. That's the learned matrix $E$ in the equation above — a genuine linear projection, resolving the one real dimensionality mismatch in the pipeline (raw pixel count vs. model width).
 - **Concatenation** shows up inside one specific *variant* the paper ablated: the **2-D learned** position embedding. Instead of one $D$-dimensional table, this scheme learns two half-width tables — an $X$-embedding and a $Y$-embedding, each of size $D/2$ — and for each patch, concatenates its $X$ and $Y$ vectors to build the final $D$-dimensional position embedding. Only after that concatenation does the result get added to the patch embedding, the same way as always.
 
 So: projection solves "raw pixels → model width," concatenation (when used) solves "build one position vector out of two half-size axis vectors," and addition is always the final step that merges position information into the patch/`[CLS]` embeddings.
