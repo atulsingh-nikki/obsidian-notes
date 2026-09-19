@@ -24,6 +24,7 @@ exclude:
   - ResearchTempalte.md
   - README.md
   - Untitled.base
+  - CLAUDE.md
   - _config-backup.yml
   - Gemfile
   - Gemfile.lock

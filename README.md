@@ -65,11 +65,16 @@ learning collection in sync with the repository.
 
 ## Local preview
 
-You can preview the site locally before publishing by launching a simple HTTP
-server from the repository root:
+The site is data-driven: a generator produces the connection/series/research data
+and the connections graph, and must run **before** each Jekyll build. Preview with:
 
 ```bash
-python3 -m http.server 8000
+python3 scripts/generate_site_data.py
+bundle exec jekyll serve --baseurl /obsidian-notes
 ```
 
-Then open <http://localhost:8000> in your browser.
+Then open <http://localhost:4000/obsidian-notes/> in your browser. CI runs the
+generator automatically before building.
+
+See [CLAUDE.md](CLAUDE.md) for the site architecture and important gotchas (macOS
+case-sensitivity, LaTeX `\mid`, excluded junk) before making changes.
