@@ -355,6 +355,9 @@ async function loadChapter(path) {
     markdown = stripFrontMatter(markdown);
     const html = window.marked ? window.marked.parse(markdown) : markdown;
     contentEl.innerHTML = html;
+    wrapTables(contentEl);
+    markImageLoadErrors(contentEl);
+    await typesetDynamicContent(contentEl);
     try {
       mainEl.focus({ preventScroll: true });
     } catch (error) {
@@ -363,6 +366,56 @@ async function loadChapter(path) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   } catch (error) {
     renderError(`Unable to load the selected chapter. ${error.message}`);
+  }
+}
+
+// Wrap tables so wide tables can scroll horizontally instead of overflowing the layout.
+function wrapTables(container) {
+  container.querySelectorAll("table").forEach((table) => {
+    if (table.parentElement && table.parentElement.classList.contains("bookshelf-table-wrap")) {
+      return;
+    }
+    const wrapper = document.createElement("div");
+    wrapper.className = "bookshelf-table-wrap";
+    table.parentNode.insertBefore(wrapper, table);
+    wrapper.appendChild(table);
+  });
+}
+
+// Flag images that fail to load so they degrade gracefully instead of showing a broken-image icon.
+function markImageLoadErrors(container) {
+  container.querySelectorAll("img").forEach((img) => {
+    img.loading = "lazy";
+    img.addEventListener("error", () => {
+      img.classList.add("bookshelf-image--broken");
+    }, { once: true });
+  });
+}
+
+// Re-run MathJax and Mermaid on dynamically inserted content; neither library watches the DOM automatically.
+async function typesetDynamicContent(container) {
+  if (window.MathJax && window.MathJax.typesetPromise) {
+    try {
+      await window.MathJax.typesetPromise([container]);
+    } catch (error) {
+      console.warn("MathJax typesetting failed", error);
+    }
+  }
+
+  const mermaidBlocks = container.querySelectorAll("pre code.language-mermaid, pre code.lang-mermaid");
+  if (mermaidBlocks.length > 0 && window.mermaid) {
+    mermaidBlocks.forEach((code) => {
+      const pre = code.parentElement;
+      const diagram = document.createElement("div");
+      diagram.className = "mermaid";
+      diagram.textContent = code.textContent;
+      pre.replaceWith(diagram);
+    });
+    try {
+      await window.mermaid.run({ nodes: container.querySelectorAll(".mermaid") });
+    } catch (error) {
+      console.warn("Mermaid rendering failed", error);
+    }
   }
 }
 
