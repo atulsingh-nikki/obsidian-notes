@@ -88,6 +88,29 @@
     ]
   },
   {
+    "name": "Attention: From Intuition to Efficient Vision",
+    "description": "A practical progression from attention's basic information-routing patterns to efficient and position-aware vision Transformers.",
+    "slugs": [
+      "queries-keys-values-intuition",
+      "different-types-of-attention",
+      "self-attention-deep-dive",
+      "cross-attention-deep-dive",
+      "causal-attention-deep-dive",
+      "multi-head-attention-deep-dive",
+      "global-attention-deep-dive",
+      "local-windowed-attention-deep-dive",
+      "sparse-deformable-attention-deep-dive",
+      "linear-attention-deep-dive",
+      "spatial-attention-deep-dive",
+      "channel-attention-deep-dive",
+      "temporal-attention-deep-dive",
+      "soft-hard-attention-deep-dive",
+      "vision-transformers",
+      "vit-patch-embeddings-cls-token-explained",
+      "positional-embeddings-in-vision-transformers"
+    ]
+  },
+  {
     "name": "Representation Interpretability & Probing",
     "description": "How to test what a representation encodes — linear probes, subspaces, disentanglement, and causal activation patching.",
     "slugs": [

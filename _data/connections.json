@@ -202,10 +202,10 @@
     "related": [
       "about-atul-singh",
       "advanced-kalman-topics",
+      "channel-attention-deep-dive",
       "classical-supervised-vision-backbones",
       "comparing-contrast-across-different-images",
-      "depth-disparity-interactive",
-      "depth-maps-computer-vision"
+      "depth-disparity-interactive"
     ],
     "series": {
       "name": "Kalman Filtering",
@@ -295,12 +295,12 @@
       "publishing-cadence-summary"
     ],
     "related": [
+      "different-types-of-attention",
       "how-many-vision-encoders",
+      "queries-keys-values-intuition",
       "vision-transformers",
       "about-atul-singh",
-      "classical-supervised-vision-backbones",
-      "comparing-contrast-across-different-images",
-      "depth-disparity-interactive"
+      "causal-attention-deep-dive"
     ],
     "series": null
   },
@@ -725,10 +725,10 @@
     "related": [
       "zeroing-model-weights-differentiability",
       "brownian-motion-diffusion-flow-models",
-      "depth-maps-computer-vision",
-      "how-vaes-avoid-computing-partition-function",
-      "image-matting-mask-edge-correction",
-      "learning-rate-schedulers-intuitions"
+      "causal-attention-deep-dive",
+      "channel-attention-deep-dive",
+      "cross-attention-deep-dive",
+      "depth-maps-computer-vision"
     ],
     "series": null
   },
@@ -839,7 +839,7 @@
       "understanding-color-balance",
       "understanding-color-contrast",
       "about-atul-singh",
-      "classical-supervised-vision-backbones"
+      "channel-attention-deep-dive"
     ],
     "series": null
   },
@@ -901,11 +901,11 @@
     ],
     "related": [
       "about-atul-singh",
+      "channel-attention-deep-dive",
       "classical-supervised-vision-backbones",
       "comparing-contrast-across-different-images",
       "depth-disparity-interactive",
-      "depth-maps-computer-vision",
-      "dino-self-distillation-no-labels-vision-transformers"
+      "depth-maps-computer-vision"
     ],
     "series": null
   },
@@ -1378,12 +1378,12 @@
       "mathematical-properties-brownian-motion"
     ],
     "related": [
+      "causal-attention-deep-dive",
+      "channel-attention-deep-dive",
+      "cross-attention-deep-dive",
       "depth-maps-computer-vision",
-      "how-vaes-avoid-computing-partition-function",
-      "image-matting-mask-edge-correction",
-      "learning-rate-schedulers-intuitions",
-      "video-matting-temporal-consistency",
-      "zeroing-model-weights-differentiability"
+      "different-types-of-attention",
+      "global-attention-deep-dive"
     ],
     "series": {
       "name": "Stochastic Processes & Diffusion",
@@ -1479,11 +1479,11 @@
     ],
     "related": [
       "depth-maps-computer-vision",
+      "channel-attention-deep-dive",
       "classical-supervised-vision-backbones",
+      "different-types-of-attention",
       "dino-self-distillation-no-labels-vision-transformers",
-      "generalist-multimodal-encoders",
-      "how-many-vision-encoders",
-      "image-matting-mask-edge-correction"
+      "generalist-multimodal-encoders"
     ],
     "series": null
   },
@@ -1495,11 +1495,11 @@
     ],
     "related": [
       "depth-disparity-interactive",
+      "channel-attention-deep-dive",
+      "different-types-of-attention",
       "image-matting-mask-edge-correction",
-      "video-matting-temporal-consistency",
-      "classical-supervised-vision-backbones",
-      "dino-self-distillation-no-labels-vision-transformers",
-      "generalist-multimodal-encoders"
+      "local-windowed-attention-deep-dive",
+      "queries-keys-values-intuition"
     ],
     "series": null
   },
@@ -1510,12 +1510,12 @@
       "publishing-cadence-summary"
     ],
     "related": [
+      "channel-attention-deep-dive",
+      "different-types-of-attention",
+      "local-windowed-attention-deep-dive",
+      "queries-keys-values-intuition",
       "sam-sam2-sam3-evolution",
-      "sam2-as-a-vision-encoder",
-      "video-matting-temporal-consistency",
-      "canny-edge-detector-practice",
-      "comparing-contrast-across-different-images",
-      "depth-maps-computer-vision"
+      "sam2-as-a-vision-encoder"
     ],
     "series": null
   },
@@ -1526,12 +1526,12 @@
       "publishing-cadence-summary"
     ],
     "related": [
-      "depth-maps-computer-vision",
-      "image-matting-mask-edge-correction",
-      "classical-supervised-vision-backbones",
-      "dino-self-distillation-no-labels-vision-transformers",
-      "generalist-multimodal-encoders",
-      "how-many-vision-encoders"
+      "channel-attention-deep-dive",
+      "different-types-of-attention",
+      "local-windowed-attention-deep-dive",
+      "queries-keys-values-intuition",
+      "spatial-attention-deep-dive",
+      "depth-maps-computer-vision"
     ],
     "series": null
   },
@@ -1881,7 +1881,7 @@
       "vit-patch-embeddings-cls-token-explained",
       "momentum-encoder-why-ema-teachers-work",
       "probing-supervised-backbone-representations",
-      "classical-supervised-vision-backbones"
+      "channel-attention-deep-dive"
     ],
     "series": {
       "name": "Vision Encoders & Representation Learning",
@@ -1902,7 +1902,7 @@
       "sam-sam2-sam3-evolution",
       "self-supervised-foundation-encoders",
       "classical-supervised-vision-backbones",
-      "probing-supervised-backbone-representations"
+      "different-types-of-attention"
     ],
     "series": {
       "name": "Vision Encoders & Representation Learning",
@@ -1923,7 +1923,7 @@
       "self-supervised-foundation-encoders",
       "vision-transformers",
       "classical-supervised-vision-backbones",
-      "probing-supervised-backbone-representations"
+      "different-types-of-attention"
     ],
     "series": {
       "name": "Vision Encoders & Representation Learning",
@@ -1966,18 +1966,18 @@
     "related": [
       "vit-patch-embeddings-cls-token-explained",
       "dino-self-distillation-no-labels-vision-transformers",
-      "probing-supervised-backbone-representations",
-      "self-supervised-foundation-encoders",
-      "vision-transformers",
-      "classical-supervised-vision-backbones"
+      "channel-attention-deep-dive",
+      "different-types-of-attention",
+      "local-windowed-attention-deep-dive",
+      "probing-supervised-backbone-representations"
     ],
     "series": {
-      "name": "Vision Encoders & Representation Learning",
+      "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
-      "part": 5,
-      "total": 14,
+      "part": 17,
+      "total": 17,
       "prev": "vit-patch-embeddings-cls-token-explained",
-      "next": "positional-embeddings-survey"
+      "next": null
     }
   },
   "positional-embeddings-survey": {
@@ -1985,12 +1985,12 @@
     "outlinks": [],
     "backlinks": [],
     "related": [
+      "causal-attention-deep-dive",
+      "different-types-of-attention",
+      "global-attention-deep-dive",
       "how-many-vision-encoders",
-      "positional-embeddings-in-vision-transformers",
-      "vision-transformers",
-      "vit-patch-embeddings-cls-token-explained",
-      "adaptive-dual-teacher-distillation-lightweight-video-models",
-      "tesseract-ocr-evolution"
+      "multi-head-attention-deep-dive",
+      "positional-embeddings-in-vision-transformers"
     ],
     "series": {
       "name": "Vision Encoders & Representation Learning",
@@ -2029,10 +2029,10 @@
     "related": [
       "sam2-as-a-vision-encoder",
       "generalist-multimodal-encoders",
+      "different-types-of-attention",
       "how-many-vision-encoders",
       "self-supervised-foundation-encoders",
-      "image-matting-mask-edge-correction",
-      "classical-supervised-vision-backbones"
+      "image-matting-mask-edge-correction"
     ],
     "series": {
       "name": "Vision Encoders & Representation Learning",
@@ -2112,18 +2112,18 @@
     "backlinks": [],
     "related": [
       "classical-supervised-vision-backbones",
+      "different-types-of-attention",
       "how-many-vision-encoders",
-      "generalist-multimodal-encoders",
-      "positional-embeddings-in-vision-transformers",
-      "probing-supervised-backbone-representations",
-      "sam2-as-a-vision-encoder"
+      "queries-keys-values-intuition",
+      "causal-attention-deep-dive",
+      "channel-attention-deep-dive"
     ],
     "series": {
-      "name": "Vision Encoders & Representation Learning",
+      "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
-      "part": 3,
-      "total": 14,
-      "prev": "probing-supervised-backbone-representations",
+      "part": 15,
+      "total": 17,
+      "prev": "soft-hard-attention-deep-dive",
       "next": "vit-patch-embeddings-cls-token-explained"
     }
   },
@@ -2136,18 +2136,312 @@
     "related": [
       "positional-embeddings-in-vision-transformers",
       "dino-self-distillation-no-labels-vision-transformers",
-      "probing-supervised-backbone-representations",
-      "self-supervised-foundation-encoders",
-      "vision-transformers",
-      "classical-supervised-vision-backbones"
+      "channel-attention-deep-dive",
+      "different-types-of-attention",
+      "local-windowed-attention-deep-dive",
+      "probing-supervised-backbone-representations"
     ],
     "series": {
-      "name": "Vision Encoders & Representation Learning",
+      "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
-      "part": 4,
-      "total": 14,
+      "part": 16,
+      "total": 17,
       "prev": "vision-transformers",
       "next": "positional-embeddings-in-vision-transformers"
+    }
+  },
+  "causal-attention-deep-dive": {
+    "title": "Causal Attention: Preventing the Model from Seeing the Future",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "different-types-of-attention",
+      "global-attention-deep-dive",
+      "multi-head-attention-deep-dive",
+      "queries-keys-values-intuition",
+      "self-attention-deep-dive",
+      "channel-attention-deep-dive"
+    ],
+    "series": {
+      "name": "Attention: From Intuition to Efficient Vision",
+      "ordered": true,
+      "part": 5,
+      "total": 17,
+      "prev": "cross-attention-deep-dive",
+      "next": "multi-head-attention-deep-dive"
+    }
+  },
+  "channel-attention-deep-dive": {
+    "title": "Channel Attention: Choose Which Features Matter",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "different-types-of-attention",
+      "local-windowed-attention-deep-dive",
+      "queries-keys-values-intuition",
+      "spatial-attention-deep-dive",
+      "causal-attention-deep-dive",
+      "cross-attention-deep-dive"
+    ],
+    "series": {
+      "name": "Attention: From Intuition to Efficient Vision",
+      "ordered": true,
+      "part": 12,
+      "total": 17,
+      "prev": "spatial-attention-deep-dive",
+      "next": "temporal-attention-deep-dive"
+    }
+  },
+  "cross-attention-deep-dive": {
+    "title": "Cross-Attention: Let One Representation Read Another",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "different-types-of-attention",
+      "causal-attention-deep-dive",
+      "channel-attention-deep-dive",
+      "global-attention-deep-dive",
+      "linear-attention-deep-dive",
+      "local-windowed-attention-deep-dive"
+    ],
+    "series": {
+      "name": "Attention: From Intuition to Efficient Vision",
+      "ordered": true,
+      "part": 4,
+      "total": 17,
+      "prev": "self-attention-deep-dive",
+      "next": "causal-attention-deep-dive"
+    }
+  },
+  "different-types-of-attention": {
+    "title": "Different Types of Attention in Deep Learning",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "queries-keys-values-intuition",
+      "causal-attention-deep-dive",
+      "channel-attention-deep-dive",
+      "cross-attention-deep-dive",
+      "global-attention-deep-dive",
+      "local-windowed-attention-deep-dive"
+    ],
+    "series": {
+      "name": "Attention: From Intuition to Efficient Vision",
+      "ordered": true,
+      "part": 2,
+      "total": 17,
+      "prev": "queries-keys-values-intuition",
+      "next": "self-attention-deep-dive"
+    }
+  },
+  "global-attention-deep-dive": {
+    "title": "Global Attention: Every Position Can See Every Position",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "causal-attention-deep-dive",
+      "different-types-of-attention",
+      "multi-head-attention-deep-dive",
+      "queries-keys-values-intuition",
+      "self-attention-deep-dive",
+      "channel-attention-deep-dive"
+    ],
+    "series": {
+      "name": "Attention: From Intuition to Efficient Vision",
+      "ordered": true,
+      "part": 7,
+      "total": 17,
+      "prev": "multi-head-attention-deep-dive",
+      "next": "local-windowed-attention-deep-dive"
+    }
+  },
+  "linear-attention-deep-dive": {
+    "title": "Linear Attention: Escaping the Quadratic Bottleneck",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "causal-attention-deep-dive",
+      "channel-attention-deep-dive",
+      "cross-attention-deep-dive",
+      "different-types-of-attention",
+      "global-attention-deep-dive",
+      "local-windowed-attention-deep-dive"
+    ],
+    "series": {
+      "name": "Attention: From Intuition to Efficient Vision",
+      "ordered": true,
+      "part": 10,
+      "total": 17,
+      "prev": "sparse-deformable-attention-deep-dive",
+      "next": "spatial-attention-deep-dive"
+    }
+  },
+  "local-windowed-attention-deep-dive": {
+    "title": "Local and Windowed Attention: Trading Reach for Efficiency",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "channel-attention-deep-dive",
+      "different-types-of-attention",
+      "queries-keys-values-intuition",
+      "spatial-attention-deep-dive",
+      "causal-attention-deep-dive",
+      "cross-attention-deep-dive"
+    ],
+    "series": {
+      "name": "Attention: From Intuition to Efficient Vision",
+      "ordered": true,
+      "part": 8,
+      "total": 17,
+      "prev": "global-attention-deep-dive",
+      "next": "sparse-deformable-attention-deep-dive"
+    }
+  },
+  "multi-head-attention-deep-dive": {
+    "title": "Multi-Head Attention: Several Routing Spaces in Parallel",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "causal-attention-deep-dive",
+      "different-types-of-attention",
+      "global-attention-deep-dive",
+      "queries-keys-values-intuition",
+      "self-attention-deep-dive",
+      "channel-attention-deep-dive"
+    ],
+    "series": {
+      "name": "Attention: From Intuition to Efficient Vision",
+      "ordered": true,
+      "part": 6,
+      "total": 17,
+      "prev": "causal-attention-deep-dive",
+      "next": "global-attention-deep-dive"
+    }
+  },
+  "queries-keys-values-intuition": {
+    "title": "Queries, Keys, and Values: The Intuition Behind Attention",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "different-types-of-attention",
+      "causal-attention-deep-dive",
+      "channel-attention-deep-dive",
+      "global-attention-deep-dive",
+      "local-windowed-attention-deep-dive",
+      "multi-head-attention-deep-dive"
+    ],
+    "series": {
+      "name": "Attention: From Intuition to Efficient Vision",
+      "ordered": true,
+      "part": 1,
+      "total": 17,
+      "prev": null,
+      "next": "different-types-of-attention"
+    }
+  },
+  "self-attention-deep-dive": {
+    "title": "Self-Attention: Let Every Token Read the Same Sequence",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "causal-attention-deep-dive",
+      "different-types-of-attention",
+      "global-attention-deep-dive",
+      "multi-head-attention-deep-dive",
+      "queries-keys-values-intuition",
+      "channel-attention-deep-dive"
+    ],
+    "series": {
+      "name": "Attention: From Intuition to Efficient Vision",
+      "ordered": true,
+      "part": 3,
+      "total": 17,
+      "prev": "different-types-of-attention",
+      "next": "cross-attention-deep-dive"
+    }
+  },
+  "soft-hard-attention-deep-dive": {
+    "title": "Soft and Hard Attention: Weight Everything or Select a Few",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "causal-attention-deep-dive",
+      "channel-attention-deep-dive",
+      "cross-attention-deep-dive",
+      "different-types-of-attention",
+      "global-attention-deep-dive",
+      "linear-attention-deep-dive"
+    ],
+    "series": {
+      "name": "Attention: From Intuition to Efficient Vision",
+      "ordered": true,
+      "part": 14,
+      "total": 17,
+      "prev": "temporal-attention-deep-dive",
+      "next": "vision-transformers"
+    }
+  },
+  "sparse-deformable-attention-deep-dive": {
+    "title": "Sparse and Deformable Attention: Learn Where to Look",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "causal-attention-deep-dive",
+      "channel-attention-deep-dive",
+      "cross-attention-deep-dive",
+      "different-types-of-attention",
+      "global-attention-deep-dive",
+      "linear-attention-deep-dive"
+    ],
+    "series": {
+      "name": "Attention: From Intuition to Efficient Vision",
+      "ordered": true,
+      "part": 9,
+      "total": 17,
+      "prev": "local-windowed-attention-deep-dive",
+      "next": "linear-attention-deep-dive"
+    }
+  },
+  "spatial-attention-deep-dive": {
+    "title": "Spatial Attention: Weight the Important Locations",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "channel-attention-deep-dive",
+      "different-types-of-attention",
+      "local-windowed-attention-deep-dive",
+      "queries-keys-values-intuition",
+      "causal-attention-deep-dive",
+      "cross-attention-deep-dive"
+    ],
+    "series": {
+      "name": "Attention: From Intuition to Efficient Vision",
+      "ordered": true,
+      "part": 11,
+      "total": 17,
+      "prev": "linear-attention-deep-dive",
+      "next": "channel-attention-deep-dive"
+    }
+  },
+  "temporal-attention-deep-dive": {
+    "title": "Temporal Attention: Connect Evidence Across Time",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "causal-attention-deep-dive",
+      "channel-attention-deep-dive",
+      "cross-attention-deep-dive",
+      "different-types-of-attention",
+      "global-attention-deep-dive",
+      "linear-attention-deep-dive"
+    ],
+    "series": {
+      "name": "Attention: From Intuition to Efficient Vision",
+      "ordered": true,
+      "part": 13,
+      "total": 17,
+      "prev": "channel-attention-deep-dive",
+      "next": "soft-hard-attention-deep-dive"
     }
   }
 }

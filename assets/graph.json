@@ -1199,7 +1199,7 @@
         "computer-vision",
         "representation-learning"
       ],
-      "group": "Vision Encoders & Representation Learning",
+      "group": "Attention: From Intuition to Efficient Vision",
       "degree": 1
     },
     {
@@ -1291,7 +1291,7 @@
         "attention",
         "backbones"
       ],
-      "group": "Vision Encoders & Representation Learning",
+      "group": "Attention: From Intuition to Efficient Vision",
       "degree": 0
     },
     {
@@ -1304,8 +1304,180 @@
         "computer-vision",
         "representation-learning"
       ],
-      "group": "Vision Encoders & Representation Learning",
+      "group": "Attention: From Intuition to Efficient Vision",
       "degree": 1
+    },
+    {
+      "id": "causal-attention-deep-dive",
+      "title": "Causal Attention: Preventing the Model from Seeing the Future",
+      "tags": [
+        "deep-learning",
+        "attention",
+        "causal-modeling",
+        "transformers"
+      ],
+      "group": "Attention: From Intuition to Efficient Vision",
+      "degree": 0
+    },
+    {
+      "id": "channel-attention-deep-dive",
+      "title": "Channel Attention: Choose Which Features Matter",
+      "tags": [
+        "deep-learning",
+        "attention",
+        "channel-attention",
+        "computer-vision",
+        "cnns"
+      ],
+      "group": "Attention: From Intuition to Efficient Vision",
+      "degree": 0
+    },
+    {
+      "id": "cross-attention-deep-dive",
+      "title": "Cross-Attention: Let One Representation Read Another",
+      "tags": [
+        "deep-learning",
+        "attention",
+        "cross-attention",
+        "multimodal-learning"
+      ],
+      "group": "Attention: From Intuition to Efficient Vision",
+      "degree": 0
+    },
+    {
+      "id": "different-types-of-attention",
+      "title": "Different Types of Attention in Deep Learning",
+      "tags": [
+        "deep-learning",
+        "attention",
+        "transformers",
+        "computer-vision",
+        "multimodal-learning"
+      ],
+      "group": "Attention: From Intuition to Efficient Vision",
+      "degree": 0
+    },
+    {
+      "id": "global-attention-deep-dive",
+      "title": "Global Attention: Every Position Can See Every Position",
+      "tags": [
+        "deep-learning",
+        "attention",
+        "global-attention",
+        "transformers"
+      ],
+      "group": "Attention: From Intuition to Efficient Vision",
+      "degree": 0
+    },
+    {
+      "id": "linear-attention-deep-dive",
+      "title": "Linear Attention: Escaping the Quadratic Bottleneck",
+      "tags": [
+        "deep-learning",
+        "attention",
+        "linear-attention",
+        "efficient-transformers"
+      ],
+      "group": "Attention: From Intuition to Efficient Vision",
+      "degree": 0
+    },
+    {
+      "id": "local-windowed-attention-deep-dive",
+      "title": "Local and Windowed Attention: Trading Reach for Efficiency",
+      "tags": [
+        "deep-learning",
+        "attention",
+        "local-attention",
+        "computer-vision"
+      ],
+      "group": "Attention: From Intuition to Efficient Vision",
+      "degree": 0
+    },
+    {
+      "id": "multi-head-attention-deep-dive",
+      "title": "Multi-Head Attention: Several Routing Spaces in Parallel",
+      "tags": [
+        "deep-learning",
+        "attention",
+        "multi-head-attention",
+        "transformers"
+      ],
+      "group": "Attention: From Intuition to Efficient Vision",
+      "degree": 0
+    },
+    {
+      "id": "queries-keys-values-intuition",
+      "title": "Queries, Keys, and Values: The Intuition Behind Attention",
+      "tags": [
+        "deep-learning",
+        "attention",
+        "transformers",
+        "computer-vision",
+        "intuition"
+      ],
+      "group": "Attention: From Intuition to Efficient Vision",
+      "degree": 0
+    },
+    {
+      "id": "self-attention-deep-dive",
+      "title": "Self-Attention: Let Every Token Read the Same Sequence",
+      "tags": [
+        "deep-learning",
+        "attention",
+        "self-attention",
+        "transformers"
+      ],
+      "group": "Attention: From Intuition to Efficient Vision",
+      "degree": 0
+    },
+    {
+      "id": "soft-hard-attention-deep-dive",
+      "title": "Soft and Hard Attention: Weight Everything or Select a Few",
+      "tags": [
+        "deep-learning",
+        "attention",
+        "soft-attention",
+        "hard-attention"
+      ],
+      "group": "Attention: From Intuition to Efficient Vision",
+      "degree": 0
+    },
+    {
+      "id": "sparse-deformable-attention-deep-dive",
+      "title": "Sparse and Deformable Attention: Learn Where to Look",
+      "tags": [
+        "deep-learning",
+        "attention",
+        "sparse-attention",
+        "deformable-attention",
+        "object-detection"
+      ],
+      "group": "Attention: From Intuition to Efficient Vision",
+      "degree": 0
+    },
+    {
+      "id": "spatial-attention-deep-dive",
+      "title": "Spatial Attention: Weight the Important Locations",
+      "tags": [
+        "deep-learning",
+        "attention",
+        "spatial-attention",
+        "computer-vision"
+      ],
+      "group": "Attention: From Intuition to Efficient Vision",
+      "degree": 0
+    },
+    {
+      "id": "temporal-attention-deep-dive",
+      "title": "Temporal Attention: Connect Evidence Across Time",
+      "tags": [
+        "deep-learning",
+        "attention",
+        "temporal-attention",
+        "video-understanding"
+      ],
+      "group": "Attention: From Intuition to Efficient Vision",
+      "degree": 0
     }
   ],
   "links": [

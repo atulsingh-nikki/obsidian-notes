@@ -279,6 +279,98 @@
     ]
   },
   {
+    "name": "Attention: From Intuition to Efficient Vision",
+    "description": "A practical progression from attention's basic information-routing patterns to efficient and position-aware vision Transformers.",
+    "ordered": true,
+    "parts": [
+      {
+        "slug": "queries-keys-values-intuition",
+        "part": 1,
+        "title": "Queries, Keys, and Values: The Intuition Behind Attention"
+      },
+      {
+        "slug": "different-types-of-attention",
+        "part": 2,
+        "title": "Different Types of Attention in Deep Learning"
+      },
+      {
+        "slug": "self-attention-deep-dive",
+        "part": 3,
+        "title": "Self-Attention: Let Every Token Read the Same Sequence"
+      },
+      {
+        "slug": "cross-attention-deep-dive",
+        "part": 4,
+        "title": "Cross-Attention: Let One Representation Read Another"
+      },
+      {
+        "slug": "causal-attention-deep-dive",
+        "part": 5,
+        "title": "Causal Attention: Preventing the Model from Seeing the Future"
+      },
+      {
+        "slug": "multi-head-attention-deep-dive",
+        "part": 6,
+        "title": "Multi-Head Attention: Several Routing Spaces in Parallel"
+      },
+      {
+        "slug": "global-attention-deep-dive",
+        "part": 7,
+        "title": "Global Attention: Every Position Can See Every Position"
+      },
+      {
+        "slug": "local-windowed-attention-deep-dive",
+        "part": 8,
+        "title": "Local and Windowed Attention: Trading Reach for Efficiency"
+      },
+      {
+        "slug": "sparse-deformable-attention-deep-dive",
+        "part": 9,
+        "title": "Sparse and Deformable Attention: Learn Where to Look"
+      },
+      {
+        "slug": "linear-attention-deep-dive",
+        "part": 10,
+        "title": "Linear Attention: Escaping the Quadratic Bottleneck"
+      },
+      {
+        "slug": "spatial-attention-deep-dive",
+        "part": 11,
+        "title": "Spatial Attention: Weight the Important Locations"
+      },
+      {
+        "slug": "channel-attention-deep-dive",
+        "part": 12,
+        "title": "Channel Attention: Choose Which Features Matter"
+      },
+      {
+        "slug": "temporal-attention-deep-dive",
+        "part": 13,
+        "title": "Temporal Attention: Connect Evidence Across Time"
+      },
+      {
+        "slug": "soft-hard-attention-deep-dive",
+        "part": 14,
+        "title": "Soft and Hard Attention: Weight Everything or Select a Few"
+      },
+      {
+        "slug": "vision-transformers",
+        "part": 15,
+        "title": "Vision Transformers: From Image Patches to General-Purpose Encoders"
+      },
+      {
+        "slug": "vit-patch-embeddings-cls-token-explained",
+        "part": 16,
+        "title": "What Does a Vision Transformer Actually Output? Patches, Positions, and the [CLS] Token"
+      },
+      {
+        "slug": "positional-embeddings-in-vision-transformers",
+        "part": 17,
+        "title": "Positional Embeddings in ViT: Why Add Them, and How the Shapes Actually Match"
+      }
+    ]
+  },
+  {
     "name": "Representation Interpretability & Probing",
     "description": "How to test what a representation encodes — linear probes, subspaces, disentanglement, and causal activation patching.",
     "ordered": true,
