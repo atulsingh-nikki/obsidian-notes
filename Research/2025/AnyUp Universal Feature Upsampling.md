@@ -38,7 +38,7 @@ website: https://wimmerth.github.io/anyup
 
 # 🧠 Summary
 
-**AnyUp** introduces a **universal, feature-agnostic upsampling model** capable of reconstructing high-resolution feature maps from any visual encoder (DINO, CLIP, SigLIP, MAE, etc.) **without retraining**.  
+**AnyUp** introduces a **universal, feature-agnostic upsampling model** capable of reconstructing high-resolution feature maps from any visual encoder (DINO, CLIP, [SigLIP]({{ site.baseurl }}/Research/2023/SigLIP%20Sigmoid%20Loss%20for%20Language%20Image%20Pre-Training%20(2023).html), MAE, etc.) **without retraining**.  
 Unlike prior upsamplers (FeatUp, LoftUp, JAFAR), which are tied to specific encoders or resolutions, AnyUp generalizes across:
 - **Any encoder**,  
 - **Any resolution**, and  

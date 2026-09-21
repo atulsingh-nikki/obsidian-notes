@@ -30,6 +30,11 @@
         "title": "MDP Multidimensional Vision Model Pruning with Latency Constraint",
         "path": "Research/2025/MDP Multidimensional Vision Model Pruning with Latency Constraint (2025).md",
         "topic": "Other"
+      },
+      {
+        "title": "SigLIP 2 Multilingual Vision-Language Encoders with Improved Semantic Understanding Localization and Dense Features",
+        "path": "Research/2025/SigLIP 2 Multilingual Vision-Language Encoders with Improved Semantic Understanding Localization and Dense Features (2025).md",
+        "topic": "Segmentation"
       }
     ],
     "2024": [
@@ -119,6 +124,11 @@
         "title": "Segment Anything",
         "path": "Research/2023/Segment Anything (SAM, 2023).md",
         "topic": "Segmentation"
+      },
+      {
+        "title": "SigLIP Sigmoid Loss for Language Image Pre-Training",
+        "path": "Research/2023/SigLIP Sigmoid Loss for Language Image Pre-Training (2023).md",
+        "topic": "Other"
       },
       {
         "title": "Stable Diffusion Turbo",
@@ -1501,5 +1511,5 @@
     "Segmentation",
     "Tracking"
   ],
-  "count": 284
+  "count": 286
 }

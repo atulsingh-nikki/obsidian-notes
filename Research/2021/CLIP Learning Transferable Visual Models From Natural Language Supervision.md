@@ -79,6 +79,7 @@ CLIP trains visual models using **natural language supervision** by pairing imag
 - **Contemporaries**:
   - ALIGN (Google, 2021) — similar large-scale image–text contrastive training.
 - **Successors**:
+  - [[SigLIP Sigmoid Loss for Language Image Pre-Training (2023)|SigLIP]] — replaces batchwise softmax contrastive training with a pairwise sigmoid loss.
   - [[OpenCLIP]] — community-trained large-scale CLIP variants.
   - [[BLIP (2022)]] — multimodal pretraining with captions + image-text matching.
   - [[Flamingo (2022)]] — multimodal few-shot learner.
