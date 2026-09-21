@@ -89,7 +89,7 @@ A vision-language encoder learns a shared representation for images and text. Th
 
 - [CLIP]({{ site.baseurl }}/Research/2021/CLIP%20Learning%20Transferable%20Visual%20Models%20From%20Natural%20Language%20Supervision.html)
 - OpenCLIP
-- [SigLIP]({{ site.baseurl }}/Research/2023/SigLIP%20Sigmoid%20Loss%20for%20Language%20Image%20Pre-Training%20(2023).html) and SigLIP 2
+- [SigLIP]({{ site.baseurl }}/Research/2023/SigLIP%20Sigmoid%20Loss%20for%20Language%20Image%20Pre-Training%20(2023).html) and [SigLIP 2]({{ site.baseurl }}/Research/2025/SigLIP%202%20Multilingual%20Vision-Language%20Encoders%20with%20Improved%20Semantic%20Understanding%20Localization%20and%20Dense%20Features%20(2025).html)
 - ALIGN
 - BLIP and BLIP-2 vision towers
 - EVA-CLIP
