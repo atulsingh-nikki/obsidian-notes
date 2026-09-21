@@ -37,6 +37,15 @@ Compute and memory grow as $O(N^2)$. High-resolution images and long videos quic
 
 Global attention provided a simple, general mechanism for scene-wide reasoning and helped make the same Transformer block usable across language and vision.
 
+## Recommended reading
+
+- [Large Language Models II: Attention, Transformers and LLMs](https://medium.com/@mitultiwari/large-language-models-ii-attention-transformers-and-llms-6107cf37232e) - broader reading on attention and Transformer context.
+- [The Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/) - useful reference implementation for dense scaled dot-product attention.
+
+## Recommended video
+
+- [Attention in transformers, step-by-step - Deep Learning Chapter 6](https://www.youtube.com/watch?v=eMlx5fFNoYc) - especially useful for seeing how a token can connect to distant context.
+
 ## Continue
 
 When $N$ is too large, [local and windowed attention]({{ site.baseurl }}/2026/09/21/local-windowed-attention-deep-dive.html) trades immediate global access for scalable neighborhoods.

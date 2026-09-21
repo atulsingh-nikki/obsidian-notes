@@ -44,6 +44,15 @@ The model may learn shortcuts and focus on a correlated but irrelevant region. S
 
 Spatial attention helped visual models allocate capacity to relevant regions instead of treating every pixel or patch equally, especially in dense and weakly supervised tasks.
 
+## Recommended reading
+
+- [Day 2: What is Self Attention | Transformers](https://medium.com/@naveenpandey2706/day-2-what-is-self-attention-transformers-f52c0bfb8988) - useful background for understanding attention over image locations.
+- [Squeeze-and-Excitation Networks](https://arxiv.org/abs/1709.01507) - a foundational example of lightweight feature reweighting in vision.
+
+## Recommended video
+
+- [Vision Transformer Quick Guide - Theory and Code](https://www.youtube.com/watch?v=j3VNqtJUoz0) - a practical visual treatment of patch-level spatial attention.
+
 ## Continue
 
 Spatial attention chooses locations. [Channel attention]({{ site.baseurl }}/2026/09/21/channel-attention-deep-dive.html) chooses which feature types to emphasize at those locations.

@@ -1394,6 +1394,20 @@
       "degree": 0
     },
     {
+      "id": "measuring-whether-attention-helps",
+      "title": "How Do We Know Attention Helps? Measuring Attention in Research",
+      "tags": [
+        "deep-learning",
+        "attention",
+        "interpretability",
+        "evaluation",
+        "transformers",
+        "computer-vision"
+      ],
+      "group": "Attention: From Intuition to Efficient Vision",
+      "degree": 0
+    },
+    {
       "id": "multi-head-attention-deep-dive",
       "title": "Multi-Head Attention: Several Routing Spaces in Parallel",
       "tags": [

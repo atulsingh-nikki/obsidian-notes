@@ -218,6 +218,15 @@ Vision Transformers changed the unit of visual computation from a fixed local fi
 
 Their success depends on more than the Transformer block. Patch size, positional encoding, hierarchy, data scale, objective, and hardware all shape the result. ViT is best understood not as a single model that defeated CNNs, but as a design language for building visual encoders with different assumptions about data, context, and transfer.
 
+## Recommended reading
+
+- [Attention, Transformers, and GPT](https://medium.com/@trevormcguire/attention-transformers-and-gpt-b3adbbb4a950) - a readable bridge from general attention to Transformer architectures.
+- [An Image is Worth 16x16 Words](https://arxiv.org/abs/2010.11929) - the original Vision Transformer paper.
+
+## Recommended video
+
+- [Stanford CS231N Lecture 8: Attention and Transformers](https://www.youtube.com/watch?v=RQowiOF_FvQ) - a university lecture connecting attention mechanics to modern vision models.
+
 When those assumptions match the task and the available compute, a Transformer can serve as a classifier, a dense-prediction backbone, or the visual foundation for a larger multimodal system.
 
 ## Continue the vision-encoder series

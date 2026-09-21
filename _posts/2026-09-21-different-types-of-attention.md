@@ -263,6 +263,15 @@ When reading a new architecture, draw the attention graph:
 
 Once that graph is visible, “self-attention,” “cross-attention,” “windowed attention,” and “deformable attention” become precise variations on the same idea rather than a list of unrelated terms.
 
+## Recommended reading
+
+- [Evolving Self-Attention: Positional Encoding, Multi-Head, and Masked Attention](https://medium.com/@luvverma2011/evolving-self-attention-positional-encoding-multi-head-and-masked-attention-transformers-f818e5567f86) - a Medium series-style overview of several attention variants.
+- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) - a visual companion for comparing self-attention, masking, and encoder-decoder attention.
+
+## Recommended video
+
+- [Introduction to Transformers with Andrej Karpathy](https://www.youtube.com/watch?v=XfpMkf4rD6E) - Stanford CS25's broad treatment of Transformer components and attention.
+
 ## Continue reading
 
 - [Attention Is All You Need]({{ site.baseurl }}/Research/2017/Attention%20Is%20All%20You%20Need%20(2017).html)

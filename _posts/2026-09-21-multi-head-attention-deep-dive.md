@@ -42,6 +42,15 @@ More heads do not guarantee more useful information. Heads can be redundant, int
 
 Multi-head attention allowed one layer to represent several relationships without hand-designing separate modules for each one. It became a flexible general-purpose block for sequence and spatial reasoning.
 
+## Recommended reading
+
+- [Query, Key, Value and Multi Head Attention: Transformers Part 2](https://medium.com/@anushka.sonawane/query-key-value-and-multi-head-attention-transformers-part-2-ba8d3db0db75) - focused reading on Q/K/V projections and multiple heads.
+- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) - visualizes how multiple attention projections operate inside a Transformer block.
+
+## Recommended video
+
+- [Introduction to Transformers with Andrej Karpathy](https://www.youtube.com/watch?v=XfpMkf4rD6E) - Stanford CS25's discussion of Transformer attention and multiple learned relationships.
+
 ## Continue
 
 Multi-head attention says how many routing spaces exist. [Global attention]({{ site.baseurl }}/2026/09/21/global-attention-deep-dive.html) says how broadly each space can connect.

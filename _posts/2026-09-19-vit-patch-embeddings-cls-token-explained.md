@@ -84,6 +84,13 @@ Not spatially — it still gets a learned position vector, but that's mostly jus
 
 ---
 
+### Recommended reading
+- [Intro To Rotational Positional Embeddings in Vision and Text Transformers](https://medium.com/@amitkhanna_4249/understanding-embeddings-in-large-language-models-what-are-they-and-why-do-we-need-rope-66fa009bc624) - a Medium companion for position representations in vision and text.
+- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) - useful background for understanding how token sequences and attention outputs are organized.
+
+### Recommended video
+- [Vision Transformer Quick Guide - Theory and Code](https://www.youtube.com/watch?v=j3VNqtJUoz0) - a concise walkthrough of patches, positional information, and the ViT output sequence.
+
 ### References
 - Dosovitskiy et al. "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale." arXiv:2010.11929, 2020 — [Research/2020/Vision Transformer (ViT) An Image is Worth 16×16 Words.md]({{ site.baseurl }}/Research/2020/Vision%20Transformer%20(ViT)%20An%20Image%20is%20Worth%2016%C3%9716%20Words.html)
 - Devlin et al. "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding." arXiv:1810.04805, 2018 — origin of the `[CLS]` token idea.

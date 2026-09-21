@@ -51,3 +51,14 @@ Soft attention made attention broadly trainable inside end-to-end neural network
 ## Final perspective
 
 The attention family is not a list of competing inventions. It is a set of choices about source streams, connectivity, time direction, spatial scope, feature dimensions, and whether selection is smooth or discrete. The right choice depends on what information the task needs and what computation the deployment budget allows.
+
+## Recommended reading
+
+- [How Words Learn to Pay Attention: Transformers Part 1](https://medium.com/towards-artificial-intelligence/how-words-learn-to-pay-attention-transformers-part-1-08c34dd76721) - a readable introduction to soft attention as learned weighting.
+- [Show, Attend and Tell](https://arxiv.org/abs/1502.03044) - the classic soft-versus-hard visual attention reference for image captioning.
+
+## Recommended video
+
+- [Attention in transformers, step-by-step - Deep Learning Chapter 6](https://www.youtube.com/watch?v=eMlx5fFNoYc) - a clear visual comparison point for differentiable weighted routing.
+
+At this point we have described the main ways attention can route information. The research question is now sharper: how can we tell whether a particular routing pattern is meaningful, necessary, or actually useful? [How Do We Know Attention Helps?]({{ site.baseurl }}/2026/09/21/measuring-whether-attention-helps.html) answers that question with visualization, alignment, ablation, attribution, and causal tests.

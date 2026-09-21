@@ -43,6 +43,15 @@ The model cannot use future context, even when future context would improve an o
 
 Causal attention made scalable autoregressive Transformers possible: the model can train on parallel shifted sequences while generating valid outputs one step at a time.
 
+## Recommended reading
+
+- [Evolving Self-Attention: Positional Encoding, Multi-Head, and Masked Attention](https://medium.com/@luvverma2011/evolving-self-attention-positional-encoding-multi-head-and-masked-attention-transformers-f818e5567f86) - includes the masked-attention perspective behind causal decoding.
+- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) - especially useful for the decoder's masked self-attention and autoregressive flow.
+
+## Recommended video
+
+- [Understanding causal attention or masked self attention](https://www.youtube.com/watch?v=CJSYo2Mw8R0) - a dedicated explanation of why future tokens are masked.
+
 ## Continue
 
 Causal masking controls *when* information may flow. [Multi-head attention]({{ site.baseurl }}/2026/09/21/multi-head-attention-deep-dive.html) controls how many learned routing spaces operate in parallel.

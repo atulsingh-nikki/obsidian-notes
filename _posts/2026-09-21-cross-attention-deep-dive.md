@@ -47,6 +47,15 @@ Repeated cross-attention can become expensive for long contexts. The query strea
 
 Cross-attention enabled text-controlled image generation, promptable detection and segmentation, and multimodal systems where one representation can ask another for task-specific evidence.
 
+## Recommended reading
+
+- [How Words Learn to Pay Attention: Transformers Part 1](https://medium.com/towards-artificial-intelligence/how-words-learn-to-pay-attention-transformers-part-1-08c34dd76721) - a readable introduction to the Transformer attention family.
+- [The Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/) - implementation-oriented reading for encoder-decoder attention and masking.
+
+## Recommended video
+
+- [Cross Attention in Transformers](https://www.youtube.com/watch?v=smOnJtCevoU) - CampusX's focused walkthrough of cross-attention inputs, processing, and outputs.
+
 ## Continue
 
 Cross-attention changes the source of information. [Causal attention]({{ site.baseurl }}/2026/09/21/causal-attention-deep-dive.html) changes the time direction of information flow.

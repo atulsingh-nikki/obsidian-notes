@@ -113,3 +113,10 @@ It matters any time inference or fine-tuning resolution differs from pretraining
 ### References
 - Dosovitskiy et al. "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale." arXiv:2010.11929, 2020 (Section 3.1, Appendix D.4) — [Research/2020/Vision Transformer (ViT) An Image is Worth 16×16 Words.md]({{ site.baseurl }}/Research/2020/Vision%20Transformer%20(ViT)%20An%20Image%20is%20Worth%2016%C3%9716%20Words.html)
 - Companion post: [What Does a Vision Transformer Actually Output? Patches, Positions, and the [CLS] Token]({{ site.baseurl }}{% post_url 2026-09-19-vit-patch-embeddings-cls-token-explained %})
+
+### Recommended reading
+- [Intro To Rotational Positional Embeddings in Vision and Text Transformers](https://medium.com/@amitkhanna_4249/understanding-embeddings-in-large-language-models-what-are-they-and-why-do-we-need-rope-66fa009bc624) - a Medium companion for position representations in vision and text.
+- [An Image is Worth 16x16 Words](https://arxiv.org/abs/2010.11929) - see the positional-embedding ablations and resolution-transfer discussion in the original paper.
+
+### Recommended video
+- [Swin Transformer paper animated and explained](https://www.youtube.com/watch?v=SndHALawoag) - includes a useful visual explanation of positional embeddings and why spatial position matters once attention operates on patches.

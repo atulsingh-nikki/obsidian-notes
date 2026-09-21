@@ -44,6 +44,15 @@ Video tokens multiply sequence length, making full space-time attention expensiv
 
 Temporal attention made it possible to treat video as a coherent signal rather than an unordered collection of still images, improving tracking, action recognition, and temporally consistent editing.
 
+## Recommended reading
+
+- [Large Language Models II: Attention, Transformers and LLMs](https://medium.com/@mitultiwari/large-language-models-ii-attention-transformers-and-llms-6107cf37232e) - broader context for extending attention across a sequence dimension such as time.
+- [TimeSformer](https://arxiv.org/abs/2102.05095) - a clear research reference for divided spatial and temporal attention in video.
+
+## Recommended video
+
+- [Introduction to Transformers with Andrej Karpathy](https://www.youtube.com/watch?v=XfpMkf4rD6E) - the Transformer context is a useful foundation before extending attention across video time.
+
 ## Continue
 
 Temporal attention is the series' move from spatial context to evolving context. The final contrast is between [soft and hard attention]({{ site.baseurl }}/2026/09/21/soft-hard-attention-deep-dive.html): smooth weighting versus discrete selection.

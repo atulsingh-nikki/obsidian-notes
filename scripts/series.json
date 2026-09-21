@@ -105,6 +105,7 @@
       "channel-attention-deep-dive",
       "temporal-attention-deep-dive",
       "soft-hard-attention-deep-dive",
+      "measuring-whether-attention-helps",
       "vision-transformers",
       "vit-patch-embeddings-cls-token-explained",
       "positional-embeddings-in-vision-transformers"

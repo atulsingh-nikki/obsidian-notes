@@ -44,6 +44,15 @@ The model can miss important evidence if its sampling locations are wrong. The i
 
 Sparse and deformable attention made end-to-end detection practical without requiring every object query to inspect every pixel or feature location.
 
+## Recommended reading
+
+- [Hierarchical Attention Transformers](https://medium.com/@ceo_44783/16x16x16x16-hierarchical-attention-transformers-how-to-train-an-llm-with-a-65-536-token-context-3f348ed38370) - useful context for reducing attention's effective search space.
+- [Deformable DETR](https://arxiv.org/abs/2010.04159) - the original research paper for learned sparse sampling around reference points.
+
+## Recommended video
+
+- [Introduction to Transformers with Andrej Karpathy](https://www.youtube.com/watch?v=XfpMkf4rD6E) - the Stanford CS25 lecture gives useful context for why learned routing is valuable before studying deformable sampling.
+
 ## Continue
 
 Sparse attention chooses fewer pairs. [Linear attention]({{ site.baseurl }}/2026/09/21/linear-attention-deep-dive.html) changes the computation itself to avoid explicitly forming all pairwise scores.

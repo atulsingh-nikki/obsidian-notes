@@ -297,10 +297,10 @@
     "related": [
       "different-types-of-attention",
       "how-many-vision-encoders",
+      "measuring-whether-attention-helps",
       "queries-keys-values-intuition",
       "vision-transformers",
-      "about-atul-singh",
-      "causal-attention-deep-dive"
+      "about-atul-singh"
     ],
     "series": null
   },
@@ -1499,7 +1499,7 @@
       "different-types-of-attention",
       "image-matting-mask-edge-correction",
       "local-windowed-attention-deep-dive",
-      "queries-keys-values-intuition"
+      "measuring-whether-attention-helps"
     ],
     "series": null
   },
@@ -1513,9 +1513,9 @@
       "channel-attention-deep-dive",
       "different-types-of-attention",
       "local-windowed-attention-deep-dive",
+      "measuring-whether-attention-helps",
       "queries-keys-values-intuition",
-      "sam-sam2-sam3-evolution",
-      "sam2-as-a-vision-encoder"
+      "sam-sam2-sam3-evolution"
     ],
     "series": null
   },
@@ -1529,9 +1529,9 @@
       "channel-attention-deep-dive",
       "different-types-of-attention",
       "local-windowed-attention-deep-dive",
+      "measuring-whether-attention-helps",
       "queries-keys-values-intuition",
-      "spatial-attention-deep-dive",
-      "depth-maps-computer-vision"
+      "spatial-attention-deep-dive"
     ],
     "series": null
   },
@@ -1768,7 +1768,7 @@
       "what-is-a-linear-probe",
       "probing-supervised-backbone-representations",
       "dino-self-distillation-no-labels-vision-transformers",
-      "momentum-encoder-why-ema-teachers-work"
+      "measuring-whether-attention-helps"
     ],
     "series": {
       "name": "Representation Interpretability & Probing",
@@ -1791,7 +1791,7 @@
       "what-is-a-linear-probe",
       "probing-supervised-backbone-representations",
       "dino-self-distillation-no-labels-vision-transformers",
-      "momentum-encoder-why-ema-teachers-work"
+      "measuring-whether-attention-helps"
     ],
     "series": {
       "name": "Representation Interpretability & Probing",
@@ -1814,7 +1814,7 @@
       "what-is-a-linear-probe",
       "probing-supervised-backbone-representations",
       "dino-self-distillation-no-labels-vision-transformers",
-      "momentum-encoder-why-ema-teachers-work"
+      "measuring-whether-attention-helps"
     ],
     "series": {
       "name": "Representation Interpretability & Probing",
@@ -1837,7 +1837,7 @@
       "representation-intervention-activation-patching",
       "single-direction-vs-subspace-representations",
       "dino-self-distillation-no-labels-vision-transformers",
-      "momentum-encoder-why-ema-teachers-work"
+      "measuring-whether-attention-helps"
     ],
     "series": {
       "name": "Representation Interpretability & Probing",
@@ -1969,13 +1969,13 @@
       "channel-attention-deep-dive",
       "different-types-of-attention",
       "local-windowed-attention-deep-dive",
-      "probing-supervised-backbone-representations"
+      "measuring-whether-attention-helps"
     ],
     "series": {
       "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
-      "part": 17,
-      "total": 17,
+      "part": 18,
+      "total": 18,
       "prev": "vit-patch-embeddings-cls-token-explained",
       "next": null
     }
@@ -1989,8 +1989,8 @@
       "different-types-of-attention",
       "global-attention-deep-dive",
       "how-many-vision-encoders",
-      "multi-head-attention-deep-dive",
-      "positional-embeddings-in-vision-transformers"
+      "measuring-whether-attention-helps",
+      "multi-head-attention-deep-dive"
     ],
     "series": {
       "name": "Vision Encoders & Representation Learning",
@@ -2114,16 +2114,16 @@
       "classical-supervised-vision-backbones",
       "different-types-of-attention",
       "how-many-vision-encoders",
+      "measuring-whether-attention-helps",
       "queries-keys-values-intuition",
-      "causal-attention-deep-dive",
-      "channel-attention-deep-dive"
+      "causal-attention-deep-dive"
     ],
     "series": {
       "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
-      "part": 15,
-      "total": 17,
-      "prev": "soft-hard-attention-deep-dive",
+      "part": 16,
+      "total": 18,
+      "prev": "measuring-whether-attention-helps",
       "next": "vit-patch-embeddings-cls-token-explained"
     }
   },
@@ -2139,13 +2139,13 @@
       "channel-attention-deep-dive",
       "different-types-of-attention",
       "local-windowed-attention-deep-dive",
-      "probing-supervised-backbone-representations"
+      "measuring-whether-attention-helps"
     ],
     "series": {
       "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
-      "part": 16,
-      "total": 17,
+      "part": 17,
+      "total": 18,
       "prev": "vision-transformers",
       "next": "positional-embeddings-in-vision-transformers"
     }
@@ -2157,16 +2157,16 @@
     "related": [
       "different-types-of-attention",
       "global-attention-deep-dive",
+      "measuring-whether-attention-helps",
       "multi-head-attention-deep-dive",
       "queries-keys-values-intuition",
-      "self-attention-deep-dive",
-      "channel-attention-deep-dive"
+      "self-attention-deep-dive"
     ],
     "series": {
       "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
       "part": 5,
-      "total": 17,
+      "total": 18,
       "prev": "cross-attention-deep-dive",
       "next": "multi-head-attention-deep-dive"
     }
@@ -2178,16 +2178,16 @@
     "related": [
       "different-types-of-attention",
       "local-windowed-attention-deep-dive",
+      "measuring-whether-attention-helps",
       "queries-keys-values-intuition",
       "spatial-attention-deep-dive",
-      "causal-attention-deep-dive",
-      "cross-attention-deep-dive"
+      "causal-attention-deep-dive"
     ],
     "series": {
       "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
       "part": 12,
-      "total": 17,
+      "total": 18,
       "prev": "spatial-attention-deep-dive",
       "next": "temporal-attention-deep-dive"
     }
@@ -2208,7 +2208,7 @@
       "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
       "part": 4,
-      "total": 17,
+      "total": 18,
       "prev": "self-attention-deep-dive",
       "next": "causal-attention-deep-dive"
     }
@@ -2218,18 +2218,18 @@
     "outlinks": [],
     "backlinks": [],
     "related": [
+      "measuring-whether-attention-helps",
       "queries-keys-values-intuition",
       "causal-attention-deep-dive",
       "channel-attention-deep-dive",
       "cross-attention-deep-dive",
-      "global-attention-deep-dive",
-      "local-windowed-attention-deep-dive"
+      "global-attention-deep-dive"
     ],
     "series": {
       "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
       "part": 2,
-      "total": 17,
+      "total": 18,
       "prev": "queries-keys-values-intuition",
       "next": "self-attention-deep-dive"
     }
@@ -2241,16 +2241,16 @@
     "related": [
       "causal-attention-deep-dive",
       "different-types-of-attention",
+      "measuring-whether-attention-helps",
       "multi-head-attention-deep-dive",
       "queries-keys-values-intuition",
-      "self-attention-deep-dive",
-      "channel-attention-deep-dive"
+      "self-attention-deep-dive"
     ],
     "series": {
       "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
       "part": 7,
-      "total": 17,
+      "total": 18,
       "prev": "multi-head-attention-deep-dive",
       "next": "local-windowed-attention-deep-dive"
     }
@@ -2271,7 +2271,7 @@
       "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
       "part": 10,
-      "total": 17,
+      "total": 18,
       "prev": "sparse-deformable-attention-deep-dive",
       "next": "spatial-attention-deep-dive"
     }
@@ -2283,18 +2283,39 @@
     "related": [
       "channel-attention-deep-dive",
       "different-types-of-attention",
+      "measuring-whether-attention-helps",
       "queries-keys-values-intuition",
       "spatial-attention-deep-dive",
-      "causal-attention-deep-dive",
-      "cross-attention-deep-dive"
+      "causal-attention-deep-dive"
     ],
     "series": {
       "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
       "part": 8,
-      "total": 17,
+      "total": 18,
       "prev": "global-attention-deep-dive",
       "next": "sparse-deformable-attention-deep-dive"
+    }
+  },
+  "measuring-whether-attention-helps": {
+    "title": "How Do We Know Attention Helps? Measuring Attention in Research",
+    "outlinks": [],
+    "backlinks": [],
+    "related": [
+      "different-types-of-attention",
+      "queries-keys-values-intuition",
+      "causal-attention-deep-dive",
+      "channel-attention-deep-dive",
+      "global-attention-deep-dive",
+      "local-windowed-attention-deep-dive"
+    ],
+    "series": {
+      "name": "Attention: From Intuition to Efficient Vision",
+      "ordered": true,
+      "part": 15,
+      "total": 18,
+      "prev": "soft-hard-attention-deep-dive",
+      "next": "vision-transformers"
     }
   },
   "multi-head-attention-deep-dive": {
@@ -2305,15 +2326,15 @@
       "causal-attention-deep-dive",
       "different-types-of-attention",
       "global-attention-deep-dive",
+      "measuring-whether-attention-helps",
       "queries-keys-values-intuition",
-      "self-attention-deep-dive",
-      "channel-attention-deep-dive"
+      "self-attention-deep-dive"
     ],
     "series": {
       "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
       "part": 6,
-      "total": 17,
+      "total": 18,
       "prev": "causal-attention-deep-dive",
       "next": "global-attention-deep-dive"
     }
@@ -2324,17 +2345,17 @@
     "backlinks": [],
     "related": [
       "different-types-of-attention",
+      "measuring-whether-attention-helps",
       "causal-attention-deep-dive",
       "channel-attention-deep-dive",
       "global-attention-deep-dive",
-      "local-windowed-attention-deep-dive",
-      "multi-head-attention-deep-dive"
+      "local-windowed-attention-deep-dive"
     ],
     "series": {
       "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
       "part": 1,
-      "total": 17,
+      "total": 18,
       "prev": null,
       "next": "different-types-of-attention"
     }
@@ -2347,15 +2368,15 @@
       "causal-attention-deep-dive",
       "different-types-of-attention",
       "global-attention-deep-dive",
+      "measuring-whether-attention-helps",
       "multi-head-attention-deep-dive",
-      "queries-keys-values-intuition",
-      "channel-attention-deep-dive"
+      "queries-keys-values-intuition"
     ],
     "series": {
       "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
       "part": 3,
-      "total": 17,
+      "total": 18,
       "prev": "different-types-of-attention",
       "next": "cross-attention-deep-dive"
     }
@@ -2376,9 +2397,9 @@
       "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
       "part": 14,
-      "total": 17,
+      "total": 18,
       "prev": "temporal-attention-deep-dive",
-      "next": "vision-transformers"
+      "next": "measuring-whether-attention-helps"
     }
   },
   "sparse-deformable-attention-deep-dive": {
@@ -2397,7 +2418,7 @@
       "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
       "part": 9,
-      "total": 17,
+      "total": 18,
       "prev": "local-windowed-attention-deep-dive",
       "next": "linear-attention-deep-dive"
     }
@@ -2410,15 +2431,15 @@
       "channel-attention-deep-dive",
       "different-types-of-attention",
       "local-windowed-attention-deep-dive",
+      "measuring-whether-attention-helps",
       "queries-keys-values-intuition",
-      "causal-attention-deep-dive",
-      "cross-attention-deep-dive"
+      "causal-attention-deep-dive"
     ],
     "series": {
       "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
       "part": 11,
-      "total": 17,
+      "total": 18,
       "prev": "linear-attention-deep-dive",
       "next": "channel-attention-deep-dive"
     }
@@ -2439,7 +2460,7 @@
       "name": "Attention: From Intuition to Efficient Vision",
       "ordered": true,
       "part": 13,
-      "total": 17,
+      "total": 18,
       "prev": "channel-attention-deep-dive",
       "next": "soft-hard-attention-deep-dive"
     }

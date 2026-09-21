@@ -219,6 +219,15 @@ That is the conceptual core behind the equation. Attention first computes releva
 
 We now have the basic mechanism: queries express a need, keys determine relevance, and values carry the retrieved information. The next step is to ask what changes when we change the participants and the allowed connections. [Different Types of Attention in Deep Learning]({{ site.baseurl }}/2026/09/21/different-types-of-attention.html) answers that question by keeping $Q/K/V$ fixed while changing the information-flow rules.
 
+## Recommended reading
+
+- [Query, Key, Value and Multi Head Attention: Transformers Part 2](https://medium.com/@anushka.sonawane/query-key-value-and-multi-head-attention-transformers-part-2-ba8d3db0db75) - a direct Medium companion for Q/K/V and multi-head attention.
+- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) - Jay Alammar's visual explanation of encoder-decoder attention and Q/K/V.
+
+## Recommended video
+
+- [Attention in transformers, step-by-step - Deep Learning Chapter 6](https://www.youtube.com/watch?v=eMlx5fFNoYc) - 3Blue1Brown's visual treatment of attention, including the attention pattern and values.
+
 ## Continue the Attention series
 
 - [Different Types of Attention in Deep Learning]({{ site.baseurl }}/2026/09/21/different-types-of-attention.html)

@@ -37,6 +37,15 @@ A token cannot see outside its window in one layer. Fixed boundaries can split o
 
 Windowed attention made hierarchical, high-resolution Transformers practical for detection, segmentation, restoration, and other dense vision tasks.
 
+## Recommended reading
+
+- [Hierarchical Attention Transformers](https://medium.com/@ceo_44783/16x16x16x16-hierarchical-attention-transformers-how-to-train-an-llm-with-a-65-536-token-context-3f348ed38370) - a practical long-context perspective on hierarchical attention.
+- [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows](https://arxiv.org/abs/2103.14030) - the original paper behind shifted-window attention.
+
+## Recommended video
+
+- [Swin Transformer paper animated and explained](https://www.youtube.com/watch?v=SndHALawoag) - explains window attention, shifted windows, positional embeddings, and the motivation for locality.
+
 ## Continue
 
 Windows impose a fixed neighborhood. [Sparse and deformable attention]({{ site.baseurl }}/2026/09/21/sparse-deformable-attention-deep-dive.html) lets the model choose a smaller set of locations more selectively.

@@ -354,18 +354,23 @@
         "title": "Soft and Hard Attention: Weight Everything or Select a Few"
       },
       {
-        "slug": "vision-transformers",
+        "slug": "measuring-whether-attention-helps",
         "part": 15,
+        "title": "How Do We Know Attention Helps? Measuring Attention in Research"
+      },
+      {
+        "slug": "vision-transformers",
+        "part": 16,
         "title": "Vision Transformers: From Image Patches to General-Purpose Encoders"
       },
       {
         "slug": "vit-patch-embeddings-cls-token-explained",
-        "part": 16,
+        "part": 17,
         "title": "What Does a Vision Transformer Actually Output? Patches, Positions, and the [CLS] Token"
       },
       {
         "slug": "positional-embeddings-in-vision-transformers",
-        "part": 17,
+        "part": 18,
         "title": "Positional Embeddings in ViT: Why Add Them, and How the Shapes Actually Match"
       }
     ]

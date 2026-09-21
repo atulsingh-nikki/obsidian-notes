@@ -45,6 +45,15 @@ Unrestricted access is not automatically useful: a model can attend to shortcuts
 
 Self-attention made one architecture adaptable across language, images, video, and multimodal inputs. It turned context selection into a learned operation instead of a fixed architectural neighborhood.
 
+## Recommended reading
+
+- [Day 2: What is Self Attention | Transformers](https://medium.com/@naveenpandey2706/day-2-what-is-self-attention-transformers-f52c0bfb8988) - a focused Medium explanation of self-attention.
+- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) - an accessible visual explanation of self-attention and contextual representations.
+
+## Recommended video
+
+- [Attention in transformers, step-by-step - Deep Learning Chapter 6](https://www.youtube.com/watch?v=eMlx5fFNoYc) - a visual explanation of tokens exchanging context through attention.
+
 ## Continue
 
 The next question is what happens when the query sequence and the context sequence are different. That is the role of [cross-attention]({{ site.baseurl }}/2026/09/21/cross-attention-deep-dive.html).

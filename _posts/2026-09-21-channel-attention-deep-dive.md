@@ -46,6 +46,15 @@ Channel attention alone cannot model arbitrary relationships between distant pos
 
 Channel attention gave CNNs a lightweight form of dynamic computation: the network could decide which feature detectors mattered for each image rather than using every channel equally.
 
+## Recommended reading
+
+- [Query, Key, Value and Multi Head Attention: Transformers Part 2](https://medium.com/@anushka.sonawane/query-key-value-and-multi-head-attention-transformers-part-2-ba8d3db0db75) - useful contrast with channel-wise feature gating.
+- [Squeeze-and-Excitation Networks](https://arxiv.org/abs/1709.01507) - the canonical channel-attention reference for CNNs.
+
+## Recommended video
+
+- [Attention in transformers, step-by-step - Deep Learning Chapter 6](https://www.youtube.com/watch?v=eMlx5fFNoYc) - useful background for contrasting token routing with channel-wise feature gating.
+
 ## Continue
 
 Channels describe feature types and spatial attention describes locations. [Temporal attention]({{ site.baseurl }}/2026/09/21/temporal-attention-deep-dive.html) extends the same information-routing idea across frames and time.

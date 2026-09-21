@@ -42,6 +42,15 @@ The approximation may not preserve the sharp pairwise selection of softmax atten
 
 Linear attention opened a path toward Transformer-like models for sequences too long for dense attention, including online and memory-constrained applications.
 
+## Recommended reading
+
+- [Hierarchical Attention Transformers](https://medium.com/@ceo_44783/16x16x16x16-hierarchical-attention-transformers-how-to-train-an-llm-with-a-65-536-token-context-3f348ed38370) - a practical long-context perspective before studying linear alternatives.
+- [Efficient Transformers: A Survey](https://arxiv.org/abs/2009.06732) - a broad comparison of sparse, low-rank, kernelized, and recurrence-based efficiency strategies.
+
+## Recommended video
+
+- [Attention in transformers, step-by-step - Deep Learning Chapter 6](https://www.youtube.com/watch?v=eMlx5fFNoYc) - the quadratic attention picture provides the baseline that linear attention is trying to change.
+
 ## Continue
 
 Efficiency is only one axis. [Spatial attention]({{ site.baseurl }}/2026/09/21/spatial-attention-deep-dive.html) focuses on which locations matter in visual features.
