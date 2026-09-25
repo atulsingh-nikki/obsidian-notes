@@ -252,28 +252,33 @@
         "title": "The Momentum Encoder: Why EMA Teachers Work in Self-Supervised Learning"
       },
       {
-        "slug": "generalist-multimodal-encoders",
+        "slug": "vision-language-encoders-inputs-outputs-training",
         "part": 10,
+        "title": "Vision-Language Encoders: Inputs, Outputs, Training, and the VLM Landscape"
+      },
+      {
+        "slug": "generalist-multimodal-encoders",
+        "part": 11,
         "title": "Generalist Multimodal Encoders: One Visual Representation, Many Tasks"
       },
       {
         "slug": "task-specific-vision-specialists",
-        "part": 11,
+        "part": 12,
         "title": "Task-Specific Vision Specialists: When Narrow Models Win"
       },
       {
         "slug": "sam-sam2-sam3-evolution",
-        "part": 12,
+        "part": 13,
         "title": "SAM, SAM 2, and SAM 3: How Promptable Segmentation Evolved"
       },
       {
         "slug": "sam2-as-a-vision-encoder",
-        "part": 13,
+        "part": 14,
         "title": "SAM 2 as a Vision Encoder: Reusing Promptable Features Beyond Segmentation"
       },
       {
         "slug": "how-many-vision-encoders",
-        "part": 14,
+        "part": 15,
         "title": "How Many Vision Encoders Are There?"
       }
     ]

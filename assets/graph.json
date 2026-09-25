@@ -21,6 +21,19 @@
       "degree": 1
     },
     {
+      "id": "understanding-dim-in-pytorch",
+      "title": "Understanding dim in PyTorch: A Practical Guide to Tensor Axes",
+      "tags": [
+        "pytorch",
+        "deep-learning",
+        "tensors",
+        "python",
+        "computer-vision"
+      ],
+      "group": "pytorch",
+      "degree": 0
+    },
+    {
       "id": "introducing-the-blog",
       "title": "Introducing the Atul Singh Notes Blog",
       "tags": [
@@ -1491,6 +1504,20 @@
         "video-understanding"
       ],
       "group": "Attention: From Intuition to Efficient Vision",
+      "degree": 0
+    },
+    {
+      "id": "vision-language-encoders-inputs-outputs-training",
+      "title": "Vision-Language Encoders: Inputs, Outputs, Training, and the VLM Landscape",
+      "tags": [
+        "computer-vision",
+        "vision-encoders",
+        "vision-language",
+        "multimodal-learning",
+        "clip",
+        "vlm"
+      ],
+      "group": "Vision Encoders & Representation Learning",
       "degree": 0
     }
   ],

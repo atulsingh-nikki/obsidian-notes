@@ -1391,6 +1391,42 @@ article .blog-post__content {
   margin: 0;
 }
 
+.blog-post__content pre {
+  max-width: 100%;
+  overflow-x: auto;
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  line-height: 1.6;
+}
+
+.blog-post__content pre code {
+  display: block;
+  width: max-content;
+  min-width: 100%;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: inherit;
+  font-family: "Fira Code", "Source Code Pro", monospace;
+  font-size: 0.9rem;
+}
+
+.blog-post__content .highlight .k,
+.blog-post__content .highlight .kn,
+.blog-post__content .highlight .kd { color: #c4b5fd; }
+.blog-post__content .highlight .s,
+.blog-post__content .highlight .s1,
+.blog-post__content .highlight .s2 { color: #86efac; }
+.blog-post__content .highlight .c,
+.blog-post__content .highlight .c1 { color: #94a3b8; }
+.blog-post__content .highlight .nf,
+.blog-post__content .highlight .nb { color: #67e8f9; }
+.blog-post__content .highlight .mi,
+.blog-post__content .highlight .mf { color: #fdba74; }
+
 .blog-post__nav {
   margin-top: 3rem;
   border-top: 1px solid var(--border);

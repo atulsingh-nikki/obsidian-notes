@@ -80,6 +80,7 @@
       "self-supervised-foundation-encoders",
       "dino-self-distillation-no-labels-vision-transformers",
       "momentum-encoder-why-ema-teachers-work",
+      "vision-language-encoders-inputs-outputs-training",
       "generalist-multimodal-encoders",
       "task-specific-vision-specialists",
       "sam-sam2-sam3-evolution",
